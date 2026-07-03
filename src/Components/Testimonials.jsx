@@ -6,11 +6,11 @@ const Testimonials = () => {
   const [direction, setDirection] = useState(0);
 
   const testimonials = [
-    { id: 1, text: "Neffto has been our trusted digital partner for years. Their team supported the launch of a modern, inclusive digital platform with clarity, precision, and care.", author: "David Harrison", company: "Client Partner", logo: "/src/assets/images/logo.png" },
-    { id: 2, text: "Their expertise in cloud and system architecture is exceptional. Neffto migrated our legacy infrastructure seamlessly, with zero downtime and zero disruption.", author: "Sarah Jenkins", company: "Technology Lead", logo: "/src/assets/images/logo.png" },
-    { id: 3, text: "Innovation in EdTech demands speed and reliability. Neffto delivered both. Their React and mobile development skills are among the best we’ve worked with.", author: "Michael Ross", company: " Product Manager", logo: "/src/assets/images/logo.png" },
-    { id: 4, text: "We needed a modern, intuitive UI for our fintech platform. Neffto went beyond expectations—transforming complexity into a clean, powerful experience.", author: "Emma Watson", company: "Fintech Founder", logo: "/src/assets/images/logo.png" },
-    { id: 5, text: "From strategy to deployment, Neffto showed true professionalism. Their data-driven approach uncovered insights that changed how we make decisions.", author: "Dr. Robert Fox", company: "Operations Director", logo: "/src/assets/images/logo.png" }
+    { id: 1, text: "Neffto has been our trusted digital partner for years. Their team supported the launch of a modern, inclusive digital platform with clarity, precision, and care.", author: "David Harrison", company: "Client Partner", logo: "./src/assets/images/logo.png" },
+    { id: 2, text: "Their expertise in cloud and system architecture is exceptional. Neffto migrated our legacy infrastructure seamlessly, with zero downtime and zero disruption.", author: "Sarah Jenkins", company: "Technology Lead", logo: "./src/assets/images/logo.png" },
+    { id: 3, text: "Innovation in EdTech demands speed and reliability. Neffto delivered both. Their React and mobile development skills are among the best we’ve worked with.", author: "Michael Ross", company: " Product Manager", logo: "./src/assets/images/logo.png" },
+    { id: 4, text: "We needed a modern, intuitive UI for our fintech platform. Neffto went beyond expectations—transforming complexity into a clean, powerful experience.", author: "Emma Watson", company: "Fintech Founder", logo: "./src/assets/images/logo.png" },
+    { id: 5, text: "From strategy to deployment, Neffto showed true professionalism. Their data-driven approach uncovered insights that changed how we make decisions.", author: "Dr. Robert Fox", company: "Operations Director", logo: "./src/assets/images/logo.png" }
   ];
 
   const paginate = (newDirection) => {

@@ -6,32 +6,32 @@ const Services = () => {
   const services = [
     {
       title: "Web Development (Coding)",
-      image: "/src/assets/images/web.avif",
+      image: "./src/assets/images/web.avif",
       path: "/services/web-development" // Proper Path
     },
     {
       title: "App Development",
-      image: "/src/assets/images/app.jpg",
+      image: "./src/assets/images/app.jpg",
       path: "/services/app-development"
     },
     {
       title: "AI & ML",
-      image: "/src/assets/images/AI.jpg",
+      image: "./src/assets/images/AI.jpg",
       path: "/services/ai-solutions"
     },
     {
       title: "Graphic Designing",
-      image: "/src/assets/images/graphic.jpg",
+      image: "./src/assets/images/graphic.jpg",
       path: "/services/graphic-design"
     },
     {
       title: "Digital Marketing",
-      image: "/src/assets/images/DigitalMarketing.jpg",
+      image: "./src/assets/images/DigitalMarketing.jpg",
       path: "/services/digital-marketing"
     },
     {
       title: "SEO",
-      image: "/src/assets/images/seo.jpg",
+      image: "./src/assets/images/seo.jpg",
       path: "/services/seo"
     }
   ];

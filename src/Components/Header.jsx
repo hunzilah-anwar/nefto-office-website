@@ -21,7 +21,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img 
               className='h-12 md:h-15 w-auto object-contain' 
-              src="/src/assets/images/logo.png" 
+              src="./src/assets/images/logo.png" 
               alt="Logo" 
             />
           </Link>
@@ -61,16 +61,16 @@ const Header = () => {
             className="group relative w-12 h-12 flex flex-col justify-center items-center bg-gray-50 rounded-full transition-all duration-300 active:scale-90 focus:outline-none cursor-pointer"
           >
             <div className="relative w-6 h-5 flex flex-col justify-between items-center">
-              <span className={`h-[2px] bg-[#00419B] rounded-full transition-all duration-300 ease-in-out ${isOpen ? 'w-6 rotate-45 translate-y-[9px]' : 'w-6'}`}></span>
-              <span className={`h-[2px] bg-[#00419B] rounded-full transition-all duration-300 ease-in-out ${isOpen ? 'w-0 opacity-0' : 'w-4 ml-auto'}`}></span>
-              <span className={`h-[2px] bg-[#00419B] rounded-full transition-all duration-300 ease-in-out ${isOpen ? 'w-6 -rotate-45 -translate-y-[9px]' : 'w-6'}`}></span>
+              <span className={`h-0.5 bg-[#00419B] rounded-full transition-all duration-300 ease-in-out ${isOpen ? 'w-6 rotate-45 translate-y-2.25' : 'w-6'}`}></span>
+              <span className={`h-0.5 bg-[#00419B] rounded-full transition-all duration-300 ease-in-out ${isOpen ? 'w-0 opacity-0' : 'w-4 ml-auto'}`}></span>
+              <span className={`h-0.5 bg-[#00419B] rounded-full transition-all duration-300 ease-in-out ${isOpen ? 'w-6 -rotate-45 -translate-y-2.25' : 'w-6'}`}></span>
             </div>
           </button>
         </div>
       </div>
 
       {/* --- ANIMATED MOBILE MENU OVERLAY --- */}
-      <div className={`absolute top-[80px] left-0 w-full bg-white shadow-2xl border-t border-gray-100 md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100 py-8' : 'max-h-0 opacity-0 py-0'}`}>
+      <div className={`absolute top-20 left-0 w-full bg-white shadow-2xl border-t border-gray-100 md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-125 opacity-100 py-8' : 'max-h-0 opacity-0 py-0'}`}>
         <div className="flex flex-col px-8 space-y-6">
           {navLinks.map((link, index) => (
             <Link
