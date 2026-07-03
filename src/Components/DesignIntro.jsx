@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Tagline from '../assets/images/tagline.png'
 
 const DesignIntro = () => {
   return (
@@ -53,7 +54,7 @@ const DesignIntro = () => {
         {/* --- Right Side: Black Card (Bitzonic Logo) --- */}
         <div className="w-full h-87.5 md:h-112.5 bg-black rounded-[2.5rem] flex items-center justify-center shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-gray-800 to-black opacity-50 rounded-[2.5rem]"></div>
-          <img src="./src/assets/images/tagline.png" alt="" />
+          <img src={Tagline} alt="" />
         </div>
       </div>
     </section>

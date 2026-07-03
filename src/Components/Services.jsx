@@ -1,37 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Routing ke liye Link import kiya
+import WebDev from '../assets/images/web.avif';
+import AppDev from '../assets/images/app.jpg';
+import AI from '../assets/images/AI.jpg';
+import GraphicDesign from '../assets/images/graphic.jpg';
+import DigitalMarketing from '../assets/images/DigitalMarketing.jpg';
+import SEO from '../assets/images/seo.jpg';
 
 const Services = () => {
   const services = [
     {
       title: "Web Development (Coding)",
-      image: "./src/assets/images/web.avif",
-      path: "/services/web-development" // Proper Path
+      image: WebDev,
+      path: "/services/web-development"
     },
     {
       title: "App Development",
-      image: "./src/assets/images/app.jpg",
+      image: AppDev,
       path: "/services/app-development"
     },
     {
       title: "AI & ML",
-      image: "./src/assets/images/AI.jpg",
+      image: AI,
       path: "/services/ai-solutions"
     },
     {
       title: "Graphic Designing",
-      image: "./src/assets/images/graphic.jpg",
+      image: GraphicDesign,
       path: "/services/graphic-design"
     },
     {
       title: "Digital Marketing",
-      image: "./src/assets/images/DigitalMarketing.jpg",
+      image: DigitalMarketing,
       path: "/services/digital-marketing"
     },
     {
       title: "SEO",
-      image: "./src/assets/images/seo.jpg",
+      image: SEO,
       path: "/services/seo"
     }
   ];

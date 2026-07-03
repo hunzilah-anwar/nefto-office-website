@@ -12,7 +12,7 @@ const StorySection = () => {
           starColor="blue"
           backgroundColor="#010101"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-black opacity-80 pointer-events-none"></div>
       </div>
 
       {/* Content Container */}
@@ -31,7 +31,7 @@ const StorySection = () => {
           {/* Main Headline */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             To create a world made of thoughtful{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CB8104] to-[#CB8104]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#CB8104] to-[#CB8104]">
               designs and experiences.
             </span>
           </h2>

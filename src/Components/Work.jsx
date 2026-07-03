@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import ProjectOne from '../assets/images/projectOne.png';
+import ProjectTwo from '../assets/images/projectTwo.png';
+import ProjectThree from '../assets/images/projectThree.png';
+import ProjectFour from '../assets/images/projectFour.png';
+import ProjectFive from '../assets/images/projectFive.png';
 
 const Work = () => {
   const [projects, setProjects] = useState([
@@ -6,31 +11,31 @@ const Work = () => {
       id: 1,
       title: "AIXOR",
       tags: ["Branding", "Web Design", "Webflow Dev"],
-      image: "/src/assets/images/projectOne.png",
+      image: ProjectOne,
     },
     {
       id: 2,
       title: "HOMELY",
       tags: ["Web Design", "Branding", "Web Development"],
-      image: "/src/assets/images/projectTwo.png",
+      image: ProjectTwo,
     },
     {
       id: 3,
       title: "Eagles Car",
       tags: ["Application Development", "UI/UX"],
-      image: "/src/assets/images/projectThree.png",
+      image: ProjectThree,
     },
     {
       id: 4,
       title: "Saint Academy",
       tags: ["Application Development", "UI/UX"],
-      image: "/src/assets/images/projectFour.png",
+      image: ProjectFour,
     },
     {
       id: 5,
       title: "Career Center",
       tags: ["Application Development", "UI/UX"],
-      image: "/src/assets/images/projectFive.png",
+      image: ProjectFive,
     },
   ]);
 

@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import webImg from "../assets/images/web.avif";
+import appImg from "../assets/images/app.jpg";
+import aiImg from "../assets/images/AI.jpg";
+import graphicImg from "../assets/images/graphic.jpg";
+import marketingImg from "../assets/images/DigitalMarketing.jpg";
+import seoImg from "../assets/images/seo.jpg";
 
 // Link ko motion-friendly banane ke liye
 const MotionLink = motion(Link);
@@ -16,7 +22,7 @@ const allProjects = {
         { value: "2.1s", label: "average load speed" },
         { value: "100k+", label: "active daily sessions" }
       ],
-      image: "./src/assets/images/web.avif",
+      image: webImg,
       link: "/services/web-development"
     },
     {
@@ -28,7 +34,7 @@ const allProjects = {
         { value: "95%", label: "Client Satisfaction" },
         { value: "24/7", label: "Technical Support" }
       ],
-      image: "./src/assets/images/web.avif",
+      image: webImg,
       link: "/services/web-development"
     }
   ],
@@ -42,7 +48,7 @@ const allProjects = {
         { value: "4.8★", label: "average user rating" },
         { value: "85%", label: "retention rate increase" }
       ],
-      image: "./src/assets/images/app.jpg",
+      image: appImg,
       link: "/services/app-development"
     },
     {
@@ -54,7 +60,7 @@ const allProjects = {
         { value: "10k+", label: "daily active riders" },
         { value: "99.9%", label: "transaction success" }
       ],
-      image: "./src/assets/images/app.jpg",
+      image: appImg,
       link: "/services/app-development"
     }
   ],
@@ -68,7 +74,7 @@ const allProjects = {
         { value: "24/7", label: "instant response time" },
         { value: "5x", label: "operational cost cut" }
       ],
-      image: "./src/assets/images/AI.jpg",
+      image: aiImg,
       link: "/services/ai-solutions"
     },
     {
@@ -80,7 +86,7 @@ const allProjects = {
         { value: "30%", label: "inventory cost reduction" },
         { value: "12M+", label: "data points processed" }
       ],
-      image: "./src/assets/images/AI.jpg",
+      image: aiImg,
       link: "/services/ai-solutions"
     }
   ],
@@ -94,7 +100,7 @@ const allProjects = {
         { value: "15+", label: "brand touchpoints" },
         { value: "3x", label: "brand recognition growth" }
       ],
-      image: "./src/assets/images/graphic.jpg",
+      image: graphicImg,
       link: "/services/graphic-design"
     },
     {
@@ -106,7 +112,7 @@ const allProjects = {
         { value: "10M+", label: "impressions globally" },
         { value: "45%", label: "increase in retail sales" }
       ],
-      image: "./src/assets/images/graphic.jpg",
+      image: graphicImg,
       link: "/services/graphic-design"
     }
   ],
@@ -120,7 +126,7 @@ const allProjects = {
         { value: "-40%", label: "reduction in acquisition cost" },
         { value: "4.2x", label: "return on ad spend (ROAS)" }
       ],
-      image: "./src/assets/images/DigitalMarketing.jpg",
+      image: marketingImg,
       link: "/services/digital-marketing"
     },
     {
@@ -132,7 +138,7 @@ const allProjects = {
         { value: "50%", label: "increase in repeat orders" },
         { value: "2.5M", label: "social media impressions" }
       ],
-      image: "./src/assets/images/DigitalMarketing.jpg",
+      image: marketingImg,
       link: "/services/digital-marketing"
     }
   ],
@@ -146,7 +152,7 @@ const allProjects = {
         { value: "Top 3", label: "rankings for 50+ keywords" },
         { value: "8.5%", label: "conversion rate from search" }
       ],
-      image: "./src/assets/images/seo.jpg",
+      image: seoImg,
       link: "/services/seo"
     },
     {
@@ -158,7 +164,7 @@ const allProjects = {
         { value: "150k+", label: "monthly map impressions" },
         { value: "#1 Spot", label: "on Google Map Pack" }
       ],
-      image: "./src/assets/images/seo.jpg",
+      image: seoImg,
       link: "/services/seo"
     }
   ]

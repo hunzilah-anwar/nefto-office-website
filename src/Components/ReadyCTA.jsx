@@ -12,7 +12,7 @@ const ReadyCTA = () => {
           starColor="blue"
           backgroundColor="#010101"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-black opacity-80 pointer-events-none"></div>
       </div>
 
       {/* Top Label */}
@@ -32,7 +32,7 @@ const ReadyCTA = () => {
         className="
             text-[16px] group relative z-10
             bg-[linear-gradient(90deg,#00419B_50%,#CB8104_50%)] 
-            bg-[length:200%_100%] 
+            bg-size-[200%_100%] 
             bg-right 
             hover:bg-left 
             text-white font-semibold py-3 px-8 rounded-full 

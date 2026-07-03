@@ -1,4 +1,6 @@
 import React from 'react';
+import CEO from '../assets/images/CEO.jpeg';
+import CTO from '../assets/images/cto.jpeg';
 
 const TeamSection = () => {
   return (
@@ -27,13 +29,13 @@ const TeamSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           <TeamCard
-            imageSrc="/src/assets/images/CEO.jpeg"
+            imageSrc={CEO}
             name="Abdul Ahad Dahir"
             title="Founder / CEO"
           />
 
           <TeamCard
-            imageSrc="/src/assets/images/cto.jpeg"
+            imageSrc={CTO}
             name="Muhammad Hunzilah"
             title="CTO"
           />

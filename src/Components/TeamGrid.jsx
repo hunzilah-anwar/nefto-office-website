@@ -1,5 +1,13 @@
 import React, { useRef } from 'react';
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import Hamza from '../assets/images/hamza.png';
+import Ameerhamza from '../assets/images/Ameerhamza.jpeg';
+import Sabir from '../assets/images/sabir.jpeg';
+import Mubeen from '../assets/images/mubeen.jpg';
+import Meer from '../assets/images/meer.png';
+import Talha from '../assets/images/talha.png';
+import Ibtsam from '../assets/images/ibtsam.jfif';
+
 
 const cardData = [
   {
@@ -7,56 +15,56 @@ const cardData = [
     category: 'WEB DEVELOPER',
     title: 'MUHAMMAD HAMZA',
     description: 'Building secure, scalable backend architectures, APIs, and cloud services.',
-    image: './src/assets/images/hamza.png',
+    image: Hamza,
   },
   {
     id: 2,
     category: 'DIGITAL MARKETING',
     title: 'Ameer Hamza',
     description: 'Creating search optimization strategies and online campaign frameworks to scale traffic.',
-    image: './src/assets/images/Ameerhamza.jpeg',
+    image: Ameerhamza,
   },
   {
     id: 3,
     category: 'Performance Marketing',
     title: 'Sabir Hussain ',
     description: 'Optimizing paid advertising channels, conversion rates, and ROI metrics.',
-    image: './src/assets/images/sabir.jpeg',
+    image: Sabir,
   },
   {
     id: 4,
     category: 'Graphic Designer',
     title: 'Raeefa Ashfaq',
     description: 'Designing user interfaces, branding visuals, and high-fidelity graphics.',
-    image: './src/assets/images/sabir.jpeg',
+    image: Sabir,
   },
   {
     id: 5,
     category: 'FRONTEND WEB DEVELOPER',
     title: 'MUHAMMAD MUBEEN AMJAD',
     description: 'Developing responsive UI components using React, Tailwind CSS, and Framer Motion.',
-    image: './src/assets/images/mubeen.jpg',
+    image: Mubeen,
   },
   {
     id: 6,
     category: 'Graphic Designer',
     title: 'Meer Ali Abbas',
     description: 'Creating visually compelling brand identities, graphics, and high-fidelity mockups for digital products.',
-    image: './src/assets/images/meer.png',
+    image: Meer,
   },
   {
     id: 7,
     category: 'MACHINE LEARNING',
     title: 'MUHAMMAD TALHA',
     description: 'Building machine learning pipelines, predictive engines, and data analytics dashboards.',
-    image: './src/assets/images/talha.jfif',
+    image: Talha,
   },
   {
     id: 8,
     category: 'FRONTEND WEB DEVELOPER',
     title: 'MUHAMMAD IBTSAM',
     description: 'Designing modular code architecture and improving clientside performance benchmarks.',
-    image: './src/assets/images/ibtsam.jfif',
+    image: Ibtsam,
   },
 ];
 

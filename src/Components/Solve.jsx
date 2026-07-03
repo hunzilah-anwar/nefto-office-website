@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import GrowYourBusiness from '../assets/images/growYourBusiness.jpeg';
 
 const Solve = () => {
   return (
@@ -80,7 +81,7 @@ const Solve = () => {
         <div className="w-full lg:w-1/2 relative">
           <div className="rounded-[30px] overflow-hidden shadow-xl border-4 border-white">
             <img 
-              src="/src/assets/images/growYourBusiness.jpeg" 
+              src={GrowYourBusiness}
               alt="Grow Your Business" 
               className="w-full h-auto object-cover min-h-87.5"
             />

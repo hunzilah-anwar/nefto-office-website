@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Logo from "../assets/images/logo.png"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -57,7 +58,7 @@ const Footer = () => {
             <motion.div whileHover={{ scale: 1.02 }} className="inline-block mb-8">
               <Link to="/">
                 <img 
-                  src="/src/assets/images/logo.png" 
+                  src={Logo}
                   alt="Logo" 
                   className="h-12 md:h-14 w-auto object-contain brightness-110"
                 />
