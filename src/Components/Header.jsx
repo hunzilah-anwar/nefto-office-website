@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from "./src/assets/images/logo.png" 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img 
               className='h-12 md:h-15 w-auto object-contain' 
-              src="./src/assets/images/logo.png" 
+              src={logo}
               alt="Logo" 
             />
           </Link>
