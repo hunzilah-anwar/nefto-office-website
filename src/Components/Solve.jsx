@@ -79,11 +79,11 @@ const Solve = () => {
 
         {/* Right Side: Image with Floating Badge */}
         <div className="w-full lg:w-1/2 relative">
-          <div className="rounded-[30px] overflow-hidden shadow-xl border-4 border-white">
+          <div className="rounded-[30px] overflow-hidden shadow-xl bg-[#000000] border-4 border-white">
             <img 
               src={GrowYourBusiness}
               alt="Grow Your Business" 
-              className="w-full h-auto object-cover min-h-87.5"
+              className="w-full h-auto object-contain min-h-87.5"
             />
           </div>
 

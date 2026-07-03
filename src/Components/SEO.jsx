@@ -161,7 +161,7 @@ const SEO = () => { // Name changed to SEOSolutions
             >
               <div className="relative w-full aspect-video md:aspect-square lg:aspect-[4/3] overflow-hidden rounded-tl-[6rem] rounded-br-[6rem] md:rounded-tl-[9rem] md:rounded-br-[9rem] shadow-2xl border-4 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c207?q=80&w=1474&auto=format&fit=crop" 
+                  src="https://plus.unsplash.com/premium_photo-1685283298465-e52e933a3312?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="SEO Audit Process" 
                   className="w-full h-full object-cover"
                 />
