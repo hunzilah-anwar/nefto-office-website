@@ -43,8 +43,8 @@ const AboutSections = () => {
             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#00419B]/5 rounded-full blur-3xl"></div>
 
             <div className="relative z-10 flex justify-center lg:justify-start">
-              <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px]">
-                <div className="absolute inset-0 border-[15px] border-[#00419B]/10 rounded-full"></div>
+              <div className="relative w-70 h-70 sm:w-87.5 sm:h-87.5 md:w-112.5 md:h-112.5">
+                <div className="absolute inset-0 border-15 border-[#00419B]/10 rounded-full"></div>
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{
@@ -183,9 +183,9 @@ const AboutSections = () => {
               <motion.div
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 5, repeat: Infinity }}
-                className="absolute -left-5 top-80 -translate-y-1/2 w-32 h-32 md:w-48 md:h-48 border-[20px] border-[#00419B]/10 rounded-full"
+                className="absolute -left-5 top-80 -translate-y-1/2 w-32 h-32 md:w-48 md:h-48 border-20 border-[#00419B]/10 rounded-full"
               ></motion.div>
-              <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px]">
+              <div className="relative w-70 h-70 sm:w-87.5 sm:h-87.5 md:w-112.5 md:h-112.5">
                 <motion.div
                   whileHover={{ rotate: 1.5 }}
                   className="absolute inset-0 rounded-full overflow-hidden border-8 border-white shadow-2xl z-10"

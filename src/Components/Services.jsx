@@ -90,7 +90,7 @@ const Services = () => {
             <Link 
               key={index} 
               to={service.path} 
-              className="block group relative h-[350px] overflow-hidden cursor-pointer border-[0.5px] border-white/20"
+              className="block group relative h-87.5 overflow-hidden cursor-pointer border-[0.5px] border-white/20"
             >
               <motion.div variants={cardVariants} className="h-full w-full">
                 <img 
@@ -99,7 +99,7 @@ const Services = () => {
                   className="absolute inset-0 h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                 />
                 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:from-[#00419B]/90 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent group-hover:from-[#00419B]/90 transition-all duration-500"></div>
 
                 <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex items-center gap-4">

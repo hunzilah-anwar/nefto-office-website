@@ -136,7 +136,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="order-1 lg:order-2 relative group h-[300px] md:h-[450px] w-full mt-4 lg:mt-0"
+            className="order-1 lg:order-2 relative group h-75 md:h-112.5 w-full mt-4 lg:mt-0"
           >
             <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] shadow-2xl border-4 border-white">
               {slides.map((slide, index) => (
@@ -153,7 +153,7 @@ const Hero = () => {
                     alt={slide.title}
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent"></div>
                 </div>
               ))}
 

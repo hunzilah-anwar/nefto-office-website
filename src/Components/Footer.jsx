@@ -13,10 +13,19 @@ const Footer = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const serviceLinks = [
+    { name: 'Web Development', href: '/services/web-development' },
+    { name: 'App Development', href: '/services/app-development' },
+    { name: 'AI & ML', href: '/services/ai-solutions' },
+    { name: 'Graphic Designing', href: '/services/graphic-design' },
+    { name: 'Digital Marketing', href: '/services/digital-marketing' },
+    { name: 'SEO', href: '/services/seo' },
+  ];
+
   const socialLinks = [
-    { name: 'Facebook', href: '#' },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591430441959' },
     { name: 'LinkedIn', href: '#' },
-    { name: 'Instagram', href: '#' },
+    { name: 'Instagram', href: 'https://www.instagram.com/nefftosolution/' },
     { name: 'Twitter', href: '#' },
   ];
 
@@ -51,10 +60,10 @@ const Footer = () => {
       >
         
         {/* TOP SECTION: LOGO & LINKS */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           
           {/* Column 1: Logo and Tagline */}
-          <motion.div variants={itemVariants} className="md:col-span-6 lg:col-span-5">
+          <motion.div variants={itemVariants} className="lg:col-span-4">
             <motion.div whileHover={{ scale: 1.02 }} className="inline-block mb-8">
               <Link to="/">
                 <img 
@@ -70,7 +79,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Column 2: Navigation */}
-          <motion.div variants={itemVariants} className="md:col-span-3 lg:col-span-3">
+          <motion.div variants={itemVariants} className="lg:col-span-3">
             <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-8">
               Navigation
             </h4>
@@ -90,8 +99,29 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Column 3: Connect */}
-          <motion.div variants={itemVariants} className="md:col-span-3 lg:col-span-4">
+          {/* Column 3: Services */}
+          <motion.div variants={itemVariants} className="lg:col-span-3">
+            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-8">
+              Services
+            </h4>
+            <ul className="space-y-4">
+              {serviceLinks.map((link) => (
+                <li key={link.name}>
+                  <motion.div whileHover={{ x: 5 }}>
+                    <Link 
+                      to={link.href} 
+                      className="text-lg hover:text-[#CB8104] transition-colors duration-300"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Column 4: Connect */}
+          <motion.div variants={itemVariants} className="lg:col-span-2">
             <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-8">
               Connect
             </h4>
