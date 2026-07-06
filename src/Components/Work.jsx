@@ -1,40 +1,62 @@
-import React, { useState } from 'react';
-import ProjectOne from '../assets/images/projectOne.png';
-import ProjectTwo from '../assets/images/projectTwo.png';
-import ProjectThree from '../assets/images/projectThree.png';
-import ProjectFour from '../assets/images/projectFour.png';
-import ProjectFive from '../assets/images/projectFive.png';
+import React, { useState } from "react";
+import ProjectOne from "../assets/images/projectOne.png";
+import ProjectTwo from "../assets/images/projectTwo.png";
+import ProjectThree from "../assets/images/projectThree.png";
+import ProjectFour from "../assets/images/projectFour.png";
+import ProjectFive from "../assets/images/projectFive.png";
 
 const Work = () => {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      title: "AIXOR",
-      tags: ["Branding", "Web Design", "Webflow Dev"],
+      title: "Mega Construction",
+      tags: [
+        "React Js",
+        "TailwindCSS",
+        "Responsive",
+        "React Routers",
+        "Functionality Base",
+      ],
       image: ProjectOne,
     },
     {
       id: 2,
-      title: "HOMELY",
-      tags: ["Web Design", "Branding", "Web Development"],
+      title: "Shop Management System",
+      tags: [
+        "Web Design",
+        "React JS",
+        "Tailwind CSS",
+        "Node JS",
+        "Express JS",
+        "MongoDB",
+        "Responsive Design",
+        "UI/UX Design",
+      ],
       image: ProjectTwo,
     },
     {
       id: 3,
-      title: "Eagles Car",
-      tags: ["Application Development", "UI/UX"],
+      title: "Bitzonic",
+      tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
       image: ProjectThree,
     },
     {
       id: 4,
-      title: "Saint Academy",
-      tags: ["Application Development", "UI/UX"],
+      title: "Learner - Services",
+      tags: ["HTML", "CSS", "Tailwind CSS", "Responsive Design"],
       image: ProjectFour,
     },
     {
       id: 5,
-      title: "Career Center",
-      tags: ["Application Development", "UI/UX"],
+      title: "HighTech – IT Solutions",
+      tags: [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "Animated",
+        "Responsive Design",
+      ],
       image: ProjectFive,
     },
   ]);
@@ -59,12 +81,11 @@ const Work = () => {
 
   return (
     <section className="relative w-full min-h-screen bg-white py-12 flex flex-col overflow-hidden">
-      
       {/* --- Header Section --- */}
       <div className="px-6 md:px-16 mb-12">
         <p
           className="uppercase tracking-widest text-[14px] mb-2 font-bold"
-          style={{ color: '#CB8104', fontFamily: 'Playfair Display, serif' }}
+          style={{ color: "#CB8104", fontFamily: "Playfair Display, serif" }}
         >
           • OUR WORKS
         </p>
@@ -72,9 +93,9 @@ const Work = () => {
         <h2
           className="font-bold leading-tight"
           style={{
-            fontSize: '42px',
-            color: '#00419B',
-            fontFamily: 'Playfair Display, serif',
+            fontSize: "42px",
+            color: "#00419B",
+            fontFamily: "Playfair Display, serif",
           }}
         >
           <span className="relative inline-block">
@@ -92,7 +113,7 @@ const Work = () => {
                 strokeLinecap="round"
               />
             </svg>
-          </span>{' '}
+          </span>{" "}
           Featured <span className="text-[#CB8104]">Projects</span>
         </h2>
       </div>
@@ -305,8 +326,22 @@ const Work = () => {
 
           {/* Navigation Arrows */}
           <div className="nav-btns">
-            <button onClick={(e) => { e.stopPropagation(); prevSlide(); }}>&#x2039;</button>
-            <button onClick={(e) => { e.stopPropagation(); nextSlide(); }}>&#x203A;</button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prevSlide();
+              }}
+            >
+              &#x2039;
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextSlide();
+              }}
+            >
+              &#x203A;
+            </button>
           </div>
         </div>
       </div>

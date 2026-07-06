@@ -24,7 +24,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591430441959' },
-    { name: 'LinkedIn', href: '#' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/abdul-ahad-a848b641b/' },
     { name: 'Instagram', href: 'https://www.instagram.com/nefftosolution/' },
     { name: 'Twitter', href: '#' },
   ];
