@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { Link } from "react-router-dom";
+// images
+import WebDev from "../assets/images/web.avif";
+import AppDev from "../assets/images/app.jpg";
+import AI from "../assets/images/AI.jpg";
+import GraphicDesign from "../assets/images/graphic.jpg";
+import DigitalMarketing from "../assets/images/DigitalMarketing.jpg";
+import SEO from "../assets/images/seo.jpg";
 // Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,45 +17,45 @@ import "swiper/css/pagination";
 const cardData = [
   {
     id: 1,
-    title: "Build powerful brand experiences",
-    desc: "Create and manage custom brand assets that drive results while keeping your identity consistent.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop",
+    title: "Web Development (Coding)",
+    desc: "Build fast, secure, and responsive websites tailored to your business needs using the latest web technologies.",
+    image: WebDev,
+    to: "/services/web-development",
   },
   {
     id: 2,
-    title: "Manage content that converts, at scale",
-    desc: "Our composable CMS lets you create and manage content that drives results with built-in SEO tools.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=500&auto=format&fit=crop",
+    title: "App Development",
+    desc: "Develop high-performance Android, iOS, and cross-platform mobile applications with modern UI and seamless functionality.",
+    image: AppDev,
+    to: "/services/app-development",
   },
   {
     id: 3,
-    title: "Optimize for conversion with AI",
-    desc: "Leverage AI to analyze user behavior and automatically improve your conversion rates.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop",
+    title: "AI & ML",
+    desc: "Leverage Artificial Intelligence and Machine Learning to automate processes, analyze data, and create smart business solutions.",
+    image: AI,
+    to: "/services/ai-solutions",
   },
   {
     id: 4,
-    title: "Future-Ready Cloud Solutions",
-    desc: "Scale your business with secure, high-performance cloud architecture designed for modern needs.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500&auto=format&fit=crop",
+    title: "Graphic Designing",
+    desc: "Create eye-catching logos, branding, social media posts, brochures, and marketing materials that leave a lasting impression.",
+    image: GraphicDesign,
+    to: "/services/graphic-design",
   },
   {
     id: 5,
-    title: "Human-Centric UI/UX Design",
-    desc: "We put users at the heart of our design process to create intuitive interfaces people love.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1661589354357-f56ddf86a0b4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Digital Marketing",
+    desc: "Grow your online presence with strategic social media marketing, paid advertising, content marketing, and lead generation.",
+    image: DigitalMarketing,
+    to: "/services/digital-marketing",
   },
   {
     id: 6,
-    title: "Data-Driven Marketing Strategy",
-    desc: "Unlock the power of your data with advanced analytics and targeted digital strategies.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop",
+    title: "SEO",
+    desc: "Improve your website's search engine rankings with on-page, off-page, technical SEO, and keyword optimization strategies.",
+    image: SEO,
+    to: "/services/seo",
   },
 ];
 
@@ -69,7 +76,7 @@ const FeatureCard = ({ card }) => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div
-        className={`absolute inset-0 transition-all duration-500 bg-linear-to-t from-[#00419B]/95 via-[#00419B]/30 to-transparent ${isHovered ? "backdrop-blur-[4px]" : "backdrop-blur-0"}`}
+        className={`absolute inset-0 transition-all duration-500 bg-linear-to-t from-[#00419B]/95 via-[#00419B]/30 to-transparent ${isHovered ? "backdrop-blur-xs" : "backdrop-blur-0"}`}
       />
 
       <div className="absolute inset-0 p-8 flex flex-col justify-end z-10 text-left">
@@ -94,10 +101,13 @@ const FeatureCard = ({ card }) => {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="flex items-center gap-2 mt-4 text-[#CB8104] font-bold">
+        <Link
+          to={card.to}
+          className="flex items-center gap-2 mt-4 text-[#CB8104] font-bold"
+        >
           <span>Learn More</span>
           <span className="text-xl">→</span>
-        </div>
+        </Link>
       </div>
     </motion.div>
   );

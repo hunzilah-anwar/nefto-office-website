@@ -37,20 +37,20 @@ const AboutHero = () => {
       </div>
 
       {/* --- Main Heading Section --- */}
-      <div className="relative text-center z-10 mt-[-10px]">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[800] tracking-tighter leading-none md:leading-[0.9]">
-          <span className="bg-gradient-to-r from-[#CB8104] to-[#00419B] bg-clip-text text-transparent">
+      <div className="relative text-center z-10 -mt-2.5">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-none md:leading-[0.9]">
+          <span className="bg-linear-to-r from-[#CB8104] to-[#00419B] bg-clip-text text-transparent">
             Creators of digital
           </span>
           <br className="hidden md:block" />
-          <span className="bg-gradient-to-r from-[#CB8104] to-[#00419B] bg-clip-text text-transparent block md:inline">
+          <span className="bg-linear-to-r from-[#CB8104] to-[#00419B] bg-clip-text text-transparent block md:inline">
             products
           </span>
         </h1>
       </div>
 
       {/* --- Black Button with Angle Down Icon --- */}
-      <div className="absolute bottom-10 md:bottom-12">
+      <div className="absolute bottom-10 md:bottom-4">
         <button 
           onClick={handleScroll}
           className="bg-[#FF6600] text-white w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 animate-bounce cursor-pointer"
