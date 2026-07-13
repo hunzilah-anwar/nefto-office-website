@@ -12,6 +12,8 @@ const ContactSection = ({ activeTab, locationRef }) => {
     newsletter: false,
     events: false,
   });
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // --- KEEPING ALL YOUR ORIGINAL HANDLERS ---
   const handleChange = (e) => {
@@ -26,10 +28,49 @@ const ContactSection = ({ activeTab, locationRef }) => {
     setFormData({ ...formData, subject });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
-    alert('Thank you! Your message has been prepared.');
+    setIsSubmitting(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const text = await response.text();
+      let result = {};
+      try {
+        result = JSON.parse(text);
+      } catch (err) {
+        console.error("Non-JSON response:", text);
+      }
+
+      if (response.ok && result.message === 'Email sent successfully') {
+        setStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' });
+        setFormData({
+          subject: 'Your project',
+          fullName: '',
+          email: '',
+          phone: '',
+          message: '',
+          newsletter: false,
+          events: false,
+        });
+        setTimeout(() => setStatus({ type: '', message: '' }), 5000);
+      } else {
+        setStatus({ type: 'error', message: result.message || 'There was a problem sending your message. If you are testing locally, PHP might not be supported.' });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus({ type: 'error', message: 'Network error. There was a problem sending your message.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const subjectOptions = [
@@ -78,6 +119,16 @@ const ContactSection = ({ activeTab, locationRef }) => {
                   <motion.p variants={itemVariants} className="mb-12 text-gray-600 text-lg md:text-xl">
                     We'd be happy to chat through your challenge over a virtual coffee - fill in our form and let's find a time.
                   </motion.p>
+                  
+                  {status.message && (
+                    <motion.div 
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className={`p-4 rounded-lg font-bold ${status.type === 'success' ? 'bg-green-100 text-green-700 border-2 border-green-200' : 'bg-red-100 text-red-700 border-2 border-red-200'}`}
+                    >
+                      {status.message}
+                    </motion.div>
+                  )}
 
                   <form onSubmit={handleSubmit} className="space-y-10">
                     {/* Message Subject */}
@@ -115,7 +166,7 @@ const ContactSection = ({ activeTab, locationRef }) => {
                         required
                         value={formData.fullName}
                         onChange={handleChange}
-                        placeholder="John Doe"
+                        placeholder="Enter Your Name"
                         className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-[#CB8104] outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
                       />
                     </motion.div>
@@ -130,21 +181,21 @@ const ContactSection = ({ activeTab, locationRef }) => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="name@company.com"
+                        placeholder="name@neffto.com"
                         className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-[#CB8104] outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
                       />
                     </motion.div>
 
                     {/* Phone */}
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-bold text-[#00419B] mb-1">Telephone number (optional)</label>
+                      <label className="block text-sm font-bold text-[#00419B] mb-1">Phone number (optional)</label>
                       <p className="text-xs text-gray-400 mb-2">If you'd like a call back</p>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="Enter Your Phone no"
                         className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-[#CB8104] outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
                       />
                     </motion.div>
@@ -195,20 +246,21 @@ const ContactSection = ({ activeTab, locationRef }) => {
                     <motion.div variants={itemVariants} className="text-xs text-gray-400 space-y-3 border-t border-gray-100 pt-8 mt-10">
                       <h4 className="font-bold text-[#00419B] uppercase tracking-widest">Data Protection</h4>
                       <p className="leading-relaxed">
-                        I understand that Neftio can contact me to promote their goods and services. I also understand I can unsubscribe at any time by emailing <a href="mailto:info@neftio.com" className="text-[#CB8104] underline font-bold">info@neftio.com</a>.
+                        I understand that Neffto can contact me to promote their goods and services. I also understand I can unsubscribe at any time by emailing <a href="mailto:nefftosolution@gmail.com" className="text-[#CB8104] underline font-bold">nefftosolution@gmail.com</a>.
                       </p>
                     </motion.div>
 
                     {/* Submit Button - ANIMATED */}
                     <motion.div variants={itemVariants}>
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                        whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
                         type="submit"
-                        className="group/submit relative overflow-hidden bg-[#00419B] text-white font-bold py-4 px-12 rounded-full transition-all duration-300 shadow-xl uppercase tracking-widest text-sm cursor-pointer"
+                        disabled={isSubmitting}
+                        className={`group/submit relative overflow-hidden text-white font-bold py-4 px-12 rounded-full transition-all duration-300 shadow-xl uppercase tracking-widest text-sm ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#00419B] cursor-pointer'}`}
                       >
-                        <span className="absolute inset-0 w-0 bg-[#CB8104] transition-all duration-300 group-hover/submit:w-full"></span>
-                        <span className="relative z-10">Send your message</span>
+                        {!isSubmitting && <span className="absolute inset-0 w-0 bg-[#CB8104] transition-all duration-300 group-hover/submit:w-full"></span>}
+                        <span className="relative z-10">{isSubmitting ? 'Sending...' : 'Send your message'}</span>
                       </motion.button>
                     </motion.div>
                   </form>
@@ -271,7 +323,8 @@ const ContactSection = ({ activeTab, locationRef }) => {
               <div className="space-y-10">
                 <div className="group cursor-pointer">
                   <h3 className="font-bold text-[#CB8104] uppercase text-xs tracking-widest mb-2">Call us</h3>
-                  <p className="text-2xl font-bold text-[#00419B] group-hover:text-[#CB8104] transition-colors">+44 (0) 208 123 4567</p>
+                  <p className="text-2xl font-bold text-[#00419B] group-hover:text-[#CB8104] transition-colors">+92 307 3495496</p>
+                  <p className="text-2xl font-bold text-[#00419B] group-hover:text-[#CB8104] transition-colors">+92 328 7799060</p>
                   <ul className="mt-3 space-y-1 text-sm text-gray-400 font-medium">
                     <li>1 • New Business Inquiry</li>
                     <li>2 • Technical Support</li>
@@ -280,8 +333,8 @@ const ContactSection = ({ activeTab, locationRef }) => {
 
                 <div className="group cursor-pointer">
                   <h3 className="font-bold text-[#CB8104] uppercase text-xs tracking-widest mb-2">Email us</h3>
-                  <a href="mailto:hello@neftio.com" className="text-xl font-bold text-slate-700 border-b-2 border-[#CB8104]/30 group-hover:border-[#CB8104] transition-all">
-                    hello@neftio.com
+                  <a href="mailto:nefftosolution@gmail.com" className="text-xl font-bold text-slate-700 border-b-2 border-[#CB8104]/30 group-hover:border-[#CB8104] transition-all">
+                    nefftosolution@gmail.com
                   </a>
                 </div>
 
@@ -298,20 +351,6 @@ const ContactSection = ({ activeTab, locationRef }) => {
                   >
                     <span className="absolute inset-0 w-0 bg-[#00419B] transition-all duration-300 group-hover/dir:w-full"></span>
                     <span className="relative z-10">Get Directions</span>
-                  </motion.button>
-                </div>
-
-                {/* Request Audit - ANIMATED */}
-                <div className="pt-10 border-t border-gray-200">
-                  <h3 className="font-bold text-[#00419B] text-lg mb-2">Free UX audit?</h3>
-                  <p className="text-sm text-gray-500 mb-6 italic">Uncover critical usability issues with our proprietary tools.</p>
-                  <motion.button 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="group/audit relative w-full bg-[#CB8104] text-white rounded-full py-4 font-bold overflow-hidden transition-all duration-300 shadow-lg cursor-pointer"
-                  >
-                    <span className="absolute inset-0 w-0 bg-[#00419B] transition-all duration-300 group-hover/audit:w-full"></span>
-                    <span className="relative z-10">Request an audit</span>
                   </motion.button>
                 </div>
               </div>
