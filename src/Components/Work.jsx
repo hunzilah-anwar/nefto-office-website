@@ -11,11 +11,12 @@ const Work = () => {
       id: 1,
       title: "Mega Construction",
       tags: [
-        "React Js",
-        "TailwindCSS",
-        "Responsive",
-        "React Routers",
-        "Functionality Base",
+        "Full Stack",
+        "MERN Stack",
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "Responsive Design",
       ],
       image: ProjectOne,
     },
@@ -23,38 +24,50 @@ const Work = () => {
       id: 2,
       title: "Shop Management System",
       tags: [
-        "Web Design",
-        "React JS",
-        "Tailwind CSS",
-        "Node JS",
-        "Express JS",
+        "MERN Stack",
+        "React.js",
+        "Express.js",
+        "Node.js",
         "MongoDB",
-        "Responsive Design",
-        "UI/UX Design",
+        "Admin Dashboard",
       ],
       image: ProjectTwo,
     },
     {
       id: 3,
       title: "Bitzonic",
-      tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      description: "Bitzonic is a premier development agency that partners with global brands to create impactful, state-of-the-art web and mobile applications.",
+      tags: [
+        "Frontend Development",
+        "React.js",
+        "Tailwind CSS",
+        "JavaScript",
+        "UI/UX",
+        "Responsive Design",
+      ],
       image: ProjectThree,
     },
     {
       id: 4,
       title: "Learner - Services",
-      tags: ["HTML", "CSS", "Tailwind CSS", "Responsive Design"],
+      tags: [
+        "PHP Development",
+        "MySQL",
+        "Bootstrap",
+        "Responsive Design",
+        "Web Application",
+      ],
       image: ProjectFour,
     },
     {
       id: 5,
       title: "HighTech – IT Solutions",
       tags: [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "JavaScript",
-        "Animated",
+        "Full Stack",
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Custom CMS",
         "Responsive Design",
       ],
       image: ProjectFive,
@@ -85,7 +98,7 @@ const Work = () => {
       <div className="px-6 md:px-16 mb-12">
         <p
           className="uppercase tracking-widest text-[14px] mb-2 font-bold"
-          style={{ color: "#CB8104", fontFamily: "Playfair Display, serif" }}
+          style={{ color: "#044e50", fontFamily: "Playfair Display, serif" }}
         >
           • OUR WORKS
         </p>
@@ -94,7 +107,7 @@ const Work = () => {
           className="font-bold leading-tight"
           style={{
             fontSize: "42px",
-            color: "#00419B",
+            color: "#044e50",
             fontFamily: "Playfair Display, serif",
           }}
         >
@@ -107,14 +120,14 @@ const Work = () => {
             >
               <path
                 d="M2 7.5 C 20 2.5, 50 9.5, 98 4.5"
-                stroke="#CB8104"
+                stroke="#7ae2cf"
                 strokeWidth="4"
                 fill="none"
                 strokeLinecap="round"
               />
             </svg>
           </span>{" "}
-          Featured <span className="text-[#CB8104]">Projects</span>
+          Featured <span className="text-accent">Projects</span>
         </h2>
       </div>
 
@@ -209,10 +222,10 @@ const Work = () => {
 
             .tag-pill {
               padding: 6px 18px;
-              border: 1px solid #CB8104;
+              border: 1px solid #7AE2CF;
               border-radius: 50px;
               font-size: 13px;
-              background: rgba(203, 129, 4, 0.65);
+              background: rgba(7, 122, 125, 0.85);
               color: #fff;
             }
 
@@ -220,11 +233,11 @@ const Work = () => {
             .view-btn {
               position: relative;
               padding: 14px 35px;
-              border: 2px solid #00419B;
+              border: 2px solid #077A7D;
               cursor: pointer;
               font-weight: 600;
               border-radius: 50px;
-              background: #00419B;
+              background: #077A7D;
               color: white;
               opacity: 0;
               overflow: hidden;
@@ -240,7 +253,7 @@ const Work = () => {
               left: -100%;
               width: 100%;
               height: 100%;
-              background: #CB8104;
+              background: #7AE2CF;
               transition: transform 0.5s ease;
               z-index: -1;
             }
@@ -250,7 +263,7 @@ const Work = () => {
             }
 
             .view-btn:hover {
-                border-color: #CB8104;
+                border-color: #7AE2CF;
             }
 
             @keyframes animateText {
@@ -273,29 +286,30 @@ const Work = () => {
               width: 50px;
               height: 50px;
               border-radius: 12px;
-              border: 1px solid rgba(0,0,0,0.1);
+              border: 1px solid rgba(7, 122, 125, 0.2);
               cursor: pointer;
-              background: rgba(255,255,255,0.9);
+              background: rgba(245, 238, 221, 0.95);
               transition: 0.3s;
               font-size: 30px;
-              color: #00419B;
+              color: #077A7D;
               display: flex;
               align-items: center;
               justify-content: center;
-              box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+              box-shadow: 0 8px 20px rgba(6, 32, 43, 0.12);
             }
 
             .nav-btns button:hover {
-              background: #00419B;
+              background: #077A7D;
               color: white;
               transform: translateY(-2px);
             }
 
             @media (max-width: 768px) {
-              .content { left: 30px; width: 85%; margin-top: 50px; }
+              .content { left: 30px; width: 85%; margin-top: -10px; }
               .content .name { font-size: 35px; }
-              .item:nth-child(3) { left: 40%; top: 20%; width: 140px; height: 200px; }
+              .item:nth-child(3) { left: 40%; top: 20%; width: 140px; height: 200px; display: none; }
               .item:nth-child(4), .item:nth-child(5) { display: none; }
+              .view-btn{padding: 10px 25px; font-size: 12px;}
             }
           `}
         </style>

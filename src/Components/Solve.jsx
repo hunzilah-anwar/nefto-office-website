@@ -13,7 +13,7 @@ const Solve = () => {
 
       {/* Main Container */}
       <div 
-        className="bg-[#f2f5f7] rounded-[40px] p-8 md:p-16 lg:p-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+        className="bg-light-450 rounded-[40px] p-8 md:p-16 lg:p-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         
@@ -21,7 +21,7 @@ const Solve = () => {
         <div className="w-full lg:w-1/2 flex flex-col items-start">
           <p 
             className="uppercase tracking-[0.2em] text-[13px] font-bold mb-6"
-            style={{ color: '#CB8104' }}
+            style={{ color: '#044e50' }}
           >
             • ABOUT OUR WORK
           </p>
@@ -30,7 +30,7 @@ const Solve = () => {
             className="font-bold leading-[1.2] mb-8"
             style={{ 
               fontSize: 'clamp(32px, 5vw, 60px)', 
-              color: '#00419B' 
+              color: '#044e50' 
             }}
           >
             We solve real{' '}
@@ -44,7 +44,7 @@ const Solve = () => {
               >
                 <path
                   d="M2 7.5 C 20 2.5, 50 9.5, 98 4.5"
-                  stroke="#CB8104"
+                  stroke="#7ae2cf"
                   strokeWidth="4"
                   fill="none"
                   strokeLinecap="round"
@@ -68,10 +68,10 @@ const Solve = () => {
           <Link 
             to={'/about'}
             className="flex items-center gap-3 font-bold group transition-all"
-            style={{ color: '#00419B' }}
+            style={{ color: '#044e50' }}
           >
             <span className="text-lg">Learn more about us</span>
-            <span className="bg-[#00419B] text-white p-2 rounded-full transition-all duration-300 group-hover:bg-[#CB8104] group-hover:translate-x-1 group-hover:-translate-y-1">
+            <span className="bg-primary text-white p-2 rounded-full transition-all duration-300 group-hover:bg-accent group-hover:translate-x-1 group-hover:-translate-y-1">
               <FiArrowUpRight size={20} />
             </span>
           </Link>
@@ -79,8 +79,8 @@ const Solve = () => {
 
         {/* Right Side: Image with Floating Badge */}
         <div className="w-full lg:w-1/2 relative">
-          <div className="rounded-[30px] overflow-hidden shadow-xl bg-[#000000] border-4 border-white">
-            <img 
+          <div className="rounded-[30px] overflow-hidden shadow-xl bg-black border-4 border-white">
+            <img loading="lazy" 
               src={GrowYourBusiness}
               alt="Grow Your Business" 
               className="w-full h-auto object-contain min-h-87.5"
@@ -91,9 +91,9 @@ const Solve = () => {
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 lg:left-0 lg:-translate-x-5 bg-white py-4 px-8 rounded-2xl shadow-2xl border border-gray-100">
             <p 
               className="font-bold text-lg whitespace-nowrap"
-              style={{ color: '#00419B' }}
+              style={{ color: '#044e50' }}
             >
-              50+ <span style={{ color: '#CB8104' }}>Projects</span> Delivered
+              50+ <span style={{ color: '#7ae2cf' }}>Projects</span> Delivered
             </p>
           </div>
         </div>

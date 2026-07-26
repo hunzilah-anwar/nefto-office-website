@@ -16,7 +16,7 @@ const InteractiveCTA = () => {
   };
 
   return (
-    <section className="relative w-full bg-[#0d1017] py-24 px-4 flex flex-col items-center justify-center text-center font-sans overflow-hidden">
+    <section className="relative w-full bg-dark-700 py-24 px-4 flex flex-col items-center justify-center text-center font-sans overflow-hidden">
       {/* Liquid Background */}
       <div style={styles.absBg}>
         <Liquid
@@ -40,7 +40,7 @@ const InteractiveCTA = () => {
       <div className="relative z-10 flex flex-col items-center">
         {/* Top Label */}
         <div className="mb-6">
-          <p className="text-gray-500 text-xs font-bold tracking-[0.2em] uppercase">
+          <p className="text-gray-300 text-xs font-bold tracking-[0.2em] uppercase">
             Ready to build something?
           </p>
         </div>
@@ -49,13 +49,13 @@ const InteractiveCTA = () => {
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
           Let's create <br className="hidden md:block" />
           something <br className="hidden md:block" />
-          <span className="bg-linear-to-r from-[#b06f03] to-[#00419B] bg-clip-text text-transparent">
+          <span className="bg-(image:--grad-hero) bg-clip-text text-transparent">
             extraordinary
           </span>
         </h1>
 
         {/* Subtext Paragraph */}
-        <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="text-gray-300 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
           Got a project in mind? We're always excited to collaborate with
           ambitious brands and people.
         </p>
@@ -65,7 +65,7 @@ const InteractiveCTA = () => {
           to={"/contact"}
           className="
             group 
-            bg-[linear-gradient(90deg,#00419B_50%,#CB8104_50%)] 
+            bg-(image:--grad-hero)
             bg-size-[200%_100%] 
             bg-right 
             hover:bg-left 

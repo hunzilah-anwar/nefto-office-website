@@ -42,7 +42,7 @@ const Faqs = () => {
   };
 
   return (
-    <section className="w-full py-16 lg:py-24 px-4 md:px-10 lg:px-20 bg-[#f8fafc]">
+    <section className="w-full py-16 lg:py-24 px-4 md:px-10 lg:px-20 bg-light-200">
       {/* Google Font Import */}
       <style>
         {`@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');`}
@@ -54,7 +54,7 @@ const Faqs = () => {
         <div className="mb-16">
           <p 
             className="uppercase tracking-[0.2em] text-[13px] font-bold mb-4"
-            style={{ color: '#CB8104' }}
+            style={{ color: '#044e50' }}
           >
             • FAQ
           </p>
@@ -63,7 +63,7 @@ const Faqs = () => {
             className="font-bold leading-[1.1]"
             style={{ 
               fontSize: 'clamp(40px, 5vw, 60px)', 
-              color: '#00419B' 
+              color: '#044e50' 
             }}
           >
             Frequently <br className="hidden md:block" /> Asked Questions
@@ -79,11 +79,11 @@ const Faqs = () => {
             >
               <button
                 onClick={() => toggleFaq(faq.id)}
-                className="w-full flex justify-between items-center text-left group"
+                className="w-full flex justify-between cursor-pointer items-center text-left group"
               >
                 <span 
                   className="text-xl lg:text-2xl font-bold transition-colors duration-300"
-                  style={{ color: openId === faq.id ? '#CB8104' : '#00419B' }}
+                  style={{ color: openId === faq.id ? '#18c6c9' : '#044e50' }}
                 >
                   {faq.question}
                 </span>
@@ -92,8 +92,8 @@ const Faqs = () => {
                 <div 
                   className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 ml-4 transition-all duration-300"
                   style={{ 
-                    backgroundColor: openId === faq.id ? '#00419B' : '#f1f5f9',
-                    color: openId === faq.id ? '#fff' : '#000'
+                    backgroundColor: openId === faq.id ? '#18c6c9' : '#044e50',
+                    color: '#fff'
                   }}
                 >
                   {openId === faq.id ? (

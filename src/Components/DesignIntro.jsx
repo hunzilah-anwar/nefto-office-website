@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import NEFTO from '../assets/images/NEFTO.png'
+import NEFTO from '../assets/images/NEFTO.jpeg'
 
 const DesignIntro = () => {
   return (
-    <section className="w-full bg-[#f9f9f9] py-20 px-6 font-['Outfit'] flex items-center justify-center">
+    <section className="w-full bg-light-150 py-20 px-6 font-['Outfit'] flex items-center justify-center">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* --- Left Side: Text Content --- */}
         <div className="space-y-8 md:pr-10">
           {/* Main Headline */}
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-[#0f151c] leading-[1.1] tracking-tight md:ml-5">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-dark-400 leading-[1.1] tracking-tight md:ml-5">
             We design digital products <br />
             built to grow
           </h2>
@@ -26,7 +26,7 @@ const DesignIntro = () => {
             to={"/contact"}
               className="
     group 
-    bg-[linear-gradient(90deg,#00419B_50%,#CB8104_50%)]
+    bg-(image:--grad-hero)
     bg-size-[200%_100%] 
     bg-right 
     hover:bg-left 
@@ -51,10 +51,9 @@ const DesignIntro = () => {
           </div>
         </div>
 
-        {/* --- Right Side: Black Card (Bitzonic Logo) --- */}
+        {/* --- Right Side: Black Card (NEFFTO Logo) --- */}
         <div className="w-full h-87.5 md:h-112.5 bg-black rounded-[2.5rem] flex items-center justify-center shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-gray-800 to-black opacity-50 rounded-[2.5rem]"></div>
-          <img src={NEFTO} alt="" className="w-full h-full object-cover" />
+          <img loading="lazy" src={NEFTO} alt="" className="w-full h-full object-cover" />
         </div>
       </div>
     </section>

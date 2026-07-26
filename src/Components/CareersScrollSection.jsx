@@ -52,7 +52,7 @@ const CareersScrollSection = () => {
           className="relative h-full bg-black z-20 shadow-2xl"
           style={{ width: "100%" }}
         >
-          <img
+          <img loading="lazy"
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
             alt="Team working"
             className="absolute inset-0 w-full h-full object-cover"
@@ -69,7 +69,7 @@ const CareersScrollSection = () => {
           }}
         >
           <div className="max-w-xl">
-            <p className="text-[#b06f03] text-sm font-bold tracking-widest uppercase mb-6">
+            <p className="text-accent-dark text-sm font-bold tracking-widest uppercase mb-6">
               Latest Opportunities
             </p>
 
@@ -86,7 +86,7 @@ const CareersScrollSection = () => {
               className="inline-flex items-center gap-4 text-white font-bold group"
             >
               <span className="text-xl">Join us</span>
-              <span className="bg-[#b06f03] p-3 transition-transform duration-300 group-hover:translate-x-2">
+              <span className="bg-accent-dark p-3 transition-transform duration-300 group-hover:translate-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

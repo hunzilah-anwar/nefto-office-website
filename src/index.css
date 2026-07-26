@@ -1,1 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  /* Primary Brand - Green/Teal */
+  --color-primary: #077a7d;
+  --color-primary-dark: #056467;
+  --color-primary-deep: #044e50;
+  --color-primary-light: #0a969a;
+  --color-primary-soft: #2cb3b5;
+
+  /* Secondary Brand - Mint */
+  --color-accent: #7ae2cf;
+  --color-accent-dark: #5fd2be;
+  --color-accent-medium: #91e8d8;
+  --color-accent-light: #b8f1e7;
+  --color-accent-soft: #d8f8f2;
+
+  /* Dark Shades */
+  --color-dark-50: #31444b;
+  --color-dark-100: #24363d;
+  --color-dark-200: #1a2d34;
+  --color-dark-300: #10252d;
+  --color-dark-400: #0b222b;
+  --color-dark-500: #06202b;
+  --color-dark-600: #041821;
+  --color-dark-700: #020f14;
+
+  /* Light / Cream Shades */
+  --color-light-50: #fffcf8;
+  --color-light-100: #fcf7f0;
+  --color-light-150: #faf3ea;
+  --color-light-200: #f5eedd;
+  --color-light-300: #efe5d2;
+  --color-light-400: #e8dcc7;
+  --color-light-500: #dfd0b5;
+  --color-light-600: #d3c2a5;
+  --color-light-700: #c4b08f;
+  --color-light-800: #b69d78;
+
+  /* Extra Accent Shades */
+  --color-teal-bright: #18c6c9;
+  --color-teal-soft: #56d9d4;
+  --color-mint-bright: #a7f2e4;
+  --color-cream-warm: #fff8ed;
+}
+
+:root {
+  /* =========================================
+     CUSTOM COLORS (New Theme)
+     ========================================= */
+
+  /* Mint / Teal */
+  --color-mint-bright: #a7f2e4;
+  --color-mint-soft: #d8f8f2;
+  --color-teal-light: #2cb3b5;
+  --color-teal: #077a7d;
+  --color-teal-dark: #056467;
+  --color-teal-deep: #044e50;
+
+  /* Cream */
+  --color-cream: #f5eedd;
+  --color-cream-light: #fffcf8;
+  --color-cream-dark: #dfd0b5;
+
+  /* Accent */
+  --color-seafoam: #7ae2cf;
+  --color-seafoam-light: #b8f1e7;
+  --color-seafoam-dark: #5fd2be;
+
+  /* Neutral */
+  --color-black-pure: #020f14;
+  --color-dark: #06202b;
+  --color-gray-dark: #24363d;
+  --color-gray-medium: #31444b;
+
+  /* =========================================
+     CUSTOM GRADIENTS
+     ========================================= */
+
+  /* Main Brand Gradient */
+  --grad-primary: linear-gradient(90deg, #077a7d 0%, #2cb3b5 40%, #7ae2cf 100%);
+
+  /* Hero Gradient */
+  --grad-hero: linear-gradient(to right, #044e50, #077a7d, #2cb3b5, #7ae2cf);
+
+  /* Soft Mint Background */
+  --grad-soft: linear-gradient(to right, #f5eedd, #d8f8f2, #b8f1e7);
+
+  /* CTA Split */
+  --grad-split: linear-gradient(90deg, #06202b 50%, #077a7d 50%);
+
+  /* Dark Overlay */
+  --grad-dark-fade: linear-gradient(
+    to right,
+    rgba(6, 32, 43, 0.85),
+    rgba(6, 32, 43, 0)
+  );
+}

@@ -34,7 +34,9 @@ const ContactSection = ({ activeTab, locationRef }) => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('/contact.php', {
+      // TODO: Jab aap backend deploy kar lein, toh niche wali URL replace karein
+      const BACKEND_URL = 'https://neffto-solution-backend.vercel.app';
+      const response = await fetch(`${BACKEND_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,9 +63,9 @@ const ContactSection = ({ activeTab, locationRef }) => {
           newsletter: false,
           events: false,
         });
-        setTimeout(() => setStatus({ type: '', message: '' }), 5000);
+        setTimeout(() => setStatus({ type: '', message: '' }), 2000);
       } else {
-        setStatus({ type: 'error', message: result.message || 'There was a problem sending your message. If you are testing locally, PHP might not be supported.' });
+        setStatus({ type: 'error', message: result.message || 'There was a problem sending your message.' });
       }
     } catch (error) {
       console.error('Error:', error);
@@ -75,7 +77,7 @@ const ContactSection = ({ activeTab, locationRef }) => {
 
   const subjectOptions = [
     'Your project',
-    'Careers at Neftio',
+    'Careers at Neffto',
     'Event opportunities',
     'Something else',
   ];
@@ -113,28 +115,46 @@ const ContactSection = ({ activeTab, locationRef }) => {
                   exit={{ opacity: 0, x: -20 }}
                   className="space-y-10"
                 >
-                  <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-extrabold text-[#00419B] mb-4">
+                  <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
                     Let's collaborate
                   </motion.h2>
                   <motion.p variants={itemVariants} className="mb-12 text-gray-600 text-lg md:text-xl">
                     We'd be happy to chat through your challenge over a virtual coffee - fill in our form and let's find a time.
                   </motion.p>
                   
-                  {status.message && (
+                  {status.message ? (
                     <motion.div 
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className={`p-4 rounded-lg font-bold ${status.type === 'success' ? 'bg-green-100 text-green-700 border-2 border-green-200' : 'bg-red-100 text-red-700 border-2 border-red-200'}`}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      className={`flex flex-col items-center justify-center p-12 rounded-4xl text-center shadow-xl border-2 ${
+                        status.type === 'success' 
+                          ? 'bg-green-50 border-green-200' 
+                          : 'bg-red-50 border-red-200'
+                      }`}
                     >
-                      {status.message}
+                      <div className={`w-20 h-20 mb-6 rounded-full flex items-center justify-center ${
+                        status.type === 'success' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
+                      }`}>
+                        {status.type === 'success' ? (
+                          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
+                        ) : (
+                          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        )}
+                      </div>
+                      <h3 className={`text-3xl font-extrabold mb-4 ${status.type === 'success' ? 'text-green-700' : 'text-red-700'}`}>
+                        {status.type === 'success' ? 'Message Sent!' : 'Oops, Error!'}
+                      </h3>
+                      <p className={`text-lg font-medium ${status.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                        {status.message}
+                      </p>
                     </motion.div>
-                  )}
-
-                  <form onSubmit={handleSubmit} className="space-y-10">
+                  ) : (
+                  <form onSubmit={handleSubmit} className={`space-y-10 ${isSubmitting ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''}`}>
                     {/* Message Subject */}
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-bold text-[#00419B] mb-4 uppercase tracking-widest">
-                        Message subject <span className="text-[#CB8104]">*</span>
+                      <label className="block text-sm font-bold text-primary mb-4 uppercase tracking-widest">
+                        Message subject <span className="text-accent">*</span>
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {subjectOptions.map((option) => (
@@ -146,8 +166,8 @@ const ContactSection = ({ activeTab, locationRef }) => {
                             onClick={() => handleSubjectChange(option)}
                             className={`w-full px-6 py-4 rounded-full border-2 font-bold text-center transition-all duration-300 cursor-pointer ${
                               formData.subject === option
-                                ? 'bg-[#00419B] text-white border-[#00419B] shadow-xl'
-                                : 'bg-white text-gray-500 border-gray-100 hover:border-[#CB8104] hover:text-[#CB8104]'
+                                ? 'bg-primary text-white border-primary shadow-xl'
+                                : 'bg-white text-gray-500 border-gray-100 hover:border-accent hover:text-accent'
                             }`}
                           >
                             {option}
@@ -158,7 +178,7 @@ const ContactSection = ({ activeTab, locationRef }) => {
 
                     {/* Full Name */}
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-bold text-[#00419B] mb-1">Full name *</label>
+                      <label className="block text-sm font-bold text-primary mb-1">Full name *</label>
                       <p className="text-xs text-gray-400 mb-2">So we know how to address you</p>
                       <input
                         type="text"
@@ -167,13 +187,13 @@ const ContactSection = ({ activeTab, locationRef }) => {
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="Enter Your Name"
-                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-[#CB8104] outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
+                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-accent outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
                       />
                     </motion.div>
 
                     {/* Email */}
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-bold text-[#00419B] mb-1">Company email address *</label>
+                      <label className="block text-sm font-bold text-primary mb-1">Company email address *</label>
                       <p className="text-xs text-gray-400 mb-2">So we can write back to you</p>
                       <input
                         type="email"
@@ -182,13 +202,13 @@ const ContactSection = ({ activeTab, locationRef }) => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="name@neffto.com"
-                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-[#CB8104] outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
+                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-accent outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
                       />
                     </motion.div>
 
                     {/* Phone */}
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-bold text-[#00419B] mb-1">Phone number (optional)</label>
+                      <label className="block text-sm font-bold text-primary mb-1">Phone number (optional)</label>
                       <p className="text-xs text-gray-400 mb-2">If you'd like a call back</p>
                       <input
                         type="tel"
@@ -196,13 +216,13 @@ const ContactSection = ({ activeTab, locationRef }) => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Enter Your Phone no"
-                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-[#CB8104] outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
+                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-accent outline-none transition-all text-xl placeholder:text-gray-400 font-medium"
                       />
                     </motion.div>
 
                     {/* Message */}
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-bold text-[#00419B] mb-1">Your message *</label>
+                      <label className="block text-sm font-bold text-primary mb-1">Your message *</label>
                       <p className="text-xs text-gray-400 mb-2">Describing your challenge in detail</p>
                       <textarea
                         name="message"
@@ -211,13 +231,13 @@ const ContactSection = ({ activeTab, locationRef }) => {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Tell us more about your goals..."
-                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-[#CB8104] outline-none transition-all text-xl placeholder:text-gray-400 font-medium resize-none"
+                        className="w-full px-0 py-4 bg-transparent border-b-2 border-gray-200 focus:border-accent outline-none transition-all text-xl placeholder:text-gray-400 font-medium resize-none"
                       ></textarea>
                     </motion.div>
 
                     {/* Checkboxes */}
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-bold text-[#00419B] mb-4">Receive our updates</label>
+                      <label className="block text-sm font-bold text-primary mb-4">Receive our updates</label>
                       <div className="flex flex-col gap-4">
                         <label className="flex items-center space-x-3 cursor-pointer group">
                           <input
@@ -225,9 +245,9 @@ const ContactSection = ({ activeTab, locationRef }) => {
                             name="newsletter"
                             checked={formData.newsletter}
                             onChange={handleChange}
-                            className="w-6 h-6 border-2 border-gray-300 rounded accent-[#00419B] cursor-pointer"
+                            className="w-6 h-6 border-2 border-gray-300 rounded accent-primary cursor-pointer"
                           />
-                          <span className="text-gray-600 font-medium group-hover:text-[#00419B] transition-colors">Quarterly digital news and insights</span>
+                          <span className="text-gray-600 font-medium group-hover:text-primary transition-colors">Quarterly digital news and insights</span>
                         </label>
                         <label className="flex items-center space-x-3 cursor-pointer group">
                           <input
@@ -235,18 +255,18 @@ const ContactSection = ({ activeTab, locationRef }) => {
                             name="events"
                             checked={formData.events}
                             onChange={handleChange}
-                            className="w-6 h-6 border-2 border-gray-300 rounded accent-[#00419B] cursor-pointer"
+                            className="w-6 h-6 border-2 border-gray-300 rounded accent-primary cursor-pointer"
                           />
-                          <span className="text-gray-600 font-medium group-hover:text-[#00419B] transition-colors">Exclusive event invitations</span>
+                          <span className="text-gray-600 font-medium group-hover:text-primary transition-colors">Exclusive event invitations</span>
                         </label>
                       </div>
                     </motion.div>
 
                     {/* Disclaimer */}
                     <motion.div variants={itemVariants} className="text-xs text-gray-400 space-y-3 border-t border-gray-100 pt-8 mt-10">
-                      <h4 className="font-bold text-[#00419B] uppercase tracking-widest">Data Protection</h4>
+                      <h4 className="font-bold text-primary uppercase tracking-widest">Data Protection</h4>
                       <p className="leading-relaxed">
-                        I understand that Neffto can contact me to promote their goods and services. I also understand I can unsubscribe at any time by emailing <a href="mailto:nefftosolution@gmail.com" className="text-[#CB8104] underline font-bold">nefftosolution@gmail.com</a>.
+                        I understand that Neffto can contact me to promote their goods and services. I also understand I can unsubscribe at any time by emailing <a href="mailto:info@nefftosolution.com" className="text-accent underline font-bold">info@nefftosolution.com</a>.
                       </p>
                     </motion.div>
 
@@ -257,13 +277,14 @@ const ContactSection = ({ activeTab, locationRef }) => {
                         whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
                         type="submit"
                         disabled={isSubmitting}
-                        className={`group/submit relative overflow-hidden text-white font-bold py-4 px-12 rounded-full transition-all duration-300 shadow-xl uppercase tracking-widest text-sm ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#00419B] cursor-pointer'}`}
+                        className={`group/submit relative overflow-hidden text-white font-bold py-4 px-12 rounded-full transition-all duration-300 shadow-xl uppercase tracking-widest text-sm ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-primary cursor-pointer'}`}
                       >
-                        {!isSubmitting && <span className="absolute inset-0 w-0 bg-[#CB8104] transition-all duration-300 group-hover/submit:w-full"></span>}
+                        {!isSubmitting && <span className="absolute inset-0 w-0 bg-accent transition-all duration-300 group-hover/submit:w-full"></span>}
                         <span className="relative z-10">{isSubmitting ? 'Sending...' : 'Send your message'}</span>
                       </motion.button>
                     </motion.div>
                   </form>
+                  )}
                 </motion.div>
               ) : (
                 /* --- TAB 2: OUR LOCATION --- */
@@ -275,7 +296,7 @@ const ContactSection = ({ activeTab, locationRef }) => {
                   exit={{ opacity: 0, x: -20 }}
                   className="space-y-12"
                 >
-                  <h2 className="text-4xl md:text-5xl font-extrabold text-[#00419B]">Visit our studio</h2>
+                  <h2 className="text-4xl md:text-5xl font-extrabold text-primary">Visit our studio</h2>
                   <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
                     Located in the heart of London, our office is where creativity meets technology. Drop by for a cup of coffee and a chat.
                   </p>
@@ -288,16 +309,16 @@ const ContactSection = ({ activeTab, locationRef }) => {
                     ></iframe>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-l-4 border-[#CB8104] pl-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-l-4 border-accent pl-8">
                     <div>
-                      <h4 className="font-bold text-[#00419B] uppercase tracking-widest text-sm mb-2">Office Address</h4>
+                      <h4 className="font-bold text-primary uppercase tracking-widest text-sm mb-2">Office Address</h4>
                       <address className="not-italic text-lg text-gray-600">
                         Kensington Village, London <br />
                         W14 8TS, United Kingdom
                       </address>
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#00419B] uppercase tracking-widest text-sm mb-2">Working Hours</h4>
+                      <h4 className="font-bold text-primary uppercase tracking-widest text-sm mb-2">Working Hours</h4>
                       <p className="text-lg text-gray-600">
                         Mon — Fri: 9:00 AM - 6:00 PM <br />
                         Sat — Sun: Closed
@@ -317,14 +338,14 @@ const ContactSection = ({ activeTab, locationRef }) => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-1"
           >
-            <div className="bg-[#00419B]/5 rounded-[3rem] p-10 border border-[#00419B]/10 sticky top-28">
-              <h2 className="text-2xl font-extrabold text-[#00419B] mb-8 uppercase tracking-tight">Direct Contact</h2>
+            <div className="bg-primary/5 rounded-[3rem] p-10 border border-primary/10 sticky top-28">
+              <h2 className="text-2xl font-extrabold text-primary mb-8 uppercase tracking-tight">Direct Contact</h2>
               
               <div className="space-y-10">
                 <div className="group cursor-pointer">
-                  <h3 className="font-bold text-[#CB8104] uppercase text-xs tracking-widest mb-2">Call us</h3>
-                  <p className="text-2xl font-bold text-[#00419B] group-hover:text-[#CB8104] transition-colors">+92 307 3495496</p>
-                  <p className="text-2xl font-bold text-[#00419B] group-hover:text-[#CB8104] transition-colors">+92 328 7799060</p>
+                  <h3 className="font-bold text-accent uppercase text-xs tracking-widest mb-2">Call us</h3>
+                  <p className="text-2xl font-bold text-primary group-hover:text-accent transition-colors">+92 307 3495496</p>
+                  <p className="text-2xl font-bold text-primary group-hover:text-accent transition-colors">+92 328 7799060</p>
                   <ul className="mt-3 space-y-1 text-sm text-gray-400 font-medium">
                     <li>1 • New Business Inquiry</li>
                     <li>2 • Technical Support</li>
@@ -332,24 +353,24 @@ const ContactSection = ({ activeTab, locationRef }) => {
                 </div>
 
                 <div className="group cursor-pointer">
-                  <h3 className="font-bold text-[#CB8104] uppercase text-xs tracking-widest mb-2">Email us</h3>
-                  <a href="mailto:nefftosolution@gmail.com" className="text-xl font-bold text-slate-700 border-b-2 border-[#CB8104]/30 group-hover:border-[#CB8104] transition-all">
-                    nefftosolution@gmail.com
+                  <h3 className="font-bold text-accent uppercase text-xs tracking-widest mb-2">Email us</h3>
+                  <a href="mailto:info@nefftosolution.com" className="text-xl font-bold text-slate-700 border-b-2 border-accent/30 group-hover:border-accent transition-all">
+                    info@nefftosolution.com
                   </a>
                 </div>
 
                 {/* Get Directions - ANIMATED */}
                 <div>
-                  <h3 className="font-bold text-[#CB8104] uppercase text-xs tracking-widest mb-4">Visit us</h3>
+                  <h3 className="font-bold text-accent uppercase text-xs tracking-widest mb-4">Visit us</h3>
                   <p className="text-gray-600 leading-relaxed mb-6 font-medium">
                     We are based in the heart of London, ready to scale your vision.
                   </p>
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group/dir relative w-full border-2 border-[#00419B] text-[#00419B] rounded-full py-3 font-bold overflow-hidden transition-all duration-300 hover:text-white cursor-pointer"
+                    className="group/dir relative w-full border-2 border-primary text-primary rounded-full py-3 font-bold overflow-hidden transition-all duration-300 hover:text-white cursor-pointer"
                   >
-                    <span className="absolute inset-0 w-0 bg-[#00419B] transition-all duration-300 group-hover/dir:w-full"></span>
+                    <span className="absolute inset-0 w-0 bg-primary transition-all duration-300 group-hover/dir:w-full"></span>
                     <span className="relative z-10">Get Directions</span>
                   </motion.button>
                 </div>
