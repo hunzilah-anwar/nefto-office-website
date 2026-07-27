@@ -63,7 +63,7 @@ const Team = () => {
                 TEAM.
               </span>
             </h1>
-            <p className="text-zinc-500 sm:text-xl text-sm font-light max-w-2xl mx-auto leading-relaxed italic">
+            <p className="text-zinc-200 sm:text-xl text-sm font-light max-w-2xl mx-auto leading-relaxed italic">
               "The innovators, creators, and dreamers architecting the digital
               backbone of the next century."
             </p>
