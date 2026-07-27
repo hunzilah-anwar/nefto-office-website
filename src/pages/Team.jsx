@@ -51,7 +51,8 @@ const Team = () => {
     <main className="bg-main-bg text-white selection:bg-surface selection:text-white pt-20">
       {/* SECTION 1 (ODD): HERO - #00042A */}
       <section className="relative sm:py-16 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff05_1px,transparent_1px)] bg-size-[40px_40px]" />
+        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
         <div className="max-w-7xl mx-auto w-full relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

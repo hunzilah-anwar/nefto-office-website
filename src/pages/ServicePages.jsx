@@ -155,7 +155,7 @@ const RoadmapSection = ({ roadmap }) => {
                 }`}
               >
                 <div className="lg:w-1/2 w-full">
-                  <div className="bg-white/5 w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-surface transition-all mx-px">
+                  <div className="bg-[#042558] w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-surface transition-all mx-px">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-[linear-gradient(90deg,#4a7fa7,#b4d0e6)] flex items-center justify-center">
                         {React.createElement(step.icon, {
@@ -164,7 +164,7 @@ const RoadmapSection = ({ roadmap }) => {
                         })}
                       </div>
                       <div>
-                        <span className="text-primary text-sm font-mono">
+                        <span className="text-secondary text-sm font-mono">
                           Step 0{idx + 1}
                         </span>
                         <h3 className="text-xl font-bold">{step.title}</h3>
@@ -344,7 +344,7 @@ const ServicePages = () => {
                     className={`text-left px-6 py-5 cursor-pointer border transition-all duration-300
                     ${
                       active === i
-                        ? "bg-linear-to-r from-[#4a7fa7] to-[#b4d0e6] text-white border-secondary"
+                        ? "bg-[#042558] text-white border-secondary"
                         : "bg-white/5 border-white/10 hover:border-secondary"
                     }
                     `}
@@ -366,7 +366,7 @@ const ServicePages = () => {
                     transition={{ duration: 0.4 }}
                     className="p-4 md:p-8 h-full"
                   >
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-primary">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white">
                       {tabs[active]?.content?.heading}
                     </h3>
                     <p className="text-zinc-400 mb-6 text-sm sm:text-base">
@@ -416,7 +416,7 @@ const ServicePages = () => {
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="p-8 bg-white/5 border border-white/10 backdrop-blur-md group hover:border-secondary transition-all"
+                  className="p-8 bg-[#042558] border border-white/10 backdrop-blur-md group hover:border-secondary transition-all"
                 >
                   {s.icon && (
                     <s.icon
@@ -430,7 +430,7 @@ const ServicePages = () => {
                   <h3 className="text-xl font-black uppercase tracking-tight mb-4 text-white">
                     {s.title}
                   </h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">
+                  <p className="text-zinc-300 text-sm leading-relaxed">
                     {s.desc}
                   </p>
                 </motion.div>

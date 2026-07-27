@@ -60,7 +60,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-1000 bg-white">
+    <header className="fixed top-0 left-0 w-full z-1000 bg-[#042558] border-b border-white/20">
       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         {/* LOGO */}
         <Link to="/" className="flex items-center">
@@ -78,7 +78,7 @@ const Header = () => {
                 className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
                   isActive
                     ? "text-primary"
-                    : "text-gray-700 hover:text-primary"
+                    : "text-white hover:text-primary"
                 }`}
               >
                 {link.name}
@@ -94,7 +94,7 @@ const Header = () => {
 
           {/* SERVICES MEGA MENU */}
           <div className="relative group">
-            <button className="flex items-center gap-1 px-5 py-2 text-[13px] font-bold uppercase tracking-wider text-gray-700 group-hover:text-primary transition-colors cursor-pointer">
+            <button className="flex items-center gap-1 px-5 py-2 text-[13px] font-bold uppercase tracking-wider text-white group-hover:text-primary transition-colors cursor-pointer">
               Services{" "}
               <ChevronDown
                 size={14}
@@ -134,7 +134,7 @@ const Header = () => {
                 className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
                   isActive
                     ? "text-primary"
-                    : "text-gray-700 hover:text-primary"
+                    : "text-white hover:text-primary"
                 }`}
               >
                 {link.name}

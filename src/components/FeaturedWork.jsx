@@ -53,7 +53,7 @@ const FeaturedWork = () => {
           filter: "blur(8px)",
         }}
       />
-      <div className="absolute inset-0 bg-black/60 z-0" />
+      <div className="absolute inset-0 bg-black/80 z-0" />
 
       {/* HEADER */}
       <div className="relative z-10 w-full max-w-6xl flex flex-col justify-between items-center gap-6 mb-20">

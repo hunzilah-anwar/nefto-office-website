@@ -94,7 +94,7 @@ const ProjectDetail = () => {
               {project.features.map((feature, i) => (
                 <div
                   key={i}
-                  className="p-6 bg-white/5 border border-white/10 hover:border-surface transition group"
+                  className="p-6 bg-[#042558] border border-white/10 hover:border-surface transition group"
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-primary text-xl">✓</span>
@@ -116,7 +116,7 @@ const ProjectDetail = () => {
               {project.tech.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-8 py-4 text-lg bg-white/10 text-white border border-white/20 hover:bg-primary transition"
+                  className="px-8 py-4 text-lg bg-[#042558] text-white border border-white/20 hover:bg-primary transition"
                 >
                   {tech}
                 </span>
@@ -135,7 +135,7 @@ const ProjectDetail = () => {
               {project.results.map((result, i) => (
                 <div
                   key={i}
-                  className="p-6 bg-linear-to-br from-[#5878a0] to-transparent border border-surface/10 text-center"
+                  className="p-6 bg-[#042558] border border-surface/10 text-center"
                 >
                   <div className="text-primary text-3xl mb-2">✓</div>
                   <p className="text-gray-200 font-medium">{result}</p>
@@ -172,7 +172,7 @@ const ProjectDetail = () => {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 highlight transition">
+                      <h3 className="text-xl font-bold mb-2 text-white transition">
                         {p.title}
                       </h3>
                       <p className="text-gray-400 text-sm mb-4">

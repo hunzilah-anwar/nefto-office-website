@@ -163,7 +163,9 @@ const PremiumCard = ({ data }) => {
 // --- MAIN LAYOUT ---
 const TeamGrid = () => {
   return (
-    <div className="relative bg-surface py-16 md:py-24 px-4 md:px-10 overflow-hidden">
+    <div className="relative bg-main-bg py-16 md:py-24 px-4 md:px-10 overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-250 h-250 bg-[#042558] blur-[140px]" />
       <div className="relative max-w-350 mx-auto z-10">
         {/* Header */}
         <div className="text-center mb-20">

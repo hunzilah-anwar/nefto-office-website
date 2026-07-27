@@ -10,12 +10,11 @@ const FAQ = ({ faqs }) => {
   };
 
   return (
-    <section className="w-full sm:py-16 py-10 sm:px-6 px-2 bg-main-bg">
-      <div className="max-w-6xl mx-auto sm:px-6 px-2">
-        
+    <section className="w-full sm:py-16 py-10 sm:px-6 px-2 bg-main-bg relative overflow-hidden">
+      <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+      <div className="max-w-6xl mx-auto sm:px-6 px-2 z-10 relative">
         {/* ===== Heading ===== */}
         <div className="text-center sm:mb-14 mb-8">
-
           <h2 className="mt-5 text-2xl md:text-4xl font-black text-white">
             Frequently <span className="text-primary">Asked Questions</span>
           </h2>
@@ -31,10 +30,7 @@ const FAQ = ({ faqs }) => {
             const isOpen = activeIndex === index;
 
             return (
-              <div
-                key={index}
-                className="border-b border-white/10"
-              >
+              <div key={index} className="border-b border-white/10">
                 {/* Question */}
                 <button
                   onClick={() => toggleFAQ(index)}

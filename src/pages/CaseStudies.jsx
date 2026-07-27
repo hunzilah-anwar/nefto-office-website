@@ -42,6 +42,8 @@ const CaseStudies = () => {
     <main className="selection:bg-surface selection:text-white">
       {/* SECTION 1: HERO (ODD - #00042A) */}
       <section className="relative sm:pt-40 pt-30 sm:pb-20 pb-10 sm:px-6 px-4 bg-main-bg text-white flex items-center overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
         <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
           {/* ================= LEFT CONTENT ================= */}
           <div className="space-y-4">
@@ -141,9 +143,11 @@ const CaseStudies = () => {
         </div>
       </section>
       {/* SECTION 3: SERVICE CARDS (ODD - #00042A) */}
-      <section className="bg-main-bg text-white sm:pt-16 pt-8 sm:pb-24 pb-14 sm:px-6 px-4">
+      <section className="bg-main-bg text-white sm:pt-16 pt-8 sm:pb-24 pb-14 sm:px-6 px-4 relative overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-300 h-300 bg-[#042558] blur-[140px]" />
         {/* Sticky Filter */}
-        <div className="border-b border-white/10">
+        <div className="relative z-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto sm:py-6 py-4 flex flex-col justify-between md:gap-10 gap-6">
             <div className="flex items-center gap-3 text-white">
               <span className="sm:text-4xl text-xl uppercase font-bold tracking-widest">

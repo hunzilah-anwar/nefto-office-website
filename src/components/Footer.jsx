@@ -11,6 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="relative w-full bg-main-bg pb-10 overflow-hidden">
+        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
       {/* ================= MARQUEE ================= */}
       <div className="relative border-y border-white/5 py-4 md:py-6 mb-10 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">

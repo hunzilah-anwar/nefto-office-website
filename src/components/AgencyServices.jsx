@@ -89,17 +89,10 @@ const AgencyServices = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="relative group overflow-hidden p-10 
-              bg-white/5 backdrop-blur-2xl 
+              bg-[#042558]
               border border-white/10 
-              shadow-[0_10px_40px_rgba(0,0,0,0.25)]
               hover:scale-[1.02] hover:border-white/20 
               transition-all duration-500 cursor-pointer"
-                style={{
-                  background: `
-                  radial-gradient(circle at 20% 20%, #0A131725 0%, transparent 60%),
-                  rgba(255,255,255,0.04)
-                `,
-                }}
               >
                 {/* Glow effect */}
                 <div

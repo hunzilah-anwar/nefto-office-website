@@ -40,8 +40,8 @@ const PartnerSection = () => {
     <section className="relative w-full bg-main-bg sm:pt-16 pt-10 sm:px-6 px-4 overflow-hidden">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-200 h-200 rounded-full bg-main-bg/20 blur-[160px] opacity-50" />
-        <div className="absolute bottom-[-10%] right-[-5%] w-150 h-150 rounded-full bg-main-bg/20 blur-[140px] opacity-40" />
+        <div className="absolute top-[-20%] left-[-10%] w-200 h-200 rounded-full bg-[#042558] blur-[160px]" />
+        <div className="absolute bottom-[-10%] right-[-5%] w-150 h-150 rounded-full bg-[#042558] blur-[140px]" />
       </div>
 
       {/* HEADER */}

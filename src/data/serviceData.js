@@ -54,7 +54,7 @@ export const servicesData = [
   // 1. Web Development
   {
     slug: "web-development",
-    title: "Web Development (Coding)",
+    title: "Web Development",
     desc: "Modern responsive websites built for performance and growth.",
     icon: Laptop,
     heroImage:
