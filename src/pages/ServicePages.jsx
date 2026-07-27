@@ -590,7 +590,7 @@ const ServicePages = () => {
               <div className="flex flex-wrap gap-4 text-xs text-white/60">
                 <span>{selectedPost.views || "1.2k"} views</span>
                 <span>{selectedPost.readTime} min read</span>
-                <span>Author: {selectedPost.author || "WBN Agency"}</span>
+                <span>Author: {selectedPost.author || "NEFFTO"}</span>
               </div>
               <p className="text-white/70 leading-relaxed text-sm md:text-base">
                 {selectedPost.description}

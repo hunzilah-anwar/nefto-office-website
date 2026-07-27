@@ -87,7 +87,7 @@ const AgencyServices = () => {
             whileInView={{ opacity: 1, x: 0 }}
             className="text-[12px] font-black uppercase tracking-[0.4em] text-secondery"
           >
-            Why WBN Agency?
+            Why NEFFTO?
           </motion.span>
 
           <h2 className="text-3xl md:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase">
@@ -97,7 +97,7 @@ const AgencyServices = () => {
 
           <div className="space-y-6 max-w-md text-white/80">
             <p className="sm:text-[14px] text-[11px]">
-              At WBN Agency, we provide complete digital solutions including web
+              At NEFFTO, we provide complete digital solutions including web
               development, e-commerce, digital marketing, AI solutions,
               branding, creative design, and content production — all focused on
               helping businesses grow faster in the digital world.

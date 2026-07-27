@@ -183,7 +183,7 @@ const Home = () => {
         <div className="relative max-w-7xl mx-auto sm:px-6 px-4">
           <div className="">
             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondery">
-              WBN Agency Performance
+              NEFFTO Performance
             </p>
 
             <h2 className="text-2xl md:text-4xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-6">
@@ -192,7 +192,7 @@ const Home = () => {
             </h2>
 
             <p className="text-gray-300 text-sm leading-relaxed mb-12">
-              WBN Agency is a results-driven digital agency dedicated to helping
+              NEFFTO is a results-driven digital agency dedicated to helping
               businesses build a strong online presence through innovative
               technology, creative strategies, and high-performance digital
               solutions. We specialize in web development, e-commerce solutions,
@@ -202,7 +202,7 @@ const Home = () => {
               visually engaging, scalable, and conversion-focused solutions that
               not only enhance brand identity but also improve customer
               experience, generate leads, and drive long-term business growth.
-              From startups to established companies, WBN Agency combines
+              From startups to established companies, NEFFTO combines
               creativity, strategy, and advanced technologies to transform ideas
               into impactful digital experiences with measurable success and
               outstanding client satisfaction.
@@ -270,7 +270,7 @@ const Home = () => {
               <div className="relative overflow-hidden border border-white/10">
                 <img
                   src={PerformanceImg}
-                  alt="WBN Agency Success"
+                  alt="NEFFTO Success"
                   className="w-full h-120 object-cover"
                 />
 

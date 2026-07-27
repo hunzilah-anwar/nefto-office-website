@@ -12,7 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import GlowButton from "./GlowButton";
-import logo from "../assets/WBN Agency.png";
+const logo = "/logo.svg";
 import { servicesData } from "../data/serviceData";
 
 const Header = () => {

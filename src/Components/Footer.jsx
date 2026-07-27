@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { servicesData } from "../data/serviceData";
-import logo from "../assets/footer-logo.png";
+const logo = "/logo-darkmode.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -138,7 +138,7 @@ const Footer = () => {
           <p className="text-center text-xs sm:text-sm text-white">
             &copy; {currentYear}{" "}
             <Link to={"/"} className="text-secondery underline">
-              WBN Agency
+              NEFFTO
             </Link>
             . All rights reserved.
           </p>

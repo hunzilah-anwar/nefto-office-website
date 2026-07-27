@@ -1,7 +1,7 @@
 // components/Loader.jsx - Enhanced Version
 import React from "react";
 import { motion } from "framer-motion";
-import Logo from "../assets/WBN Agency.png"
+const Logo = "/logo.svg";
 const Loader = () => {
   return (
     <div className="fixed inset-0 bg-linear-to-br from-secondary-dark to-main-bg flex items-center justify-center z-999999">
@@ -22,7 +22,7 @@ const Loader = () => {
             className="absolute inset-0 bg-cyan-500 rounded-full blur-xl opacity-50"
           />
           <div className="relative w-24 h-24 bg-white rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-2xl">
-            <img src={Logo} alt="WBN Agency" />
+            <img src={Logo} alt="NEFFTO" />
           </div>
         </motion.div>
 
