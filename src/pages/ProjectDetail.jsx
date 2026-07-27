@@ -22,7 +22,7 @@ const ProjectDetail = () => {
         <h1 className="text-4xl font-bold">Project Not Found</h1>
         <Link
           to={`/services/${slug}`}
-          className="text-cyan-400 hover:underline"
+          className="text-secondery hover:underline"
         >
           Back to {service?.title || "Service"}
         </Link>
@@ -47,21 +47,22 @@ const ProjectDetail = () => {
         <div className="relative py-20">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex flex-col items-start gap-3 mb-4">
-                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded-full">
-                  Project
-                </span>
-                <span className="text-cyan-400 uppercase tracking-[5px] text-xs font-semibold">
-                  {service.title}
-                </span>
-              </div>
+              <span className="text-secondery uppercase tracking-[4px] text-sm font-bold">
+                {service.title}
+              </span>
               <h1 className="md:text-5xl sm:text-3xl text-xl font-black sm:mb-6 mb-2 leading-tight">
                 {project.title}
               </h1>
               <p className="text-gray-300 sm:text-lg text-sm leading-relaxed mb-8">
                 {project.desc}
               </p>
-              <GlowButton to={"/contact"} name={"Get This Service"} />
+              <GlowButton
+                to={"/contact"}
+                name={"Get This Service"}
+                className="bg-secondary-dark text-white border-2 border-secondary-dark"
+                hover="hover:text-secondary-dark"
+                layerHover="bg-white"
+              />
             </div>
             <div className="relative">
               <img
@@ -89,14 +90,14 @@ const ProjectDetail = () => {
             <h2 className="sm:text-3xl text-2xl font-bold mb-10">
               Key Features
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3">
               {project.features.map((feature, i) => (
                 <div
                   key={i}
-                  className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-cyan-400 transition group"
+                  className="p-6 bg-white/5 border border-white/10 hover:border-light-surface transition group"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-cyan-400 text-xl">✓</span>
+                    <span className="text-secondery text-xl">✓</span>
                     <span className="text-gray-200 font-medium">{feature}</span>
                   </div>
                 </div>
@@ -111,11 +112,11 @@ const ProjectDetail = () => {
             <h2 className="sm:text-3xl text-2xl font-bold mb-10">
               Technologies Used
             </h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="grid md:grid-cols-3 lg:grid-cols-4">
               {project.tech.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 bg-white/10 rounded-full text-cyan-400 border border-white/20 hover:bg-cyan-400/20 transition"
+                  className="px-8 py-4 text-lg bg-white/10 text-white border border-white/20 hover:bg-secondery transition"
                 >
                   {tech}
                 </span>
@@ -134,9 +135,9 @@ const ProjectDetail = () => {
               {project.results.map((result, i) => (
                 <div
                   key={i}
-                  className="p-6 bg-linear-to-br from-cyan-400/10 to-transparent border border-cyan-400/30 rounded-2xl text-center"
+                  className="p-6 bg-linear-to-br from-[#5878a0] to-transparent border border-light-surface/10 text-center"
                 >
-                  <div className="text-cyan-400 text-3xl mb-2">✓</div>
+                  <div className="text-secondery text-3xl mb-2">✓</div>
                   <p className="text-gray-200 font-medium">{result}</p>
                 </div>
               ))}
@@ -161,7 +162,7 @@ const ProjectDetail = () => {
                   <Link
                     key={index}
                     to={`/services/${service.slug}/${p.slug}`}
-                    className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-cyan-400 transition-all hover:scale-105 duration-300"
+                    className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-light-gray-blue transition-all hover:scale-105 duration-300"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img
@@ -169,10 +170,9 @@ const ProjectDetail = () => {
                         className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                         alt={p.title}
                       />
-                      <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">
+                      <h3 className="text-xl font-bold mb-2 highlight transition">
                         {p.title}
                       </h3>
                       <p className="text-gray-400 text-sm mb-4">
@@ -182,7 +182,7 @@ const ProjectDetail = () => {
                         {p.tech.slice(0, 3).map((tech, i) => (
                           <span
                             key={i}
-                            className="text-xs px-2 py-1 bg-cyan-400/10 text-cyan-400 rounded-full"
+                            className="text-xs px-2 py-1 bg-linear-to-br from-[#5878a0] to-[#b4c6d8] text-white rounded-full"
                           >
                             {tech}
                           </span>
@@ -198,12 +198,20 @@ const ProjectDetail = () => {
         {/* ================= CTA ================= */}
         <div className="py-10 border-t border-white/10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="sm:text-4xl text-2xl font-black mb-4">Ready to Get Started?</h2>
+            <h2 className="sm:text-4xl text-2xl font-black mb-4">
+              Ready to Get Started?
+            </h2>
             <p className="text-gray-400 mb-8">
               Let's discuss how our {project.title} service can help your
               business grow.
             </p>
-            <GlowButton to={"/contact"} name={"Let's Contact"} />
+            <GlowButton
+              to={"/contact"}
+              name={"Let's Contact"}
+              className="bg-secondary-dark text-white border-2 border-secondary-dark"
+              hover="hover:text-secondary-dark"
+              layerHover="bg-white"
+            />
           </div>
         </div>
       </section>

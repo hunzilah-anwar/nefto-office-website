@@ -98,6 +98,9 @@ const ProjectSlider = ({ projects, parentSlug }) => {
                 <GlowButton
                   to={`/services/${parentSlug}/${projects[index].slug}`}
                   name="View Detail"
+                  className="bg-black text-white border-2 border-black"
+                  hover="hover:text-secondary-dark"
+                  layerHover="bg-white"
                 />
               </div>
             </motion.div>
@@ -106,13 +109,13 @@ const ProjectSlider = ({ projects, parentSlug }) => {
           <div className="flex gap-4 pt-10">
             <button
               onClick={prev}
-              className="p-4 rounded-full border border-white/10 hover:bg-cyan-500 transition-all text-white hover:text-black cursor-pointer"
+              className="p-4 rounded-full border border-white/10 hover:bg-light-gray-blue transition-all text-white hover:text-black cursor-pointer"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={next}
-              className="p-4 rounded-full border border-white/10 hover:bg-cyan-500 transition-all text-white hover:text-black cursor-pointer"
+              className="p-4 rounded-full border border-white/10 hover:bg-light-gray-blue transition-all text-white hover:text-black cursor-pointer"
             >
               <ChevronRight size={20} />
             </button>
@@ -126,7 +129,7 @@ const ProjectSlider = ({ projects, parentSlug }) => {
 // Roadmap Component
 const RoadmapSection = ({ roadmap }) => {
   return (
-    <section className="py-10 pb-20 px-4 bg-main-bg overflow-hidden">
+    <section className="pb-20 px-4 bg-main-bg overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center sm:mb-16 mb-10">
           <h2 className="text-xl sm:text-3xl md:text-5xl font-black mb-4">
@@ -138,7 +141,7 @@ const RoadmapSection = ({ roadmap }) => {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-linear-to-b from-cyan-500 to-purple-500 hidden lg:block" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-linear-to-b from-[#5878a0] to-[#b4c6d8] hidden lg:block" />
           <div className="space-y-12">
             {roadmap?.steps?.map((step, idx) => (
               <motion.div
@@ -152,16 +155,16 @@ const RoadmapSection = ({ roadmap }) => {
                 }`}
               >
                 <div className="lg:w-1/2 w-full">
-                  <div className="bg-white/5 w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-cyan-500/50 transition-all mx-px">
+                  <div className="bg-white/5 w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-light-surface transition-all mx-px">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-[linear-gradient(90deg,#5878a0,#b4c6d8)] flex items-center justify-center">
                         {React.createElement(step.icon, {
                           size: 24,
-                          className: "text-cyan-400",
+                          className: "text-white",
                         })}
                       </div>
                       <div>
-                        <span className="text-cyan-400 text-sm font-mono">
+                        <span className="text-secondery text-sm font-mono">
                           Step 0{idx + 1}
                         </span>
                         <h3 className="text-xl font-bold">{step.title}</h3>
@@ -203,7 +206,7 @@ const NextStepsSection = ({ nextSteps }) => {
               viewport={{ once: true }}
               className="text-center group"
             >
-              <div className="sm:w-20 sm:h-20 w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-br from-cyan-500 to-secondery flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="sm:w-20 sm:h-20 w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-br from-[#5878a0] to-[#b4c6d8] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-2xl font-black">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
@@ -217,6 +220,9 @@ const NextStepsSection = ({ nextSteps }) => {
           <GlowButton
             name={nextSteps?.buttonText || "Start Your Project"}
             to={nextSteps?.buttonLink || "/contact"}
+            className="bg-secondary-dark text-white border-2 border-secondary-dark"
+            hover="hover:text-secondary-dark"
+            layerHover="bg-white"
           />
         </div>
       </div>
@@ -264,7 +270,7 @@ const ServicePages = () => {
   };
 
   return (
-    <div className="bg-main-bg text-white selection:bg-cyan-500 selection:text-black">
+    <div className="bg-main-bg text-white selection:bg-main-bg selection:text-black">
       {/* NAVBAR SPACER */}
       <div className="h-20" />
 
@@ -278,7 +284,7 @@ const ServicePages = () => {
         >
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute top-20 left-10 w-72 h-72 bg-main-bg/10 rounded-full blur-3xl animate-pulse" />
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-black/10 rounded-full blur-3xl animate-pulse delay-1000" />
           </div>
 
@@ -297,11 +303,15 @@ const ServicePages = () => {
             </motion.div>
 
             {/* Enhanced Form */}
-            <GlowButton
-              name={"Get a Quote"}
-              to={"/contact"}
-              className="mt-10"
-            />
+            <div className="mt-10">
+              <GlowButton
+                name={"Get a Quote"}
+                to={"/contact"}
+                className="bg-secondary-dark text-white border-2 border-secondary-dark"
+                hover="hover:text-secondary-dark"
+                layerHover="bg-white"
+              />
+            </div>
           </div>
         </section>
 
@@ -315,7 +325,7 @@ const ServicePages = () => {
                 </h2>
                 <p className="text-zinc-400 max-w-xl">{service.sectionDesc}</p>
               </div>
-              <div className="lg:w-1/2">
+              <div className="ml-auto">
                 <img
                   src={service.sectionImage}
                   alt={service.title}
@@ -334,8 +344,8 @@ const ServicePages = () => {
                     className={`text-left px-6 py-5 cursor-pointer border transition-all duration-300
                     ${
                       active === i
-                        ? "bg-linear-to-r from-cyan-500 to-purple-500 text-black border-cyan-500"
-                        : "bg-white/5 border-white/10 hover:border-cyan-500"
+                        ? "bg-linear-to-r from-[#5878a0] to-[#b4c6d8] text-white border-muted-steel"
+                        : "bg-white/5 border-white/10 hover:border-muted-steel"
                     }
                     `}
                   >
@@ -356,7 +366,7 @@ const ServicePages = () => {
                     transition={{ duration: 0.4 }}
                     className="p-4 md:p-8 h-full"
                   >
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-light-gray-blue">
                       {tabs[active]?.content?.heading}
                     </h3>
                     <p className="text-zinc-400 mb-6 text-sm sm:text-base">
@@ -368,7 +378,7 @@ const ServicePages = () => {
                           key={i}
                           className="flex justify-start items-center gap-3 sm:text-sm text-xs text-zinc-300"
                         >
-                          <span className="w-2 h-2 bg-cyan-500 rounded-full shrink-0" />
+                          <span className="w-2 h-2 bg-off-white rounded-full shrink-0" />
                           {p}
                         </li>
                       ))}
@@ -392,7 +402,7 @@ const ServicePages = () => {
             <div className="text-center space-y-4 sm:mb-20 mb-10">
               <h2 className="text-2xl md:text-6xl font-black tracking-tighter uppercase leading-none text-white">
                 {service.capabilitiesTitle} <br />
-                <span className="text-cyan-500 italic">
+                <span className="highlight italic">
                   {service.capabilitiesHighlight}
                 </span>
               </h2>
@@ -406,13 +416,13 @@ const ServicePages = () => {
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="p-8 bg-white/5 border border-white/10 backdrop-blur-md group hover:border-cyan-500/50 transition-all"
+                  className="p-8 bg-white/5 border border-white/10 backdrop-blur-md group hover:border-light-gray-blue transition-all"
                 >
                   {s.icon && (
                     <s.icon
                       className="p-3 mb-4 text-white shadow-lg backdrop-blur-xl border border-white/20 transition-transform duration-500"
                       style={{
-                        background: `linear-gradient(135deg, #0A1317, rgba(255,255,255,0.1))`,
+                        background: `linear-gradient(90deg, #5878a0, #b4c6d8)`,
                       }}
                       size={50}
                     />
@@ -431,14 +441,14 @@ const ServicePages = () => {
 
         {/* SECTION 4: PROCESS */}
         <section className="sm:py-16 py-10 sm:px-6 px-4 bg-main-bg">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white border-b border-white/10 pb-20">
             <div className="lg:w-1/2 space-y-2">
-              <h3 className="text-sm text-cyan-400 font-black">
+              <h3 className="text-sm text-secondery font-black">
                 {service.processSubTitle}
               </h3>
               <h2 className="md:text-5xl sm:text-3xl text-xl font-black italic uppercase tracking-tighter leading-tight mb-8">
                 {service.processTitle} <br />
-                <span className="text-cyan-500 font-serif">
+                <span className="text-secondery font-serif">
                   {service.processHighlight}
                 </span>
               </h2>
@@ -456,7 +466,7 @@ const ServicePages = () => {
                     viewport={{ once: true }}
                     className="flex items-center gap-3 md:gap-4"
                   >
-                    <Check size={24} className="text-cyan-400 shrink-0" />
+                    <Check size={24} className="text-secondery shrink-0" />
                     <span className="text-sm sm:text-base md:text-xl font-bold leading-tight">
                       {text}
                     </span>
@@ -514,12 +524,18 @@ const ServicePages = () => {
           <div className="max-w-7xl mx-auto text-center space-y-12 relative z-10">
             <div className="space-y-8">
               <div className="flex justify-center items-center bg-white/10 backdrop-blur-xl border border-white/30 sm:w-24 sm:h-24 w-20 h-20 rounded-full mx-auto mb-4">
-                <Rocket className="text-cyan-500" size={40} />
+                <Rocket className="text-secondery" size={40} />
               </div>
               <h3 className="text-lg sm:text-3xl md:text-5xl font-black sm:tracking-tighter uppercase">
                 {service.ctaTitle}
               </h3>
-              <GlowButton name={service.ctaButton} to={service.ctaLink} />
+              <GlowButton
+                name={service.ctaButton}
+                to={service.ctaLink}
+                className="bg-secondary-dark text-white border-2 border-secondary-dark"
+                hover="hover:text-secondary-dark"
+                layerHover="bg-white"
+              />
             </div>
           </div>
           <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-size-[100%_2px,3px_100%]" />
