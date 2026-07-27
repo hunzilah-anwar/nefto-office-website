@@ -75,7 +75,7 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`relative px-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
+                className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
                   isActive
                     ? "text-secondery"
                     : "text-gray-700 hover:text-secondery"
@@ -104,33 +104,20 @@ const Header = () => {
 
             {/* Dropdown Card */}
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-              <div className="bg-white border border-gray-200 shadow-2xl w-130 overflow-hidden">
-                <div className="p-4 grid grid-cols-2 gap-2">
+              <div className="bg-white border border-gray-200 shadow-2xl w-80 overflow-hidden">
+                <div className="p-2 grid grid-cols-1 gap-1">
                   {services.map((service, index) => (
                     <Link
                       key={index}
                       to={service.to}
-                      className="group/item flex items-start gap-4 p-4 hover:bg-gray-50 transition-all duration-300 border border-gray-300 hover:border-black/10"
+                      className="group/item flex items-start gap-4 p-4 hover:bg-secondary-dark text-gray-900 hover:text-white transition-all duration-300 border border-gray-300 hover:border-black/10"
                     >
-                      {/* ICON */}
-                      <div className="p-2 bg-gray-100 text-gray-600 group-hover/item:bg-black group-hover/item:text-white transition-all duration-300">
-                        {React.createElement(service.icon, { size: 20 })}
-                      </div>
 
                       {/* CONTENT */}
                       <div className="flex-1">
-                        <h4 className="text-[11px] font-black uppercase text-gray-900 tracking-wide">
+                        <h4 className="text-[11px] font-black uppercase tracking-wide">
                           {service.title}
                         </h4>
-
-                        {/* CTA */}
-                        <div className="flex items-center gap-1 mt-3 text-[9px] font-bold uppercase tracking-[0.2em]text-gray-400 group-hover/item:text-black transition-all">
-                          Explore Service
-                          <ArrowRight
-                            size={12}
-                            className="transition-transform duration-300 group-hover/item:translate-x-1"
-                          />
-                        </div>
                       </div>
                     </Link>
                   ))}
@@ -144,7 +131,7 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`relative px-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
+                className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
                   isActive
                     ? "text-secondery"
                     : "text-gray-700 hover:text-secondery"
