@@ -58,7 +58,7 @@ const Team = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-2xl sm:text-4xl md:text-[8rem] font-black italic leading-[0.8] tracking-tighter uppercase sm:mb-10 mb-4">
+            <h1 className="text-5xl md:text-[8rem] font-black italic leading-[0.8] tracking-tighter uppercase sm:mb-10 mb-4">
               OUR{" "}
               <span className="text-transparent stroke-text italic font-serif">
                 TEAM.
@@ -119,7 +119,7 @@ const Team = () => {
 
       {/* SECTION 5 (ODD): JOIN THE PIPELINE */}
       <section
-        className="relative sm:py-16 py-10 px-4 bg-fixed bg-cover bg-center sm:text-center overflow-hidden"
+        className="relative sm:py-16 py-10 px-4 bg-fixed bg-cover bg-center text-center overflow-hidden"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070')`,
         }}
@@ -129,7 +129,7 @@ const Team = () => {
 
         <div className="relative max-w-5xl mx-auto sm:space-y-8 space-y-4 z-10 text-white">
           {/* small label */}
-          <div className="flex sm:justify-center items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-off-white font-bold">
+          <div className="flex justify-center items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-off-white font-bold">
             <span className="sm:w-10 w-4 h-px bg-off-white" />
             Join The Network
           </div>
@@ -139,14 +139,14 @@ const Team = () => {
             whileInView={{ scale: [0.9, 1], opacity: [0, 1] }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8]">
+            <h2 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8]">
               BUILD THE <br />
               <span className="text-transparent stroke-text">FUTURE.</span>
             </h2>
           </motion.div>
 
           {/* description */}
-          <p className="text-zinc-300 text-sm sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-zinc-200 text-sm sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
             We’re assembling a high-performance engineering team focused on AI,
             distributed systems, and next-generation products. If you think in
             systems and build with precision, you’ll fit right in.

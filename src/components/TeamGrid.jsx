@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Hamza from "../assets/hamza.png";
-import Sabir from "../assets/sabir.jpeg";
-import Mubeen from "../assets/mubeen.jpg";
+import Sabir from "../assets/sabir.png";
+import Mubeen from "../assets/mubeen.png";
 import Meer from "../assets/meer.png";
 import Talha from "../assets/talha.png";
-import Abeeha from "../assets/Abeeha.webp";
-import Wahaj from "../assets/Wahaj.jpeg";
-import Rahul from "../assets/rahul-team.jpeg";
+import Abeeha from "../assets/Abeeha.png";
+import Wahaj from "../assets/Wahaj.png";
+import Rahul from "../assets/rahul-team.png";
 
 const cardData = [
   {
@@ -109,7 +109,7 @@ const PremiumCard = ({ data }) => {
         transformStyle: "preserve-3d",
       }}
       // OPTIMIZATION 2: will-change-transform add kiya hai taake browser isse GPU par render kare
-      className="group relative h-95 sm:h-105 md:h-112.5 w-full rounded-3xl bg-dark-200 shadow-xl overflow-hidden cursor-pointer border border-white/10 will-change-transform transition-all duration-200 ease-out"
+      className="group relative h-115 w-full rounded-3xl bg-dark-200 shadow-xl overflow-hidden cursor-pointer border border-white/10 will-change-transform transition-all duration-200 ease-out"
     >
       {/* BACKGROUND IMAGE */}
       <motion.div
@@ -120,12 +120,10 @@ const PremiumCard = ({ data }) => {
           className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:saturate-150"
           style={{ backgroundImage: `url(${data.image})` }}
         />
-        <div className="absolute inset-0 bg-black/20 transition-opacity duration-500 group-hover:opacity-20" />
       </motion.div>
 
       {/* GRADIENTS */}
-      <div className="absolute inset-0 bg-linear-to-t from-accent-alt via-black/50 to-transparent opacity-60 translate-y-[40%] transition-transform duration-500 group-hover:translate-y-[20%] group-hover:opacity-90 mix-blend-overlay" />
-      <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent opacity-90 transition-all duration-500 group-hover:opacity-70" />
+      <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent opacity-90 transition-all duration-500 group-hover:opacity-70" />
 
       {/* CONTENT CONTAINER */}
       <div
@@ -164,16 +162,13 @@ const PremiumCard = ({ data }) => {
 const TeamGrid = () => {
   return (
     <div className="relative bg-main-bg py-16 md:py-24 px-4 md:px-10 overflow-hidden">
-        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-250 h-250 bg-[#042558] blur-[140px]" />
+      <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-250 h-250 bg-[#042558] blur-[140px]" />
       <div className="relative max-w-350 mx-auto z-10">
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-off-white mb-2">
-            MEET THE{" "}
-            <span className="highlight">
-              TEAM
-            </span>
+            MEET THE <span className="highlight">TEAM</span>
           </h2>
           <div className="h-1 w-24 bg-linear-to-r from-transparent via-accent-alt to-transparent mx-auto" />
         </div>
