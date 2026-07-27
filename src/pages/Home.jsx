@@ -56,11 +56,11 @@ const Home = () => {
   return (
     <>
       <section
-        className="relative overflow-hidden w-full bg-cover bg-center before:absolute before:inset-0 before:content-[''] before:bg-[linear-gradient(to_right,#071524_35%,rgba(7,21,36,0.85)_55%,rgba(7,21,36,0.3)_75%,transparent_100%)] before:pointer-events-none flex items-center px-4 sm:px-12 pt-35 pb-25 md:pt-45 md:pb-35"
+        className="relative overflow-hidden w-full bg-cover bg-center before:absolute before:inset-0 before:content-[''] before:bg-[linear-gradient(to_right,#071524_35%,rgba(7,21,36,0.85)_55%,rgba(7,21,36,0.3)_75%,transparent_100%)] before:pointer-events-none flex items-center pt-35 pb-25 md:pt-45 md:pb-35"
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="absolute top-[-20%] left-[-10%] w-180 h-180 bg-[#042558] blur-[140px]" />
-        <div className="relative z-10 mx-auto grid max-w-7xl md:items-center gap-20 lg:grid-cols-2">
+        <div className="relative z-10 mx-auto grid max-w-7xl sm:px-6 px-4 md:items-center gap-20 lg:grid-cols-2">
           <div className="z-50 max-w-2xl w-full">
             <h1 className="font-sans text-white text-2xl md:text-4xl lg:text-5xl font-black leading-tight flex flex-col justify-start">
               Where Creativity Meets{" "}

@@ -61,7 +61,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-1000 bg-[#042558] border-b border-white/20">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto sm:px-6 px-4 h-20 flex justify-between items-center">
         {/* LOGO */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="w-20" />
@@ -162,7 +162,7 @@ const Header = () => {
 
         {/* MOBILE TOGGLE */}
         <button
-          className="lg:hidden p-2 text-gray-900 hover:text-primary transition ease-in-out duration-300 cursor-pointer"
+          className="lg:hidden p-2 text-white hover:text-primary transition ease-in-out duration-300 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
