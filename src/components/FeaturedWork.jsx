@@ -107,7 +107,7 @@ const FeaturedWork = () => {
                 {/* LEFT SIDE */}
                 <div className="lg:col-span-4 flex flex-col items-start gap-6">
                   {/* Service tag */}
-                  <span className="text-cyan-400 text-xs uppercase tracking-wider font-semibold">
+                  <span className="text-muted-steel text-sm uppercase tracking-wider font-bold">
                     {project.serviceTitle}
                   </span>
                   <h3 className="sm:text-3xl text-xl font-semibold text-white uppercase tracking-wider leading-none">
@@ -122,6 +122,9 @@ const FeaturedWork = () => {
                     <GlowButton
                       to={`/services/${project.slug}/${project.projectSlug}`}
                       name="View Project"
+                      className="bg-white text-secondary-dark border-2 border-secondery"
+                      hover="hover:text-white"
+                      layerHover="bg-secondery"
                     />
 
                     {/* SERVICE PAGE */}

@@ -19,7 +19,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time (remove this in production)
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
@@ -27,26 +26,35 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <Loader />;
-  }
-
   return (
     <Router>
       <ScrollToTop />
-      <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/casestudies" element={<CaseStudies />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/services/:slug" element={<ServicePages />} />
-        <Route path="/services/:slug/:projectSlug" element={<ProjectDetail />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      {loading ? (
+        <>
+          <Header />
+          <Loader />
+        </>
+      ) : (
+        <>
+          <Header />
 
-      <Footer />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/casestudies" element={<CaseStudies />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/services/:slug" element={<ServicePages />} />
+            <Route
+              path="/services/:slug/:projectSlug"
+              element={<ProjectDetail />}
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+
+          <Footer />
+        </>
+      )}
     </Router>
   );
 }

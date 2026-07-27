@@ -11,12 +11,6 @@ const Footer = () => {
 
   return (
     <footer className="relative w-full bg-main-bg pb-10 overflow-hidden">
-      {/* ================= BACKGROUND ================= */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-[-10%] right-[-5%] w-60 h-60 md:w-80 md:h-80 bg-purple-600/10 blur-[140px]" />
-        <div className="absolute top-0 left-[-10%] w-52 h-52 md:w-72 md:h-72 bg-purple-500/10 blur-[120px]" />
-      </div>
-
       {/* ================= MARQUEE ================= */}
       <div className="relative border-y border-white/5 py-4 md:py-6 mb-10 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
@@ -46,10 +40,6 @@ const Footer = () => {
                   src={logo}
                   alt="Logo"
                   className="w-30"
-                  style={{
-                    filter:
-                      "brightness(0) saturate(100%) invert(30%) sepia(95%) saturate(2200%) hue-rotate(205deg) brightness(95%) contrast(95%)",
-                  }}
                 />
               </Link>
 

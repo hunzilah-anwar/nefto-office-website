@@ -39,45 +39,49 @@ const CaseStudies = () => {
   const duplicatedLogos = Array(5).fill(logos).flat();
 
   return (
-    <main className="selection:bg-cyan-500 selection:text-white">
+    <main className="selection:bg-secondary-dark selection:text-white">
       {/* SECTION 1: HERO (ODD - #00042A) */}
       <section className="relative sm:pt-40 pt-30 sm:pb-20 pb-10 sm:px-6 px-4 bg-main-bg text-white flex items-center overflow-hidden">
         {/* BACKGROUND GLOW */}
-        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-blue-500/20 blur-[140px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-purple-600/20 blur-[140px]" />
+        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-off-white/20 blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-secondery/20 blur-[140px]" />
 
         <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
           {/* ================= LEFT CONTENT ================= */}
-          <div className="sm:space-y-8 space-y-4">
+          <div className="space-y-4">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4"
             >
-              <span className="sm:w-16 w-6 h-0.5 bg-cyan-400" />
-              <p className="uppercase tracking-[0.4em] text-cyan-400 sm:text-xs text-[11px]  font-bold">
-                Case Studies
+              <span className="sm:w-16 w-6 h-0.5 bg-secondery" />
+              <p className="uppercase tracking-[0.4em] text-secondery sm:text-xs text-[11px] font-bold">
+                What We Do
               </p>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-2xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.8]"
+              className="text-2xl sm:text-5xl md:text-7xl font-black leading-[0.8]"
             >
-              DIGITAL{" "}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
-                IMPACT
-              </span>
+              BUILDING <span className="highlight">DIGITAL EXCELLENCE</span>
             </motion.h1>
 
             <p className="text-zinc-400 sm:text-lg text-sm max-w-md leading-relaxed">
-              We engineer scalable platforms, AI systems, and cloud
-              architectures that power modern digital ecosystems.
+              From modern websites and scalable web applications to AI powered
+              automation and branding, we create technology solutions tailored
+              to your business goals.
             </p>
 
             <div className="pt-4">
-              <GlowButton name="Explore More" to="/contact" />
+              <GlowButton
+                name="Explore More"
+                to="/contact"
+                className="bg-secondary-dark text-white border-2 border-secondary-dark"
+                hover="hover:text-secondary-dark"
+                layerHover="bg-white"
+              />
             </div>
           </div>
 
@@ -99,12 +103,12 @@ const CaseStudies = () => {
 
               {/* floating stats */}
               <div className="absolute bottom-6 left-6 bg-black/50 backdrop-blur-md px-5 py-3 rounded-xl border border-white/10">
-                <p className="text-xs text-zinc-400">Active Systems</p>
-                <p className="text-xl font-bold">10M+</p>
+                <p className="text-xs text-zinc-400">Support Available</p>
+                <p className="text-xl font-bold">24/7</p>
               </div>
 
-              <div className="absolute top-6 right-6 bg-cyan-500 text-black px-4 py-2 text-xs font-bold rounded-full">
-                AI Powered
+              <div className="absolute top-6 right-6 bg-secondary-dark text-white border border-white/20 px-4 py-2 text-xs font-semibold rounded-full">
+                NEFFTO IT SOLUTION
               </div>
             </div>
           </motion.div>
@@ -147,7 +151,7 @@ const CaseStudies = () => {
           <div className="max-w-7xl mx-auto sm:py-6 py-4 flex flex-col justify-between md:gap-10 gap-6">
             <div className="flex items-center gap-3 text-white">
               <span className="sm:text-4xl text-xl uppercase font-bold tracking-widest">
-                Engineering
+                Services
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -157,7 +161,7 @@ const CaseStudies = () => {
                   onClick={() => setActiveFilter(cat)}
                   className={`px-6 py-2 text-[10px] cursor-pointer uppercase font-bold tracking-widest rounded-full border transition-all duration-500 ${
                     activeFilter === cat
-                      ? "bg-cyan-500 text-black border-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.5)]"
+                      ? "bg-secondary-dark text-off-white border-off-white shadow-[0_0_10px_rgba(239,239,242,0.5)]"
                       : "bg-transparent text-zinc-400 border-white/10 hover:border-white/40"
                   }`}
                 >
@@ -171,7 +175,7 @@ const CaseStudies = () => {
         <div className="max-w-7xl mx-auto sm:pt-24 pt-10">
           <motion.div
             layout
-            className="grid md:grid-cols-2 xl:grid-cols-3 gap-20"
+            className="grid md:grid-cols-2 xl:grid-cols-3 gap-10"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, idx) => (
@@ -182,9 +186,9 @@ const CaseStudies = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ delay: idx * 0.1 }}
-                  className="group"
+                  className="group border border-white/10 bg-white/5 backdrop-blur-md"
                 >
-                  <div className="relative aspect-4/5 overflow-hidden sm:mb-8 mb-4 bg-zinc-900 border border-white/5">
+                  <div className="relative aspect-4/4 overflow-hidden bg-zinc-900">
                     <img
                       src={project.heroImage}
                       alt={project.title}
@@ -205,17 +209,17 @@ const CaseStudies = () => {
 
                     <Link
                       to={`/services/${project.slug}`}
-                      className="absolute bottom-5 right-5 p-4 bg-cyan-500 rounded-full text-black cursor-pointer transition-all duration-500 hover:scale-110"
+                      className="absolute bottom-5 right-5 p-4 bg-medium-gray-blue rounded-full text-off-white cursor-pointer transition-all duration-500 hover:scale-110"
                     >
                       <ExternalLink size={20} />
                     </Link>
                   </div>
 
-                  <div className="sm:space-y-4 space-y-2">
-                    <h3 className="text-2xl font-bold leading-tight tracking-tight group-hover:text-cyan-400 transition-colors">
+                  <div className="sm:space-y-4 space-y-2 p-4">
+                    <h3 className="text-2xl font-bold leading-tight tracking-tight group-hover:text-muted-steel transition-colors">
                       {project.sectionTitle}
                     </h3>
-                    <p className="text-zinc-400 sm:text-lg text-sm leading-relaxed font-light line-clamp-2">
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light line-clamp-2">
                       {project.sectionDesc}
                     </p>
                   </div>
@@ -233,15 +237,8 @@ const CaseStudies = () => {
         <div className="absolute inset-0 bg-black/60" />{" "}
         {/* Dark Overlay for high impact */}
         <div className="max-w-4xl mx-auto sm:space-y-8 space-y-4 relative z-10 text-white">
-          <motion.div
-            whileInView={{ scale: [0.8, 1.1, 1], opacity: [0, 1] }}
-            className="inline-flex items-center justify-center w-20 h-20 rounded-full border border-cyan-500/30 bg-cyan-500/10 mb-8"
-          >
-            <Zap className="text-cyan-400" size={32} />
-          </motion.div>
-
           <h2 className="sm:text-4xl text-3xl md:text-6xl font-black tracking-tighter uppercase leading-[0.85]">
-            Ready to {" "}
+            Ready to{" "}
             <span className="text-transparent stroke-text-white italic">
               Innovate?
             </span>
@@ -253,7 +250,13 @@ const CaseStudies = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center pt-4">
-            <GlowButton name="Start Project" to="/contact" />
+            <GlowButton
+              name="Start Project"
+              to="/contact"
+              className="bg-secondary-dark text-white border-2 border-secondary-dark"
+              hover="hover:text-secondary-dark"
+              layerHover="bg-white"
+            />
           </div>
         </div>
       </section>
@@ -263,7 +266,7 @@ const CaseStudies = () => {
           -webkit-text-stroke: 1.5px white;
         }
         .stroke-text-white {
-          -webkit-text-stroke: 1.5px #06b6d4;
+          -webkit-text-stroke: 1.5px #efeff2;
         }
       `}</style>
     </main>

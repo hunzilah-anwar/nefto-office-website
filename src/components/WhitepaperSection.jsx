@@ -44,15 +44,15 @@ const WhitepaperSection = () => {
                 >
                   <div className="space-y-4">
                     <h2 className="sm:text-3xl text-xl font-black text-white uppercase">
-                      STAY AHEAD IN 2026
+                      STAY AHEAD IN { new Date().getFullYear().toString() }
                     </h2>
 
                     <p className="sm:text-md text-sm text-zinc-300 font-light max-w-md leading-relaxed">
-                      Download the{" "}
+                      Get the latest insights on{" "}
                       <span className="text-white font-medium italic underline decoration-secondery underline-offset-4">
-                        Top Digital Trends
+                        web development, app development, AI solutions, digital marketing, Graphic Designing and SEO
                       </span>{" "}
-                      shaping branding and web design this year.
+                      to help your business grow faster.
                     </p>
                   </div>
 

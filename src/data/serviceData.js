@@ -1,4 +1,5 @@
-// ================= servicesData.js (8 Services with Projects inside showcase.projects) =================
+// ================= servicesData.js (6 Services with Projects inside showcase.projects) =================
+// Order: 1. Web Development  2. App Development  3. AI & ML  4. Graphic Designing  5. Digital Marketing  6. SEO
 
 import {
   Laptop,
@@ -42,22 +43,28 @@ import ToolProject1 from "../assets/tool-project-1.png";
 import ToolProject2 from "../assets/tool-project-2.png";
 import ToolClient1 from "../assets/tool-clint-1.png";
 import ToolClient2 from "../assets/tool-clint-2.webp";
+import Web from "../assets/web.avif";
+import App from "../assets/app.webp";
+import Python from "../assets/AI.webp";
+import Digital from "../assets/DigitalMarketing.jpg";
+import Graphic from "../assets/graphic.jpg";
+import SEO from "../assets/seo.jpg";
 
 export const servicesData = [
   // 1. Web Development
   {
     slug: "web-development",
-    title: "Web Development",
+    title: "Web Development (Coding)",
     desc: "Modern responsive websites built for performance and growth.",
     icon: Laptop,
     heroImage:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072",
+      Web,
     heroTitle: "Next-Generation Web Development",
     heroDesc:
-      "We build fast, scalable, and future-ready web applications that drive business growth. Our expert team delivers cutting-edge solutions with modern frameworks.",
+      "We build fast, scalable, and future-ready web applications that drive business growth. Our expert team delivers modern solutions built on proven frameworks.",
     sectionTitle: "Custom Web Development Solutions",
     sectionDesc:
-      "We create modern, scalable, and high-performance websites using cutting-edge technologies.",
+      "We create modern, scalable, and high-performance websites using proven technologies.",
     sectionImage:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
     tabs: [
@@ -77,7 +84,7 @@ export const servicesData = [
       {
         title: "Backend",
         content: {
-          heading: "Powerful Backend Systems",
+          heading: "Strong Backend Systems",
           desc: "Secure and scalable backend architecture for web apps.",
           points: [
             "Node.js APIs",
@@ -122,7 +129,7 @@ export const servicesData = [
       },
       {
         title: "Frontend Apps",
-        desc: "Interactive, lightning-fast UI experiences built with React & Next.js for seamless user journeys.",
+        desc: "Interactive, lightning-fast UI experiences built with React & Next.js for smooth user journeys.",
         icon: Laptop,
       },
       {
@@ -161,7 +168,7 @@ export const servicesData = [
         {
           slug: "fundbox",
           title: "Fundbox – Capital Products for Small Businesses",
-          desc: "Fundbox offers fast, easy access to business financing — including lines of credit and term loans up to $250,000 — to help small businesses manage cash flow and grow.",
+          desc: "Fundbox offers fast, easy access to business financing, including lines of credit and term loans up to $250,000, to help small businesses manage cash flow and grow.",
           image: WebProject1,
           tech: [
             "Line of Credit",
@@ -180,10 +187,10 @@ export const servicesData = [
             "No Early Repayment Fees",
           ],
           overview:
-            "Fundbox is a small business financing platform founded in 2013 that has connected 500,000+ businesses to over $6 billion in capital. It offers lines of credit and term loans with a simple 3-minute application, fast funding, and flexible repayment — integrated into everyday business tools like Stripe, Intuit, FreshBooks, and more.",
+            "Fundbox is a small business financing platform founded in 2013 that has connected 500,000+ businesses to over $6 billion in capital. Fundbox offers lines of credit and term loans with a simple 3-minute application, fast funding, and flexible repayment, integrated into everyday business tools like Stripe, Intuit, FreshBooks, and more.",
           results: [
             "500k+ Businesses Connected",
-            "$6B+ Capital Unlocked",
+            "$6B+ in Capital Raised",
             "4.8 Trustpilot Score",
           ],
         },
@@ -207,7 +214,7 @@ export const servicesData = [
             "Dedicated M&A Advisor End-to-End",
           ],
           overview:
-            "OffDeal is a modern AI-powered investment bank built for small businesses with $5M–$100M in revenue. Unlike traditional M&A firms, OffDeal uses AI to match sellers with 1,000+ strategic buyers on average, runs competitive auctions to drive up offers by 30%, and delivers initial offers in under 45 days — compared to 4 months the traditional way. Featured in CNBC, Financial Times, Forbes, and TechCrunch, OffDeal charges zero upfront fees and only succeeds when you do. They serve industries including Home Services, Business Services, Healthcare, Industrials, and Consumer brands.",
+            "OffDeal is a modern AI-powered investment bank built for small businesses with $5M–$100M in revenue. Unlike traditional M&A firms, OffDeal uses AI to match sellers with 1,000+ strategic buyers on average, runs competitive auctions to drive up offers by 30%, and delivers initial offers in under 45 days, compared to 4 months the traditional way. Featured in CNBC, Financial Times, Forbes, and TechCrunch, OffDeal charges zero upfront fees and only succeeds when you do. They serve industries including Home Services, Business Services, Healthcare, Industrials, and Consumer brands.",
           results: [
             "1,000+ Buyer Matches on Average",
             "30% Higher Sale Price",
@@ -236,7 +243,7 @@ export const servicesData = [
             "Customizable Matching & Vesting at No Extra Cost",
           ],
           overview:
-            "Human Interest is an affordable, full-service 401(k) and 403(b) provider founded in 2015 in San Francisco, on a mission to give employees in all lines of work access to retirement benefits. Trusted by 40,000+ businesses and covering 1,000,000+ employees, the platform handles everything — payroll sync, contribution processing, compliance testing, and IRS filings — so employers can focus on running their business. Human Interest offers Traditional and Roth 401(k)s, 403(b)s, Safe Harbor plans, Profit-Sharing plans, and IRAs. Their flagship (k)ickstart® program is the first 401(k) to offer 3% cash back on contributions for employees earning $60,000 or less, paired with a free 10-part financial education course.",
+            "Human Interest is an affordable, full-service 401(k) and 403(b) provider founded in 2015 in San Francisco, on a mission to give employees in all lines of work access to retirement benefits. Trusted by 40,000+ businesses and covering 1,000,000+ employees, the platform handles payroll sync, contribution processing, compliance testing, and IRS filings, so employers focus on running their business. Human Interest offers Traditional and Roth 401(k)s, 403(b)s, Safe Harbor plans, Profit-Sharing plans, and IRAs. Their flagship (k)ickstart® program is the first 401(k) to offer 3% cash back on contributions for employees earning $60,000 or less, paired with a free 10-part financial education course.",
           results: [
             "40,000+ Businesses Trust Human Interest",
             "1,000,000+ Employees Covered",
@@ -266,7 +273,7 @@ export const servicesData = [
             "AI Call Intelligence – Sentiment Analysis & Revenue Opportunity Detection",
           ],
           overview:
-            "Weave is an all-in-one communication and patient experience platform built for small businesses and healthcare practices — including dental, veterinary, optometry, and medical offices. It combines a world-class VoIP phone system with AI-powered texting, scheduling, payments, reviews, digital forms, email marketing, and call intelligence into a single unified platform. Weave's AI Receptionist answers calls, books appointments, takes payments, and responds to texts 24/7 — even when staff are unavailable. With over a decade of patient interaction data powering its AI models, Weave helps practices fill their schedules, reduce no-shows, get paid faster, and grow their online reputation — all from one dashboard.",
+            "Weave is an all-in-one communication and patient experience platform built for small businesses and healthcare practices, including dental, veterinary, optometry, and medical offices. Weave combines a VoIP phone system with AI-powered texting, scheduling, payments, reviews, digital forms, email marketing, and call intelligence in one platform. Weave's AI Receptionist answers calls, books appointments, takes payments, and responds to texts 24/7, even when staff are unavailable. With over a decade of patient interaction data behind its AI models, Weave helps practices fill their schedules, reduce no-shows, get paid faster, and grow their online reputation, all from one dashboard.",
           results: [
             "3x Faster Task Completion with Built-in AI",
             "125+ New Patients/Month for Top Practices",
@@ -304,7 +311,7 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "They built our web platform from scratch — fast, clean, and exactly what a growing startup needs. The attention to performance and scalability gave us a real edge from day one.",
+          "They built our web platform from scratch. Fast, clean, and exactly what a growing startup needs. The attention to performance and scalability gave us a real edge from day one.",
         name: "Prashant Kumar",
         designation: "Founder & CEO @ Fundbox",
         src: WebClient1,
@@ -340,7 +347,7 @@ export const servicesData = [
       {
         question: "Do you provide SEO optimization?",
         answer:
-          "Yes, all websites are optimized for SEO and speed by default — including meta tags, schema markup, image compression, and Core Web Vitals.",
+          "Yes, all websites are optimized for SEO and speed by default. This includes meta tags, schema markup, image compression, and Core Web Vitals.",
       },
       {
         question: "Which technologies do you use?",
@@ -400,7 +407,7 @@ export const servicesData = [
         {
           title: "Launch Your Website",
           description:
-            "We build, test, and launch your website — then hand it over with full training.",
+            "We build, test, and launch your website, then hand it over with full training.",
         },
       ],
       buttonText: "Start Your Project",
@@ -413,344 +420,968 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072",
   },
 
-  // 2. E-Commerce Solutions
+  // 2. App Development
   {
-    slug: "ecommerce-solutions",
-    title: "E-Commerce",
-    desc: "Scalable online stores with modern shopping experiences.",
-    icon: ShoppingCart,
+    slug: "app-development",
+    title: "App Development",
+    desc: "Custom software tools and automation solutions.",
+    icon: Wrench,
     heroImage:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
-    heroTitle: "High-Converting E-Commerce Stores",
+      App,
+    heroTitle: "Custom Tool Development",
     heroDesc:
-      "Launch powerful online stores that drive sales and deliver exceptional shopping experiences. From Shopify to WooCommerce, we build e-commerce solutions that scale with your business.",
-    sectionTitle: "Powerful E-Commerce Solutions",
+      "Build strong custom software tools and intelligent automation systems that eliminate manual work, reduce costs, and give your business a competitive edge.",
+    sectionTitle: "Custom Tool Development Solutions",
     sectionDesc:
-      "We create high-converting Shopify and WooCommerce stores with seamless payment integration, mobile-first design, and built-in marketing tools — everything you need to sell more online.",
+      "We build tailored software tools, from automation scripts and internal dashboards to full CRM systems and API integrations. If your team repeats a task often, we automate it.",
     sectionImage:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070",
+      "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
     tabs: [
       {
-        title: "Store Setup",
+        title: "Automation",
         content: {
-          heading: "E-Commerce Store Setup",
-          desc: "Complete online store configuration from scratch — ready to sell on day one.",
+          heading: "Business Process Automation",
+          desc: "Eliminate repetitive tasks and streamline your workflows with intelligent custom automation tools.",
           points: [
-            "Shopify Stores",
-            "WooCommerce Setup",
-            "Product Management",
-            "Store Branding",
+            "Workflow & Process Automation",
+            "Automated Data Processing",
+            "Scheduled Report Generation",
+            "Multi-step Task Scheduling",
           ],
         },
       },
       {
-        title: "Payments",
+        title: "Dashboards",
         content: {
-          heading: "Payment Integration",
-          desc: "Secure, multi-currency payment gateways for smooth global transactions.",
+          heading: "Custom Analytics Dashboards",
+          desc: "Real-time, role-based dashboards that give your team the data they need, exactly when they need it.",
           points: [
-            "Stripe Integration",
-            "PayPal Setup",
-            "JazzCash Integration",
-            "Easypaisa Support",
+            "Custom KPI Dashboards",
+            "Interactive Data Visualization",
+            "Real-time Updates & Alerts",
+            "Export & Reporting Features",
           ],
         },
       },
       {
-        title: "Optimization",
+        title: "APIs",
         content: {
-          heading: "Conversion Optimization",
-          desc: "Data-driven UX improvements to turn more visitors into paying customers.",
+          heading: "API Development & Integration",
+          desc: "Build robust, documented APIs that power your applications and connect your tools smoothly.",
           points: [
-            "Fast Checkout",
-            "Mobile Optimization",
-            "SEO Optimization",
-            "Cart Recovery",
+            "RESTful API Development",
+            "GraphQL APIs",
+            "Comprehensive API Documentation",
+            "Rate Limiting & Security",
           ],
         },
       },
       {
-        title: "Marketing",
+        title: "Integration",
         content: {
-          heading: "Store Growth & Marketing",
-          desc: "End-to-end marketing systems designed to drive consistent revenue growth.",
+          heading: "Third-Party System Integration",
+          desc: "Connect your existing tools, platforms, and databases into one unified, automated ecosystem.",
           points: [
-            "Meta Ads",
-            "Google Shopping Ads",
-            "Email Marketing",
-            "Analytics Tracking",
+            "CRM & ERP Integration",
+            "Payment Gateway Connections",
+            "Email & SMS Service APIs",
+            "Zapier & Make.com Workflows",
           ],
         },
       },
     ],
     capabilities: [
       {
-        title: "Shopify Stores",
-        desc: "Custom Shopify stores with premium themes, apps, and integrations built to convert visitors into buyers.",
-        icon: ShoppingCart,
+        title: "Custom Tools",
+        desc: "Purpose-built software tools designed specifically around your business processes and team workflows.",
+        icon: Settings,
       },
       {
-        title: "WooCommerce",
-        desc: "Flexible WooCommerce stores on WordPress with full control over design, pricing, and functionality.",
-        icon: Globe,
+        title: "Automation Systems",
+        desc: "End-to-end automation that handles data entry, report generation, notifications, and repetitive tasks 24/7.",
+        icon: Zap,
       },
       {
-        title: "Payment Systems",
-        desc: "Secure multi-gateway payment integrations including Stripe, PayPal, JazzCash, and Easypaisa.",
-        icon: Shield,
+        title: "Analytics Dashboards",
+        desc: "Beautiful, real-time dashboards that consolidate your business data into clear, actionable insights.",
+        icon: BarChart,
       },
       {
-        title: "Sales Optimization",
-        desc: "CRO strategies, A/B testing, and abandoned cart recovery to maximize your revenue per visitor.",
-        icon: TrendingUp,
+        title: "API & Integrations",
+        desc: "Scalable API development and smooth third-party integrations that make all your tools work together.",
+        icon: Database,
       },
     ],
-    capabilitiesTitle: "E-Commerce",
-    capabilitiesHighlight: "Solutions",
+    capabilitiesTitle: "Tool Development",
+    capabilitiesHighlight: "Capabilities",
     capabilitiesBg:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070",
-    processSubTitle: "Our E-Commerce Process",
-    processTitle: "Build Your Online Empire",
-    processHighlight: "Today",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
+    processSubTitle: "Our Development Process",
+    processTitle: "Build Strong Tools",
+    processHighlight: "That Work",
     processImage:
-      "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2070",
+      "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
     processDesc:
-      "We create scalable online shopping experiences designed to maximize sales and conversions from day one.",
+      "We don't build generic software. We build exactly the tool your business needs. Every project starts with understanding your workflow, then engineering the most efficient solution.",
     processFeatures: [
-      "Store Strategy & Planning",
-      "Custom Design & UX",
-      "Payment & Shipping Integration",
-      "Launch, Marketing & Growth",
+      "Requirements Deep-Dive",
+      "Architecture & System Design",
+      "Agile Development & Testing",
+      "Deployment, Training & Handover",
     ],
     showcase: {
-      title: "E-Commerce Projects",
+      title: "Tool Development Projects",
       bgImage:
-        "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
       projects: [
         {
-          slug: "shopify-store",
-          title: "Shopify Store Development",
-          desc: "Complete Shopify store setup with custom themes, apps, and payment integrations built to drive sales.",
-          image:
-            "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
-          tech: ["Shopify", "Liquid", "Shopify Apps", "Stripe", "Meta Pixel"],
+          slug: "firmware-security-platform",
+          title: "Firmware & Supply Chain Security Platform",
+          desc: "Advanced enterprise-grade firmware security platform designed to detect vulnerabilities, monitor device integrity, and protect hardware supply chains.",
+          image: ToolProject1,
+          tech: [
+            "React",
+            "Python",
+            "AI Detection",
+            "Cloud Infrastructure",
+            "REST API",
+          ],
           features: [
-            "Custom Theme Design",
-            "Payment Gateway Setup",
-            "Product & Inventory Management",
-            "SEO Optimization",
-            "Mobile-First Responsive Design",
+            "Firmware Vulnerability Detection",
+            "Real-time Device Monitoring",
+            "Supply Chain Risk Analysis",
+            "Threat Intelligence Dashboard",
+            "Automated Security Reporting",
           ],
           overview:
-            "Launch a professional Shopify store that drives sales and provides a seamless shopping experience. We handle everything from theme customization and app integration to payment setup and launch — so you can focus on growing your business.",
+            "We developed a robust firmware and hardware security platform inspired by modern enterprise cybersecurity ecosystems. The system continuously scans connected devices, identifies hidden firmware vulnerabilities, monitors hardware integrity, and provides real-time threat intelligence dashboards for enterprise IT teams.",
           results: [
-            "3x Faster Launch vs DIY",
-            "Higher Conversion Rates",
-            "Better User Experience",
+            "Improved Infrastructure Security",
+            "Faster Threat Detection",
+            "Enterprise-grade Compliance Visibility",
           ],
         },
         {
-          slug: "woocommerce-store",
-          title: "WooCommerce Store",
-          desc: "Custom WordPress-based e-commerce stores with WooCommerce — powerful, flexible, and fully yours.",
-          image:
-            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999",
-          tech: ["WordPress", "WooCommerce", "PHP", "MySQL", "Elementor"],
+          slug: "ai-finance-audit-platform",
+          title: "AI Finance Audit & Spend Management Platform",
+          desc: "AI-powered financial auditing and spend management software that automates invoice reviews, fraud detection, and expense compliance.",
+          image: ToolProject2,
+          tech: ["Electron.js", "Python", "AI Models", "Node.js", "MongoDB"],
           features: [
-            "Custom Product Catalogs",
-            "Secure Multi-gateway Checkout",
-            "Inventory & Order Management",
-            "Flexible Shipping Options",
-            "Coupon & Discount System",
+            "Automated Invoice Auditing",
+            "AI Fraud Detection Engine",
+            "Expense Policy Compliance",
+            "Real-time Financial Insights",
+            "ERP & Accounting Integrations",
           ],
           overview:
-            "Build a flexible and fully customizable WooCommerce store that grows with your business. Unlike hosted platforms, WooCommerce gives you complete control over your store's data, design, and functionality — with no transaction fees.",
+            "This intelligent finance operations platform automates manual accounting workflows using AI. The software reviews invoices, flags suspicious transactions, validates policy compliance, and provides finance teams with real-time visibility into spending behavior across multiple departments and vendors.",
           results: [
-            "Full Ownership & Control",
-            "Cost-Effective Long Term",
-            "Easy Self-Management",
-          ],
-        },
-        {
-          slug: "ecommerce-dashboard",
-          title: "E-Commerce Analytics Dashboard",
-          desc: "Real-time sales, inventory, and customer analytics dashboard built specifically for online stores.",
-          image:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-          tech: ["React", "Node.js", "Chart.js", "MongoDB", "REST API"],
-          features: [
-            "Real-time Sales Analytics",
-            "Inventory Level Tracking",
-            "Customer Behavior Insights",
-            "Order Management Overview",
-            "Revenue & Profit Reports",
-          ],
-          overview:
-            "Get complete, real-time visibility of your entire e-commerce operation in one centralized dashboard. Track sales trends, monitor inventory, analyze customer behavior, and make faster, smarter business decisions — all without switching between multiple tools.",
-          results: [
-            "Smarter Business Decisions",
-            "Real-time Operational Insights",
-            "30% Increase in Efficiency",
+            "Reduced Manual Audit Work",
+            "Faster Financial Operations",
+            "Improved Expense Accuracy",
           ],
         },
       ],
     },
-    blogTitle: "E-Commerce Insights",
+    blogTitle: "Tool Development Insights",
     blogDescription:
-      "Tips, strategies, and case studies for online store success",
+      "Automation strategies and custom software development tips",
     blogPosts: [
       {
-        title: "7 Ways to Increase Your E-Commerce Conversion Rate",
-        category: "Conversion",
-        readTime: 6,
+        title: "How Automation Can Save Your Business 20+ Hours Per Week",
+        category: "Automation",
+        readTime: 5,
         imageUrl:
-          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
+          "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
         description:
-          "Learn proven, data-backed strategies to boost your e-commerce conversion rates without increasing ad spend.",
-        views: "3.2k",
-        author: "Usman Ali",
+          "Discover which business processes are easiest to automate and how much time and money you can realistically save.",
+        views: "1.5k",
+        author: "Imran Ali",
       },
       {
-        title: "Shopify vs WooCommerce: Which Is Right for You?",
-        category: "Platforms",
-        readTime: 8,
+        title: "Why Your Business Needs a Custom CRM (Not a Generic One)",
+        category: "CRM",
+        readTime: 6,
         imageUrl:
-          "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070",
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
         description:
-          "A comprehensive comparison to help you choose the best platform for your online store in 2024.",
-        views: "5.4k",
-        author: "Sara Malik",
+          "Generic CRMs bloat your workflow with features you never use. Here's why a custom CRM pays for itself.",
+        views: "2.1k",
+        author: "Hassan Raza",
       },
     ],
     testimonials: [
       {
         quote:
-          "They launched and automated our TikTok Shop USA operations with synchronized supplier inventory and high-converting SEO product listings. Our outdoor gear brand scaled faster than we imagined.",
-        name: "Ryan Greenfield",
-        designation: "Founder & CEO, Aspen Trail Gear",
+          "They built a custom TikTok Creator Outreach Tool that auto-scans micro-influencers, sends DMs, and tracks affiliate revenue. Our influencer program now runs on autopilot.",
+        name: "Derek Vance",
+        designation: "Founder & Marketing Director, AeroFit Apparel",
         src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "Their Shopify SEO restructuring completely transformed our organic traffic. They optimized over 150 product pages and helped our activewear collections rank across multiple search channels.",
-        name: "Amanda Ross",
-        designation: "Co-Founder, Sol Vibe Activewear",
+          "Their AI-powered SEO optimizer rewrites thousands of product titles and pushes updates to Shopify and Amazon in one click. Months of work done in minutes.",
+        name: "Chloe Sterling",
+        designation: "Chief Growth Officer, PureGlow Organics",
         src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "The custom Laravel retention dashboard and AI-powered email sequences recovered abandoned carts automatically and significantly improved our subscription retention rates.",
-        name: "Tyler Vance",
-        designation: "Brand Director, Midnight Roast Co.",
+          "They eliminated our expensive SaaS subscriptions by building a proprietary Laravel marketing dashboard with behavioral email sequences tied directly to our Meta ad pixel.",
+        name: "Marcus Hayes",
+        designation: "E-Commerce Director, Alpha Grind Coffee Co.",
         src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "They built a blazing-fast storefront and deployed an AI customer support assistant that recommends skincare routines in real-time. It completely upgraded our customer experience.",
-        name: "Jessica Miller",
-        designation: "Managing Director, Opal & Oak Skincare",
+          "Their NLP lead qualification chatbot helped us filter high-value prospects instantly and route enterprise leads directly to our sales team while improving Google Ads ROI.",
+        name: "Natalie Reyes",
+        designation: "Head of Operations, SafeHaven Smart Home",
         src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
       {
-        question: "Which e-commerce platforms do you work with?",
+        question: "How long does custom tool development take?",
         answer:
-          "We specialize in Shopify, WooCommerce, and custom-built e-commerce solutions. We help you choose the right platform based on your budget, product type, and growth goals.",
+          "Timeline depends on complexity. Simple automation scripts take 1–2 weeks. A full CRM or dashboard typically takes 4–8 weeks. We provide a clear timeline upfront after reviewing your requirements.",
       },
       {
-        question: "How long does a store setup take?",
+        question: "Do you provide documentation and training?",
         answer:
-          "A standard store with up to 50 products takes 3–5 weeks to launch. Larger stores or custom features may take 6–10 weeks.",
+          "Yes. Every tool we build comes with full documentation and a handover training session so your team can use and manage it confidently.",
       },
       {
-        question:
-          "Can you migrate my existing store to Shopify or WooCommerce?",
+        question: "Can you integrate with our existing software?",
         answer:
-          "Yes, we handle full store migrations including products, customer data, orders, and SEO redirects with zero downtime.",
+          "Absolutely. We integrate with thousands of tools via APIs, including Salesforce, HubSpot, QuickBooks, Shopify, Google Workspace, Slack, and more.",
       },
       {
-        question: "Do you set up local payment gateways for Pakistan?",
+        question: "Do you offer ongoing maintenance after delivery?",
         answer:
-          "Absolutely. We integrate JazzCash, Easypaisa, HBL Pay, and bank transfer options alongside international gateways like Stripe and PayPal.",
+          "Yes. We offer flexible maintenance plans including bug fixes, feature additions, and performance monitoring so your tool stays reliable as your business grows.",
       },
     ],
     roadmap: {
-      title: "E-Commerce Launch Roadmap",
+      title: "Tool Development Roadmap",
       description:
-        "Your clear path to a successful, revenue-generating online store",
+        "From business problem to working software, our proven path",
       steps: [
         {
-          title: "Product & Market Strategy",
+          title: "Discovery & Requirements",
           description:
-            "Define your product catalog, target audience, pricing strategy, and platform selection before writing a single line of code.",
+            "We deep-dive into your workflows, pain points, and goals to define exactly what needs to be built.",
           icon: Target,
         },
         {
-          title: "Store Design & UX",
+          title: "Architecture & Design",
           description:
-            "Create a visually compelling, conversion-optimized store design that builds trust and encourages purchases.",
+            "Design the system architecture, database schema, and UI/UX before any code is written.",
           icon: Palette,
         },
         {
-          title: "Integration & Testing",
+          title: "Development & Testing",
           description:
-            "Set up payment gateways, shipping providers, tax rules, and thoroughly test every checkout flow.",
-          icon: Settings,
+            "Build and rigorously test every feature with real-world data and edge case scenarios.",
+          icon: Code,
         },
         {
-          title: "Launch & Scale",
+          title: "Deployment & Training",
           description:
-            "Go live, set up analytics tracking, and begin driving traffic through SEO, paid ads, and email campaigns.",
+            "Deploy to production, provide full documentation, and train your team for a smooth handover.",
           icon: Rocket,
         },
       ],
     },
     nextSteps: {
-      title: "Launch Your Store",
+      title: "Build Your Custom Tool",
       description:
-        "Start selling online — here's exactly how we make it happen",
+        "Turn your biggest operational pain point into a solved problem",
       steps: [
         {
-          title: "Free E-Commerce Consultation",
+          title: "Share Your Requirements",
           description:
-            "Tell us your products, budget, and goals — we'll recommend the best platform and strategy for you.",
+            "Tell us about your workflow challenges, the tasks you want to automate, or the tool you have in mind.",
         },
         {
-          title: "Custom Store Build",
+          title: "Receive a Custom Proposal",
           description:
-            "We design and develop your complete online store, set up payments, and load your products.",
+            "We deliver a detailed development plan, timeline, and fixed-price quote. No surprises.",
         },
         {
-          title: "Launch & Start Selling",
+          title: "Launch & Use Your Tool",
           description:
-            "We launch your store, provide training, and set up marketing tools so you can start generating sales immediately.",
+            "We build, test, deploy, and hand over your custom tool with full documentation and training.",
         },
       ],
-      buttonText: "Start Your Store",
+      buttonText: "Discuss Your Project",
       buttonLink: "/contact",
     },
-    ctaTitle: "Ready to Start Selling Online?",
-    ctaButton: "Get a Free Quote",
+    ctaTitle: "Ready to Automate Your Business?",
+    ctaButton: "Get a Free Consultation",
     ctaLink: "/contact",
     ctaBg:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
   },
 
-  // 3. Digital Marketing
+  // 3. AI & Machine Learning
+  {
+    slug: "python-ml-ai",
+    title: "AI & Machine Learning",
+    desc: "Python, ML and AI solutions for intelligent automation.",
+    icon: BrainCircuit,
+    heroImage:
+      Python,
+    heroTitle: "AI & Machine Learning Solutions",
+    heroDesc:
+      "Leverage the power of Python, AI, and Machine Learning to automate complex processes, predict future trends, and gain insights your competitors can't see.",
+    sectionTitle: "Intelligent AI & ML Solutions",
+    sectionDesc:
+      "We build custom AI and machine learning systems that learn from your data, automate intelligent decisions, and give your business capabilities that were previously only available to tech giants.",
+    sectionImage:
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
+    tabs: [
+      {
+        title: "Machine Learning",
+        content: {
+          heading: "Custom ML Model Development",
+          desc: "Build predictive models trained on your own data to forecast outcomes and automate complex decisions.",
+          points: [
+            "Predictive Analytics & Forecasting",
+            "Classification & Regression Models",
+            "Anomaly Detection",
+            "Model Training, Evaluation & Deployment",
+          ],
+        },
+      },
+      {
+        title: "AI Automation",
+        content: {
+          heading: "Intelligent Process Automation",
+          desc: "Replace rule-based automation with AI that understands context, learns over time, and handles exceptions.",
+          points: [
+            "Intelligent Workflow Automation",
+            "AI-Powered Decision Making",
+            "Pattern Recognition Systems",
+            "Automated Data Extraction (ETL)",
+          ],
+        },
+      },
+      {
+        title: "Data Science",
+        content: {
+          heading: "Data Analysis & Science",
+          desc: "Turn raw, messy data into structured insights that drive better business decisions.",
+          points: [
+            "Exploratory Data Analysis (EDA)",
+            "Statistical Modeling",
+            "Data Cleaning & Pipeline Building",
+            "Interactive Reporting",
+          ],
+        },
+      },
+      {
+        title: "NLP",
+        content: {
+          heading: "Natural Language Processing",
+          desc: "Build systems that understand, process, and generate human language at scale.",
+          points: [
+            "Sentiment & Intent Analysis",
+            "AI Chatbots & Virtual Assistants",
+            "Text Classification & Summarization",
+            "Document Processing & OCR",
+          ],
+        },
+      },
+    ],
+    capabilities: [
+      {
+        title: "Machine Learning",
+        desc: "Custom predictive models trained on your data, built for sales forecasting, churn prediction, demand planning, and more.",
+        icon: BrainCircuit,
+      },
+      {
+        title: "AI Automation",
+        desc: "Intelligent automation that goes beyond rules. Systems that understand context and make smart decisions on their own.",
+        icon: Zap,
+      },
+      {
+        title: "Data Science",
+        desc: "End-to-end data pipelines, analysis, and visualization to uncover insights hidden in your business data.",
+        icon: Database,
+      },
+      {
+        title: "NLP & Chatbots",
+        desc: "Natural language systems for support automation, document processing, sentiment analysis, and conversational AI.",
+        icon: Search,
+      },
+    ],
+    capabilitiesTitle: "AI & ML",
+    capabilitiesHighlight: "Capabilities",
+    capabilitiesBg:
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
+    processSubTitle: "Our AI Development Process",
+    processTitle: "Intelligence That",
+    processHighlight: "Transforms",
+    processImage:
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
+    processDesc:
+      "We follow a structured, research-backed process to build AI systems that are accurate, reliable, explainable, and production-ready.",
+    processFeatures: [
+      "Data Assessment & Collection",
+      "Model Selection & Development",
+      "Training, Evaluation & Testing",
+      "Deployment, Monitoring & Retraining",
+    ],
+    showcase: {
+      title: "AI & ML Projects",
+      bgImage:
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
+      projects: [
+        {
+          slug: "predictive-analytics",
+          title: "Predictive Analytics Engine",
+          desc: "Machine learning models that forecast business trends, demand, and outcomes with high accuracy.",
+          image:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+          tech: ["Python", "Scikit-learn", "TensorFlow", "Pandas", "Plotly"],
+          features: [
+            "Sales & Revenue Forecasting",
+            "Inventory Demand Prediction",
+            "Customer Churn Prediction",
+            "Risk Scoring Models",
+            "Trend & Seasonality Analysis",
+          ],
+          overview:
+            "Stop making decisions based on gut feeling. Our predictive analytics engines train on your historical business data to forecast sales, predict customer churn, optimize inventory, and identify risks before they become problems. This gives you a 60-day head start on the competition.",
+          results: [
+            "60-Day Sales Forecasting",
+            "32% Reduction in Inventory Overhead",
+            "Measurable Competitive Advantage",
+          ],
+        },
+        {
+          slug: "chatbot-development",
+          title: "AI Chatbot & Virtual Assistant",
+          desc: "Intelligent, context-aware chatbots that handle customer support, lead qualification, and FAQs automatically.",
+          image:
+            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070",
+          tech: ["Python", "LangChain", "OpenAI GPT-4", "Rasa", "Dialogflow"],
+          features: [
+            "Natural Language Understanding",
+            "24/7 Automated Support",
+            "Multi-language Support",
+            "Lead Capture & Qualification",
+            "Smooth Human Handoff",
+          ],
+          overview:
+            "Our AI chatbots go beyond scripted responses. Powered by large language models, they understand context, handle complex queries, remember conversation history, and escalate to human agents when needed. Most clients resolve 65–75% of support tickets automatically after deployment.",
+          results: [
+            "70% Support Tickets Auto-Resolved",
+            "Response Time: 14 Hours → 45 Seconds",
+            "Significant Support Cost Reduction",
+          ],
+        },
+        {
+          slug: "image-recognition",
+          title: "Computer Vision & Image Recognition",
+          desc: "Custom computer vision systems for object detection, image classification, OCR, and visual search.",
+          image:
+            "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
+          tech: ["Python", "TensorFlow", "PyTorch", "OpenCV", "YOLO v8"],
+          features: [
+            "Real-time Object Detection",
+            "Face & Identity Recognition",
+            "Multi-class Image Classification",
+            "Optical Character Recognition (OCR)",
+            "Visual Product Search",
+          ],
+          overview:
+            "Automate visual inspection, document processing, product recognition, and quality control with modern computer vision. Our models train on your specific use case, whether you need to detect defects on a production line, extract text from documents, or identify products from images.",
+          results: [
+            "95%+ Model Accuracy",
+            "Fully Automated Visual Processing",
+            "Scalable to Millions of Images",
+          ],
+        },
+      ],
+    },
+    blogTitle: "AI & ML Insights",
+    blogDescription:
+      "Latest developments in artificial intelligence and machine learning",
+    blogPosts: [
+      {
+        title: "How AI is Transforming Small & Medium Businesses",
+        category: "AI",
+        readTime: 6,
+        imageUrl:
+          "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
+        description:
+          "Explore practical, affordable ways AI is giving smaller businesses capabilities that were once only available to enterprises.",
+        views: "5.2k",
+        author: "Dr. Sara Ahmed",
+      },
+      {
+        title: "Predictive Analytics: A Practical Guide for Business Owners",
+        category: "Machine Learning",
+        readTime: 8,
+        imageUrl:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+        description:
+          "What is predictive analytics, how does it work, and what kind of results can your business realistically expect?",
+        views: "3.8k",
+        author: "Imran Ali",
+      },
+    ],
+    testimonials: [
+      {
+        quote:
+          "Their predictive ML inventory engine transformed how we manage purchasing and warehouse forecasting. The AI accurately predicts demand trends weeks in advance and significantly reduced our operational waste.",
+        name: "Derek Sterling",
+        designation: "Chief Technology Officer, Apex Apparel Group",
+        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "The NLP-powered recommendation engine completely changed our customer experience. Users now receive personalized supplement suggestions instantly through natural conversation flows.",
+        name: "Dr. Elena Rostova",
+        designation: "Founder, Vitality Bio-Nutrient Co.",
+        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "Their AI-driven TikTok trend scraper helped us identify viral products before competitors even noticed them. It became the backbone of our multi-store dropshipping operation.",
+        name: "Marcus Thorne",
+        designation: "VP of Growth, Horizon Drop-Logistics",
+        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "The AI intent-classification system automated most of our support operations and reduced response times from hours to seconds while routing complex cases perfectly.",
+        name: "Sophia Chen",
+        designation: "Operations Director, LuxeDecor Direct",
+        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
+      },
+    ],
+    faqs: [
+      {
+        question: "What kind of data do I need to start an AI/ML project?",
+        answer:
+          "It depends on the use case. Most ML models need at least 1,000–10,000 historical records. We can work with structured CSVs, databases, images, PDFs, or raw text. We'll assess your data readiness in a free consultation.",
+      },
+      {
+        question: "How accurate will the AI model be?",
+        answer:
+          "Accuracy depends on data quality and quantity. With clean, sufficient data, we typically achieve 85–95% accuracy. We always provide clear performance metrics before deployment.",
+      },
+      {
+        question: "Do I need a technical team to manage the AI system?",
+        answer:
+          "No. We build user-friendly interfaces around our AI systems so your team can use and monitor them without any technical knowledge.",
+      },
+      {
+        question: "Can you integrate AI into our existing software?",
+        answer:
+          "Yes. We integrate AI models into your existing CRM, e-commerce platform, website, or internal tools via APIs. You don't need to rebuild your existing systems.",
+      },
+    ],
+    roadmap: {
+      title: "AI Implementation Roadmap",
+      description:
+        "A structured, low-risk path to deploying AI in your business",
+      steps: [
+        {
+          title: "Data Assessment",
+          description:
+            "Evaluate the quality, quantity, and structure of your data to determine the best AI approach.",
+          icon: Database,
+        },
+        {
+          title: "Model Selection & Design",
+          description:
+            "Select the optimal ML architecture and design the system based on your specific use case and goals.",
+          icon: BrainCircuit,
+        },
+        {
+          title: "Development & Training",
+          description:
+            "Build, train, and rigorously evaluate the model using your data and industry benchmarks.",
+          icon: Code,
+        },
+        {
+          title: "Deployment & Monitoring",
+          description:
+            "Deploy to production with monitoring dashboards, alerting, and scheduled retraining pipelines.",
+          icon: Settings,
+        },
+      ],
+    },
+    nextSteps: {
+      title: "Start Your AI Journey",
+      description: "Three steps to bringing AI into your business",
+      steps: [
+        {
+          title: "Free AI Consultation",
+          description:
+            "Discuss your business challenges and explore which AI solutions will deliver the highest ROI for you.",
+        },
+        {
+          title: "Feasibility & Data Review",
+          description:
+            "We analyze your data, define the use case, and present a clear development roadmap and success metrics.",
+        },
+        {
+          title: "Build & Deploy AI",
+          description:
+            "We develop, test, and deploy your AI solution, then monitor performance to keep it improving over time.",
+        },
+      ],
+      buttonText: "Explore AI Solutions",
+      buttonLink: "/contact",
+    },
+    ctaTitle: "Ready to Give Your Business an AI Edge?",
+    ctaButton: "Talk to an AI Expert",
+    ctaLink: "/contact",
+    ctaBg:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
+  },
+
+  // 4. Graphic Design
+  {
+    slug: "graphic-design",
+    title: "Graphic Designing",
+    desc: "Creative branding and visual design services.",
+    icon: Palette,
+    heroImage:
+      Graphic,
+    heroTitle: "Creative Graphic Design That Sells",
+    heroDesc:
+      "Stand out with stunning visual designs that capture your brand identity, build trust with your audience, and convert attention into action.",
+    sectionTitle: "Professional Graphic Design Services",
+    sectionDesc:
+      "From brand identities and logo suites to social media graphics and packaging design, we create visuals built to make a lasting impression.",
+    sectionImage:
+      "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
+    tabs: [
+      {
+        title: "Branding",
+        content: {
+          heading: "Brand Identity Design",
+          desc: "Create a cohesive, memorable brand identity that communicates your values and attracts your ideal customers.",
+          points: [
+            "Logo Design & Icon System",
+            "Brand Guidelines Document",
+            "Color Psychology & Palette",
+            "Typography System",
+          ],
+        },
+      },
+      {
+        title: "Print Design",
+        content: {
+          heading: "Print & Packaging Design",
+          desc: "Professional print materials that make a strong first impression, both online and offline.",
+          points: [
+            "Brochures & Flyers",
+            "Business Cards & Stationery",
+            "Poster & Banner Design",
+            "Product Packaging Mockups",
+          ],
+        },
+      },
+      {
+        title: "Digital Design",
+        content: {
+          heading: "Digital & Social Media Graphics",
+          desc: "Scroll-stopping digital visuals designed for every platform and every campaign.",
+          points: [
+            "Social Media Post Templates",
+            "Web Banners & Display Ads",
+            "Email Newsletter Templates",
+            "Meta & TikTok Ad Creatives",
+          ],
+        },
+      },
+      {
+        title: "Illustration",
+        content: {
+          heading: "Custom Illustration & Icons",
+          desc: "Unique illustrations and icon sets that give your brand a distinctive visual voice.",
+          points: [
+            "Character & Mascot Design",
+            "Custom Infographics",
+            "Icon & UI Element Sets",
+            "Editorial & Concept Art",
+          ],
+        },
+      },
+    ],
+    capabilities: [
+      {
+        title: "Brand Identity",
+        desc: "Complete brand identity packages: logo, color palette, typography, and brand guidelines, built to last.",
+        icon: Award,
+      },
+      {
+        title: "Print & Packaging",
+        desc: "Professional print design from business cards and brochures to product packaging and trade show materials.",
+        icon: HeartHandshake,
+      },
+      {
+        title: "Digital Graphics",
+        desc: "Scroll-stopping social media graphics, display ads, and email templates optimized for engagement.",
+        icon: Globe,
+      },
+      {
+        title: "Custom Illustration",
+        desc: "Unique, hand-drawn illustrations, mascots, infographics, and icon sets that set your brand apart.",
+        icon: Palette,
+      },
+    ],
+    capabilitiesTitle: "Design",
+    capabilitiesHighlight: "Services",
+    capabilitiesBg:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
+    processSubTitle: "Our Design Process",
+    processTitle: "Creativity That",
+    processHighlight: "Inspires",
+    processImage:
+      "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
+    processDesc:
+      "Great design isn't accidental. It comes from a structured creative process that combines strategic thinking with artistic execution.",
+    processFeatures: [
+      "Brand Discovery & Research",
+      "Concept Development & Mood Board",
+      "Design Creation & Refinement",
+      "Final Delivery & Brand Guidelines",
+    ],
+    showcase: {
+      title: "Design Projects",
+      bgImage:
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
+      projects: [
+        {
+          slug: "logo-design",
+          title: "Logo & Brand Mark Design",
+          desc: "Unique, versatile logo designs that represent your brand identity across every medium and scale.",
+          image:
+            "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
+          tech: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
+          features: [
+            "3–5 Unique Initial Concepts",
+            "Scalable Vector Files (AI, EPS, SVG)",
+            "Full Color, Mono & Reversed Versions",
+            "Unlimited Revision Rounds",
+            "Complete Logo Usage Guidelines",
+          ],
+          overview:
+            "Your logo is the foundation of your brand. It appears everywhere, from your website and packaging to social media and business cards. We create logos that are simple enough to be instantly recognizable, versatile enough to work everywhere, and distinctive enough to stand out in your market.",
+          results: [
+            "Instant Brand Recognition",
+            "Professional First Impressions",
+            "Versatile Across All Media",
+          ],
+        },
+        {
+          slug: "social-media-graphics",
+          title: "Social Media Graphics & Ad Creatives",
+          desc: "Scroll-stopping graphics and ad creatives for Instagram, Facebook, TikTok, and LinkedIn.",
+          image:
+            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
+          tech: ["Adobe Photoshop", "Illustrator", "Figma", "Canva Pro"],
+          features: [
+            "Instagram Feed & Story Templates",
+            "Facebook Cover & Ad Creatives",
+            "LinkedIn Banner & Post Design",
+            "TikTok Thumbnail & Overlay Design",
+            "Reusable Brand-Consistent Templates",
+          ],
+          overview:
+            "Social media is crowded. Only the most visually compelling content stops the scroll. We design strategic, brand-consistent graphics built for engagement, combining eye-catching visuals with clear messaging that drives clicks, follows, and conversions.",
+          results: [
+            "Higher Engagement & CTR",
+            "Consistent Brand Presence",
+            "Stronger Social Media Growth",
+          ],
+        },
+        {
+          slug: "brand-identity",
+          title: "Complete Brand Identity System",
+          desc: "A comprehensive brand identity package with everything you need to present your business professionally.",
+          image:
+            "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
+          tech: ["Illustrator", "Photoshop", "InDesign", "Figma"],
+          features: [
+            "Primary & Secondary Logo Suite",
+            "Full Color Palette with Usage Rules",
+            "Typography Hierarchy System",
+            "60+ Page Brand Guidelines Document",
+            "Stationery & Business Card Design",
+          ],
+          overview:
+            "A complete brand identity system gives your business the visual consistency and professionalism that builds trust. We deliver everything: logos, colors, fonts, patterns, icons, and a full brand guidelines document, so your entire team presents the brand consistently everywhere.",
+          results: [
+            "Consistent Brand Across All Channels",
+            "Premium, Professional Image",
+            "Clear Market Differentiation",
+          ],
+        },
+      ],
+    },
+    blogTitle: "Design Insights",
+    blogDescription:
+      "Latest graphic design trends, tips, and branding strategies",
+    blogPosts: [
+      {
+        title: "Graphic Design Trends Dominating 2024",
+        category: "Trends",
+        readTime: 5,
+        imageUrl:
+          "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
+        description:
+          "From maximalist typography to AI-generated textures, the design trends you need to know for 2024.",
+        views: "2.8k",
+        author: "Fatima Khan",
+      },
+      {
+        title: "Why Your Brand Needs a Proper Brand Identity (Not Just a Logo)",
+        category: "Branding",
+        readTime: 6,
+        imageUrl:
+          "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
+        description:
+          "The difference between a logo and a brand identity, and why it matters for your business growth.",
+        views: "3.4k",
+        author: "Ali Raza",
+      },
+    ],
+    testimonials: [
+      {
+        quote:
+          "Their creative team completely refreshed our paid advertising visuals with scroll-stopping Meta and TikTok creatives. The new graphics dramatically improved our engagement and click-through rates.",
+        name: "Austin Vance",
+        designation: "Marketing Director, AeroFit Gear",
+        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "They transformed our skincare brand into a premium luxury identity with stunning packaging, minimalist branding, and beautifully designed unboxing materials that elevated the entire customer experience.",
+        name: "Chloe Bennett",
+        designation: "Founder, Sol & Seed Botanicals",
+        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "The custom UI/UX graphics and icon systems they designed made our subscription experience far more intuitive and visually polished. Our storefront finally feels like a premium coffee brand.",
+        name: "Marcus Hayes",
+        designation: "Operations Lead, Grindhouse Coffee Roasters",
+        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "Their lookbook designs and Amazon A+ content gave our seasonal collections a high-end visual presence while significantly improving the professionalism of our marketplace listings.",
+        name: "Natalie Reyes",
+        designation: "Brand Manager, Home & Hearth Co.",
+        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
+      },
+    ],
+    faqs: [
+      {
+        question: "How many design concepts do you provide?",
+        answer:
+          "We provide 3–5 unique initial concepts for logo projects, and 2–3 directions for branding projects. You choose the direction you love and we refine from there.",
+      },
+      {
+        question: "How many revisions are included?",
+        answer:
+          "We offer unlimited revisions on all design projects until you are completely satisfied. Your approval is our goal.",
+      },
+      {
+        question: "What file formats will I receive?",
+        answer:
+          "You receive all source files in AI, EPS, PSD, SVG, PNG (transparent), JPG, and PDF formats: everything you need for print and digital use.",
+      },
+      {
+        question: "Do you create designs for social media ad campaigns?",
+        answer:
+          "Yes. We design high-converting ad creatives for Meta, TikTok, Google Display, LinkedIn, and all major platforms in correct dimensions for each placement.",
+      },
+    ],
+    roadmap: {
+      title: "Design Project Roadmap",
+      description: "From blank canvas to stunning, delivered brand assets",
+      steps: [
+        {
+          title: "Discovery & Brief",
+          description:
+            "We understand your brand, audience, competitors, and vision through a detailed creative brief.",
+          icon: Target,
+        },
+        {
+          title: "Mood Board & Direction",
+          description:
+            "Present visual mood boards to align on aesthetic direction before any design work begins.",
+          icon: Palette,
+        },
+        {
+          title: "Design & Refinement",
+          description:
+            "Create initial concepts, gather your feedback, and refine until every detail is perfect.",
+          icon: Sparkles,
+        },
+        {
+          title: "Final Delivery",
+          description:
+            "Deliver all final files in every format needed, with usage guidelines and full transfer of ownership.",
+          icon: CheckCircle,
+        },
+      ],
+    },
+    nextSteps: {
+      title: "Start Your Design Project",
+      description: "Bring your brand vision to life in three steps",
+      steps: [
+        {
+          title: "Share Your Vision",
+          description:
+            "Tell us about your brand, your target audience, and the feeling you want your design to convey.",
+        },
+        {
+          title: "Receive Your Designs",
+          description:
+            "We present initial concepts and refine based on your feedback until the design is perfect.",
+        },
+        {
+          title: "Get Your Files",
+          description:
+            "Receive all final design files in every format, ready to use across print and digital channels.",
+        },
+      ],
+      buttonText: "Start Designing",
+      buttonLink: "/contact",
+    },
+    ctaTitle: "Ready to Build a Brand That Stands Out?",
+    ctaButton: "Get a Design Quote",
+    ctaLink: "/contact",
+    ctaBg:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
+  },
+
+  // 5. Digital Marketing
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
     desc: "SEO, Google Ads & Meta Ads for business growth.",
     icon: Search,
     heroImage:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
+      Digital,
     heroTitle: "Data-Driven Digital Marketing",
     heroDesc:
       "Grow your business with strategic SEO, precision-targeted Meta Ads, and high-ROI Google advertising campaigns. Every strategy is backed by data, built for results.",
     sectionTitle: "Growth-Focused Digital Marketing",
     sectionDesc:
-      "We don't just run ads — we build complete growth systems. From SEO foundations to paid advertising funnels, every campaign is engineered to increase traffic, generate quality leads, and maximize revenue.",
+      "We do more than run ads. We build complete growth systems. From SEO foundations to paid advertising funnels, every campaign is engineered to increase traffic, generate quality leads, and maximize revenue.",
     sectionImage:
       "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074",
     tabs: [
@@ -771,7 +1402,7 @@ export const servicesData = [
         title: "Meta Ads",
         content: {
           heading: "Facebook & Instagram Ads",
-          desc: "Highly targeted ad campaigns across Meta platforms — designed for leads, sales, and brand growth.",
+          desc: "Highly targeted ad campaigns across Meta platforms, designed for leads, sales, and brand growth.",
           points: [
             "Custom Audience Targeting",
             "Retargeting & Lookalike Ads",
@@ -784,7 +1415,7 @@ export const servicesData = [
         title: "Google Ads",
         content: {
           heading: "Google Advertising",
-          desc: "Capture high-intent buyers at the moment they search — with search, display, and shopping ads.",
+          desc: "Capture high-intent buyers at the moment they search, with search, display, and shopping ads.",
           points: [
             "Search Ads",
             "Display & Remarketing Ads",
@@ -797,7 +1428,7 @@ export const servicesData = [
         title: "Analytics",
         content: {
           heading: "Analytics & Performance Reporting",
-          desc: "Full transparency on every campaign — know exactly where your money goes and what it returns.",
+          desc: "Full transparency on every campaign. Know exactly where your money goes and what it returns.",
           points: [
             "Google Analytics 4 Setup",
             "ROI & ROAS Tracking",
@@ -839,7 +1470,7 @@ export const servicesData = [
     processImage:
       "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070",
     processDesc:
-      "We build data-driven marketing systems — not one-off campaigns. Every strategy is built to compound over time and deliver predictable, scalable growth.",
+      "We build data-driven marketing systems, not one-off campaigns. Every strategy compounds over time and delivers predictable, scalable growth.",
     processFeatures: [
       "Market & Competitor Research",
       "Custom Campaign Strategy",
@@ -872,7 +1503,7 @@ export const servicesData = [
             "Local SEO & Google Business Profile",
           ],
           overview:
-            "Our SEO service goes beyond keywords — we build a complete organic growth engine. We audit your site's technical health, optimize every page, build high-authority backlinks, and publish SEO-driven content. Most clients see significant ranking improvements within 90 days.",
+            "Our SEO service goes beyond keywords. We build a complete organic growth engine. We audit your site's technical health, optimize every page, build high-authority backlinks, and publish SEO-driven content. Most clients see significant ranking improvements within 90 days.",
           results: [
             "First-Page Google Rankings",
             "3x More Organic Traffic",
@@ -1004,7 +1635,7 @@ export const servicesData = [
       {
         question: "How do you report campaign performance?",
         answer:
-          "You receive a detailed monthly performance report with all key metrics — impressions, clicks, conversions, cost per result, and ROI — plus a strategy review call.",
+          "You receive a detailed monthly performance report with all key metrics: impressions, clicks, conversions, cost per result, and ROI, plus a strategy review call.",
       },
     ],
     roadmap: {
@@ -1067,1295 +1698,20 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
   },
 
-  // 4. Tool Development
+  // 6. SEO
   {
-    slug: "tool-development",
-    title: "Tool Development",
-    desc: "Custom software tools and automation solutions.",
-    icon: Wrench,
-    heroImage:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
-    heroTitle: "Custom Tool Development",
-    heroDesc:
-      "Build powerful custom software tools and intelligent automation systems that eliminate manual work, reduce costs, and give your business a competitive edge.",
-    sectionTitle: "Custom Tool Development Solutions",
-    sectionDesc:
-      "We build tailored software tools — from automation scripts and internal dashboards to full CRM systems and API integrations. If your team does it repeatedly, we can automate it.",
-    sectionImage:
-      "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
-    tabs: [
-      {
-        title: "Automation",
-        content: {
-          heading: "Business Process Automation",
-          desc: "Eliminate repetitive tasks and streamline your workflows with intelligent custom automation tools.",
-          points: [
-            "Workflow & Process Automation",
-            "Automated Data Processing",
-            "Scheduled Report Generation",
-            "Multi-step Task Scheduling",
-          ],
-        },
-      },
-      {
-        title: "Dashboards",
-        content: {
-          heading: "Custom Analytics Dashboards",
-          desc: "Real-time, role-based dashboards that give your team the data they need — exactly when they need it.",
-          points: [
-            "Custom KPI Dashboards",
-            "Interactive Data Visualization",
-            "Real-time Updates & Alerts",
-            "Export & Reporting Features",
-          ],
-        },
-      },
-      {
-        title: "APIs",
-        content: {
-          heading: "API Development & Integration",
-          desc: "Build robust, documented APIs that power your applications and connect your tools seamlessly.",
-          points: [
-            "RESTful API Development",
-            "GraphQL APIs",
-            "Comprehensive API Documentation",
-            "Rate Limiting & Security",
-          ],
-        },
-      },
-      {
-        title: "Integration",
-        content: {
-          heading: "Third-Party System Integration",
-          desc: "Connect your existing tools, platforms, and databases into one unified, automated ecosystem.",
-          points: [
-            "CRM & ERP Integration",
-            "Payment Gateway Connections",
-            "Email & SMS Service APIs",
-            "Zapier & Make.com Workflows",
-          ],
-        },
-      },
-    ],
-    capabilities: [
-      {
-        title: "Custom Tools",
-        desc: "Purpose-built software tools designed specifically around your business processes and team workflows.",
-        icon: Settings,
-      },
-      {
-        title: "Automation Systems",
-        desc: "End-to-end automation that handles data entry, report generation, notifications, and repetitive tasks 24/7.",
-        icon: Zap,
-      },
-      {
-        title: "Analytics Dashboards",
-        desc: "Beautiful, real-time dashboards that consolidate your business data into clear, actionable insights.",
-        icon: BarChart,
-      },
-      {
-        title: "API & Integrations",
-        desc: "Scalable API development and seamless third-party integrations that make all your tools work together.",
-        icon: Database,
-      },
-    ],
-    capabilitiesTitle: "Tool Development",
-    capabilitiesHighlight: "Capabilities",
-    capabilitiesBg:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
-    processSubTitle: "Our Development Process",
-    processTitle: "Build Powerful Tools",
-    processHighlight: "That Work",
-    processImage:
-      "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
-    processDesc:
-      "We don't build generic software — we build exactly the tool your business needs. Every project starts with deeply understanding your workflow, then engineering the most efficient solution.",
-    processFeatures: [
-      "Requirements Deep-Dive",
-      "Architecture & System Design",
-      "Agile Development & Testing",
-      "Deployment, Training & Handover",
-    ],
-    showcase: {
-      title: "Tool Development Projects",
-      bgImage:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
-      projects: [
-        {
-          slug: "firmware-security-platform",
-          title: "Firmware & Supply Chain Security Platform",
-          desc: "Advanced enterprise-grade firmware security platform designed to detect vulnerabilities, monitor device integrity, and protect hardware supply chains.",
-          image: ToolProject1,
-          tech: [
-            "React",
-            "Python",
-            "AI Detection",
-            "Cloud Infrastructure",
-            "REST API",
-          ],
-          features: [
-            "Firmware Vulnerability Detection",
-            "Real-time Device Monitoring",
-            "Supply Chain Risk Analysis",
-            "Threat Intelligence Dashboard",
-            "Automated Security Reporting",
-          ],
-          overview:
-            "We developed a powerful firmware and hardware security platform inspired by modern enterprise cybersecurity ecosystems. The system continuously scans connected devices, identifies hidden firmware vulnerabilities, monitors hardware integrity, and provides real-time threat intelligence dashboards for enterprise IT teams.",
-          results: [
-            "Improved Infrastructure Security",
-            "Faster Threat Detection",
-            "Enterprise-grade Compliance Visibility",
-          ],
-        },
-        {
-          slug: "ai-finance-audit-platform",
-          title: "AI Finance Audit & Spend Management Platform",
-          desc: "AI-powered financial auditing and spend management software that automates invoice reviews, fraud detection, and expense compliance.",
-          image: ToolProject2,
-          tech: ["Electron.js", "Python", "AI Models", "Node.js", "MongoDB"],
-          features: [
-            "Automated Invoice Auditing",
-            "AI Fraud Detection Engine",
-            "Expense Policy Compliance",
-            "Real-time Financial Insights",
-            "ERP & Accounting Integrations",
-          ],
-          overview:
-            "This intelligent finance operations platform automates manual accounting workflows using AI. The software reviews invoices, flags suspicious transactions, validates policy compliance, and provides finance teams with real-time visibility into spending behavior across multiple departments and vendors.",
-          results: [
-            "Reduced Manual Audit Work",
-            "Faster Financial Operations",
-            "Improved Expense Accuracy",
-          ],
-        },
-      ],
-    },
-    blogTitle: "Tool Development Insights",
-    blogDescription:
-      "Automation strategies and custom software development tips",
-    blogPosts: [
-      {
-        title: "How Automation Can Save Your Business 20+ Hours Per Week",
-        category: "Automation",
-        readTime: 5,
-        imageUrl:
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
-        description:
-          "Discover which business processes are easiest to automate and how much time and money you can realistically save.",
-        views: "1.5k",
-        author: "Imran Ali",
-      },
-      {
-        title: "Why Your Business Needs a Custom CRM (Not a Generic One)",
-        category: "CRM",
-        readTime: 6,
-        imageUrl:
-          "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
-        description:
-          "Generic CRMs bloat your workflow with features you never use. Here's why a custom CRM pays for itself.",
-        views: "2.1k",
-        author: "Hassan Raza",
-      },
-    ],
-    testimonials: [
-      {
-        quote:
-          "They built a custom TikTok Creator Outreach Tool that auto-scans micro-influencers, sends DMs, and tracks affiliate revenue. Our influencer program now runs on autopilot.",
-        name: "Derek Vance",
-        designation: "Founder & Marketing Director, AeroFit Apparel",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "Their AI-powered SEO optimizer rewrites thousands of product titles and pushes updates to Shopify and Amazon in one click. Months of work done in minutes.",
-        name: "Chloe Sterling",
-        designation: "Chief Growth Officer, PureGlow Organics",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "They eliminated our expensive SaaS subscriptions by building a proprietary Laravel marketing dashboard with behavioral email sequences tied directly to our Meta ad pixel.",
-        name: "Marcus Hayes",
-        designation: "E-Commerce Director, Alpha Grind Coffee Co.",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "Their NLP lead qualification chatbot helped us filter high-value prospects instantly and route enterprise leads directly to our sales team while improving Google Ads ROI.",
-        name: "Natalie Reyes",
-        designation: "Head of Operations, SafeHaven Smart Home",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-    faqs: [
-      {
-        question: "How long does custom tool development take?",
-        answer:
-          "Timeline depends on complexity. Simple automation scripts take 1–2 weeks. A full CRM or dashboard typically takes 4–8 weeks. We provide a clear timeline upfront after reviewing your requirements.",
-      },
-      {
-        question: "Do you provide documentation and training?",
-        answer:
-          "Yes. Every tool we build comes with full documentation and a handover training session so your team can use and manage it confidently.",
-      },
-      {
-        question: "Can you integrate with our existing software?",
-        answer:
-          "Absolutely. We integrate with thousands of tools via APIs — including Salesforce, HubSpot, QuickBooks, Shopify, Google Workspace, Slack, and more.",
-      },
-      {
-        question: "Do you offer ongoing maintenance after delivery?",
-        answer:
-          "Yes. We offer flexible maintenance plans including bug fixes, feature additions, and performance monitoring so your tool stays reliable as your business grows.",
-      },
-    ],
-    roadmap: {
-      title: "Tool Development Roadmap",
-      description:
-        "From business problem to working software — our proven path",
-      steps: [
-        {
-          title: "Discovery & Requirements",
-          description:
-            "We deep-dive into your workflows, pain points, and goals to define exactly what needs to be built.",
-          icon: Target,
-        },
-        {
-          title: "Architecture & Design",
-          description:
-            "Design the system architecture, database schema, and UI/UX before any code is written.",
-          icon: Palette,
-        },
-        {
-          title: "Development & Testing",
-          description:
-            "Build and rigorously test every feature with real-world data and edge case scenarios.",
-          icon: Code,
-        },
-        {
-          title: "Deployment & Training",
-          description:
-            "Deploy to production, provide full documentation, and train your team for a seamless handover.",
-          icon: Rocket,
-        },
-      ],
-    },
-    nextSteps: {
-      title: "Build Your Custom Tool",
-      description:
-        "Turn your biggest operational pain point into a solved problem",
-      steps: [
-        {
-          title: "Share Your Requirements",
-          description:
-            "Tell us about your workflow challenges, the tasks you want to automate, or the tool you have in mind.",
-        },
-        {
-          title: "Receive a Custom Proposal",
-          description:
-            "We deliver a detailed development plan, timeline, and fixed-price quote — no surprises.",
-        },
-        {
-          title: "Launch & Use Your Tool",
-          description:
-            "We build, test, deploy, and hand over your custom tool with full documentation and training.",
-        },
-      ],
-      buttonText: "Discuss Your Project",
-      buttonLink: "/contact",
-    },
-    ctaTitle: "Ready to Automate Your Business?",
-    ctaButton: "Get a Free Consultation",
-    ctaLink: "/contact",
-    ctaBg:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
-  },
-
-  // 5. AI & Machine Learning
-  {
-    slug: "python-ml-ai",
-    title: "AI & Machine Learning",
-    desc: "Python, ML and AI solutions for intelligent automation.",
-    icon: BrainCircuit,
-    heroImage:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
-    heroTitle: "AI & Machine Learning Solutions",
-    heroDesc:
-      "Leverage the power of Python, AI, and Machine Learning to automate complex processes, predict future trends, and gain insights your competitors can't see.",
-    sectionTitle: "Intelligent AI & ML Solutions",
-    sectionDesc:
-      "We build custom AI and machine learning systems that learn from your data, automate intelligent decisions, and give your business capabilities that were previously only available to tech giants.",
-    sectionImage:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
-    tabs: [
-      {
-        title: "Machine Learning",
-        content: {
-          heading: "Custom ML Model Development",
-          desc: "Build predictive models trained on your own data to forecast outcomes and automate complex decisions.",
-          points: [
-            "Predictive Analytics & Forecasting",
-            "Classification & Regression Models",
-            "Anomaly Detection",
-            "Model Training, Evaluation & Deployment",
-          ],
-        },
-      },
-      {
-        title: "AI Automation",
-        content: {
-          heading: "Intelligent Process Automation",
-          desc: "Replace rule-based automation with AI that understands context, learns over time, and handles exceptions.",
-          points: [
-            "Intelligent Workflow Automation",
-            "AI-Powered Decision Making",
-            "Pattern Recognition Systems",
-            "Automated Data Extraction (ETL)",
-          ],
-        },
-      },
-      {
-        title: "Data Science",
-        content: {
-          heading: "Data Analysis & Science",
-          desc: "Turn raw, messy data into structured insights that drive better business decisions.",
-          points: [
-            "Exploratory Data Analysis (EDA)",
-            "Statistical Modeling",
-            "Data Cleaning & Pipeline Building",
-            "Interactive Reporting",
-          ],
-        },
-      },
-      {
-        title: "NLP",
-        content: {
-          heading: "Natural Language Processing",
-          desc: "Build systems that understand, process, and generate human language at scale.",
-          points: [
-            "Sentiment & Intent Analysis",
-            "AI Chatbots & Virtual Assistants",
-            "Text Classification & Summarization",
-            "Document Processing & OCR",
-          ],
-        },
-      },
-    ],
-    capabilities: [
-      {
-        title: "Machine Learning",
-        desc: "Custom predictive models trained on your data — for sales forecasting, churn prediction, demand planning, and more.",
-        icon: BrainCircuit,
-      },
-      {
-        title: "AI Automation",
-        desc: "Intelligent automation that goes beyond rules — systems that understand context and make smart decisions autonomously.",
-        icon: Zap,
-      },
-      {
-        title: "Data Science",
-        desc: "End-to-end data pipelines, analysis, and visualization to uncover insights hidden in your business data.",
-        icon: Database,
-      },
-      {
-        title: "NLP & Chatbots",
-        desc: "Natural language systems for support automation, document processing, sentiment analysis, and conversational AI.",
-        icon: Search,
-      },
-    ],
-    capabilitiesTitle: "AI & ML",
-    capabilitiesHighlight: "Capabilities",
-    capabilitiesBg:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
-    processSubTitle: "Our AI Development Process",
-    processTitle: "Intelligence That",
-    processHighlight: "Transforms",
-    processImage:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
-    processDesc:
-      "We follow a structured, research-backed process to build AI systems that are accurate, reliable, explainable, and production-ready.",
-    processFeatures: [
-      "Data Assessment & Collection",
-      "Model Selection & Development",
-      "Training, Evaluation & Testing",
-      "Deployment, Monitoring & Retraining",
-    ],
-    showcase: {
-      title: "AI & ML Projects",
-      bgImage:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
-      projects: [
-        {
-          slug: "predictive-analytics",
-          title: "Predictive Analytics Engine",
-          desc: "Machine learning models that forecast business trends, demand, and outcomes with high accuracy.",
-          image:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-          tech: ["Python", "Scikit-learn", "TensorFlow", "Pandas", "Plotly"],
-          features: [
-            "Sales & Revenue Forecasting",
-            "Inventory Demand Prediction",
-            "Customer Churn Prediction",
-            "Risk Scoring Models",
-            "Trend & Seasonality Analysis",
-          ],
-          overview:
-            "Stop making decisions based on gut feeling. Our predictive analytics engines are trained on your historical business data to forecast sales, predict customer churn, optimize inventory, and identify risks before they become problems — giving you a 60-day strategic advantage.",
-          results: [
-            "60-Day Sales Forecasting",
-            "32% Reduction in Inventory Overhead",
-            "Measurable Competitive Advantage",
-          ],
-        },
-        {
-          slug: "chatbot-development",
-          title: "AI Chatbot & Virtual Assistant",
-          desc: "Intelligent, context-aware chatbots that handle customer support, lead qualification, and FAQs automatically.",
-          image:
-            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070",
-          tech: ["Python", "LangChain", "OpenAI GPT-4", "Rasa", "Dialogflow"],
-          features: [
-            "Natural Language Understanding",
-            "24/7 Automated Support",
-            "Multi-language Support",
-            "Lead Capture & Qualification",
-            "Seamless Human Handoff",
-          ],
-          overview:
-            "Our AI chatbots go beyond scripted responses. Powered by large language models, they understand context, handle complex queries, remember conversation history, and escalate to human agents when needed. Most clients resolve 65–75% of support tickets automatically after deployment.",
-          results: [
-            "70% Support Tickets Auto-Resolved",
-            "Response Time: 14 Hours → 45 Seconds",
-            "Significant Support Cost Reduction",
-          ],
-        },
-        {
-          slug: "image-recognition",
-          title: "Computer Vision & Image Recognition",
-          desc: "Custom computer vision systems for object detection, image classification, OCR, and visual search.",
-          image:
-            "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
-          tech: ["Python", "TensorFlow", "PyTorch", "OpenCV", "YOLO v8"],
-          features: [
-            "Real-time Object Detection",
-            "Face & Identity Recognition",
-            "Multi-class Image Classification",
-            "Optical Character Recognition (OCR)",
-            "Visual Product Search",
-          ],
-          overview:
-            "Automate visual inspection, document processing, product recognition, and quality control with state-of-the-art computer vision. Our models are trained on your specific use case — whether you need to detect defects on a production line, extract text from documents, or identify products from images.",
-          results: [
-            "95%+ Model Accuracy",
-            "Fully Automated Visual Processing",
-            "Scalable to Millions of Images",
-          ],
-        },
-      ],
-    },
-    blogTitle: "AI & ML Insights",
-    blogDescription:
-      "Latest developments in artificial intelligence and machine learning",
-    blogPosts: [
-      {
-        title: "How AI is Transforming Small & Medium Businesses",
-        category: "AI",
-        readTime: 6,
-        imageUrl:
-          "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
-        description:
-          "Explore practical, affordable ways AI is giving smaller businesses capabilities that were once only available to enterprises.",
-        views: "5.2k",
-        author: "Dr. Sara Ahmed",
-      },
-      {
-        title: "Predictive Analytics: A Practical Guide for Business Owners",
-        category: "Machine Learning",
-        readTime: 8,
-        imageUrl:
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-        description:
-          "What is predictive analytics, how does it work, and what kind of results can your business realistically expect?",
-        views: "3.8k",
-        author: "Imran Ali",
-      },
-    ],
-    testimonials: [
-      {
-        quote:
-          "Their predictive ML inventory engine transformed how we manage purchasing and warehouse forecasting. The AI accurately predicts demand trends weeks in advance and significantly reduced our operational waste.",
-        name: "Derek Sterling",
-        designation: "Chief Technology Officer, Apex Apparel Group",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "The NLP-powered recommendation engine completely changed our customer experience. Users now receive personalized supplement suggestions instantly through natural conversation flows.",
-        name: "Dr. Elena Rostova",
-        designation: "Founder, Vitality Bio-Nutrient Co.",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "Their AI-driven TikTok trend scraper helped us identify viral products before competitors even noticed them. It became the backbone of our multi-store dropshipping operation.",
-        name: "Marcus Thorne",
-        designation: "VP of Growth, Horizon Drop-Logistics",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "The AI intent-classification system automated most of our support operations and reduced response times from hours to seconds while routing complex cases perfectly.",
-        name: "Sophia Chen",
-        designation: "Operations Director, LuxeDecor Direct",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-    faqs: [
-      {
-        question: "What kind of data do I need to start an AI/ML project?",
-        answer:
-          "It depends on the use case. Most ML models need at least 1,000–10,000 historical records. We can work with structured CSVs, databases, images, PDFs, or raw text. We'll assess your data readiness in a free consultation.",
-      },
-      {
-        question: "How accurate will the AI model be?",
-        answer:
-          "Accuracy depends on data quality and quantity. With clean, sufficient data, we typically achieve 85–95% accuracy. We always provide clear performance metrics before deployment.",
-      },
-      {
-        question: "Do I need a technical team to manage the AI system?",
-        answer:
-          "No. We build user-friendly interfaces around our AI systems so your team can use and monitor them without any technical knowledge.",
-      },
-      {
-        question: "Can you integrate AI into our existing software?",
-        answer:
-          "Yes. We integrate AI models into your existing CRM, e-commerce platform, website, or internal tools via APIs — no need to rebuild your existing systems.",
-      },
-    ],
-    roadmap: {
-      title: "AI Implementation Roadmap",
-      description:
-        "A structured, low-risk path to deploying AI in your business",
-      steps: [
-        {
-          title: "Data Assessment",
-          description:
-            "Evaluate the quality, quantity, and structure of your data to determine the best AI approach.",
-          icon: Database,
-        },
-        {
-          title: "Model Selection & Design",
-          description:
-            "Select the optimal ML architecture and design the system based on your specific use case and goals.",
-          icon: BrainCircuit,
-        },
-        {
-          title: "Development & Training",
-          description:
-            "Build, train, and rigorously evaluate the model using your data and industry benchmarks.",
-          icon: Code,
-        },
-        {
-          title: "Deployment & Monitoring",
-          description:
-            "Deploy to production with monitoring dashboards, alerting, and scheduled retraining pipelines.",
-          icon: Settings,
-        },
-      ],
-    },
-    nextSteps: {
-      title: "Start Your AI Journey",
-      description: "Three steps to bringing AI into your business",
-      steps: [
-        {
-          title: "Free AI Consultation",
-          description:
-            "Discuss your business challenges and explore which AI solutions will deliver the highest ROI for you.",
-        },
-        {
-          title: "Feasibility & Data Review",
-          description:
-            "We analyze your data, define the use case, and present a clear development roadmap and success metrics.",
-        },
-        {
-          title: "Build & Deploy AI",
-          description:
-            "We develop, test, and deploy your AI solution — then monitor it to ensure it keeps improving over time.",
-        },
-      ],
-      buttonText: "Explore AI Solutions",
-      buttonLink: "/contact",
-    },
-    ctaTitle: "Ready to Give Your Business an AI Edge?",
-    ctaButton: "Talk to an AI Expert",
-    ctaLink: "/contact",
-    ctaBg:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
-  },
-
-  // 6. Graphic Design
-  {
-    slug: "graphic-design",
-    title: "Graphic Design",
-    desc: "Creative branding and visual design services.",
-    icon: Palette,
-    heroImage:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
-    heroTitle: "Creative Graphic Design That Sells",
-    heroDesc:
-      "Stand out with stunning visual designs that capture your brand identity, build trust with your audience, and convert attention into action.",
-    sectionTitle: "Professional Graphic Design Services",
-    sectionDesc:
-      "From brand identities and logo suites to social media graphics and packaging design — we create visuals that are strategically beautiful and built to make a lasting impression.",
-    sectionImage:
-      "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
-    tabs: [
-      {
-        title: "Branding",
-        content: {
-          heading: "Brand Identity Design",
-          desc: "Create a cohesive, memorable brand identity that communicates your values and attracts your ideal customers.",
-          points: [
-            "Logo Design & Icon System",
-            "Brand Guidelines Document",
-            "Color Psychology & Palette",
-            "Typography System",
-          ],
-        },
-      },
-      {
-        title: "Print Design",
-        content: {
-          heading: "Print & Packaging Design",
-          desc: "Professional print materials that make powerful first impressions — both online and offline.",
-          points: [
-            "Brochures & Flyers",
-            "Business Cards & Stationery",
-            "Poster & Banner Design",
-            "Product Packaging Mockups",
-          ],
-        },
-      },
-      {
-        title: "Digital Design",
-        content: {
-          heading: "Digital & Social Media Graphics",
-          desc: "Scroll-stopping digital visuals designed for every platform and every campaign.",
-          points: [
-            "Social Media Post Templates",
-            "Web Banners & Display Ads",
-            "Email Newsletter Templates",
-            "Meta & TikTok Ad Creatives",
-          ],
-        },
-      },
-      {
-        title: "Illustration",
-        content: {
-          heading: "Custom Illustration & Icons",
-          desc: "Unique illustrations and icon sets that give your brand a distinctive visual voice.",
-          points: [
-            "Character & Mascot Design",
-            "Custom Infographics",
-            "Icon & UI Element Sets",
-            "Editorial & Concept Art",
-          ],
-        },
-      },
-    ],
-    capabilities: [
-      {
-        title: "Brand Identity",
-        desc: "Complete brand identity packages — logo, color palette, typography, and brand guidelines — built to last.",
-        icon: Award,
-      },
-      {
-        title: "Print & Packaging",
-        desc: "Professional print design from business cards and brochures to product packaging and trade show materials.",
-        icon: HeartHandshake,
-      },
-      {
-        title: "Digital Graphics",
-        desc: "Scroll-stopping social media graphics, display ads, and email templates optimized for engagement.",
-        icon: Globe,
-      },
-      {
-        title: "Custom Illustration",
-        desc: "Unique hand-crafted illustrations, mascots, infographics, and icon sets that set your brand apart.",
-        icon: Palette,
-      },
-    ],
-    capabilitiesTitle: "Design",
-    capabilitiesHighlight: "Services",
-    capabilitiesBg:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
-    processSubTitle: "Our Design Process",
-    processTitle: "Creativity That",
-    processHighlight: "Inspires",
-    processImage:
-      "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
-    processDesc:
-      "Great design isn't accidental — it's the result of a structured creative process that combines strategic thinking with artistic execution.",
-    processFeatures: [
-      "Brand Discovery & Research",
-      "Concept Development & Mood Board",
-      "Design Creation & Refinement",
-      "Final Delivery & Brand Guidelines",
-    ],
-    showcase: {
-      title: "Design Projects",
-      bgImage:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
-      projects: [
-        {
-          slug: "logo-design",
-          title: "Logo & Brand Mark Design",
-          desc: "Unique, versatile logo designs that represent your brand identity across every medium and scale.",
-          image:
-            "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
-          tech: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
-          features: [
-            "3–5 Unique Initial Concepts",
-            "Scalable Vector Files (AI, EPS, SVG)",
-            "Full Color, Mono & Reversed Versions",
-            "Unlimited Revision Rounds",
-            "Complete Logo Usage Guidelines",
-          ],
-          overview:
-            "Your logo is the foundation of your brand — it appears everywhere from your website and packaging to social media and business cards. We create logos that are simple enough to be instantly recognizable, versatile enough to work everywhere, and distinctive enough to stand out in your market.",
-          results: [
-            "Instant Brand Recognition",
-            "Professional First Impressions",
-            "Versatile Across All Media",
-          ],
-        },
-        {
-          slug: "social-media-graphics",
-          title: "Social Media Graphics & Ad Creatives",
-          desc: "Scroll-stopping graphics and ad creatives for Instagram, Facebook, TikTok, and LinkedIn.",
-          image:
-            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
-          tech: ["Adobe Photoshop", "Illustrator", "Figma", "Canva Pro"],
-          features: [
-            "Instagram Feed & Story Templates",
-            "Facebook Cover & Ad Creatives",
-            "LinkedIn Banner & Post Design",
-            "TikTok Thumbnail & Overlay Design",
-            "Reusable Brand-Consistent Templates",
-          ],
-          overview:
-            "In a saturated social media landscape, only the most visually compelling content stops the scroll. We design strategic, brand-consistent graphics that are built for engagement — combining eye-catching visuals with clear messaging that drives clicks, follows, and conversions.",
-          results: [
-            "Higher Engagement & CTR",
-            "Consistent Brand Presence",
-            "Stronger Social Media Growth",
-          ],
-        },
-        {
-          slug: "brand-identity",
-          title: "Complete Brand Identity System",
-          desc: "A comprehensive brand identity package — everything you need to present your business professionally.",
-          image:
-            "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
-          tech: ["Illustrator", "Photoshop", "InDesign", "Figma"],
-          features: [
-            "Primary & Secondary Logo Suite",
-            "Full Color Palette with Usage Rules",
-            "Typography Hierarchy System",
-            "60+ Page Brand Guidelines Document",
-            "Stationery & Business Card Design",
-          ],
-          overview:
-            "A complete brand identity system gives your business the visual consistency and professionalism that builds trust. We deliver everything — logos, colors, fonts, patterns, icons, and a comprehensive brand guidelines document — so your entire team presents the brand consistently everywhere.",
-          results: [
-            "Consistent Brand Across All Channels",
-            "Premium, Professional Image",
-            "Clear Market Differentiation",
-          ],
-        },
-      ],
-    },
-    blogTitle: "Design Insights",
-    blogDescription:
-      "Latest graphic design trends, tips, and branding strategies",
-    blogPosts: [
-      {
-        title: "Graphic Design Trends Dominating 2024",
-        category: "Trends",
-        readTime: 5,
-        imageUrl:
-          "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
-        description:
-          "From maximalist typography to AI-generated textures — the design trends you need to know for 2024.",
-        views: "2.8k",
-        author: "Fatima Khan",
-      },
-      {
-        title: "Why Your Brand Needs a Proper Brand Identity (Not Just a Logo)",
-        category: "Branding",
-        readTime: 6,
-        imageUrl:
-          "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
-        description:
-          "The difference between a logo and a brand identity — and why it matters for your business growth.",
-        views: "3.4k",
-        author: "Ali Raza",
-      },
-    ],
-    testimonials: [
-      {
-        quote:
-          "Their creative team completely refreshed our paid advertising visuals with scroll-stopping Meta and TikTok creatives. The new graphics dramatically improved our engagement and click-through rates.",
-        name: "Austin Vance",
-        designation: "Marketing Director, AeroFit Gear",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "They transformed our skincare brand into a premium luxury identity with stunning packaging, minimalist branding, and beautifully designed unboxing materials that elevated the entire customer experience.",
-        name: "Chloe Bennett",
-        designation: "Founder, Sol & Seed Botanicals",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "The custom UI/UX graphics and icon systems they designed made our subscription experience far more intuitive and visually polished. Our storefront finally feels like a premium coffee brand.",
-        name: "Marcus Hayes",
-        designation: "Operations Lead, Grindhouse Coffee Roasters",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "Their lookbook designs and Amazon A+ content gave our seasonal collections a high-end visual presence while significantly improving the professionalism of our marketplace listings.",
-        name: "Natalie Reyes",
-        designation: "Brand Manager, Home & Hearth Co.",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-    faqs: [
-      {
-        question: "How many design concepts do you provide?",
-        answer:
-          "We provide 3–5 unique initial concepts for logo projects, and 2–3 directions for branding projects. You choose the direction you love and we refine from there.",
-      },
-      {
-        question: "How many revisions are included?",
-        answer:
-          "We offer unlimited revisions on all design projects until you are completely satisfied — your approval is our goal.",
-      },
-      {
-        question: "What file formats will I receive?",
-        answer:
-          "You receive all source files in AI, EPS, PSD, SVG, PNG (transparent), JPG, and PDF formats — everything you need for print and digital use.",
-      },
-      {
-        question: "Do you create designs for social media ad campaigns?",
-        answer:
-          "Yes. We design high-converting ad creatives for Meta, TikTok, Google Display, LinkedIn, and all major platforms in correct dimensions for each placement.",
-      },
-    ],
-    roadmap: {
-      title: "Design Project Roadmap",
-      description: "From blank canvas to stunning, delivered brand assets",
-      steps: [
-        {
-          title: "Discovery & Brief",
-          description:
-            "We understand your brand, audience, competitors, and vision through a detailed creative brief.",
-          icon: Target,
-        },
-        {
-          title: "Mood Board & Direction",
-          description:
-            "Present visual mood boards to align on aesthetic direction before any design work begins.",
-          icon: Palette,
-        },
-        {
-          title: "Design & Refinement",
-          description:
-            "Create initial concepts, gather your feedback, and refine until every detail is perfect.",
-          icon: Sparkles,
-        },
-        {
-          title: "Final Delivery",
-          description:
-            "Deliver all final files in every format needed, with usage guidelines and full transfer of ownership.",
-          icon: CheckCircle,
-        },
-      ],
-    },
-    nextSteps: {
-      title: "Start Your Design Project",
-      description: "Bring your brand vision to life in three steps",
-      steps: [
-        {
-          title: "Share Your Vision",
-          description:
-            "Tell us about your brand, your target audience, and the feeling you want your design to convey.",
-        },
-        {
-          title: "Receive Your Designs",
-          description:
-            "We present initial concepts and refine based on your feedback until the design is perfect.",
-        },
-        {
-          title: "Get Your Files",
-          description:
-            "Receive all final design files in every format, ready to use across print and digital channels.",
-        },
-      ],
-      buttonText: "Start Designing",
-      buttonLink: "/contact",
-    },
-    ctaTitle: "Ready to Build a Brand That Stands Out?",
-    ctaButton: "Get a Design Quote",
-    ctaLink: "/contact",
-    ctaBg:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
-  },
-
-  // 7. Video Editing
-  {
-    slug: "video-editing",
-    title: "Video Editing",
-    desc: "Professional video editing and post-production services.",
-    icon: Video,
-    heroImage:
-      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    heroTitle: "Professional Video Editing & Post-Production",
-    heroDesc:
-      "Transform your raw footage into captivating, high-retention videos that tell your story, build your brand, and drive real engagement across every platform.",
-    sectionTitle: "Professional Video Editing Services",
-    sectionDesc:
-      "From YouTube long-form content and viral TikTok Reels to corporate brand films and Meta ad creatives — we edit videos that hold attention, communicate clearly, and get results.",
-    sectionImage:
-      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tabs: [
-      {
-        title: "Video Editing",
-        content: {
-          heading: "Professional Video Editing",
-          desc: "Full post-production editing that transforms raw footage into polished, compelling video content.",
-          points: [
-            "Precision Cutting & Trimming",
-            "Cinematic Color Grading",
-            "Audio Enhancement & Mixing",
-            "Seamless Transitions",
-          ],
-        },
-      },
-      {
-        title: "Motion Graphics",
-        content: {
-          heading: "Motion Graphics & Animation",
-          desc: "Eye-catching animated elements that elevate your video production quality and brand presence.",
-          points: [
-            "Branded Title Sequences",
-            "Lower Thirds & Overlays",
-            "Explainer Video Animation",
-            "Animated Logo Reveals",
-          ],
-        },
-      },
-      {
-        title: "VFX",
-        content: {
-          heading: "Visual Effects (VFX)",
-          desc: "Cinematic visual effects that add production value and wow-factor to your video content.",
-          points: [
-            "Green Screen Keying",
-            "Compositing & Layer Work",
-            "Particle & Special Effects",
-            "3D Element Integration",
-          ],
-        },
-      },
-      {
-        title: "Social Media",
-        content: {
-          heading: "Social Media Video Content",
-          desc: "Short-form videos engineered for platform algorithms, scroll-stopping hooks, and viral potential.",
-          points: [
-            "Instagram Reels & Stories",
-            "YouTube Shorts & Long-form",
-            "TikTok Content with Hooks",
-            "Facebook & Meta Ad Videos",
-          ],
-        },
-      },
-    ],
-    capabilities: [
-      {
-        title: "Full Video Editing",
-        desc: "End-to-end post-production — cutting, color, audio mixing, and motion graphics — delivered on time.",
-        icon: Video,
-      },
-      {
-        title: "Motion Graphics",
-        desc: "Custom animated titles, logo reveals, lower thirds, and explainer animations for maximum production value.",
-        icon: Sparkles,
-      },
-      {
-        title: "Visual Effects",
-        desc: "Green screen compositing, particle effects, and 3D integration to add cinematic quality to your videos.",
-        icon: Zap,
-      },
-      {
-        title: "Social Media Content",
-        desc: "Scroll-stopping short-form videos with strong hooks, captions, and music sync for all major platforms.",
-        icon: Globe,
-      },
-    ],
-    capabilitiesTitle: "Video",
-    capabilitiesHighlight: "Production",
-    capabilitiesBg:
-      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    processSubTitle: "Our Editing Process",
-    processTitle: "Stories That",
-    processHighlight: "Captivate",
-    processImage:
-      "https://images.unsplash.com/photo-1551302175-952301267d19?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    processDesc:
-      "We don't just cut footage — we craft narrative-driven videos with pacing, sound, and visuals working in harmony to hold viewer attention from first frame to last.",
-    processFeatures: [
-      "Raw Footage Review & Organization",
-      "Assembly Edit & Structure",
-      "Color Grade, Effects & Audio Mix",
-      "Export, Captioning & Final Delivery",
-    ],
-    showcase: {
-      title: "Video Projects",
-      bgImage:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      projects: [
-        {
-          slug: "youtube-editing",
-          title: "YouTube Long-Form Video Editing",
-          desc: "Professional editing for YouTube creators and brands — built for watch time, retention, and subscriber growth.",
-          image:
-            "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2070",
-          tech: [
-            "Adobe Premiere Pro",
-            "After Effects",
-            "DaVinci Resolve",
-            "Audition",
-          ],
-          features: [
-            "Custom Animated Intros & Outros",
-            "B-Roll & Stock Footage Integration",
-            "Royalty-Free Background Music",
-            "Auto-Captions & Subtitle Styling",
-            "Optimized End Screens & Cards",
-          ],
-          overview:
-            "YouTube success is built on watch time and retention. We edit your raw footage into tightly paced, engaging videos that hook viewers in the first 30 seconds and keep them watching until the end. Every edit is made with YouTube's algorithm in mind — from chapter markers and timestamps to thumbnail-ready moments.",
-          results: [
-            "Higher Average View Duration",
-            "Consistent Publishing Workflow",
-            "Faster Channel Growth",
-          ],
-        },
-        {
-          slug: "social-media-videos",
-          title: "Short-Form Social Media Video Editing",
-          desc: "High-energy, algorithm-optimized short videos for TikTok, Instagram Reels, and YouTube Shorts.",
-          image:
-            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
-          tech: ["Adobe Premiere Pro", "CapCut Pro", "After Effects"],
-          features: [
-            "Attention-Grabbing 3-Second Hooks",
-            "Kinetic Cuts & Trendy Transitions",
-            "Animated Captions & Text Overlays",
-            "Music Sync & Sound Design",
-            "Vertical Format (9:16) Optimization",
-          ],
-          overview:
-            "Short-form content is the fastest way to grow — but only if the editing is right. We create short videos with proven viral mechanics: strong opening hooks, punchy pacing, strategic caption placement, and platform-specific optimizations. Most clients see significant engagement increases within the first batch of videos.",
-          results: [
-            "Viral-Ready Content Structure",
-            "Higher Watch-Through & Shares",
-            "Faster Brand & Audience Growth",
-          ],
-        },
-        {
-          slug: "corporate-video",
-          title: "Corporate & Brand Video Editing",
-          desc: "Polished, professional video editing for corporate communications, brand films, and product showcases.",
-          image:
-            "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070",
-          tech: ["Adobe Premiere Pro", "After Effects", "Adobe Audition"],
-          features: [
-            "Professional Color Grading",
-            "Branded Lower Thirds & Typography",
-            "Company Logo Animation",
-            "Clean, Precise Cut Editing",
-            "Professional Voice-over Integration",
-          ],
-          overview:
-            "Your brand video is often a prospect's first impression of your company. We edit corporate videos, product showcases, testimonial compilations, and brand films with the professionalism and polish that builds trust, communicates value, and inspires confidence in your brand.",
-          results: [
-            "Elevated Brand Perception",
-            "Stronger Audience Trust",
-            "Higher-Converting Sales Videos",
-          ],
-        },
-      ],
-    },
-    blogTitle: "Video Production Insights",
-    blogDescription:
-      "Tips, trends, and strategies for video content creators and brands",
-    blogPosts: [
-      {
-        title: "Video Marketing Trends That Will Define 2024",
-        category: "Trends",
-        readTime: 6,
-        imageUrl:
-          "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        description:
-          "From AI-assisted editing to interactive shoppable videos — the trends reshaping video marketing this year.",
-        views: "3.1k",
-        author: "Omar Hussain",
-      },
-      {
-        title: "How to Hook Viewers in the First 3 Seconds (The Science)",
-        category: "Short-Form Video",
-        readTime: 5,
-        imageUrl:
-          "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
-        description:
-          "The data-backed techniques top creators use to capture attention instantly and maximize watch time.",
-        views: "4.5k",
-        author: "Fatima Khan",
-      },
-    ],
-    testimonials: [
-      {
-        quote:
-          "Their video editing team transformed our raw supplier footage into high-performing TikTok Shop ads with strong 3-second hooks, dynamic captions, and viral pacing that finally stopped the scroll and increased product clicks.",
-        name: "Ryan Greenfield",
-        designation: "Founder & CEO, Aspen Trail Gear",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "They completely rebuilt our Meta ad creatives from basic UGC into high-retention video ads with multiple hook variations, cinematic grading, and smooth transitions that significantly improved our CAC and viewer retention.",
-        name: "Amanda Ross",
-        designation: "Co-Founder, Sol Vibe Activewear",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "Their cinematic editing and ASMR-style brand videos captured the true sensory feel of our coffee. The result was a premium storytelling experience that elevated our subscription marketing campaigns across platforms.",
-        name: "Tyler Vance",
-        designation: "Brand Director, Midnight Roast Co.",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
-      },
-      {
-        quote:
-          "They produced clean explainer videos, before-and-after case studies, and AI-guided consultation clips that dramatically improved user understanding and reduced drop-off on our skincare platform.",
-        name: "Jessica Miller",
-        designation: "Managing Director, Opal & Oak Skincare",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
-      },
-    ],
-    faqs: [
-      {
-        question: "What video formats and resolutions do you work with?",
-        answer:
-          "We work with all major formats including MP4, MOV, MXF, and RAW footage from any camera. We deliver in up to 4K resolution for YouTube and 1080p for social media.",
-      },
-      {
-        question: "How long does video editing take?",
-        answer:
-          "A YouTube video (10–20 minutes) typically takes 3–5 business days. Short-form videos take 1–2 days each. Turnaround depends on complexity and revisions.",
-      },
-      {
-        question: "Do you add subtitles and captions?",
-        answer:
-          "Yes. We add auto-generated, manually reviewed captions for all videos. For social media, we style them with branded animations and color-coded highlights.",
-      },
-      {
-        question: "Can you help with ongoing monthly video content?",
-        answer:
-          "Absolutely. We offer monthly retainer packages for consistent content creators and brands needing regular video editing on a reliable schedule.",
-      },
-    ],
-    roadmap: {
-      title: "Video Production Roadmap",
-      description: "From raw footage to final, platform-ready video",
-      steps: [
-        {
-          title: "Footage Review",
-          description:
-            "Review and organize all raw footage, assets, voiceovers, and reference videos before editing begins.",
-          icon: Eye,
-        },
-        {
-          title: "Assembly Edit",
-          description:
-            "Build the narrative structure — selecting the best takes and assembling the full timeline.",
-          icon: Video,
-        },
-        {
-          title: "Polish & Enhance",
-          description:
-            "Add color grading, motion graphics, music, effects, captions, and sound design.",
-          icon: Sparkles,
-        },
-        {
-          title: "Review & Deliver",
-          description:
-            "Incorporate your feedback, export final files in all required formats, and deliver on time.",
-          icon: CheckCircle,
-        },
-      ],
-    },
-    nextSteps: {
-      title: "Start Your Video Project",
-      description:
-        "Great video content starts with great editing — here's how we begin",
-      steps: [
-        {
-          title: "Send Your Raw Footage",
-          description:
-            "Share your raw video files, reference videos, brand assets, and any editing notes via Google Drive or WeTransfer.",
-        },
-        {
-          title: "We Edit & Enhance",
-          description:
-            "Our editors craft your video with cuts, color, audio, graphics, and captions — then send a draft for review.",
-        },
-        {
-          title: "Receive Your Final Video",
-          description:
-            "After your approval, we export and deliver final files in all required formats, optimized for every platform.",
-        },
-      ],
-      buttonText: "Start Editing",
-      buttonLink: "/contact",
-    },
-    ctaTitle: "Ready to Transform Your Video Content?",
-    ctaButton: "Get a Quote",
-    ctaLink: "/contact",
-    ctaBg:
-      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-
-  // 8. WordPress Website
-  {
-    slug: "wordpress-website",
-    title: "WordPress Website",
+    slug: "seo",
+    title: "SEO",
     desc: "Custom WordPress development and design services.",
     icon: Globe,
     heroImage:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
+      SEO,
     heroTitle: "Custom WordPress Development",
     heroDesc:
       "Get a beautiful, blazing-fast, and fully secure WordPress website that's easy for your team to manage and built to grow with your business.",
     sectionTitle: "Professional WordPress Development Solutions",
     sectionDesc:
-      "We build custom WordPress websites that combine exceptional design with powerful functionality. From custom theme development and plugin creation to speed optimization and ongoing maintenance — we handle everything.",
+      "We build custom WordPress websites that combine exceptional design with strong functionality. From custom theme development and plugin creation to speed optimization and ongoing maintenance, we handle everything.",
     sectionImage:
       "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
     tabs: [
@@ -2363,7 +1719,7 @@ export const servicesData = [
         title: "Custom Themes",
         content: {
           heading: "Custom WordPress Theme Development",
-          desc: "Pixel-perfect, custom-coded WordPress themes that are unique to your brand — not recycled templates.",
+          desc: "Pixel-perfect, custom-coded WordPress themes that are unique to your brand, not recycled templates.",
           points: [
             "100% Custom Design & Code",
             "Fully Responsive Layouts",
@@ -2376,7 +1732,7 @@ export const servicesData = [
         title: "Plugins",
         content: {
           heading: "Custom Plugin Development",
-          desc: "Add any functionality you need with custom-built WordPress plugins — no bloated third-party plugins.",
+          desc: "Add any functionality you need with custom-built WordPress plugins. No bloated third-party plugins.",
           points: [
             "Custom Feature Plugins",
             "WooCommerce Extensions",
@@ -2415,7 +1771,7 @@ export const servicesData = [
     capabilities: [
       {
         title: "Custom Themes",
-        desc: "Unique, custom-coded WordPress themes designed for your brand — fast, clean, and built to last.",
+        desc: "Unique, custom-coded WordPress themes designed for your brand: fast, clean, and built to last.",
         icon: Palette,
       },
       {
@@ -2444,7 +1800,7 @@ export const servicesData = [
     processImage:
       "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
     processDesc:
-      "We create WordPress websites that are beautiful, functional, blazing fast, and — most importantly — easy for you and your team to manage without technical skills.",
+      "We create WordPress websites that are beautiful, functional, and fast. Most importantly, they are easy for you and your team to manage without technical skills.",
     processFeatures: [
       "Discovery & Planning",
       "Custom Design & Development",
@@ -2464,14 +1820,14 @@ export const servicesData = [
             "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
           tech: ["PHP", "WordPress", "CSS3", "JavaScript", "ACF Pro", "Timber"],
           features: [
-            "100% Custom Design — No Templates",
+            "100% Custom Design, No Templates",
             "Fully Responsive on All Devices",
             "SEO-Optimized HTML Structure",
             "Sub-2-Second Load Time",
             "Easy Content Management (Gutenberg / ACF)",
           ],
           overview:
-            "Template-based WordPress sites look like everyone else's — and your business deserves better. We hand-code custom WordPress themes from the ground up, precisely matching your brand identity. Every line of code is clean, optimized, and built with performance and maintainability as core priorities.",
+            "Template-based WordPress sites look like everyone else's, and your business deserves better. We hand-code custom WordPress themes from the ground up, precisely matching your brand identity. Every line of code is clean, optimized, and built with performance and maintainability as core priorities.",
           results: [
             "Completely Unique Brand Identity",
             "Faster Page Speed & Core Web Vitals",
@@ -2481,7 +1837,7 @@ export const servicesData = [
         {
           slug: "wordpress-maintenance",
           title: "WordPress Maintenance & Security",
-          desc: "Comprehensive WordPress care plans — security monitoring, backups, updates, and performance checks.",
+          desc: "Comprehensive WordPress care plans: security monitoring, backups, updates, and performance checks.",
           image:
             "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=2069",
           tech: [
@@ -2499,7 +1855,7 @@ export const servicesData = [
             "Priority Support & Bug Fixes",
           ],
           overview:
-            "A neglected WordPress site is a vulnerable one — outdated plugins are the #1 source of WordPress hacks. Our maintenance plans keep your site updated, backed up, and secure 24/7, so you never have to worry about your website going down or getting compromised.",
+            "A neglected WordPress site is a vulnerable one. Outdated plugins are the top source of WordPress hacks. Our maintenance plans keep your site updated, backed up, and secure 24/7, so you never have to worry about your website going down or getting compromised.",
           results: [
             "Zero Unplanned Downtime",
             "Complete Security Protection",
@@ -2509,7 +1865,7 @@ export const servicesData = [
         {
           slug: "elementor-design",
           title: "Elementor Pro Website Design",
-          desc: "Professional, fast-loading WordPress websites built with Elementor Pro — fully editable by your team.",
+          desc: "Professional, fast-loading WordPress websites built with Elementor Pro, fully editable by your team.",
           image:
             "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
           tech: [
@@ -2526,7 +1882,7 @@ export const servicesData = [
             "Team Self-Editing Without a Developer",
           ],
           overview:
-            "Elementor Pro gives your team the power to update and edit the website themselves without touching code — while still looking like it was built by a professional developer. We build the site, then hand you the keys with full training so you're never dependent on us for small changes.",
+            "Elementor Pro gives your team the power to update and edit the website without touching code, while still looking like a professional developer built it. We build the site, then hand you the keys with full training so you're never dependent on us for small changes.",
           results: [
             "Beautiful Professional Design",
             "Full Team Editing Independence",
@@ -2547,7 +1903,7 @@ export const servicesData = [
         imageUrl:
           "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
         description:
-          "Cut through the noise — these are the only WordPress plugins you actually need for security, SEO, speed, and forms.",
+          "Cut through the noise. These are the only WordPress plugins you need for security, SEO, speed, and forms.",
         views: "4.5k",
         author: "Hassan Raza",
       },
@@ -2559,7 +1915,7 @@ export const servicesData = [
         imageUrl:
           "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
         description:
-          "The honest comparison between custom theme development and Elementor — with real performance data.",
+          "The honest comparison between custom theme development and Elementor, with real performance data.",
         views: "3.2k",
         author: "Ali Raza",
       },
@@ -2607,7 +1963,7 @@ export const servicesData = [
       {
         question: "What if I need new features added after launch?",
         answer:
-          "No problem. We're always available for post-launch additions — new pages, new functionality, plugin integrations, or WooCommerce expansions. We can work on a project basis or a monthly retainer.",
+          "No problem. We're always available for post-launch additions: new pages, new functionality, plugin integrations, or WooCommerce expansions. We work on a project basis or a monthly retainer.",
       },
     ],
     roadmap: {
@@ -2670,4 +2026,5 @@ export const servicesData = [
     ctaBg:
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
   },
+
 ];

@@ -17,64 +17,7 @@ import GlowButton from "./GlowButton";
 import ServicesImage from "../assets/Explore-Services.png";
 import { Link } from "react-router-dom";
 
-const services = [
-  {
-    slug: "web-development",
-    title: "Web Development",
-    desc: "We design and develop modern websites...",
-    icon: <Laptop size={32} />,
-    color: "#0A1317",
-  },
-  {
-    slug: "ecommerce-solutions",
-    title: "E-Commerce Solutions",
-    desc: "We build Shopify and WooCommerce stores...",
-    icon: <ShoppingCart size={32} />,
-    color: "#0A1317",
-  },
-  {
-    slug: "digital-marketing",
-    title: "Digital Marketing",
-    desc: "SEO, Meta Ads, Google Ads...",
-    icon: <Search size={32} />,
-    color: "#0A1317",
-  },
-  {
-    slug: "tool-development",
-    title: "Tool Development",
-    desc: "Custom automation tools...",
-    icon: <Settings size={32} />,
-    color: "#0A1317",
-  },
-  {
-    slug: "ai-ml-python",
-    title: "Python, Machine Learning & AI",
-    desc: "AI models and automation systems...",
-    icon: <BrainCircuit size={32} />,
-    color: "#0A1317",
-  },
-  {
-    slug: "graphics-design",
-    title: "Graphics Design",
-    desc: "Branding and visual design...",
-    icon: <Palette size={32} />,
-    color: "#0A1317",
-  },
-  {
-    slug: "video-editing",
-    title: "Video Editing",
-    desc: "Cinematic video production...",
-    icon: <Video size={32} />,
-    color: "#0A1317",
-  },
-  {
-    slug: "wordpress-website",
-    title: "WordPress Website",
-    desc: "Custom WordPress development...",
-    icon: <Globe size={32} />,
-    color: "#0A1317",
-  },
-];
+import { servicesData } from "../data/serviceData";
 
 const AgencyServices = () => {
   return (
@@ -115,19 +58,25 @@ const AgencyServices = () => {
               <br />
               <br />
               Whether you need a high-converting website, a scalable online
-              store, AI-powered tools, or powerful marketing campaigns, WBN
-              Agency delivers innovative solutions designed to elevate your
-              brand and drive measurable success.
+              store, AI-powered tools, or powerful marketing campaigns, NEFFTO
+              delivers innovative solutions designed to elevate your brand and
+              drive measurable success.
             </p>
           </div>
 
-          <GlowButton name="More Services" to="/casestudies" />
+          <GlowButton
+            name="More Services"
+            to="/casestudies"
+            className="bg-white text-secondary-dark border-2 border-secondery"
+            hover="hover:text-white"
+            layerHover="bg-secondery"
+          />
           <img src={ServicesImage} alt="" className="w-full mt-4 pr-4" />
         </div>
 
         {/* RIGHT SIDE - GLASS CARDS */}
         <div className="flex flex-col gap-6">
-          {services.map((service, index) => (
+          {servicesData.map((service, index) => (
             <Link
               key={index}
               to={`/services/${service.slug}`}
@@ -147,7 +96,7 @@ const AgencyServices = () => {
               transition-all duration-500 cursor-pointer"
                 style={{
                   background: `
-                  radial-gradient(circle at 20% 20%, ${service.color}25 0%, transparent 60%),
+                  radial-gradient(circle at 20% 20%, #0A131725 0%, transparent 60%),
                   rgba(255,255,255,0.04)
                 `,
                 }}
@@ -156,7 +105,7 @@ const AgencyServices = () => {
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
                   style={{
-                    background: `radial-gradient(circle at 50% 0%, ${service.color}30, transparent 70%)`,
+                    background: `radial-gradient(circle at 50% 0%, #0A131730, transparent 70%)`,
                   }}
                 />
 
@@ -166,10 +115,10 @@ const AgencyServices = () => {
                     className="p-4 mb-4 text-white shadow-lg 
                   backdrop-blur-xl border border-white/20 transition-transform duration-500"
                     style={{
-                      background: `linear-gradient(135deg, ${service.color}, rgba(255,255,255,0.1))`,
+                      background: `linear-gradient(135deg, #5878a0, #b4c6d8)`,
                     }}
                   >
-                    {service.icon}
+                    {service.icon && <service.icon size={32} />}
                   </div>
 
                   {/* TITLE */}

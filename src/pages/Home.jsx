@@ -17,6 +17,7 @@ import BlogBg from "../assets/blog-bg.jpg";
 import Counter from "../components/Counter";
 import ServicesImage from "../assets/Explore-Services.png";
 import PerformanceImg from "../assets/performance-img.jpeg";
+import { servicesData } from "../data/serviceData";
 
 const Home = () => {
   const faqs = [
@@ -135,7 +136,7 @@ const Home = () => {
                 hover="hover:text-secondary-dark"
               />
               <GlowButton
-                to={"/contact"}
+                to={"/casestudies"}
                 name={"View Services"}
                 className="bg-off-white text-secondary-dark"
                 hover="hover:text-white"
@@ -211,43 +212,10 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             {/* LEFT CONTENT */}
             <div className="space-y-8">
-              {[
-                {
-                  title: "Web Development",
-                  desc: "Building fast, scalable, and responsive websites with modern technologies for outstanding business performance.",
-                },
-                {
-                  title: "E-Commerce",
-                  desc: "Creating high-converting online stores optimized for sales growth, customer experience, and secure transactions.",
-                },
-                {
-                  title: "Digital Marketing",
-                  desc: "Driving traffic, leads, and brand awareness through SEO, social media, and targeted advertising campaigns.",
-                },
-                {
-                  title: "Tool Development",
-                  desc: "Developing custom tools and automation systems that improve workflow efficiency and business productivity.",
-                },
-                {
-                  title: "AI & Machine Learning",
-                  desc: "Delivering smart AI-powered solutions, automation, and intelligent systems for modern digital businesses.",
-                },
-                {
-                  title: "Graphic Design",
-                  desc: "Designing professional branding, social media creatives, and visual identities that leave lasting impressions.",
-                },
-                {
-                  title: "Video Editing",
-                  desc: "Producing engaging and high-quality video content optimized for marketing, YouTube, and social platforms.",
-                },
-                {
-                  title: "WordPress Website",
-                  desc: "Creating secure, SEO-friendly, and fully customized WordPress websites tailored to business goals.",
-                },
-              ].map((item, i) => (
+              {servicesData.map((item, i) => (
                 <div key={i} className="flex items-start gap-5 group">
                   {/* NUMBER */}
-                  <div className="min-w-13.75 h-13.75 bg-linear-to-br from-secondery to-blue-500 flex items-center justify-center text-white font-bold text-lg">
+                  <div className="min-w-13.75 h-13.75 bg-linear-to-br from-[#5878a0] to-[#b4c6d8] flex items-center justify-center text-white font-bold text-lg">
                     0{i + 1}
                   </div>
 
@@ -267,7 +235,7 @@ const Home = () => {
             {/* RIGHT IMAGE */}
             <div className="relative">
               {/* MAIN IMAGE */}
-              <div className="relative overflow-hidden border border-white/10">
+              <div className="relative overflow-hidden border border-black/10">
                 <img
                   src={PerformanceImg}
                   alt="NEFFTO Success"
@@ -279,13 +247,13 @@ const Home = () => {
               </div>
 
               {/* FLOATING STATS */}
-              <div className="absolute top-0 left-0 bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2">
-                <h3 className="text-2xl font-bold text-secondery">99%</h3>
-                <p className="text-white text-xs">Client Satisfaction</p>
+              <div className="absolute top-px left-px bg-white/10 backdrop-blur-xl border border-black/10 px-4 py-2">
+                <h3 className="text-2xl font-bold text-secondary-dark">99%</h3>
+                <p className="text-secondary-dark text-xs">Client Satisfaction</p>
               </div>
 
-              <div className="absolute bottom-0 right-0 bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2">
-                <h3 className="text-2xl font-bold text-secondery">500+</h3>
+              <div className="absolute bottom-px right-px bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2">
+                <h3 className="text-2xl font-bold text-secondary-dark">500+</h3>
                 <p className="text-white text-xs">Projects Delivered</p>
               </div>
             </div>
@@ -294,7 +262,6 @@ const Home = () => {
       </section>
       <FeaturedWork />
       <PartnerSection />
-      
       <WhitepaperSection />
       <FAQ faqs={faqs} />
     </>

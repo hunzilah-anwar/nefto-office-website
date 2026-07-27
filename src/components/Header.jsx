@@ -60,7 +60,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-1000 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <header className="fixed top-0 left-0 w-full z-1000 bg-white">
       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         {/* LOGO */}
         <Link to="/" className="flex items-center">
@@ -164,7 +164,13 @@ const Header = () => {
 
         {/* RIGHT ACTIONS */}
         <div className="hidden lg:flex items-center gap-4">
-          <GlowButton name="Contact Us" to="/contact" />
+          <GlowButton
+            to={"/contact"}
+            name={"Get Started"}
+            className="bg-white text-secondary-dark border-2 border-secondery"
+            hover="hover:text-white"
+            layerHover="bg-secondery"
+          />
         </div>
 
         {/* MOBILE TOGGLE */}
@@ -266,7 +272,9 @@ const Header = () => {
                 <GlowButton
                   name="Get a Quote"
                   to="/contact"
-                  className=""
+                  className="bg-white text-secondary-dark border-2 border-secondery"
+                  hover="hover:text-white"
+                  layerHover="bg-secondery"
                   onClick={() => setIsOpen(false)}
                 />
               </motion.div>

@@ -2,65 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Zap, Globe } from "lucide-react";
 import GlowButton from "../components/GlowButton";
-import CEOImage from "../assets/Mudassir.png";
-import HamzaImg from "../assets/hamza-team.jpeg";
-import RahulImg from "../assets/rahul-team.jpeg";
-import MaryamImg from "../assets/maryam-team.jpeg";
-import SaifImg from "../assets/saif-team.jpeg";
-import WaqasImg from "../assets/waqas-team.jpeg";
-import AhadImg from "../assets/ahad-team.jpeg";
-
-/* ================= TEAM DATA ================= */
-const coreTeam = [
-  {
-    id: 1,
-    name: "Mr. Abdul Ahad",
-    role: "Web Development Head",
-    image: AhadImg,
-  },
-  {
-    id: 2,
-    name: "Mudassir Khan",
-    role: "E-commerce Head",
-    image: CEOImage,
-  },
-  {
-    id: 3,
-    name: "Saif-ur-Rehman",
-    role: "Video Editing",
-    image: SaifImg,
-  },
-  {
-    id: 4,
-    name: "Ruhul Hasnain",
-    role: "Python, Machine learning and AI head",
-    image: RahulImg,
-  },
-  {
-    id: 5,
-    name: "Waqas Khan",
-    role: "Tool development Head",
-    image: WaqasImg,
-  },
-  {
-    id: 6,
-    name: "Mariyum",
-    role: "Graphics Design Head",
-    image: MaryamImg,
-  },
-  {
-    id: 7,
-    name: "Waqas Khan",
-    role: "Wordpress",
-    image: WaqasImg,
-  },
-  {
-    id: 8,
-    name: "Hamza",
-    role: "Digital marketing Head",
-    image: HamzaImg,
-  },
-];
+import CEO from "../assets/CEO.jpeg";
+import CTO from "../assets/cto.png";
+import CoFounder from "../assets/Ameerhamza.webp";
+import TeamGrid from "../components/TeamGrid";
 
 /* ================= SUB-COMPONENTS ================= */
 const TeamCard = ({ member }) => (
@@ -85,10 +30,42 @@ const TeamCard = ({ member }) => (
   </motion.div>
 );
 
+const MainTeamCard = ({
+  imageSrc,
+  name,
+  title,
+  imagePosition = "center center",
+}) => {
+  return (
+    <div className="bg-secondary-dark rounded-4xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 w-full max-w-140 mx-auto">
+      <div className="group relative overflow-hidden h-95 md:h-125">
+        <img
+          loading="lazy"
+          src={imageSrc}
+          alt={name}
+          style={{ objectPosition: imagePosition }}
+          className="w-full h-full object-cover transition ease-in-out duration-700 scale-110 group-hover:scale-120"
+        />
+
+        {/* Rest of your code */}
+      </div>
+
+      <div className="flex justify-between items-center p-6">
+        <h3 className="text-accent-medium text-[18px] md:text-xl font-bold">
+          {name}
+        </h3>
+        <p className="text-muted-steel font-bold md:text-sm tracking-wide">
+          {title}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 /* ================= MAIN COMPONENT ================= */
 const Team = () => {
   return (
-    <main className="bg-main-bg text-white selection:bg-cyan-500 selection:text-black pt-20">
+    <main className="bg-main-bg text-white selection:bg-secondary-dark selection:text-white pt-20">
       {/* SECTION 1 (ODD): HERO - #00042A */}
       <section className="relative sm:py-16 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff05_1px,transparent_1px)] bg-size-[40px_40px]" />
@@ -120,49 +97,41 @@ const Team = () => {
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 grid-cols-1 sm:gap-20 gap-10 items-center">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-cyan-500/20 blur-3xl rounded-full opacity-30 group-hover:opacity-60 transition duration-1000" />
-              <img
-                src={CEOImage}
-                className="relative rounded-full w-full aspect-square object-cover border-8 border-white/10 shadow-2xl transition-all duration-700"
-                alt="CEO"
-              />
-            </div>
-            <div className="sm:space-y-8 space-y-4">
-              <h3 className="text-cyan-500 font-mono text-sm tracking-[0.3em] uppercase">
-                CEO & Founder
-              </h3>
-              <h2 className="text-2xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-none">
-                Mudassir{" "}
-                <span className="text-transparent stroke-text italic font-serif">
-                  Khan.
-                </span>
-              </h2>
-              <p className="text-zinc-300 sm:text-2xl text-sm font-light italic leading-relaxed border-l-4 border-cyan-500 sm:pl-8 pl-4">
-                "Consistently producing localized systems while saving time and
-                energy for our global partners is our prime protocol."
-              </p>
-            </div>
+          <div className="w-full max-w-140 mr-auto mb-10">
+            <span className="inline-flex items-center gap-2 text-off-white text-sm font-bold tracking-[0.2em] uppercase">
+              • Meet Our Team
+            </span>
+            <p className="mt-2 max-w-2xl text-zinc-300 leading-8">
+              Our team combines creativity, technology, and innovation to build
+              high performance digital solutions that help businesses grow.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-between items-center gap-14">
+            <MainTeamCard
+              imageSrc={CEO}
+              name="Abdul Ahad Dahir"
+              title="Founder / CEO"
+              imagePosition="center 0%"
+            />
+
+            <MainTeamCard
+              imageSrc={CoFounder}
+              name="Ameer Hamza"
+              title="Co-Founder / CEO"
+              imagePosition="center 10%"
+            />
+
+            <MainTeamCard
+              imageSrc={CTO}
+              name="Muhammad Hunzilah"
+              title="CTO"
+              imagePosition="center 0%"
+            />
           </div>
         </div>
       </section>
 
-      {/* SECTION 3 (ODD): CORE TEAM GRID - #00042A */}
-      <section className="sm:py-16 py-10 sm:px-6 px-4 bg-main-bg">
-        <div className="max-w-7xl mx-auto">
-          <div className="sm:mb-16 mb-10">
-            <h2 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
-              Team <span className="text-secondery">Members</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 sm:gap-y-20 gap-y-10">
-            {coreTeam.map((member) => (
-              <TeamCard key={member.id} member={member} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamGrid />
 
       {/* SECTION 5 (ODD): JOIN THE PIPELINE */}
       <section
@@ -176,8 +145,8 @@ const Team = () => {
 
         <div className="relative max-w-5xl mx-auto sm:space-y-8 space-y-4 z-10 text-white">
           {/* small label */}
-          <div className="flex sm:justify-center items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-cyan-400 font-bold">
-            <span className="sm:w-10 w-4 h-px bg-cyan-500" />
+          <div className="flex sm:justify-center items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-off-white font-bold">
+            <span className="sm:w-10 w-4 h-px bg-off-white" />
             Join The Network
           </div>
 
@@ -201,14 +170,20 @@ const Team = () => {
 
           {/* actions */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <GlowButton name="Let's Connect" to="/contact" />
+            <GlowButton
+              name="Let's Connect"
+              to="/contact"
+              className="bg-secondary-dark text-white border-2 border-secondary-dark"
+              hover="hover:text-secondary-dark"
+              layerHover="bg-white"
+            />
           </div>
         </div>
       </section>
       {/* stroke style */}
       <style>{`
         .stroke-text {
-          -webkit-text-stroke: 1.5px #06b6d4;
+          -webkit-text-stroke: 1.5px #efeff2;
           color: transparent;
         }
       `}</style>

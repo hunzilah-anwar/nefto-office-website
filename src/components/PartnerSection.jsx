@@ -78,7 +78,7 @@ const PartnerSection = () => {
       {/* CTA */}
       <div className="sm:mt-24 mt-10 text-center pb-20 border-b border-white/10">
         <Link to="/casestudies">
-          <button className="relative sm:px-10 px-4 sm:py-5 py-2 bg-white text-black sm:font-bold font-medium uppercase sm:text-sm text-[12px] cursor-pointer tracking-widest overflow-hidden group">
+          <button className="relative sm:px-10 px-4 sm:py-5 py-2 bg-white text-black hover:text-white sm:font-bold font-medium uppercase sm:text-sm text-[12px] cursor-pointer tracking-widest overflow-hidden group">
             <span className="relative z-10 tracking-tight">
               Explore Our Services
             </span>
