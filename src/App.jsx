@@ -1,67 +1,52 @@
-import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Loader from "./components/Loader";
 
-// Lazy Load Pages
-const Home = lazy(() => import('./Pages/Home'));
-const Services = lazy(() => import('./Pages/Services'));
-const About = lazy(() => import('./Pages/About'));
-const Contact = lazy(() => import('./Pages/Contact'));
-const WebDevelopment = lazy(() => import('./Pages/WebDevelopment'));
-const AppDevelopment = lazy(() => import('./Pages/AppDevelopment'));
-const Artificial = lazy(() => import('./Pages/Artificial'));
-const GraphicDesignPage = lazy(() => import('./Pages/Graphic'));
-const DigitalMarketing = lazy(() => import('./Pages/DigitalMarketing'));
-const SEO = lazy(() => import('./Pages/Seo'));
-
-// Helper: Page change hone par scroll top par le janay ke liye
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    // 1. Scroll to top
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-};
-
-// Loading Fallback Component
-const Loader = () => (
-  <div className="flex items-center justify-center min-h-[90vh]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-  </div>
-);
+// Pages
+import Home from "./pages/Home";
+import CaseStudies from "./pages/CaseStudies";
+import Contact from "./pages/Contact";
+import Team from "./pages/Team";
+import ProjectDetail from "./pages/ProjectDetail";
+import ScrollToTop from "./components/ScrollToTop";
+import ServicePages from "./pages/ServicePages";
+import NotFound from "./pages/NotFound";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time (remove this in production)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-white flex flex-col">
-        <Header />
-       
-        <main className="grow">
-          <Suspense fallback={<Loader />}>
-            <Routes>
-              {/* Main Navigation Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+      <Header />
 
-              {/* Individual Services Routes */}
-              <Route path="/services/web-development" element={<WebDevelopment />} />
-              <Route path="/services/app-development" element={<AppDevelopment />} />
-              <Route path="/services/ai-solutions" element={<Artificial />} />
-              <Route path="/services/graphic-design" element={<GraphicDesignPage />} />
-              <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-              <Route path="/services/seo" element={<SEO />} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/casestudies" element={<CaseStudies />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/services/:slug" element={<ServicePages />} />
+        <Route path="/services/:slug/:projectSlug" element={<ProjectDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
+      <Footer />
     </Router>
   );
 }

@@ -1,177 +1,165 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Logo from "../assets/images/logo-darkmode.svg";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
+import { servicesData } from "../data/serviceData";
+import logo from "../assets/footer-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
-
-  const serviceLinks = [
-    { name: "Web Development", href: "/services/web-development" },
-    { name: "App Development", href: "/services/app-development" },
-    { name: "AI & ML", href: "/services/ai-solutions" },
-    { name: "Graphic Designing", href: "/services/graphic-design" },
-    { name: "Digital Marketing", href: "/services/digital-marketing" },
-    { name: "SEO", href: "/services/seo" },
-  ];
-
-  const socialLinks = [
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/profile.php?id=61591430441959",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/abdul-ahad-a848b641b/",
-    },
-    { name: "Instagram", href: "https://www.instagram.com/nefftosolution/" },
-  ];
-
-  // Animation Variants
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+  const MotionLink = motion.create(Link);
 
   return (
-    <footer className="bg-[#06202B] text-gray-400 py-7 px-4 sm:px-6 lg:px-8 border-t border-white/5 overflow-hidden">
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="max-w-7xl mx-auto"
-      >
-        {/* TOP SECTION: LOGO & LINKS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-          {/* Column 1: Logo and Tagline */}
-          <motion.div variants={itemVariants} className="lg:col-span-4">
-            <motion.div className="inline-block">
+    <footer className="relative w-full bg-main-bg pb-10 overflow-hidden">
+      {/* ================= BACKGROUND ================= */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-[-10%] right-[-5%] w-60 h-60 md:w-80 md:h-80 bg-purple-600/10 blur-[140px]" />
+        <div className="absolute top-0 left-[-10%] w-52 h-52 md:w-72 md:h-72 bg-purple-500/10 blur-[120px]" />
+      </div>
+
+      {/* ================= MARQUEE ================= */}
+      <div className="relative border-y border-white/5 py-4 md:py-6 mb-10 overflow-hidden">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {Array(3)
+            .fill("Partner with Us to Build Excellence • ")
+            .map((text, i) => (
+              <span
+                key={i}
+                className="text-[6vw] md:text-[5vw] lg:text-[3vw] font-black uppercase tracking-tighter text-transparent pr-4"
+                style={{
+                  WebkitTextStroke: "1px rgba(255,255,255,0.15)",
+                }}
+              >
+                {text}
+              </span>
+            ))}
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-16 items-start">
+          {/* ================= LEFT ================= */}
+          <div className="space-y-8 lg:col-span-2">
+            <div className="space-y-4">
               <Link to="/">
-                <img loading="lazy" 
-                  src={Logo}
-                  alt="Logo" 
-                  className="h-20 w-auto object-contain"
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="w-30"
+                  style={{
+                    filter:
+                      "brightness(0) saturate(100%) invert(30%) sepia(95%) saturate(2200%) hue-rotate(205deg) brightness(95%) contrast(95%)",
+                  }}
                 />
               </Link>
-            </motion.div>
-            <p className="text-lg md:text-xl leading-relaxed max-w-sm">
-              We build digital products people actually enjoy using. Based
-              wherever good WiFi and coffee meet.
-            </p>
-          </motion.div>
 
-          {/* Column 2: Navigation */}
-          <motion.div variants={itemVariants} className="lg:col-span-3">
-            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-8">
-              Navigation
-            </h4>
-            <ul className="space-y-4">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <motion.div whileHover={{ x: 5 }}>
-                    <Link
-                      to={link.href}
-                      className="text-lg hover:text-accent transition-colors duration-300"
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                </li>
+              <p className="max-w-sm text-white/70 text-xs sm:text-sm leading-relaxed">
+                We take on a limited number of projects each year to ensure deep
+                focus, precision, and premium quality execution.
+              </p>
+            </div>
+
+            {/* CTA BUTTON */}
+            <MotionLink
+              to={"/contact"}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group cursor-pointer w-fit flex items-center gap-3 sm:gap-5 bg-white text-black px-1 pr-5 sm:pr-8 py-1 rounded-full"
+            >
+              <div className="h-8 w-8 sm:h-10 sm:w-10 bg-secondery ease-in-out rounded-full flex items-center justify-center text-white group-hover:rotate-45 transition duration-500">
+                <ArrowUpRight size={18} />
+              </div>
+
+              <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest">
+                Get In Touch
+              </span>
+            </MotionLink>
+          </div>
+
+          {/* ================= NAV ================= */}
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
+              Pages
+            </h2>
+
+            <nav className="space-y-3 sm:space-y-4">
+              {["Home", "Case Studies", "Team", "Contact"].map((item) => (
+                <Link
+                  key={item}
+                  to={
+                    item === "Home"
+                      ? "/"
+                      : `/${item.toLowerCase().replace(/\s+/g, "")}`
+                  }
+                  className="group flex items-center w-fit gap-2 text-white/80 hover:text-secondery transition"
+                >
+                  <span className="w-0 h-px bg-secondery group-hover:w-4 transition-all duration-300" />
+                  <span className="text-xs sm:text-sm">{item}</span>
+                </Link>
               ))}
-            </ul>
-          </motion.div>
+            </nav>
+          </div>
 
-          {/* Column 3: Services */}
-          <motion.div variants={itemVariants} className="lg:col-span-3">
-            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-8">
+          {/* ================= SERVICES ================= */}
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
               Services
-            </h4>
-            <ul className="space-y-4">
-              {serviceLinks.map((link) => (
-                <li key={link.name}>
-                  <motion.div whileHover={{ x: 5 }}>
-                    <Link
-                      to={link.href}
-                      className="text-lg hover:text-accent transition-colors duration-300"
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+            </h2>
 
-          {/* Column 4: Connect */}
-          <motion.div variants={itemVariants} className="lg:col-span-2">
-            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-8">
-              Connect
-            </h4>
-            <ul className="space-y-4">
-              {socialLinks.map((link) => (
-                <li key={link.name}>
-                  <motion.a
-                    whileHover={{ x: 5 }}
-                    href={link.href}
-                    className="text-lg hover:text-accent transition-colors duration-300 flex items-center group"
-                  >
-                    {link.name}
-                    <span className="ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-accent">
-                      →
-                    </span>
-                  </motion.a>
-                </li>
+            <nav className="space-y-3 sm:space-y-4">
+              {servicesData.map((item) => (
+                <Link
+                  key={item.slug}
+                  to={`/services/${item.slug}`}
+                  className="group flex items-center w-fit gap-2 text-white/80 hover:text-secondery transition"
+                >
+                  <span className="w-0 h-px bg-secondery group-hover:w-4 transition-all duration-300" />
+                  <span className="text-xs sm:text-sm">{item.title}</span>
+                </Link>
               ))}
-            </ul>
-          </motion.div>
+            </nav>
+          </div>
+
+          {/* ================= Agency Location ================= */}
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
+              Agency Location
+            </h2>
+
+            <div className="space-y-3 text-white/70 text-sm">
+              <p>5942 W 124th St, Alsip, IL 60803</p>
+              <p>United States</p>
+            </div>
+          </div>
         </div>
 
-        {/* BOTTOM SECTION: COPYRIGHT */}
-        <motion.div
-          variants={itemVariants}
-          className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm tracking-wide"
-        >
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="order-2 md:order-1"
-          >
-            © {currentYear} Neffto Solutions. All rights reserved.
-          </motion.p>
+        {/* ================= BOTTOM ================= */}
+        <div className="mt-10 pt-6 md:pt-8 border-t border-white/5">
+          <p className="text-center text-xs sm:text-sm text-white">
+            &copy; {currentYear}{" "}
+            <Link to={"/"} className="text-secondery underline">
+              WBN Agency
+            </Link>
+            . All rights reserved.
+          </p>
+        </div>
+      </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="order-1 md:order-2 italic text-gray-500"
-          >
-            Crafted with obsessive attention to detail.
-          </motion.p>
-        </motion.div>
-      </motion.div>
+      {/* ================= ANIMATION ================= */}
+      <style>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          display: flex;
+          animation: marquee 18s linear infinite;
+        }
+      `}</style>
     </footer>
   );
 };
