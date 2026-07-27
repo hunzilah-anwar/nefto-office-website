@@ -33,17 +33,17 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="space-y-10"
         >
-          <div className="flex items-center gap-4 text-cyan-400 text-xs uppercase tracking-[0.4em] font-bold">
-            <span className="w-12 h-px bg-cyan-500" />
+          <div className="flex items-center gap-4 text-secondary text-xs uppercase tracking-[0.4em] font-bold">
+            <span className="w-12 h-px bg-secondary" />
             Contact Protocol
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tight">
             Let’s Build <br />
-            <span className="text-cyan-400">Something Real.</span>
+            <span className="highlight">Something Real.</span>
           </h1>
 
-          <p className="text-zinc-400 text-lg leading-relaxed max-w-md">
+          <p className="text-zinc-200 text-lg leading-relaxed max-w-md">
             Tell us about your system requirements, product vision, or technical
             challenges. Our engineers will respond with a structured execution plan.
           </p>
@@ -52,18 +52,18 @@ const Contact = () => {
           <div className="space-y-6 pt-6">
 
             <div className="flex items-center gap-4">
-              <Mail className="text-cyan-400" size={18} />
-              <span className="text-sm text-zinc-300">contact@youragency.com</span>
+              <Mail className="text-primary" size={18} />
+              <span className="text-sm text-zinc-200">info@nefftosolution.com</span>
             </div>
 
             <div className="flex items-center gap-4">
-              <Globe className="text-cyan-400" size={18} />
-              <span className="text-sm text-zinc-300">www.youragency.com</span>
+              <Globe className="text-primary" size={18} />
+              <span className="text-sm text-zinc-200">nefftosolution.com</span>
             </div>
 
             <div className="flex items-center gap-4">
-              <MapPin className="text-cyan-400" size={18} />
-              <span className="text-sm text-zinc-300">Global Remote Team</span>
+              <MapPin className="text-primary" size={18} />
+              <span className="text-sm text-zinc-200">Global Remote Team</span>
             </div>
 
           </div>

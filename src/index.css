@@ -1,22 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Saira+Stencil:wght@100..900&display=swap");
+
 @import "tailwindcss";
 
 @theme {
-  --color-main-bg: #071524;
-  --color-secondary-dark: #132435;
-  --color-dark-blue-gray: #293949;
-  --color-medium-gray-blue: #4b5663;
-  --color-muted-steel: #6f7b8a;
-  --color-light-gray-blue: #9da5b0;
-  --color-light-surface: #c8ccd3;
-  --color-off-white: #efeff2;
-  --color-primery: #071524;
-  --color-secondery: #6f7b8a;
+  /* Brand Colors */
+  --color-primary-navy: #0d1933;
+  --color-secondary-navy: #1c3c63;
+  --color-accent-blue: #4a7fa7;
+  --color-light-blue: #b4d0e6;
+  --color-off-white: #f6fafd;
+
+  /* Semantic Colors */
+  --color-main-bg: var(--color-primary-navy);
+  --color-surface: var(--color-secondary-navy);
+  --color-primary: var(--color-accent-blue);
+  --color-secondary: var(--color-light-blue);
+  --color-text: var(--color-off-white);
+
+  /* Fonts */
+  --font-heading: "Merriweather", serif;
   --font-sans: "Open Sans", sans-serif;
+  --font-display: "Oswald", sans-serif;
+  --font-logo: "Saira Stencil", sans-serif;
 }
 
 .highlight {
-  background: linear-gradient(90deg, #5878a0, #b4c6d8);
+  background: linear-gradient(90deg, #4a7fa7 0%, #b4d0e6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

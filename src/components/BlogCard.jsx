@@ -19,7 +19,7 @@ const BlogCard = ({
           {words.map((word, index) => (
             <React.Fragment key={index}>
               {index > 0 && ' '}
-              <span className={index % 2 === 0 ? '' : 'text-secondery'}>{word}</span>
+              <span className={index % 2 === 0 ? '' : 'text-primary'}>{word}</span>
             </React.Fragment>
           ))}
         </h2>
@@ -52,7 +52,7 @@ const BlogCard = ({
               <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* 3. LIGHTING EFFECT: Secondary color spotlight on hover */}
-              <div className="absolute inset-0 bg-radial-gradient(circle_at_bottom_left,var(--color-secondery)_0%,transparent_70%) opacity-0 group-hover:opacity-20 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-radial-gradient(circle_at_bottom_left,var(--color-primary)_0%,transparent_70%) opacity-0 group-hover:opacity-20 transition-opacity duration-700" />
 
               {/* 4. CONTENT WRAPPER */}
               <article className="relative z-10 p-8 sm:p-4 flex flex-col justify-end gap-2 h-full">
@@ -69,7 +69,7 @@ const BlogCard = ({
                         size={12}
                         className={`${
                           i < (post.rating || 5)
-                            ? "fill-secondery text-secondery"
+                            ? "fill-primary text-primary"
                             : "fill-white/10 text-white/10"
                         } transition-all duration-300 hover:scale-125`}
                       />
@@ -95,7 +95,7 @@ const BlogCard = ({
                     <span className="text-white text-[10px] uppercase tracking-[0.3em]">
                       Read Case Study
                     </span>
-                    <div className="w-0 h-px bg-secondery transition-all duration-500 group-hover:w-12" />
+                    <div className="w-0 h-px bg-primary transition-all duration-500 group-hover:w-12" />
                     <MoveRight
                       size={18}
                       className="text-white -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500"

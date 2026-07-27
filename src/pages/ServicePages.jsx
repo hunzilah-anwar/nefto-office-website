@@ -99,7 +99,7 @@ const ProjectSlider = ({ projects, parentSlug }) => {
                   to={`/services/${parentSlug}/${projects[index].slug}`}
                   name="View Detail"
                   className="bg-black text-white border-2 border-black"
-                  hover="hover:text-secondary-dark"
+                  hover="hover:text-surface"
                   layerHover="bg-white"
                 />
               </div>
@@ -109,13 +109,13 @@ const ProjectSlider = ({ projects, parentSlug }) => {
           <div className="flex gap-4 pt-10">
             <button
               onClick={prev}
-              className="p-4 rounded-full border border-white/10 hover:bg-light-gray-blue transition-all text-white hover:text-black cursor-pointer"
+              className="p-4 rounded-full border border-white/10 hover:bg-primary transition-all text-white cursor-pointer"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={next}
-              className="p-4 rounded-full border border-white/10 hover:bg-light-gray-blue transition-all text-white hover:text-black cursor-pointer"
+              className="p-4 rounded-full border border-white/10 hover:bg-primary transition-all text-white cursor-pointer"
             >
               <ChevronRight size={20} />
             </button>
@@ -141,7 +141,7 @@ const RoadmapSection = ({ roadmap }) => {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-linear-to-b from-[#5878a0] to-[#b4c6d8] hidden lg:block" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-linear-to-b from-[#4a7fa7] to-[#b4d0e6] hidden lg:block" />
           <div className="space-y-12">
             {roadmap?.steps?.map((step, idx) => (
               <motion.div
@@ -155,16 +155,16 @@ const RoadmapSection = ({ roadmap }) => {
                 }`}
               >
                 <div className="lg:w-1/2 w-full">
-                  <div className="bg-white/5 w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-light-surface transition-all mx-px">
+                  <div className="bg-white/5 w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-surface transition-all mx-px">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-[linear-gradient(90deg,#5878a0,#b4c6d8)] flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-[linear-gradient(90deg,#4a7fa7,#b4d0e6)] flex items-center justify-center">
                         {React.createElement(step.icon, {
                           size: 24,
                           className: "text-white",
                         })}
                       </div>
                       <div>
-                        <span className="text-secondery text-sm font-mono">
+                        <span className="text-primary text-sm font-mono">
                           Step 0{idx + 1}
                         </span>
                         <h3 className="text-xl font-bold">{step.title}</h3>
@@ -206,7 +206,7 @@ const NextStepsSection = ({ nextSteps }) => {
               viewport={{ once: true }}
               className="text-center group"
             >
-              <div className="sm:w-20 sm:h-20 w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-br from-[#5878a0] to-[#b4c6d8] flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="sm:w-20 sm:h-20 w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-br from-[#4a7fa7] to-[#b4d0e6] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-2xl font-black">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
@@ -220,8 +220,8 @@ const NextStepsSection = ({ nextSteps }) => {
           <GlowButton
             name={nextSteps?.buttonText || "Start Your Project"}
             to={nextSteps?.buttonLink || "/contact"}
-            className="bg-secondary-dark text-white border-2 border-secondary-dark"
-            hover="hover:text-secondary-dark"
+            className="bg-surface text-white border-2 border-surface"
+            hover="hover:text-surface"
             layerHover="bg-white"
           />
         </div>
@@ -307,8 +307,8 @@ const ServicePages = () => {
               <GlowButton
                 name={"Get a Quote"}
                 to={"/contact"}
-                className="bg-secondary-dark text-white border-2 border-secondary-dark"
-                hover="hover:text-secondary-dark"
+                className="bg-surface text-white border-2 border-surface"
+                hover="hover:text-surface"
                 layerHover="bg-white"
               />
             </div>
@@ -344,8 +344,8 @@ const ServicePages = () => {
                     className={`text-left px-6 py-5 cursor-pointer border transition-all duration-300
                     ${
                       active === i
-                        ? "bg-linear-to-r from-[#5878a0] to-[#b4c6d8] text-white border-muted-steel"
-                        : "bg-white/5 border-white/10 hover:border-muted-steel"
+                        ? "bg-linear-to-r from-[#4a7fa7] to-[#b4d0e6] text-white border-secondary"
+                        : "bg-white/5 border-white/10 hover:border-secondary"
                     }
                     `}
                   >
@@ -366,7 +366,7 @@ const ServicePages = () => {
                     transition={{ duration: 0.4 }}
                     className="p-4 md:p-8 h-full"
                   >
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-light-gray-blue">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-primary">
                       {tabs[active]?.content?.heading}
                     </h3>
                     <p className="text-zinc-400 mb-6 text-sm sm:text-base">
@@ -376,9 +376,9 @@ const ServicePages = () => {
                       {tabs[active]?.content?.points?.map((p, i) => (
                         <li
                           key={i}
-                          className="flex justify-start items-center gap-3 sm:text-sm text-xs text-zinc-300"
+                          className="flex justify-start items-center gap-3 sm:text-sm text-xs text-zinc-50"
                         >
-                          <span className="w-2 h-2 bg-off-white rounded-full shrink-0" />
+                          <span className="w-2 h-2 bg-primary rounded-full shrink-0" />
                           {p}
                         </li>
                       ))}
@@ -416,7 +416,7 @@ const ServicePages = () => {
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="p-8 bg-white/5 border border-white/10 backdrop-blur-md group hover:border-light-gray-blue transition-all"
+                  className="p-8 bg-white/5 border border-white/10 backdrop-blur-md group hover:border-secondary transition-all"
                 >
                   {s.icon && (
                     <s.icon
@@ -443,12 +443,12 @@ const ServicePages = () => {
         <section className="sm:py-16 py-10 sm:px-6 px-4 bg-main-bg">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white border-b border-white/10 pb-20">
             <div className="lg:w-1/2 space-y-2">
-              <h3 className="text-sm text-secondery font-black">
+              <h3 className="text-sm text-primary font-black">
                 {service.processSubTitle}
               </h3>
               <h2 className="md:text-5xl sm:text-3xl text-xl font-black italic uppercase tracking-tighter leading-tight mb-8">
                 {service.processTitle} <br />
-                <span className="text-secondery font-serif">
+                <span className="text-primary font-serif">
                   {service.processHighlight}
                 </span>
               </h2>
@@ -466,7 +466,7 @@ const ServicePages = () => {
                     viewport={{ once: true }}
                     className="flex items-center gap-3 md:gap-4"
                   >
-                    <Check size={24} className="text-secondery shrink-0" />
+                    <Check size={24} className="text-primary shrink-0" />
                     <span className="text-sm sm:text-base md:text-xl font-bold leading-tight">
                       {text}
                     </span>
@@ -475,7 +475,7 @@ const ServicePages = () => {
               </ul>
             </div>
             <div className="lg:w-1/2">
-              <div className="relative p-1 bg-linear-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl">
+              <div className="relative p-1 bg-primary rounded-2xl">
                 <img
                   src={service.processImage}
                   className="h-auto w-full object-cover transition-all duration-1000 rounded-2xl"
@@ -524,7 +524,7 @@ const ServicePages = () => {
           <div className="max-w-7xl mx-auto text-center space-y-12 relative z-10">
             <div className="space-y-8">
               <div className="flex justify-center items-center bg-white/10 backdrop-blur-xl border border-white/30 sm:w-24 sm:h-24 w-20 h-20 rounded-full mx-auto mb-4">
-                <Rocket className="text-secondery" size={40} />
+                <Rocket className="text-primary" size={40} />
               </div>
               <h3 className="text-lg sm:text-3xl md:text-5xl font-black sm:tracking-tighter uppercase">
                 {service.ctaTitle}
@@ -532,8 +532,8 @@ const ServicePages = () => {
               <GlowButton
                 name={service.ctaButton}
                 to={service.ctaLink}
-                className="bg-secondary-dark text-white border-2 border-secondary-dark"
-                hover="hover:text-secondary-dark"
+                className="bg-surface text-white border-2 border-surface"
+                hover="hover:text-surface"
                 layerHover="bg-white"
               />
             </div>
@@ -585,7 +585,7 @@ const ServicePages = () => {
       {/* Blog Modal Popup */}
       {selectedPost && (
         <div className="fixed inset-0 z-1999 flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
-          <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-secondary-dark border border-white/10 shadow-2xl">
+          <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-surface border border-white/10 shadow-2xl">
             <button
               onClick={() => setSelectedPost(null)}
               className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white text-black hover:bg-black border border-black cursor-pointer hover:text-white transition flex items-center justify-center z-10"

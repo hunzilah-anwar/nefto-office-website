@@ -135,7 +135,7 @@ const PremiumCard = ({ data }) => {
         <div className="absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-white/20 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         <div className="mb-2">
-          <p className="text-muted-steel font-bold text-xs tracking-[3px] uppercase">
+          <p className="text-secondary font-bold text-xs tracking-[3px] uppercase">
             {data.category}
           </p>
         </div>
@@ -163,7 +163,7 @@ const PremiumCard = ({ data }) => {
 // --- MAIN LAYOUT ---
 const TeamGrid = () => {
   return (
-    <div className="relative bg-secondary-dark py-16 md:py-24 px-4 md:px-10 overflow-hidden">
+    <div className="relative bg-surface py-16 md:py-24 px-4 md:px-10 overflow-hidden">
       <div className="relative max-w-350 mx-auto z-10">
         {/* Header */}
         <div className="text-center mb-20">

@@ -24,9 +24,9 @@ const WhitepaperSection = () => {
         />
         <div className="absolute inset-0 bg-black/55" />
         {/* Bright Secondary Glow (Top Right) */}
-        <div className="absolute top-[-20%] right-[-10%] w-200 h-200 rounded-full bg-secondery/20 blur-[140px]" />
+        <div className="absolute top-[-20%] right-[-10%] w-200 h-200 rounded-full bg-primary/20 blur-[140px]" />
         {/* Soft Secondary Light Leak (Bottom Left) */}
-        <div className="absolute bottom-[-10%] left-[-5%] w-150 h-150 rounded-full bg-secondery/10 blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-150 h-150 rounded-full bg-primary/10 blur-[120px]" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -49,7 +49,7 @@ const WhitepaperSection = () => {
 
                     <p className="sm:text-md text-sm text-zinc-300 font-light max-w-md leading-relaxed">
                       Get the latest insights on{" "}
-                      <span className="text-white font-medium italic underline decoration-secondery underline-offset-4">
+                      <span className="text-white font-medium italic underline decoration-primary underline-offset-4">
                         web development, app development, AI solutions, digital marketing, Graphic Designing and SEO
                       </span>{" "}
                       to help your business grow faster.
@@ -60,9 +60,9 @@ const WhitepaperSection = () => {
                     onSubmit={handleSubmit}
                     className="relative max-w-md group"
                   >
-                    <div className="relative border-b border-white transition-all duration-500 focus-within:border-secondery">
+                    <div className="relative border-b border-white transition-all duration-500 focus-within:border-primary">
                       <Mail
-                        className="absolute left-0 top-1/2 -translate-y-1/2 text-white group-focus-within:text-secondery transition-colors"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 text-white group-focus-within:text-primary transition-colors"
                         size={20}
                       />
                       <input
@@ -75,7 +75,7 @@ const WhitepaperSection = () => {
                       />
                       <button
                         type="submit"
-                        className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 bg-white text-zinc-950 px-6 py-2.5 font-black uppercase text-[10px] tracking-widest hover:bg-secondery hover:text-white transition-all duration-300 cursor-pointer"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 bg-white text-zinc-950 px-6 py-2.5 font-black uppercase text-[10px] tracking-widest hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer"
                       >
                         Submit <Download size={14} />
                       </button>
@@ -89,7 +89,7 @@ const WhitepaperSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   className="space-y-8 bg-white/3 border border-white/10 p-12 backdrop-blur-md"
                 >
-                  <div className="w-16 h-16 rounded-full bg-secondery/20 flex items-center justify-center text-secondery mb-6">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-6">
                     <CheckCircle size={40} />
                   </div>
                   <h3 className="text-2xl font-black text-white uppercase tracking-tighter">
@@ -136,7 +136,7 @@ const WhitepaperSection = () => {
             </div>
 
             {/* Background Glow behind the mockup */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-secondery/20 blur-[100px] -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[100px] -z-10" />
           </motion.div>
         </div>
       </div>

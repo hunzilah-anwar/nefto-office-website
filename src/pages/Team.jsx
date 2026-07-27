@@ -37,7 +37,7 @@ const MainTeamCard = ({
   imagePosition = "center center",
 }) => {
   return (
-    <div className="bg-secondary-dark rounded-4xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 w-full max-w-140 mx-auto">
+    <div className="bg-surface rounded-4xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 w-full max-w-140 mx-auto">
       <div className="group relative overflow-hidden h-95 md:h-125">
         <img
           loading="lazy"
@@ -54,7 +54,7 @@ const MainTeamCard = ({
         <h3 className="text-accent-medium text-[18px] md:text-xl font-bold">
           {name}
         </h3>
-        <p className="text-muted-steel font-bold md:text-sm tracking-wide">
+        <p className="text-secondary font-bold md:text-sm tracking-wide">
           {title}
         </p>
       </div>
@@ -65,7 +65,7 @@ const MainTeamCard = ({
 /* ================= MAIN COMPONENT ================= */
 const Team = () => {
   return (
-    <main className="bg-main-bg text-white selection:bg-secondary-dark selection:text-white pt-20">
+    <main className="bg-main-bg text-white selection:bg-surface selection:text-white pt-20">
       {/* SECTION 1 (ODD): HERO - #00042A */}
       <section className="relative sm:py-16 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff05_1px,transparent_1px)] bg-size-[40px_40px]" />
@@ -173,8 +173,8 @@ const Team = () => {
             <GlowButton
               name="Let's Connect"
               to="/contact"
-              className="bg-secondary-dark text-white border-2 border-secondary-dark"
-              hover="hover:text-secondary-dark"
+              className="bg-surface text-white border-2 border-surface"
+              hover="hover:text-surface"
               layerHover="bg-white"
             />
           </div>

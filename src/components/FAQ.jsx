@@ -17,7 +17,7 @@ const FAQ = ({ faqs }) => {
         <div className="text-center sm:mb-14 mb-8">
 
           <h2 className="mt-5 text-2xl md:text-4xl font-black text-white">
-            Frequently <span className="text-secondery">Asked Questions</span>
+            Frequently <span className="text-primary">Asked Questions</span>
           </h2>
 
           <p className="mt-4 text-white/60 max-w-xl mx-auto text-xs sm:text-sm md:text-base">

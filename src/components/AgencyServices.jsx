@@ -28,14 +28,14 @@ const AgencyServices = () => {
           <motion.span
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-[12px] font-black uppercase tracking-[0.4em] text-secondery"
+            className="text-[12px] font-black uppercase tracking-[0.4em] text-primary"
           >
             Why NEFFTO?
           </motion.span>
 
           <h2 className="text-3xl md:text-5xl font-black text-white leading-[0.95] tracking-tighter uppercase">
             We Create Powerful Digital Experiences For{" "}
-            <span className="text-secondery">Modern Brands</span>
+            <span className="text-primary">Modern Brands</span>
           </h2>
 
           <div className="space-y-6 max-w-md text-white/80">
@@ -67,9 +67,9 @@ const AgencyServices = () => {
           <GlowButton
             name="More Services"
             to="/casestudies"
-            className="bg-white text-secondary-dark border-2 border-secondery"
+            className="bg-white text-surface border-2 border-primary"
             hover="hover:text-white"
-            layerHover="bg-secondery"
+            layerHover="bg-primary"
           />
           <img src={ServicesImage} alt="" className="w-full mt-4 pr-4" />
         </div>

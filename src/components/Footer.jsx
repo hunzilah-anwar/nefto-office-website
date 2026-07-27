@@ -56,7 +56,7 @@ const Footer = () => {
               whileTap={{ scale: 0.95 }}
               className="group cursor-pointer w-fit flex items-center gap-3 sm:gap-5 bg-white text-black px-1 pr-5 sm:pr-8 py-1 rounded-full"
             >
-              <div className="h-8 w-8 sm:h-10 sm:w-10 bg-secondery ease-in-out rounded-full flex items-center justify-center text-white group-hover:rotate-45 transition duration-500">
+              <div className="h-8 w-8 sm:h-10 sm:w-10 bg-primary ease-in-out rounded-full flex items-center justify-center text-white group-hover:rotate-45 transition duration-500">
                 <ArrowUpRight size={18} />
               </div>
 
@@ -81,9 +81,9 @@ const Footer = () => {
                       ? "/"
                       : `/${item.toLowerCase().replace(/\s+/g, "")}`
                   }
-                  className="group flex items-center w-fit gap-2 text-white/80 hover:text-secondery transition"
+                  className="group flex items-center w-fit gap-2 text-white/80 hover:text-primary transition"
                 >
-                  <span className="w-0 h-px bg-secondery group-hover:w-4 transition-all duration-300" />
+                  <span className="w-0 h-px bg-primary group-hover:w-4 transition-all duration-300" />
                   <span className="text-xs sm:text-sm">{item}</span>
                 </Link>
               ))}
@@ -101,9 +101,9 @@ const Footer = () => {
                 <Link
                   key={item.slug}
                   to={`/services/${item.slug}`}
-                  className="group flex items-center w-fit gap-2 text-white/80 hover:text-secondery transition"
+                  className="group flex items-center w-fit gap-2 text-white/80 hover:text-primary transition"
                 >
-                  <span className="w-0 h-px bg-secondery group-hover:w-4 transition-all duration-300" />
+                  <span className="w-0 h-px bg-primary group-hover:w-4 transition-all duration-300" />
                   <span className="text-xs sm:text-sm">{item.title}</span>
                 </Link>
               ))}
@@ -127,7 +127,7 @@ const Footer = () => {
         <div className="mt-10 pt-6 md:pt-8 border-t border-white/5">
           <p className="text-center text-xs sm:text-sm text-white">
             &copy; {currentYear}{" "}
-            <Link to={"/"} className="text-secondery underline">
+            <Link to={"/"} className="text-primary underline">
               NEFFTO
             </Link>
             . All rights reserved.

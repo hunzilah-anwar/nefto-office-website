@@ -39,13 +39,9 @@ const CaseStudies = () => {
   const duplicatedLogos = Array(5).fill(logos).flat();
 
   return (
-    <main className="selection:bg-secondary-dark selection:text-white">
+    <main className="selection:bg-surface selection:text-white">
       {/* SECTION 1: HERO (ODD - #00042A) */}
       <section className="relative sm:pt-40 pt-30 sm:pb-20 pb-10 sm:px-6 px-4 bg-main-bg text-white flex items-center overflow-hidden">
-        {/* BACKGROUND GLOW */}
-        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-off-white/20 blur-[140px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-secondery/20 blur-[140px]" />
-
         <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
           {/* ================= LEFT CONTENT ================= */}
           <div className="space-y-4">
@@ -54,8 +50,8 @@ const CaseStudies = () => {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4"
             >
-              <span className="sm:w-16 w-6 h-0.5 bg-secondery" />
-              <p className="uppercase tracking-[0.4em] text-secondery sm:text-xs text-[11px] font-bold">
+              <span className="sm:w-16 w-6 h-0.5 bg-primary" />
+              <p className="uppercase tracking-[0.4em] text-primary sm:text-xs text-[11px] font-bold">
                 What We Do
               </p>
             </motion.div>
@@ -78,8 +74,8 @@ const CaseStudies = () => {
               <GlowButton
                 name="Explore More"
                 to="/contact"
-                className="bg-secondary-dark text-white border-2 border-secondary-dark"
-                hover="hover:text-secondary-dark"
+                className="bg-surface text-white border-2 border-surface"
+                hover="hover:text-surface"
                 layerHover="bg-white"
               />
             </div>
@@ -103,11 +99,11 @@ const CaseStudies = () => {
 
               {/* floating stats */}
               <div className="absolute bottom-6 left-6 bg-black/50 backdrop-blur-md px-5 py-3 rounded-xl border border-white/10">
-                <p className="text-xs text-zinc-400">Support Available</p>
+                <p className="text-xs text-secondary">Support Available</p>
                 <p className="text-xl font-bold">24/7</p>
               </div>
 
-              <div className="absolute top-6 right-6 bg-secondary-dark text-white border border-white/20 px-4 py-2 text-xs font-semibold rounded-full">
+              <div className="absolute top-6 right-6 bg-surface text-white border border-white/20 px-4 py-2 text-xs font-semibold rounded-full">
                 NEFFTO IT SOLUTION
               </div>
             </div>
@@ -115,7 +111,7 @@ const CaseStudies = () => {
         </div>
       </section>
       {/* SECTION 2 SLIDER */}
-      <section className="py-8 relative bg-secondery overflow-hidden">
+      <section className="py-8 relative bg-primary overflow-hidden">
         {/* The Wrapper with Faded Edges */}
         <div className="flex overflow-hidden">
           <motion.div
@@ -161,7 +157,7 @@ const CaseStudies = () => {
                   onClick={() => setActiveFilter(cat)}
                   className={`px-6 py-2 text-[10px] cursor-pointer uppercase font-bold tracking-widest rounded-full border transition-all duration-500 ${
                     activeFilter === cat
-                      ? "bg-secondary-dark text-off-white border-off-white shadow-[0_0_10px_rgba(239,239,242,0.5)]"
+                      ? "bg-surface text-off-white border-off-white shadow-[0_0_10px_rgba(239,239,242,0.5)]"
                       : "bg-transparent text-zinc-400 border-white/10 hover:border-white/40"
                   }`}
                 >
@@ -180,49 +176,55 @@ const CaseStudies = () => {
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, idx) => (
                 <motion.div
-                  key={project.id}
+                  key={project.slug}
                   layout
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="group border border-white/10 bg-white/5 backdrop-blur-md"
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.5, delay: idx * 0.08 }}
                 >
-                  <div className="relative aspect-4/4 overflow-hidden bg-zinc-900">
-                    <img
-                      src={project.heroImage}
-                      alt={project.title}
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-main-bg via-transparent to-transparent opacity-60" />
+                  <Link
+                    to={`/services/${project.slug}`}
+                    className="group relative block overflow-hidden border border-white/10 bg-surface/30 backdrop-blur-xl"
+                  >
+                    {/* Image */}
+                    <div className="relative aspect-4/5 overflow-hidden">
+                      <img
+                        src={project.heroImage}
+                        alt={project.title}
+                        className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                      />
 
-                    <div className="absolute top-5 left-5 flex flex-wrap gap-2">
-                      {project.tabs?.map((tab, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 bg-black/50 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-widest rounded-full"
-                        >
-                          {tab.title}
-                        </span>
-                      ))}
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-linear-to-t from-primary-navy via-primary-navy/20 to-transparent transition duration-500 group-hover:from-primary-navy/95" />
                     </div>
+                    <div className="absolute inset-0 p-7">
+                      <div className="flex flex-wrap gap-2">
+                        {project.tabs?.map((tab) => (
+                          <span
+                            key={tab.title}
+                            className="rounded-full border border-white/15 bg-black/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-text backdrop-blur-md"
+                          >
+                            {tab.title}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Content */}
+                    <div className="absolute inset-0 flex flex-col justify-end p-7">
+                      {/* Title */}
+                      <h3 className="text-2xl font-bold text-off-white transition-all duration-500">
+                        {project.sectionTitle}
+                      </h3>
 
-                    <Link
-                      to={`/services/${project.slug}`}
-                      className="absolute bottom-5 right-5 p-4 bg-medium-gray-blue rounded-full text-off-white cursor-pointer transition-all duration-500 hover:scale-110"
-                    >
-                      <ExternalLink size={20} />
-                    </Link>
-                  </div>
-
-                  <div className="sm:space-y-4 space-y-2 p-4">
-                    <h3 className="text-2xl font-bold leading-tight tracking-tight group-hover:text-muted-steel transition-colors">
-                      {project.sectionTitle}
-                    </h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed font-light line-clamp-2">
-                      {project.sectionDesc}
-                    </p>
-                  </div>
+                      {/* Hover Content */}
+                      <div className="mt-0 max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:mt-4 group-hover:max-h-40 group-hover:opacity-100">
+                        <p className="text-sm leading-7 text-zinc-200">
+                          {project.sectionDesc}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -253,8 +255,8 @@ const CaseStudies = () => {
             <GlowButton
               name="Start Project"
               to="/contact"
-              className="bg-secondary-dark text-white border-2 border-secondary-dark"
-              hover="hover:text-secondary-dark"
+              className="bg-surface text-white border-2 border-surface"
+              hover="hover:text-surface"
               layerHover="bg-white"
             />
           </div>

@@ -101,7 +101,7 @@ const Home = () => {
                 {/* Modern Action Button */}
                 <button className="group/btn relative md:px-6 px-1 md:py-4 py-3 bg-black text-white text-[10px] md:text-xs md:font-black uppercase tracking-widest overflow-hidden transition-all duration-300 whitespace-nowrap cursor-pointer w-45">
                   {/* 45-Degree Hover Layer (Violet) */}
-                  <div className="absolute top-[-80%] left-[-80%] w-[200%] h-[300%] z-0 bg-secondery rotate-45 translate-y-[150%] group-hover/btn:translate-y-[-30%] transition-transform duration-500 ease-out" />
+                  <div className="absolute top-[-80%] left-[-80%] w-[200%] h-[300%] z-0 bg-surface rotate-45 translate-y-[150%] group-hover/btn:translate-y-[-30%] transition-transform duration-500 ease-out" />
 
                   {/* Shine Wave Animation */}
                   <div className="absolute inset-0 z-10 overflow-hidden">
@@ -131,16 +131,16 @@ const Home = () => {
               <GlowButton
                 to={"/contact"}
                 name={"Get Started"}
-                className="text-white bg-medium-gray-blue"
+                className="text-white bg-surface"
                 layerHover="bg-white"
-                hover="hover:text-secondary-dark"
+                hover="hover:text-surface"
               />
               <GlowButton
                 to={"/casestudies"}
                 name={"View Services"}
-                className="bg-off-white text-secondary-dark"
+                className="bg-off-white text-surface"
                 hover="hover:text-white"
-                layerHover="bg-secondery"
+                layerHover="bg-surface"
               />
             </div>
           </div>
@@ -183,13 +183,13 @@ const Home = () => {
       <section className="bg-main-bg sm:py-16 py-10 overflow-hidden">
         <div className="relative max-w-7xl mx-auto sm:px-6 px-4">
           <div className="">
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondery">
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">
               NEFFTO Performance
             </p>
 
             <h2 className="text-2xl md:text-4xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-6">
               Trusted Digital Agency With{" "}
-              <span className="text-secondery">High Success Rates</span>
+              <span className="text-primary">High Success Rates</span>
             </h2>
 
             <p className="text-gray-300 text-sm leading-relaxed mb-12">
@@ -221,7 +221,7 @@ const Home = () => {
 
                   {/* CONTENT */}
                   <div>
-                    <h3 className="sm:text-xl text-md font-semibold text-white mb-1 group-hover:text-secondery transition-all duration-300">
+                    <h3 className="sm:text-xl text-md font-semibold text-white mb-1 group-hover:text-primary transition-all duration-300">
                       {item.title}
                     </h3>
 
@@ -243,17 +243,17 @@ const Home = () => {
                 />
 
                 {/* OVERLAY */}
-                <div className="absolute inset-0 bg-linear-to-t from-secondary-dark via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent"></div>
               </div>
 
               {/* FLOATING STATS */}
               <div className="absolute top-px left-px bg-white/10 backdrop-blur-xl border border-black/10 px-4 py-2">
-                <h3 className="text-2xl font-bold text-secondary-dark">99%</h3>
-                <p className="text-secondary-dark text-xs">Client Satisfaction</p>
+                <h3 className="text-2xl font-bold text-surface">99%</h3>
+                <p className="text-surface text-xs">Client Satisfaction</p>
               </div>
 
               <div className="absolute bottom-px right-px bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2">
-                <h3 className="text-2xl font-bold text-secondary-dark">500+</h3>
+                <h3 className="text-2xl font-bold text-surface">500+</h3>
                 <p className="text-white text-xs">Projects Delivered</p>
               </div>
             </div>

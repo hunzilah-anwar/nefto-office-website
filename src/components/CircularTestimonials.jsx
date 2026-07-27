@@ -152,7 +152,7 @@ const CircularTestimonials = ({
     >
       <div className="text-center sm:mb-20 mb-8">
         <h2 className="text-3xl md:text-4xl italic font-bold text-white tracking-tight">
-          What Our <span className="text-secondery"> Clients Say</span>
+          What Our <span className="text-primary"> Clients Say</span>
         </h2>
 
         <p className="mt-4 text-white/60 max-w-xl mx-auto text-sm">
@@ -182,7 +182,7 @@ const CircularTestimonials = ({
         {/* TEXT CONTENT */}
         <div className="flex flex-col space-y-6 md:space-y-10">
           <div className="space-y-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-secondery">
+            <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">
               Client Feedback
             </span>
             <AnimatePresence mode="wait">
@@ -228,7 +228,7 @@ const CircularTestimonials = ({
                 resetAutoplay();
               }}
               aria-label="Previous testimonial"
-              className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full border border-zinc-200 bg-white hover:bg-secondery transition-all hover:scale-105 active:scale-95 cursor-pointer"
+              className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full border border-zinc-200 bg-white hover:bg-primary transition-all hover:scale-105 active:scale-95 cursor-pointer"
             >
               <ArrowLeft
                 className="text-primery group-hover:text-white transition-colors"
@@ -242,7 +242,7 @@ const CircularTestimonials = ({
                 resetAutoplay();
               }}
               aria-label="Next testimonial"
-              className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full hover:bg-secondery bg-black border border-zinc-200 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+              className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full hover:bg-primary bg-black border border-zinc-200 transition-all hover:scale-105 active:scale-95 cursor-pointer"
             >
               <ArrowRight
                 className="text-white group-hover:text-white transition-colors"
@@ -257,7 +257,7 @@ const CircularTestimonials = ({
                   key={i}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     i === activeIndex
-                      ? "w-8 bg-secondery"
+                      ? "w-8 bg-primary"
                       : "w-2 bg-zinc-500/40"
                   }`}
                 />

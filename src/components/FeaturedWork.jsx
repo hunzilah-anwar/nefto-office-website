@@ -43,7 +43,7 @@ const FeaturedWork = () => {
   }
 
   return (
-    <section className="relative w-full bg-secondary-dark overflow-hidden flex flex-col items-center justify-center sm:py-16 py-10 sm:px-6 px-4 font-sans">
+    <section className="relative w-full bg-surface overflow-hidden flex flex-col items-center justify-center sm:py-16 py-10 sm:px-6 px-4 font-sans">
       {/* BACKGROUND */}
       <div
         className="absolute inset-0 opacity-40 grayscale bg-fixed"
@@ -73,14 +73,14 @@ const FeaturedWork = () => {
         <div className="absolute right-0 -top-15 flex gap-1">
           <button
             onClick={prev}
-            className="w-14 h-14 border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-secondery z-20 transition ease-in-out duration-300 cursor-pointer"
+            className="w-14 h-14 border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-primary z-20 transition ease-in-out duration-300 cursor-pointer"
           >
             <ChevronLeft size={30} />
           </button>
 
           <button
             onClick={next}
-            className="w-14 h-14 border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-secondery z-20 transition ease-in-out duration-300 cursor-pointer"
+            className="w-14 h-14 border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-primary z-20 transition ease-in-out duration-300 cursor-pointer"
           >
             <ChevronRight size={30} />
           </button>
@@ -105,9 +105,9 @@ const FeaturedWork = () => {
                 className="w-full shrink-0 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
               >
                 {/* LEFT SIDE */}
-                <div className="lg:col-span-4 flex flex-col items-start gap-6">
+                <div className="lg:col-span-4 flex flex-col items-start gap-4">
                   {/* Service tag */}
-                  <span className="text-muted-steel text-sm uppercase tracking-wider font-bold">
+                  <span className="text-secondary text-sm uppercase tracking-wider font-bold">
                     {project.serviceTitle}
                   </span>
                   <h3 className="sm:text-3xl text-xl font-semibold text-white uppercase tracking-wider leading-none">
@@ -122,9 +122,9 @@ const FeaturedWork = () => {
                     <GlowButton
                       to={`/services/${project.slug}/${project.projectSlug}`}
                       name="View Project"
-                      className="bg-white text-secondary-dark border-2 border-secondery"
+                      className="bg-white text-surface border-2 border-surface"
                       hover="hover:text-white"
-                      layerHover="bg-secondery"
+                      layerHover="bg-surface"
                     />
 
                     {/* SERVICE PAGE */}
@@ -138,7 +138,7 @@ const FeaturedWork = () => {
 
                 {/* RIGHT SIDE */}
                 <div className="lg:col-span-8 relative flex justify-center items-center">
-                  <div className="relative w-full max-w-4xl border-12 border-dark-blue-gray bg-black shadow-2xl overflow-hidden aspect-video">
+                  <div className="relative w-full max-w-4xl border-12 border-main-bg bg-black shadow-2xl overflow-hidden aspect-video">
                     <img
                       src={project.desktopImg}
                       alt={project.title}
@@ -155,7 +155,7 @@ const FeaturedWork = () => {
                           "linear-gradient(to right, #9ca3af 0%, #f3f4f6 50%, #9ca3af 100%)",
                       }}
                     >
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 sm:w-14 w-10 sm:h-7 h-4 bg-dark-blue-gray rounded-b-full shadow-inner" />
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 sm:w-14 w-10 sm:h-7 h-4 bg-surface rounded-b-full shadow-inner" />
                     </div>
                     <div className="w-[150%] h-4 bg-black/40 blur-xl -mt-2 rounded-[100%]" />
                   </div>
@@ -173,7 +173,7 @@ const FeaturedWork = () => {
             key={i}
             onClick={() => setCurrent(i)}
             className={`h-2 w-2 rounded-full transition-all duration-500 ${
-              current === i ? "bg-secondery w-6" : "bg-white/30"
+              current === i ? "bg-primary w-6" : "bg-white/30"
             }`}
           />
         ))}

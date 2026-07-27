@@ -22,7 +22,7 @@ const ProjectDetail = () => {
         <h1 className="text-4xl font-bold">Project Not Found</h1>
         <Link
           to={`/services/${slug}`}
-          className="text-secondery hover:underline"
+          className="text-primary hover:underline"
         >
           Back to {service?.title || "Service"}
         </Link>
@@ -47,7 +47,7 @@ const ProjectDetail = () => {
         <div className="relative py-20">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-secondery uppercase tracking-[4px] text-sm font-bold">
+              <span className="text-primary uppercase tracking-[4px] text-sm font-bold">
                 {service.title}
               </span>
               <h1 className="md:text-5xl sm:text-3xl text-xl font-black sm:mb-6 mb-2 leading-tight">
@@ -59,8 +59,8 @@ const ProjectDetail = () => {
               <GlowButton
                 to={"/contact"}
                 name={"Get This Service"}
-                className="bg-secondary-dark text-white border-2 border-secondary-dark"
-                hover="hover:text-secondary-dark"
+                className="bg-surface text-white border-2 border-surface"
+                hover="hover:text-surface"
                 layerHover="bg-white"
               />
             </div>
@@ -94,10 +94,10 @@ const ProjectDetail = () => {
               {project.features.map((feature, i) => (
                 <div
                   key={i}
-                  className="p-6 bg-white/5 border border-white/10 hover:border-light-surface transition group"
+                  className="p-6 bg-white/5 border border-white/10 hover:border-surface transition group"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-secondery text-xl">✓</span>
+                    <span className="text-primary text-xl">✓</span>
                     <span className="text-gray-200 font-medium">{feature}</span>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const ProjectDetail = () => {
               {project.tech.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-8 py-4 text-lg bg-white/10 text-white border border-white/20 hover:bg-secondery transition"
+                  className="px-8 py-4 text-lg bg-white/10 text-white border border-white/20 hover:bg-primary transition"
                 >
                   {tech}
                 </span>
@@ -135,9 +135,9 @@ const ProjectDetail = () => {
               {project.results.map((result, i) => (
                 <div
                   key={i}
-                  className="p-6 bg-linear-to-br from-[#5878a0] to-transparent border border-light-surface/10 text-center"
+                  className="p-6 bg-linear-to-br from-[#5878a0] to-transparent border border-surface/10 text-center"
                 >
-                  <div className="text-secondery text-3xl mb-2">✓</div>
+                  <div className="text-primary text-3xl mb-2">✓</div>
                   <p className="text-gray-200 font-medium">{result}</p>
                 </div>
               ))}
@@ -162,7 +162,7 @@ const ProjectDetail = () => {
                   <Link
                     key={index}
                     to={`/services/${service.slug}/${p.slug}`}
-                    className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-light-gray-blue transition-all hover:scale-105 duration-300"
+                    className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-secondary transition-all hover:scale-105 duration-300"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img
@@ -182,7 +182,7 @@ const ProjectDetail = () => {
                         {p.tech.slice(0, 3).map((tech, i) => (
                           <span
                             key={i}
-                            className="text-xs px-2 py-1 bg-linear-to-br from-[#5878a0] to-[#b4c6d8] text-white rounded-full"
+                            className="text-xs px-4 py-1 bg-white/10 border border-white/20 text-white rounded-full"
                           >
                             {tech}
                           </span>
@@ -208,8 +208,8 @@ const ProjectDetail = () => {
             <GlowButton
               to={"/contact"}
               name={"Let's Contact"}
-              className="bg-secondary-dark text-white border-2 border-secondary-dark"
-              hover="hover:text-secondary-dark"
+              className="bg-surface text-white border-2 border-surface"
+              hover="hover:text-surface"
               layerHover="bg-white"
             />
           </div>

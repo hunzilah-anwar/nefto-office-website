@@ -52,7 +52,7 @@ const PartnerSection = () => {
           className="text-2xl md:text-4xl font-black text-white italic leading-[0.9] uppercase"
         >
           Full-Service
-          <span className="text-secondery"> WEB Agency</span>
+          <span className="text-primary"> WEB Agency</span>
         </motion.h2>
 
         <motion.p
@@ -78,11 +78,11 @@ const PartnerSection = () => {
       {/* CTA */}
       <div className="sm:mt-24 mt-10 text-center pb-20 border-b border-white/10">
         <Link to="/casestudies">
-          <button className="relative sm:px-10 px-4 sm:py-5 py-2 bg-white text-black hover:text-white sm:font-bold font-medium uppercase sm:text-sm text-[12px] cursor-pointer tracking-widest overflow-hidden group">
+          <button className="relative sm:px-10 px-4 sm:py-5 py-2 bg-white border border-white text-black hover:text-white sm:font-bold font-medium uppercase sm:text-sm text-[12px] cursor-pointer tracking-widest overflow-hidden group">
             <span className="relative z-10 tracking-tight">
               Explore Our Services
             </span>
-            <div className="absolute inset-0 bg-secondery translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            <div className="absolute inset-0 bg-surface translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </button>
         </Link>
       </div>
@@ -123,7 +123,7 @@ const PartnerSection = () => {
 const LogoCard = ({ brand }) => (
   <div className="items-center gap-3 group">
     {/* GLASS CARD */}
-    <div className="relative flex items-center justify-center h-28 sm:w-60 w-30 bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden transition-all duration-500 hover:bg-white/10 hover:border-secondery group p-4">
+    <div className="relative flex items-center justify-center h-28 sm:w-60 w-30 bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden transition-all duration-500 hover:bg-white/10 hover:border-primary group p-4">
       {/* shine */}
       <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 

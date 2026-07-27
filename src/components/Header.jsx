@@ -77,15 +77,15 @@ const Header = () => {
                 to={link.to}
                 className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
                   isActive
-                    ? "text-secondery"
-                    : "text-gray-700 hover:text-secondery"
+                    ? "text-primary"
+                    : "text-gray-700 hover:text-primary"
                 }`}
               >
                 {link.name}
                 {isActive && (
                   <motion.div
                     layoutId="navUnderline"
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-secondery"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"
                   />
                 )}
               </Link>
@@ -94,7 +94,7 @@ const Header = () => {
 
           {/* SERVICES MEGA MENU */}
           <div className="relative group">
-            <button className="flex items-center gap-1 px-5 py-2 text-[13px] font-bold uppercase tracking-wider text-gray-700 group-hover:text-secondery transition-colors cursor-pointer">
+            <button className="flex items-center gap-1 px-5 py-2 text-[13px] font-bold uppercase tracking-wider text-gray-700 group-hover:text-primary transition-colors cursor-pointer">
               Services{" "}
               <ChevronDown
                 size={14}
@@ -110,7 +110,7 @@ const Header = () => {
                     <Link
                       key={index}
                       to={service.to}
-                      className="group/item flex items-start gap-4 p-4 hover:bg-secondary-dark text-gray-900 hover:text-white transition-all duration-300 border border-gray-300 hover:border-black/10"
+                      className="group/item flex items-start gap-4 p-4 hover:bg-surface text-gray-900 hover:text-white transition-all duration-300 border border-gray-300 hover:border-black/10"
                     >
 
                       {/* CONTENT */}
@@ -133,15 +133,15 @@ const Header = () => {
                 to={link.to}
                 className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
                   isActive
-                    ? "text-secondery"
-                    : "text-gray-700 hover:text-secondery"
+                    ? "text-primary"
+                    : "text-gray-700 hover:text-primary"
                 }`}
               >
                 {link.name}
                 {isActive && (
                   <motion.div
                     layoutId="navUnderline"
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-secondery"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"
                   />
                 )}
               </Link>
@@ -154,15 +154,15 @@ const Header = () => {
           <GlowButton
             to={"/contact"}
             name={"Get Started"}
-            className="bg-white text-secondary-dark border-2 border-secondery"
+            className="bg-white text-surface border-2 border-primary"
             hover="hover:text-white"
-            layerHover="bg-secondery"
+            layerHover="bg-primary"
           />
         </div>
 
         {/* MOBILE TOGGLE */}
         <button
-          className="lg:hidden p-2 text-gray-900 hover:text-secondery transition ease-in-out duration-300 cursor-pointer"
+          className="lg:hidden p-2 text-gray-900 hover:text-primary transition ease-in-out duration-300 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -177,7 +177,7 @@ const Header = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="absolute top-full left-0 w-full bg-dark-blue-gray border-t border-white/10 overflow-hidden lg:hidden shadow-2xl"
+            className="absolute top-full left-0 w-full bg-surface border-t border-white/10 overflow-hidden lg:hidden shadow-2xl"
           >
             <div className="px-8 py-10 flex flex-col gap-2 overflow-y-auto max-h-[80vh]">
               {navLinksFirst.map((link) => {
@@ -188,7 +188,7 @@ const Header = () => {
                       to={link.to}
                       onClick={() => setIsOpen(false)}
                       className={`block py-4 text-xl font-bold uppercase tracking-tighter border-b border-white/10 mt-2 ${
-                        isActive ? "text-secondery" : "text-white"
+                        isActive ? "text-primary" : "text-white"
                       }`}
                     >
                       {link.name}
@@ -206,11 +206,11 @@ const Header = () => {
                   onClick={() => setOpenServices(!openServices)}
                   className="w-full flex items-center justify-between py-6 text-xl font-bold uppercase tracking-tighter text-white"
                 >
-                  <span className={openServices ? "text-secondery" : ""}>
+                  <span className={openServices ? "text-primary" : ""}>
                     Services
                   </span>
                   <motion.div animate={{ rotate: openServices ? 180 : 0 }}>
-                    <ChevronDown size={24} className="text-secondery" />
+                    <ChevronDown size={24} className="text-primary" />
                   </motion.div>
                 </button>
 
@@ -220,14 +220,14 @@ const Header = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden flex flex-col gap-4 pl-4 border-l-2 border-secondery mb-6"
+                      className="overflow-hidden flex flex-col gap-4 pl-4 border-l-2 border-primary mb-6"
                     >
                       {services.map((service, index) => (
                         <Link
                           key={index}
                           to={service.to}
                           onClick={() => setIsOpen(false)}
-                          className="text-white py-1 text-sm font-bold uppercase tracking-widest hover:text-secondery transition ease-in-out duration-300"
+                          className="text-white py-1 text-sm font-bold uppercase tracking-widest hover:text-primary transition ease-in-out duration-300"
                         >
                           {service.title}
                         </Link>
@@ -244,7 +244,7 @@ const Header = () => {
                       to={link.to}
                       onClick={() => setIsOpen(false)}
                       className={`block py-4 text-xl font-bold uppercase tracking-tighter border-b border-white/10 mt-2 ${
-                        isActive ? "text-secondery" : "text-white"
+                        isActive ? "text-primary" : "text-white"
                       }`}
                     >
                       {link.name}
@@ -259,9 +259,9 @@ const Header = () => {
                 <GlowButton
                   name="Get a Quote"
                   to="/contact"
-                  className="bg-white text-secondary-dark border-2 border-secondery"
+                  className="bg-white text-surface border-2 border-primary"
                   hover="hover:text-white"
-                  layerHover="bg-secondery"
+                  layerHover="bg-primary"
                   onClick={() => setIsOpen(false)}
                 />
               </motion.div>

@@ -40,7 +40,7 @@ const ProjectCards = ({ projects = [], setSelected }) => {
               {/* TEXT */}
               <div className="space-y-1">
 
-                <p className="text-[10px] text-secondery uppercase tracking-[0.25em]">
+                <p className="text-[10px] text-primary uppercase tracking-[0.25em]">
                   {project.category}
                 </p>
 
