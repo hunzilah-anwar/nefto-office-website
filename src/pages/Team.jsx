@@ -7,28 +7,6 @@ import CTO from "../assets/cto.png";
 import CoFounder from "../assets/Ameerhamza.webp";
 import TeamGrid from "../components/TeamGrid";
 
-/* ================= SUB-COMPONENTS ================= */
-const TeamCard = ({ member }) => (
-  <motion.div className="relative">
-    <div className="relative aspect-3/4 overflow-hidden rounded-2xl border border-white/10">
-      <img
-        src={member.image || member.img}
-        alt={member.name}
-        className="w-full h-full object-cover transition-all duration-1000"
-      />
-      <div className="absolute inset-0 bg-linear-to-t from-main-bg via-transparent to-transparent opacity-60" />
-    </div>
-
-    <div className="absolute bottom-5 left-0 right-0 mx-4 mt-6 sm:p-6 p-2 bg-white/3 backdrop-blur-xl border border-white/5 rounded-xl">
-      <h4 className="text-lg font-black tracking-tight text-white">
-        {member.name}
-      </h4>
-      <p className="text-[10px] uppercase tracking-[0.2em] text-cyan-500 font-bold mt-1">
-        {member.role}
-      </p>
-    </div>
-  </motion.div>
-);
 
 const MainTeamCard = ({
   imageSrc,
@@ -37,26 +15,31 @@ const MainTeamCard = ({
   imagePosition = "center center",
 }) => {
   return (
-    <div className="bg-surface rounded-4xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 w-full max-w-140 mx-auto">
-      <div className="group relative overflow-hidden h-95 md:h-125">
+    <div className="group mx-auto w-full max-w-125 overflow-hidden rounded-[28px] border border-white/10 bg-surface/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-light-blue/40 hover:shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+      {/* Image */}
+      <div className="relative h-120 overflow-hidden">
         <img
           loading="lazy"
           src={imageSrc}
           alt={name}
           style={{ objectPosition: imagePosition }}
-          className="w-full h-full object-cover transition ease-in-out duration-700 scale-110 group-hover:scale-120"
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
         />
 
-        {/* Rest of your code */}
-      </div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-linear-to-t from-black via-primary-navy/20 to-transparent" />
 
-      <div className="flex justify-between items-center p-6">
-        <h3 className="text-accent-medium text-[18px] md:text-xl font-bold">
+        {/* Role Badge */}
+        <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/40 px-4 py-2 backdrop-blur-md">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white">
+            {title}
+          </span>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 p-7">
+        <h3 className="text-2xl font-bold text-off-white transition duration-300 group-hover:text-primary">
           {name}
         </h3>
-        <p className="text-secondary font-bold md:text-sm tracking-wide">
-          {title}
-        </p>
       </div>
     </div>
   );

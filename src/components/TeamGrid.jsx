@@ -135,7 +135,7 @@ const PremiumCard = ({ data }) => {
         <div className="absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-white/20 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         <div className="mb-2">
-          <p className="text-secondary font-bold text-xs tracking-[3px] uppercase">
+          <p className="text-primary font-bold text-xs tracking-[3px] uppercase">
             {data.category}
           </p>
         </div>

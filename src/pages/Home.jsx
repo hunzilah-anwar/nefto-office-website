@@ -127,7 +127,7 @@ const Home = () => {
               `}
               </style>
             </form>
-            <div className="mt-10 gap-4 flex">
+            <div className="mt-10 gap-4 flex flex-wrap">
               <GlowButton
                 to={"/contact"}
                 name={"Get Started"}
