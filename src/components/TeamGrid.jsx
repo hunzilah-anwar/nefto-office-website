@@ -132,10 +132,8 @@ const TeamGrid = () => {
     { stiffness: 50, damping: 20 },
   );
 
-
   return (
     <div className="relative">
-      <div className="absolute top-[-20%] left-[-10%] w-200 h-200 bg-[#042558] blur-[140px]" />
       {/* DESKTOP VIEW: Horizontal Scroll (lg:block) */}
       <section ref={targetRef} className="hidden lg:block relative h-[500vh]">
         <div className="sticky top-10 flex h-screen items-center overflow-hidden">
@@ -176,7 +174,7 @@ const TeamGrid = () => {
         <div className="mb-20 text-center">
           <h2 className="text-6xl font-black italic text-white uppercase leading-none tracking-tighter">
             MEET THE <br />
-            <span className="text-blue-500">SQUAD.</span>
+            <span className="text-transparent stroke-text-white">SQUAD.</span>
           </h2>
           <p className="text-zinc-500 italic mt-4">
             The innovators behind the screen.
