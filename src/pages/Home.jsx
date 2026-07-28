@@ -215,7 +215,7 @@ const Home = () => {
               {servicesData.map((item, i) => (
                 <div key={i} className="flex items-start gap-5 group">
                   {/* NUMBER */}
-                  <div className="min-w-13.75 h-13.75 bg-[#042558] flex items-center justify-center text-white font-bold text-lg border border-white/10">
+                  <div className="min-w-13.75 h-13.75 glass rounded-xl flex items-center justify-center text-white font-bold text-lg border border-white/5">
                     0{i + 1}
                   </div>
 
@@ -243,7 +243,7 @@ const Home = () => {
                 />
 
                 {/* OVERLAY */}
-                <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent"></div>
               </div>
 
               {/* FLOATING STATS */}
@@ -253,7 +253,7 @@ const Home = () => {
               </div>
 
               <div className="absolute bottom-px right-px bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2">
-                <h3 className="text-2xl font-bold text-surface">500+</h3>
+                <h3 className="text-2xl font-bold text-white">500+</h3>
                 <p className="text-white text-xs">Projects Delivered</p>
               </div>
             </div>

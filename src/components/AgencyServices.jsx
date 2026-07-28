@@ -89,7 +89,7 @@ const AgencyServices = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="relative group overflow-hidden p-10 
-              bg-[#042558]
+              glass rounded-2xl
               border border-white/10 
               hover:scale-[1.02] hover:border-white/20 
               transition-all duration-500 cursor-pointer"

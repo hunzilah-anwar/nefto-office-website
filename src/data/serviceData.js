@@ -35,14 +35,8 @@ import WebProject1 from "../assets/web-project-1.png";
 import WebProject2 from "../assets/web-project-2.png";
 import WebProject3 from "../assets/web-project-3.png";
 import WebProject4 from "../assets/web-project-4.png";
-import WebClient1 from "../assets/web-clint-1.webp";
-import WebClient2 from "../assets/web-clint-2.png";
-import WebClient3 from "../assets/web-clint-3.webp";
-import WebClient4 from "../assets/web-clint-4.avif";
 import ToolProject1 from "../assets/tool-project-1.png";
 import ToolProject2 from "../assets/tool-project-2.png";
-import ToolClient1 from "../assets/tool-clint-1.png";
-import ToolClient2 from "../assets/tool-clint-2.webp";
 import Web from "../assets/web.avif";
 import App from "../assets/app.webp";
 import Python from "../assets/AI.webp";
@@ -314,28 +308,24 @@ export const servicesData = [
           "They built our web platform from scratch. Fast, clean, and exactly what a growing startup needs. The attention to performance and scalability gave us a real edge from day one.",
         name: "Prashant Kumar",
         designation: "Founder & CEO @ Fundbox",
-        src: WebClient1,
       },
       {
         quote:
           "Working with this team was a game changer. They delivered a sleek, high-performing web solution that perfectly matched the speed and precision we demand at OffDeal.",
         name: "Ori Eldarov",
         designation: "Co-Founder & CEO @ OffDeal",
-        src: WebClient2,
       },
       {
         quote:
           "The team delivered a product that truly elevated our customer experience. Polished, reliable, and built with the kind of quality that reflects our brand values at Weave.",
         name: "Brett White",
         designation: "CEO & Board Director @ Getweave",
-        src: WebClient3,
       },
       {
         quote:
           "They understood our mission to make complex systems simple. The platform they built is intuitive, scalable, and has helped us serve our customers at Human Interest even better.",
         name: "Jeff Schneble",
         designation: "CEO @ Human Interest",
-        src: WebClient4,
       },
     ],
     faqs: [
@@ -617,28 +607,24 @@ export const servicesData = [
           "They built a custom TikTok Creator Outreach Tool that auto-scans micro-influencers, sends DMs, and tracks affiliate revenue. Our influencer program now runs on autopilot.",
         name: "Derek Vance",
         designation: "Founder & Marketing Director, AeroFit Apparel",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "Their AI-powered SEO optimizer rewrites thousands of product titles and pushes updates to Shopify and Amazon in one click. Months of work done in minutes.",
         name: "Chloe Sterling",
         designation: "Chief Growth Officer, PureGlow Organics",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "They eliminated our expensive SaaS subscriptions by building a proprietary Laravel marketing dashboard with behavioral email sequences tied directly to our Meta ad pixel.",
         name: "Marcus Hayes",
         designation: "E-Commerce Director, Alpha Grind Coffee Co.",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "Their NLP lead qualification chatbot helped us filter high-value prospects instantly and route enterprise leads directly to our sales team while improving Google Ads ROI.",
         name: "Natalie Reyes",
         designation: "Head of Operations, SafeHaven Smart Home",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -940,28 +926,24 @@ export const servicesData = [
           "Their predictive ML inventory engine transformed how we manage purchasing and warehouse forecasting. The AI accurately predicts demand trends weeks in advance and significantly reduced our operational waste.",
         name: "Derek Sterling",
         designation: "Chief Technology Officer, Apex Apparel Group",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "The NLP-powered recommendation engine completely changed our customer experience. Users now receive personalized supplement suggestions instantly through natural conversation flows.",
         name: "Dr. Elena Rostova",
         designation: "Founder, Vitality Bio-Nutrient Co.",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "Their AI-driven TikTok trend scraper helped us identify viral products before competitors even noticed them. It became the backbone of our multi-store dropshipping operation.",
         name: "Marcus Thorne",
         designation: "VP of Growth, Horizon Drop-Logistics",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "The AI intent-classification system automated most of our support operations and reduced response times from hours to seconds while routing complex cases perfectly.",
         name: "Sophia Chen",
         designation: "Operations Director, LuxeDecor Direct",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -1262,28 +1244,24 @@ export const servicesData = [
           "Their creative team completely refreshed our paid advertising visuals with scroll-stopping Meta and TikTok creatives. The new graphics dramatically improved our engagement and click-through rates.",
         name: "Austin Vance",
         designation: "Marketing Director, AeroFit Gear",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "They transformed our skincare brand into a premium luxury identity with stunning packaging, minimalist branding, and beautifully designed unboxing materials that elevated the entire customer experience.",
         name: "Chloe Bennett",
         designation: "Founder, Sol & Seed Botanicals",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "The custom UI/UX graphics and icon systems they designed made our subscription experience far more intuitive and visually polished. Our storefront finally feels like a premium coffee brand.",
         name: "Marcus Hayes",
         designation: "Operations Lead, Grindhouse Coffee Roasters",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
           "Their lookbook designs and Amazon A+ content gave our seasonal collections a high-end visual presence while significantly improving the professionalism of our marketplace listings.",
         name: "Natalie Reyes",
         designation: "Brand Manager, Home & Hearth Co.",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -1599,21 +1577,18 @@ export const servicesData = [
           "Our leads increased massively after running Google Ads with them.",
         name: "Bilal Ahmed",
         designation: "CEO @ Growthify",
-        src: WebClient1,
       },
       {
         quote:
           "They managed our Meta funnels and built a behavioral email system that dramatically grew our subscription sign-ups.",
         name: "Marcus Hayes",
         designation: "E-Commerce Director, Alpha Grind Coffee Co.",
-        src: WebClient2,
       },
       {
         quote:
           "Their hyper-targeted Google Search ads captured high-intent buyers perfectly. Our CRO improved significantly within the first month.",
         name: "Natalie Reyes",
         designation: "Head of Operations, SafeHaven Smart Home",
-        src: WebClient3,
       },
     ],
     faqs: [
@@ -1925,21 +1900,18 @@ export const servicesData = [
         quote: "Our new WordPress site is fast, beautiful, and easy to manage.",
         name: "Hassan Raza",
         designation: "Business Owner",
-        src: WebClient1,
       },
       {
         quote:
           "They redesigned our WordPress store from scratch. The speed improvement and clean design completely changed how customers interact with us.",
         name: "Marcus Hayes",
         designation: "Operations Lead, Grindhouse Coffee Roasters",
-        src: WebClient2,
       },
       {
         quote:
           "Professional, fast, and easy to update. Our team manages the site with zero technical knowledge thanks to their Elementor build.",
         name: "Natalie Reyes",
         designation: "Brand Manager, Home & Hearth Co.",
-        src: WebClient3,
       },
     ],
     faqs: [

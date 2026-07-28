@@ -4,11 +4,11 @@
 
 @theme {
   /* Brand Colors */
-  --color-primary-navy: #0d1933;
-  --color-secondary-navy: #1c3c63;
-  --color-accent-blue: #4a7fa7;
-  --color-light-blue: #b4d0e6;
-  --color-off-white: #f6fafd;
+  --color-primary-navy: #020e24;
+  --color-secondary-navy: #042558;
+  --color-accent-blue: #5482b4;
+  --color-light-blue: #c3e9fe;
+  --color-off-white: #fffefa;
 
   /* Semantic Colors */
   --color-main-bg: var(--color-primary-navy);
@@ -28,4 +28,10 @@
   background: linear-gradient(90deg, #4a7fa7 0%, #b4d0e6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: rgba(4, 37, 88, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }

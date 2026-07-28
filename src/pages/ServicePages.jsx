@@ -548,8 +548,8 @@ const ServicePages = () => {
               testimonials={yourData}
               autoplay={true}
               colors={{
-                arrowBackground: "#050505",
-                arrowHoverBackground: "#009cff",
+                arrowBackground: "#f6fafd",
+                arrowHoverBackground: "#4a7fa7",
               }}
             />
           </section>

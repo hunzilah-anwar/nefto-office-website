@@ -200,7 +200,7 @@ const CaseStudies = () => {
                       />
 
                       {/* Overlay */}
-                      <div className="absolute inset-0 bg-linear-to-t from-primary-navy via-primary-navy/20 to-transparent transition duration-500 group-hover:from-primary-navy/95" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent transition duration-500"/>
                     </div>
                     <div className="absolute inset-0 p-7">
                       <div className="flex flex-wrap gap-2">

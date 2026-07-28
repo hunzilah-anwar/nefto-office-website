@@ -73,18 +73,18 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="border border-white/10 rounded-3xl p-8 md:p-12"
+          className="border border-white/10 glass rounded-3xl p-8 md:p-12"
         >
           <form className="space-y-10">
 
             <div className="grid md:grid-cols-2 gap-10">
 
               {[
-                { label: "First Name", placeholder: "Alan" },
-                { label: "Last Name", placeholder: "Turing" },
-                { label: "Job Title", placeholder: "CTO" },
-                { label: "Company", placeholder: "Neuralink" },
-                { label: "Email", placeholder: "turing@neuralink.com", type: "email" },
+                { label: "First Name", placeholder: "Enter your first name" },
+                { label: "Last Name", placeholder: "Enter your last name" },
+                { label: "Job Title", placeholder: "" },
+                { label: "Company", placeholder: "" },
+                { label: "Email", placeholder: "info@nefftosolution.com", type: "email" },
                 { label: "Phone", placeholder: "+1 (555) 000-0000" },
               ].map((field, i) => (
                 <div key={i} className="flex flex-col gap-2 group">
