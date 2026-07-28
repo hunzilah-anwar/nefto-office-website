@@ -1,8 +1,25 @@
 const Loader = () => {
   return (
-      <div className="flex items-center justify-center min-h-screen bg-main-bg">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
-      </div>    
+    <div className="fixed inset-0 z-9999 flex items-center justify-center overflow-hidden bg-main-bg">
+      {/* Background Glow */}
+      <div className="absolute h-80 w-80 rounded-full bg-primary/20 blur-[120px]" />
+
+      {/* Spinner */}
+      <div className="relative flex items-center justify-center">
+        {/* Outer Ring */}
+        <div className="h-44 w-44 animate-spin rounded-full border-[3px] border-white/10 border-t-primary border-r-primary" />
+
+        {/* Inner Ring */}
+        <div className="absolute h-32 w-32 animate-spin rounded-full border-2 border-white/10 border-b-white border-l-white [animation-direction:reverse] [animation-duration:2s]" />
+
+        {/* Logo */}
+        <img
+          src="/logo.png"
+          alt="Logo"
+          className="absolute h-20 w-20 animate-pulse object-contain"
+        />
+      </div>
+    </div>
   );
 };
 
