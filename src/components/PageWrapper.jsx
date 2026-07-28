@@ -9,30 +9,34 @@ const PageWrapper = ({ children }) => {
   useEffect(() => {
     setLoading(true);
     let isCancelled = false;
+    let fallbackTimeout;
 
     const checkImages = () => {
+      if (isCancelled) return;
       const images = Array.from(document.images);
       const allLoaded = images.every(img => img.complete);
       
       if (allLoaded) {
-        if (!isCancelled) {
-          // small buffer to ensure styles are painted
-          setTimeout(() => {
-            if (!isCancelled) setLoading(false);
-          }, 300);
-        }
+        clearTimeout(fallbackTimeout);
+        setTimeout(() => {
+          if (!isCancelled) setLoading(false);
+        }, 150);
       } else {
-        if (!isCancelled) {
-          setTimeout(checkImages, 100);
-        }
+        setTimeout(checkImages, 100);
       }
     };
 
-    // Need a small timeout to let the new route components mount and add images to DOM
+    // Maximum wait time of 1.2 seconds so users don't stare at the loader forever
+    fallbackTimeout = setTimeout(() => {
+      if (!isCancelled) setLoading(false);
+    }, 1200);
+
+    // Initial check
     setTimeout(checkImages, 50);
 
     return () => {
       isCancelled = true;
+      clearTimeout(fallbackTimeout);
     };
   }, [location.pathname]);
 
