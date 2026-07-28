@@ -12,7 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import GlowButton from "./GlowButton";
-const logo = "/logo.svg";
+const logo = "/logo.png";
 import { servicesData } from "../data/serviceData";
 
 const Header = () => {
@@ -65,7 +65,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto sm:px-6 px-4 h-20 flex justify-between items-center">
         {/* LOGO */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Logo" className="w-20" />
+          <img src={logo} alt="Logo" className="w-20 -translate-x-6" />
         </Link>
 
         {/* DESKTOP NAVIGATION */}

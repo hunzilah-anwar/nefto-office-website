@@ -16,25 +16,22 @@ const MainTeamCard = ({
   imagePosition = "center center",
 }) => {
   return (
-    <div className="group relative select-none shrink-0 overflow-hidden w-65 rounded-2xl sm:rounded-[28px] border border-white/10 bg-[#020617]/60 backdrop-blur-xl transition-all duration-500 hover:border-cyan-400/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+    <div className="group relative select-none shrink-0 overflow-hidden w-80 rounded-2xl sm:rounded-[28px] border border-white/10 bg-[#020617]/60 backdrop-blur-xl">
       {/* Image Container */}
-      <div className="relative h-90 w-full overflow-hidden">
+      <div className="relative h-100 w-full overflow-hidden">
         <img
           loading="lazy"
           src={imageSrc}
           alt={name}
           style={{ objectPosition: imagePosition }}
-          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          className="h-full w-full object-cover"
         />
 
         {/* Multi-stage Gradient Overlay for Perfect Text Contrast */}
-        <div className="absolute inset-0 bg-linear-to-t from-black to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
-
-        {/* Modern Diagonal Shine/Gloss Effect on Hover */}
-        <div className="pointer-events-none absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-linear-to-r from-transparent via-white/10 to-transparent opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-linear-to-t from-black to-transparent opacity-90 transition-opacity duration-300" />
 
         {/* Role Badge - Responsive Sizing */}
-        <div className="absolute left-3 top-3 sm:left-4 sm:top-4 rounded-full border border-white/15 bg-black/50 px-3 py-1.5 backdrop-blur-md shadow-lg transition-transform duration-300 group-hover:scale-105">
+        <div className="absolute left-3 top-3 sm:left-4 sm:top-4 rounded-full border border-white/15 bg-black/50 px-3 py-1.5 backdrop-blur-md shadow-lg">
           <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-accent-blue drop-shadow-sm">
             {title}
           </span>
@@ -42,7 +39,7 @@ const MainTeamCard = ({
 
         {/* Card Content Footer */}
         <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-7">
-          <h3 className="text-lg sm:text-xl font-bold tracking-normal text-white transition-colors duration-300 group-hover:text-primary">
+          <h3 className="text-lg sm:text-xl font-bold tracking-normal text-white transition-colors duration-300">
             {name}
           </h3>
         </div>
@@ -100,6 +97,8 @@ const Team = () => {
         onMouseEnter={() => !isMobile && setIsHovered(true)}
         onMouseLeave={() => !isMobile && setIsHovered(false)}
       >
+        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
         <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto items-center justify-between">
           {/* LEFT SIDE: TEXT CONTENT */}
           <motion.div
@@ -107,18 +106,18 @@ const Team = () => {
               // On desktop: Shrink to 0 width. On mobile: Stay full width.
               flexBasis: !isMobile && isHovered ? "0%" : "100%",
               opacity: !isMobile && isHovered ? 0 : 1,
-              x: !isMobile && isHovered ? -100 : 0,
+              x: !isMobile && isHovered ? -200 : 0,
             }}
             transition={springTransition}
             className="min-w-0 overflow-hidden text-center lg:text-left z-50 lg:pr-10 mb-16 lg:mb-0"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black italic leading-[0.9] tracking-tighter uppercase text-white">
+            <h1 className="text-5xl md:text-nowrap md:text-7xl lg:text-8xl font-black italic leading-[0.9] tracking-tighter uppercase text-white">
               OUR {" "}
               <span className="text-transparent stroke-text font-serif">
                 TEAM.
               </span>
             </h1>
-            <p className="text-zinc-400 text-base md:text-xl font-light max-w-md mt-6 italic mx-auto lg:mx-0">
+            <p className="text-zinc-400 md:text-nowrap text-base md:text-xl font-light max-w-md mt-6 italic mx-auto lg:mx-0">
               "The innovators, creators, and dreamers architecting the digital
               backbone of the next century."
             </p>
@@ -127,10 +126,10 @@ const Team = () => {
           {/* RIGHT SIDE: INTERACTIVE CARDS GALLERY */}
           <motion.div
             animate={{
-              width: !isMobile && isHovered ? "100%" : "50%",
+              flexBasis: !isMobile && isHovered ? "100%" : "50%",
             }}
             transition={springTransition}
-            className="relative shrink-0"
+            className="relative w-full shrink-0"
           >
             {/* 
               MOBILE: Grid layout (2 columns on tablet, 1 on mobile)
@@ -151,8 +150,8 @@ const Team = () => {
                         ? {
                             // DESKTOP ANIMATION
                             x: isHovered
-                              ? distanceFromCenter * 280
-                              : distanceFromCenter * 25,
+                              ? distanceFromCenter * 340 // Horizontal spread
+                              : distanceFromCenter * 25, // Tight stack
 
                             y: 0, // NO Y-AXIS MOVEMENT AS REQUESTED
 

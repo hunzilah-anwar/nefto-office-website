@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { servicesData } from "../data/serviceData";
-const logo = "/logo-darkmode.svg";
+const logo = "/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,9 +35,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-16 items-start">
           {/* ================= LEFT ================= */}
           <div className="space-y-8 lg:col-span-2">
-            <div className="space-y-4">
-              <Link to="/">
-                <img src={logo} alt="Logo" className="w-30" />
+            <div className="space-y-2">
+              <Link to="/" className="inline-block">
+                <img src={logo} alt="Logo" className="w-30 -translate-x-8" />
               </Link>
 
               <p className="max-w-sm text-white/70 text-xs sm:text-sm leading-relaxed">

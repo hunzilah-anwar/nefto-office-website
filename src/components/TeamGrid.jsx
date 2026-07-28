@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import Hamza from "../assets/hamza.png";
 import Sabir from "../assets/sabir.png";
 import Mubeen from "../assets/mubeen.png";
@@ -76,112 +76,128 @@ const cardData = [
   },
 ];
 
-// --- 3D PARALLAX CARD COMPONENT ---
-const PremiumCard = ({ data }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  // OPTIMIZATION 1: useSpring ko hata kar CSS transitions ka use kiya hai (Bohot fast chalega)
-  const rotateX = useTransform(y, [-0.5, 0.5], [7, -7]);
-  const rotateY = useTransform(x, [-0.5, 0.5], [-7, 7]);
-
-  const imageX = useTransform(x, [-0.5, 0.5], ["-3%", "3%"]);
-  const imageY = useTransform(y, [-0.5, 0.5], ["-3%", "3%"]);
-
-  function handleMouseMove({ currentTarget, clientX, clientY }) {
-    const { left, top, width, height } = currentTarget.getBoundingClientRect();
-    x.set((clientX - left) / width - 0.5);
-    y.set((clientY - top) / height - 0.5);
-  }
-
-  function handleMouseLeave() {
-    x.set(0);
-    y.set(0);
-  }
-
+const TeamMemberCard = ({ card, index }) => {
   return (
     <motion.div
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-      }}
-      // OPTIMIZATION 2: will-change-transform add kiya hai taake browser isse GPU par render kare
-      className="group relative h-115 w-full rounded-3xl bg-dark-200 shadow-xl overflow-hidden cursor-pointer border border-white/10 will-change-transform transition-all duration-200 ease-out"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.05 }}
+      // Responsive logic: Zig-zag only on Large screens
+      className={`group relative h-112.5 w-[320px] sm:w-95 shrink-0 overflow-hidden rounded-[30px] lg:rounded-[40px] bg-zinc-900 shadow-2xl 
+        ${index % 2 === 0 ? "lg:mt-20" : "lg:mb-20"} 
+        mx-auto lg:mx-0`}
     >
-      {/* BACKGROUND IMAGE */}
-      <motion.div
-        style={{ x: imageX, y: imageY, scale: 1.1 }}
-        className="absolute inset-0 h-full w-full will-change-transform"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:saturate-150"
-          style={{ backgroundImage: `url(${data.image})` }}
+      {/* Image with subtle scale on hover */}
+      <div className="absolute inset-0 h-full w-full">
+        <img
+          src={card.image}
+          alt={card.title}
+          className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
         />
-      </motion.div>
-
-      {/* GRADIENTS */}
-      <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent opacity-90 transition-all duration-500 group-hover:opacity-70" />
-
-      {/* CONTENT CONTAINER */}
-      <div
-        style={{ transform: "translateZ(30px)" }} // Value kam ki hai taake text jhatke na mare
-        className="absolute inset-0 p-8 flex flex-col justify-end h-full z-10"
-      >
-        <div className="absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-white/20 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-        <div className="mb-2">
-          <p className="text-primary font-bold text-xs tracking-[3px] uppercase">
-            {data.category}
-          </p>
-        </div>
-
-        <h3 className="text-3xl font-black text-white leading-tight mb-2 transition-all duration-300">
-          {data.title}
-        </h3>
-
-        {/* Description */}
-        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
-          <div className="overflow-hidden">
-            <p className="text-gray-300 text-sm leading-relaxed py-1 border-l-2 border-accent-alt pl-4">
-              {data.description}
-            </p>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-linear-to-t from-black via-black/30 to-transparent" />
       </div>
 
-      {/* OPTIMIZATION 3: Dynamic Sheen Effect hata diya hai kyunki yeh continuous re-paints trigger kar raha tha */}
-      <div className="absolute inset-0 z-20 pointer-events-none opacity-0 group-hover:opacity-30 transition-opacity duration-500 bg-linear-to-tr from-transparent via-white/10 to-transparent" />
+      {/* Floating Info */}
+      <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-10">
+        <div className="mb-4 w-fit rounded-full border border-white/10 bg-black/5 px-4 py-1 backdrop-blur-md">
+          <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-primary">
+            {card.category}
+          </span>
+        </div>
+
+        <h3 className="text-2xl lg:text-3xl font-black italic tracking-tighter text-white uppercase leading-[0.85]">
+          {card.title}
+        </h3>
+
+        <div className="mt-4 overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out">
+          <p className="text-sm text-zinc-300 font-light leading-snug italic border-l border-primary pl-3">
+            {card.description}
+          </p>
+        </div>
+      </div>
     </motion.div>
   );
 };
 
-// --- MAIN LAYOUT ---
 const TeamGrid = () => {
+  const targetRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useSpring(
+    useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-80%"]),
+    { stiffness: 50, damping: 20 },
+  );
+
+
   return (
-    <div className="relative bg-main-bg py-16 md:py-24 px-4 md:px-10 overflow-hidden">
-      <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-250 h-250 bg-[#042558] blur-[140px]" />
-      <div className="relative max-w-350 mx-auto z-10">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-off-white mb-2">
-            MEET THE <span className="highlight">TEAM</span>
+    <div className="relative">
+      <div className="absolute top-[-20%] left-[-10%] w-200 h-200 bg-[#042558] blur-[140px]" />
+      {/* DESKTOP VIEW: Horizontal Scroll (lg:block) */}
+      <section ref={targetRef} className="hidden lg:block relative h-[500vh]">
+        <div className="sticky top-10 flex h-screen items-center overflow-hidden">
+          <motion.div
+            style={{ x }}
+            className="flex gap-16 px-[6vw] items-center"
+          >
+            {/* Unique Header Design */}
+            <div className="flex w-125 shrink-0 flex-col justify-center">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-8 bg-primary"></span>
+                <span className="text-primary font-bold tracking-widest text-sm uppercase">
+                  The Core Team
+                </span>
+              </div>
+              <h2 className="text-8xl font-black italic text-white leading-[0.8] tracking-tighter uppercase">
+                MEET THE <br />
+                <span className="text-transparent stroke-text-white">
+                  SQUAD.
+                </span>
+              </h2>
+              <p className="mt-8 text-zinc-400 text-xl font-light italic leading-relaxed max-w-sm">
+                Architecting the digital backbone of the next century with
+                precision and passion.
+              </p>
+            </div>
+
+            {/* Team Members */}
+            {cardData.map((card, index) => (
+              <TeamMemberCard key={card.id} card={card} index={index} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* MOBILE/TABLET VIEW: Vertical Layout (lg:hidden) */}
+      <section className="lg:hidden px-6 py-20">
+        <div className="mb-20 text-center">
+          <h2 className="text-6xl font-black italic text-white uppercase leading-none tracking-tighter">
+            MEET THE <br />
+            <span className="text-blue-500">SQUAD.</span>
           </h2>
-          <div className="h-1 w-24 bg-linear-to-r from-transparent via-accent-alt to-transparent mx-auto" />
+          <p className="text-zinc-500 italic mt-4">
+            The innovators behind the screen.
+          </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {cardData.map((card) => (
-            <div key={card.id}>
-              <PremiumCard data={card} />
-            </div>
+        <div className="flex flex-col gap-10">
+          {cardData.map((card, index) => (
+            <TeamMemberCard key={card.id} card={card} index={index} />
           ))}
         </div>
-      </div>
+      </section>
+
+      <style jsx>{`
+        .stroke-text {
+          -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.1);
+        }
+        .stroke-text-white {
+          -webkit-text-stroke: 1px white;
+        }
+      `}</style>
     </div>
   );
 };
