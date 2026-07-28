@@ -1,6 +1,4 @@
-// ================= servicesData.js (6 Services with Projects inside showcase.projects) =================
 // Order: 1. Web Development  2. App Development  3. AI & ML  4. Graphic Designing  5. Digital Marketing  6. SEO
-
 import {
   Laptop,
   ShoppingCart,
@@ -49,16 +47,15 @@ export const servicesData = [
   {
     slug: "web-development",
     title: "Web Development",
-    desc: "Modern responsive websites built for performance and growth.",
+    desc: "Full stack web development company in Pakistan. We build fast websites, web apps, and Shopify stores for local and global clients.",
     icon: Laptop,
-    heroImage:
-      Web,
-    heroTitle: "Next-Generation Web Development",
+    heroImage: Web,
+    heroTitle: "Full Stack Web Development Services in Pakistan",
     heroDesc:
-      "We build fast, scalable, and future-ready web applications that drive business growth. Our expert team delivers modern solutions built on proven frameworks.",
-    sectionTitle: "Custom Web Development Solutions",
+      "We are a software company in Bahawalpur building fast, scalable websites for businesses across Pakistan. Our team handles custom web apps, Shopify custom theme development, and full stack projects from planning to launch.",
+    sectionTitle: "Web Development Services in Pakistan",
     sectionDesc:
-      "We create modern, scalable, and high-performance websites using proven technologies.",
+      "We design and build custom websites, web apps, and Shopify stores for businesses in Pakistan and abroad. As a full stack web development company, we handle the frontend, backend, and hosting under one roof.",
     sectionImage:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
     tabs: [
@@ -118,7 +115,7 @@ export const servicesData = [
     capabilities: [
       {
         title: "Custom Websites",
-        desc: "Modern websites tailored to your business goals, brand identity, and target audience for maximum impact.",
+        desc: "Custom websites and Shopify custom theme development tailored to your business goals and brand identity. Built by a software company in Bahawalpur that serves clients across Pakistan.",
         icon: Globe,
       },
       {
@@ -403,7 +400,8 @@ export const servicesData = [
       buttonText: "Start Your Project",
       buttonLink: "/contact",
     },
-    ctaTitle: "Ready to Build Your Dream Website?",
+    ctaTitle:
+      "Ready to Build Your Website With a Trusted Software House in Bahawalpur?",
     ctaButton: "Get in Touch",
     ctaLink: "/contact",
     ctaBg:
@@ -414,16 +412,15 @@ export const servicesData = [
   {
     slug: "app-development",
     title: "App Development",
-    desc: "Custom software tools and automation solutions.",
+    desc: "Custom software tools and automation from one of the best software houses in Pakistan, based in Bahawalpur.",
     icon: Wrench,
-    heroImage:
-      App,
-    heroTitle: "Custom Tool Development",
+    heroImage: App,
+    heroTitle: "Software Company in Bahawalpur for Custom Tools and Automation",
     heroDesc:
-      "Build strong custom software tools and intelligent automation systems that eliminate manual work, reduce costs, and give your business a competitive edge.",
-    sectionTitle: "Custom Tool Development Solutions",
+      "We rank among the best software houses in Pakistan for custom tools and intelligent automation systems that eliminate manual work and reduce costs. If you searched for software companies near me, our Bahawalpur team is ready to build.",
+    sectionTitle: "Custom Software Development Solutions",
     sectionDesc:
-      "We build tailored software tools, from automation scripts and internal dashboards to full CRM systems and API integrations. If your team repeats a task often, we automate it.",
+      "We build tailored software tools, from automation scripts and internal dashboards to full CRM systems and API integrations. As a software company in Bahawalpur, we serve clients across Pakistan who want a team nearby.",
     sectionImage:
       "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
     tabs: [
@@ -651,8 +648,7 @@ export const servicesData = [
     ],
     roadmap: {
       title: "Tool Development Roadmap",
-      description:
-        "From business problem to working software, our proven path",
+      description: "From business problem to working software, our proven path",
       steps: [
         {
           title: "Discovery & Requirements",
@@ -704,7 +700,7 @@ export const servicesData = [
       buttonText: "Discuss Your Project",
       buttonLink: "/contact",
     },
-    ctaTitle: "Ready to Automate Your Business?",
+    ctaTitle: "Ready to Work With a Top Software House in Bahawalpur?",
     ctaButton: "Get a Free Consultation",
     ctaLink: "/contact",
     ctaBg:
@@ -715,16 +711,16 @@ export const servicesData = [
   {
     slug: "python-ml-ai",
     title: "AI & Machine Learning",
-    desc: "Python, ML and AI solutions for intelligent automation.",
+    desc: "Python, ML, and AI solutions from one of the best software houses in Pakistan.",
     icon: BrainCircuit,
-    heroImage:
-      Python,
-    heroTitle: "AI & Machine Learning Solutions",
+    heroImage: Python,
+    heroTitle:
+      "AI and Machine Learning Services from a Software Company in Pakistan",
     heroDesc:
-      "Leverage the power of Python, AI, and Machine Learning to automate complex processes, predict future trends, and gain insights your competitors can't see.",
-    sectionTitle: "Intelligent AI & ML Solutions",
+      "We use Python, AI, and Machine Learning to automate complex processes, predict business outcomes, and find insights your competitors miss. Our software company works with clients across Pakistan and abroad.",
+    sectionTitle: "AI and Machine Learning Solutions",
     sectionDesc:
-      "We build custom AI and machine learning systems that learn from your data, automate intelligent decisions, and give your business capabilities that were previously only available to tech giants.",
+      "We build custom AI and machine learning systems that learn from your data and automate decisions. As one of the best software houses in Pakistan, we give smaller businesses the same AI tools used by large enterprises.",
     sectionImage:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
     tabs: [
@@ -1022,7 +1018,7 @@ export const servicesData = [
       buttonText: "Explore AI Solutions",
       buttonLink: "/contact",
     },
-    ctaTitle: "Ready to Give Your Business an AI Edge?",
+    ctaTitle: "Ready to Work With a Software Company That Understands AI?",
     ctaButton: "Talk to an AI Expert",
     ctaLink: "/contact",
     ctaBg:
@@ -1033,16 +1029,16 @@ export const servicesData = [
   {
     slug: "graphic-design",
     title: "Graphic Designing",
-    desc: "Creative branding and visual design services.",
+    desc: "Brand identity design agency offering UI UX design services and creative social media post design.",
     icon: Palette,
-    heroImage:
-      Graphic,
-    heroTitle: "Creative Graphic Design That Sells",
+    heroImage: Graphic,
+    heroTitle:
+      "Brand Identity Design Agency for Startups and Growing Businesses",
     heroDesc:
-      "Stand out with stunning visual designs that capture your brand identity, build trust with your audience, and convert attention into action.",
-    sectionTitle: "Professional Graphic Design Services",
+      "We work as a brand identity design agency building logos, UI UX design services, and creative social media post design that build trust and convert attention into action.",
+    sectionTitle: "UI UX Design and Brand Identity Services",
     sectionDesc:
-      "From brand identities and logo suites to social media graphics and packaging design, we create visuals built to make a lasting impression.",
+      "From brand identities and logo suites to UI UX design and creative social media post design, we work as a collaborative design agency focused on brand identity work that lasts.",
     sectionImage:
       "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
     tabs: [
@@ -1102,7 +1098,7 @@ export const servicesData = [
     capabilities: [
       {
         title: "Brand Identity",
-        desc: "Complete brand identity packages: logo, color palette, typography, and brand guidelines, built to last.",
+        desc: "Complete brand identity packages: logo, color palette, typography, and brand guidelines. We work as a collaborative design agency for startup brand identity and UX design.",
         icon: Award,
       },
       {
@@ -1339,7 +1335,8 @@ export const servicesData = [
       buttonText: "Start Designing",
       buttonLink: "/contact",
     },
-    ctaTitle: "Ready to Build a Brand That Stands Out?",
+    ctaTitle:
+      "Ready to Work With the Best Agency for Startup Brand Identity and UX Design?",
     ctaButton: "Get a Design Quote",
     ctaLink: "/contact",
     ctaBg:
@@ -1350,16 +1347,15 @@ export const servicesData = [
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
-    desc: "SEO, Google Ads & Meta Ads for business growth.",
+    desc: "Best SEO services in Pakistan, on page SEO optimization, Google Ads, and Meta Ads for business growth.",
     icon: Search,
-    heroImage:
-      Digital,
-    heroTitle: "Data-Driven Digital Marketing",
+    heroImage: Digital,
+    heroTitle: "Best SEO Services in Pakistan for Business Growth",
     heroDesc:
-      "Grow your business with strategic SEO, precision-targeted Meta Ads, and high-ROI Google advertising campaigns. Every strategy is backed by data, built for results.",
-    sectionTitle: "Growth-Focused Digital Marketing",
+      "We help you grow your business online with on page SEO optimization services, precision-targeted Meta Ads, and Google Ads campaigns. Every strategy is built to help you rank your website on Google and increase online sales fast.",
+    sectionTitle: "How to Rank Your Website on Google First Page",
     sectionDesc:
-      "We do more than run ads. We build complete growth systems. From SEO foundations to paid advertising funnels, every campaign is engineered to increase traffic, generate quality leads, and maximize revenue.",
+      "We do more than run ads. We build complete growth systems, from on page SEO optimization services to paid advertising funnels, so you learn how to grow your business online and increase online sales fast.",
     sectionImage:
       "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074",
     tabs: [
@@ -1419,7 +1415,7 @@ export const servicesData = [
     capabilities: [
       {
         title: "SEO Services",
-        desc: "Increase your organic search rankings and drive consistent, cost-free traffic from Google and Bing.",
+        desc: "On page SEO optimization services that increase your organic search rankings and drive consistent traffic from Google. Ranked among the best SEO services in Pakistan.",
         icon: Search,
       },
       {
@@ -1666,7 +1662,7 @@ export const servicesData = [
       buttonText: "Get a Free Marketing Audit",
       buttonLink: "/contact",
     },
-    ctaTitle: "Ready to Grow Your Business?",
+    ctaTitle: "Ready to Rank on Google and Grow Your Business Online?",
     ctaButton: "Get a Free Audit",
     ctaLink: "/contact",
     ctaBg:
@@ -1677,326 +1673,319 @@ export const servicesData = [
   {
     slug: "seo",
     title: "SEO",
-    desc: "Custom WordPress development and design services.",
+    desc: "SEO services in Bahawalpur. On page SEO, technical audits, and link building that help you rank higher on Google.",
     icon: Globe,
-    heroImage:
-      SEO,
-    heroTitle: "Custom WordPress Development",
+    heroImage: SEO,
+    heroTitle: "SEO Services in Bahawalpur for Higher Google Rankings",
     heroDesc:
-      "Get a beautiful, blazing-fast, and fully secure WordPress website that's easy for your team to manage and built to grow with your business.",
-    sectionTitle: "Professional WordPress Development Solutions",
+      "We run keyword research, technical SEO audits, on page optimization, and link building campaigns that help your website rank on Google's first page. Our Bahawalpur team works with businesses across Pakistan who want steady, compounding organic traffic.",
+    sectionTitle: "On Page and Technical SEO Services in Pakistan",
     sectionDesc:
-      "We build custom WordPress websites that combine exceptional design with strong functionality. From custom theme development and plugin creation to speed optimization and ongoing maintenance, we handle everything.",
+      "We build a complete SEO foundation for your website: keyword research, on page optimization, technical fixes, and authority link building. Every recommendation is backed by data, not guesswork.",
     sectionImage:
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
+      "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070",
     tabs: [
       {
-        title: "Custom Themes",
+        title: "Technical SEO",
         content: {
-          heading: "Custom WordPress Theme Development",
-          desc: "Pixel-perfect, custom-coded WordPress themes that are unique to your brand, not recycled templates.",
+          heading: "Technical SEO Audits",
+          desc: "Find and fix the technical issues holding your rankings back.",
           points: [
-            "100% Custom Design & Code",
-            "Fully Responsive Layouts",
-            "Optimized, Clean PHP Code",
-            "Brand Identity Integration",
+            "Site Speed & Core Web Vitals",
+            "Crawlability & Indexing Fixes",
+            "Schema Markup & Structured Data",
+            "Mobile SEO Audits",
           ],
         },
       },
       {
-        title: "Plugins",
+        title: "On-Page SEO",
         content: {
-          heading: "Custom Plugin Development",
-          desc: "Add any functionality you need with custom-built WordPress plugins. No bloated third-party plugins.",
+          heading: "On Page SEO Optimization",
+          desc: "Optimize every page so Google understands exactly what it offers.",
           points: [
-            "Custom Feature Plugins",
-            "WooCommerce Extensions",
-            "Third-Party API Integrations",
-            "Performance-First Development",
+            "Keyword Research & Mapping",
+            "Title Tags & Meta Descriptions",
+            "Content & Header Optimization",
+            "Internal Linking Strategy",
           ],
         },
       },
       {
-        title: "Maintenance",
+        title: "Off-Page SEO",
         content: {
-          heading: "WordPress Site Maintenance",
-          desc: "Proactive WordPress maintenance that keeps your site secure, updated, and performing at its best.",
+          heading: "Link Building & Authority",
+          desc: "Build the backlink profile that pushes your site past competitors.",
           points: [
-            "Core, Theme & Plugin Updates",
-            "Automated Daily Backups",
-            "Security Scanning & Hardening",
-            "Uptime Monitoring & Bug Fixes",
+            "High-Authority Backlink Outreach",
+            "Guest Posting Campaigns",
+            "Digital PR & Brand Mentions",
+            "Competitor Backlink Analysis",
           ],
         },
       },
       {
-        title: "Speed",
+        title: "Local SEO",
         content: {
-          heading: "WordPress Speed Optimization",
-          desc: "Dramatically improve your WordPress site speed for better user experience, SEO, and conversion rates.",
+          heading: "Local SEO for Bahawalpur Businesses",
+          desc: "Show up in local search results and Google Maps when nearby customers search.",
           points: [
-            "Advanced Caching (Redis, WP Rocket)",
-            "Image Compression & WebP Conversion",
-            "CSS/JS Minification & Deferral",
-            "Global CDN Setup",
+            "Google Business Profile Optimization",
+            "Local Citation Building",
+            "Review Generation & Management",
+            "Location Page Optimization",
           ],
         },
       },
     ],
     capabilities: [
       {
-        title: "Custom Themes",
-        desc: "Unique, custom-coded WordPress themes designed for your brand: fast, clean, and built to last.",
-        icon: Palette,
-      },
-      {
-        title: "Plugin Development",
-        desc: "Custom plugins that add exactly the features you need without the bloat of off-the-shelf solutions.",
+        title: "Technical SEO",
+        desc: "Full technical SEO audits that fix crawl errors, speed issues, and indexing problems before they cost you rankings.",
         icon: Settings,
       },
       {
-        title: "Ongoing Maintenance",
-        desc: "Proactive security monitoring, updates, backups, and support to keep your WordPress site healthy.",
-        icon: HeartHandshake,
+        title: "On Page SEO",
+        desc: "Keyword research, content optimization, and on page SEO that align every page with what your customers search for.",
+        icon: Search,
       },
       {
-        title: "Speed Optimization",
-        desc: "Expert optimization to achieve sub-2-second load times and top Core Web Vitals scores.",
-        icon: Zap,
+        title: "Link Building",
+        desc: "Authority link building campaigns that grow your domain strength and push competitive keywords onto page one.",
+        icon: TrendingUp,
+      },
+      {
+        title: "Local SEO",
+        desc: "Local SEO services in Bahawalpur that help you rank in Google Maps and win nearby customers.",
+        icon: Globe,
       },
     ],
-    capabilitiesTitle: "WordPress",
-    capabilitiesHighlight: "Expertise",
+    capabilitiesTitle: "SEO",
+    capabilitiesHighlight: "Services",
     capabilitiesBg:
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
-    processSubTitle: "Our WordPress Process",
-    processTitle: "Build Your WordPress",
-    processHighlight: "Vision",
+    processSubTitle: "Our SEO Process",
+    processTitle: "Rankings Built On",
+    processHighlight: "Data",
     processImage:
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
+      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074",
     processDesc:
-      "We create WordPress websites that are beautiful, functional, and fast. Most importantly, they are easy for you and your team to manage without technical skills.",
+      "We do not guess at SEO. Every audit, keyword decision, and link building campaign is backed by data and tracked against clear ranking and traffic goals.",
     processFeatures: [
-      "Discovery & Planning",
-      "Custom Design & Development",
-      "Content Integration & Testing",
-      "Launch, Training & Support",
+      "Full Site SEO Audit",
+      "Keyword & Competitor Research",
+      "On Page & Technical Implementation",
+      "Link Building & Monthly Reporting",
     ],
     showcase: {
-      title: "WordPress Projects",
+      title: "SEO Projects",
       bgImage:
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
+        "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070",
       projects: [
         {
-          slug: "custom-wordpress-theme",
-          title: "Custom WordPress Theme Development",
-          desc: "Completely custom-coded WordPress themes that are unique to your brand, optimized for speed, and easy to manage.",
+          slug: "technical-seo-audit",
+          title: "Technical SEO Audit & Recovery",
+          desc: "Full-site technical SEO audits that find and fix the errors blocking your rankings.",
           image:
-            "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
-          tech: ["PHP", "WordPress", "CSS3", "JavaScript", "ACF Pro", "Timber"],
+            "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070",
+          tech: [
+            "Google Search Console",
+            "Screaming Frog",
+            "Ahrefs",
+            "PageSpeed Insights",
+          ],
           features: [
-            "100% Custom Design, No Templates",
-            "Fully Responsive on All Devices",
-            "SEO-Optimized HTML Structure",
-            "Sub-2-Second Load Time",
-            "Easy Content Management (Gutenberg / ACF)",
+            "Full Crawl & Indexing Audit",
+            "Core Web Vitals Fixes",
+            "Schema Markup Implementation",
+            "Duplicate Content Cleanup",
+            "Redirect & 404 Audit",
           ],
           overview:
-            "Template-based WordPress sites look like everyone else's, and your business deserves better. We hand-code custom WordPress themes from the ground up, precisely matching your brand identity. Every line of code is clean, optimized, and built with performance and maintainability as core priorities.",
+            "Rankings often drop because of technical problems most site owners never see: broken redirects, duplicate pages, slow load times, and indexing errors. We audit your entire site, fix what is holding you back, and set up monitoring so new issues get caught early.",
           results: [
-            "Completely Unique Brand Identity",
-            "Faster Page Speed & Core Web Vitals",
-            "Easy Team Self-Management",
+            "Faster Indexing by Google",
+            "Fewer Crawl Errors",
+            "Improved Core Web Vitals Scores",
           ],
         },
         {
-          slug: "wordpress-maintenance",
-          title: "WordPress Maintenance & Security",
-          desc: "Comprehensive WordPress care plans: security monitoring, backups, updates, and performance checks.",
+          slug: "on-page-seo-optimization",
+          title: "On Page SEO Optimization",
+          desc: "Keyword research and on page SEO optimization services that align your content with what people actually search for.",
           image:
-            "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=2069",
-          tech: [
-            "WordPress",
-            "Wordfence",
-            "UpdraftPlus",
-            "WP Rocket",
-            "ManageWP",
-          ],
+            "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074",
+          tech: ["SEMrush", "Ahrefs", "Google Keyword Planner", "Yoast SEO"],
           features: [
-            "Daily Automated Off-site Backups",
-            "Real-time Security Threat Monitoring",
-            "Weekly Core, Theme & Plugin Updates",
-            "Monthly Performance Audits",
-            "Priority Support & Bug Fixes",
+            "In-Depth Keyword Research",
+            "Title Tag & Meta Description Rewrites",
+            "Header & Content Structuring",
+            "Internal Linking Improvements",
+            "Image Alt Text Optimization",
           ],
           overview:
-            "A neglected WordPress site is a vulnerable one. Outdated plugins are the top source of WordPress hacks. Our maintenance plans keep your site updated, backed up, and secure 24/7, so you never have to worry about your website going down or getting compromised.",
+            "On page SEO is the foundation every ranking sits on. We research the exact terms your customers search, then rewrite titles, meta descriptions, headers, and content so Google and your visitors both understand what the page offers.",
           results: [
-            "Zero Unplanned Downtime",
-            "Complete Security Protection",
-            "Always-Up-to-Date Performance",
+            "Higher Click-Through Rates",
+            "Better Keyword Rankings",
+            "Clearer Site Structure for Google",
           ],
         },
         {
-          slug: "elementor-design",
-          title: "Elementor Pro Website Design",
-          desc: "Professional, fast-loading WordPress websites built with Elementor Pro, fully editable by your team.",
+          slug: "local-seo-bahawalpur",
+          title: "Local SEO for Bahawalpur Businesses",
+          desc: "Local SEO services that help Bahawalpur businesses rank in Google Maps and local search results.",
           image:
-            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
+            "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
           tech: [
-            "WordPress",
-            "Elementor Pro",
-            "Elementor Theme Builder",
-            "CSS",
+            "Google Business Profile",
+            "BrightLocal",
+            "Local Citations",
+            "Review Management Tools",
           ],
           features: [
-            "Custom Elementor Page Designs",
-            "Dynamic Content & Custom Post Types",
-            "Advanced Popup & Form Builder",
-            "WooCommerce Integration",
-            "Team Self-Editing Without a Developer",
+            "Google Business Profile Optimization",
+            "Local Citation Building & Cleanup",
+            "Review Generation Campaigns",
+            "Location-Specific Landing Pages",
+            "Local Keyword Targeting",
           ],
           overview:
-            "Elementor Pro gives your team the power to update and edit the website without touching code, while still looking like a professional developer built it. We build the site, then hand you the keys with full training so you're never dependent on us for small changes.",
+            "Most local searches lead to a call or a visit within a day. We optimize your Google Business Profile, build consistent local citations, and target location-based keywords so nearby customers find you before your competitors.",
           results: [
-            "Beautiful Professional Design",
-            "Full Team Editing Independence",
-            "Faster Content Updates",
+            "Higher Map Pack Visibility",
+            "More Local Search Calls",
+            "Stronger Google Business Profile Rankings",
           ],
         },
       ],
     },
-    blogTitle: "WordPress Insights",
+    blogTitle: "SEO Insights",
     blogDescription:
-      "WordPress tips, tutorials, and best practices for business owners",
+      "SEO tips, ranking strategies, and case studies for business owners",
     blogPosts: [
       {
-        title:
-          "The Essential WordPress Plugins Every Business Site Needs in 2024",
-        category: "WordPress",
+        title: "How to Rank Your Website on Google First Page",
+        category: "SEO",
         readTime: 7,
         imageUrl:
-          "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
+          "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070",
         description:
-          "Cut through the noise. These are the only WordPress plugins you need for security, SEO, speed, and forms.",
-        views: "4.5k",
-        author: "Hassan Raza",
+          "A practical breakdown of the on page, technical, and link building work it takes to reach page one.",
+        views: "3.9k",
+        author: "Bilal Ahmed",
       },
       {
-        title:
-          "Custom WordPress Theme vs Page Builder: Which Should You Choose?",
-        category: "Development",
+        title: "Technical SEO Checklist Every Website Owner Should Know",
+        category: "Technical SEO",
         readTime: 6,
         imageUrl:
-          "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
         description:
-          "The honest comparison between custom theme development and Elementor, with real performance data.",
-        views: "3.2k",
-        author: "Ali Raza",
+          "The crawl, speed, and indexing issues that quietly hold back your rankings, and how to fix them.",
+        views: "2.6k",
+        author: "Sara Malik",
       },
     ],
     testimonials: [
       {
-        quote: "Our new WordPress site is fast, beautiful, and easy to manage.",
+        quote:
+          "Our organic traffic grew every month after they took over our SEO. Rankings that used to sit on page three now show up on page one.",
         name: "Hassan Raza",
         designation: "Business Owner",
       },
       {
         quote:
-          "They redesigned our WordPress store from scratch. The speed improvement and clean design completely changed how customers interact with us.",
+          "Their technical SEO audit fixed indexing problems we did not know existed. Search traffic to our site grew within weeks.",
         name: "Marcus Hayes",
         designation: "Operations Lead, Grindhouse Coffee Roasters",
       },
       {
         quote:
-          "Professional, fast, and easy to update. Our team manages the site with zero technical knowledge thanks to their Elementor build.",
+          "The local SEO work put us on the map, literally. We now show up in the map pack for our main keywords.",
         name: "Natalie Reyes",
         designation: "Brand Manager, Home & Hearth Co.",
       },
     ],
     faqs: [
       {
-        question:
-          "Can you redesign my existing WordPress site without losing my content?",
+        question: "How long does SEO take to show results?",
         answer:
-          "Yes. We handle full WordPress redesigns while preserving all your existing content, SEO rankings, and URL structure. No data loss, no broken links.",
+          "Most clients see ranking movement within 8 to 12 weeks and stronger traffic gains by month four to six. SEO compounds, so results keep growing the longer you stay consistent.",
       },
       {
-        question:
-          "Do you provide training so we can manage the site ourselves?",
+        question: "Do you guarantee first page rankings?",
         answer:
-          "Absolutely. After launch, we provide a recorded video tutorial and a live training session so your team can confidently add pages, update content, and manage media without needing a developer.",
+          "No one can honestly guarantee a specific Google ranking. What we guarantee is a clear strategy, consistent execution, and monthly reporting so you always see the work and the progress.",
       },
       {
-        question: "How do you handle WordPress security?",
+        question: "What is included in your monthly SEO reporting?",
         answer:
-          "All our WordPress builds include hardened security configurations, brute-force protection, SSL setup, and firewall rules. For maintenance clients, we also include real-time malware scanning.",
+          "You get keyword ranking positions, organic traffic numbers, technical fixes completed, and links built that month, along with a short summary of what we are working on next.",
       },
       {
-        question: "What if I need new features added after launch?",
+        question: "Do you work with businesses outside Bahawalpur?",
         answer:
-          "No problem. We're always available for post-launch additions: new pages, new functionality, plugin integrations, or WooCommerce expansions. We work on a project basis or a monthly retainer.",
+          "Yes. Our SEO team works with businesses across Pakistan and internationally. Location only matters for local SEO campaigns targeting a specific city or area.",
       },
     ],
     roadmap: {
-      title: "WordPress Development Roadmap",
-      description:
-        "A clear, structured path from your vision to a live website",
+      title: "SEO Roadmap",
+      description: "Our clear path from audit to first page rankings",
       steps: [
         {
-          title: "Discovery & Planning",
+          title: "Full SEO Audit",
           description:
-            "Define your site structure, features, integrations, and content strategy before design begins.",
+            "We audit your technical health, on page content, backlink profile, and competitors to find the fastest path to ranking gains.",
+          icon: Search,
+        },
+        {
+          title: "Strategy & Keyword Mapping",
+          description:
+            "We map target keywords to the right pages and build a prioritized action plan based on ranking difficulty and traffic potential.",
           icon: Target,
         },
         {
-          title: "Design & Development",
+          title: "On Page & Technical Fixes",
           description:
-            "Create custom designs, develop the WordPress theme or Elementor build, and integrate all functionality.",
-          icon: BsPalette2,
+            "We implement the on page and technical changes first, since they are the fastest wins available.",
+          icon: Settings,
         },
         {
-          title: "Content & Testing",
+          title: "Link Building & Reporting",
           description:
-            "Load all content, run cross-browser/device testing, and perform speed and SEO checks before launch.",
-          icon: Code,
-        },
-        {
-          title: "Launch & Training",
-          description:
-            "Deploy to live hosting, submit to Google, and deliver a full training session to your team.",
-          icon: Rocket,
+            "We build authority through link building and send monthly reports so you always know where rankings and traffic stand.",
+          icon: TrendingUp,
         },
       ],
     },
     nextSteps: {
-      title: "Start Your WordPress Project",
-      description: "Your dream website is three steps away",
+      title: "Start Ranking Higher on Google",
+      description: "Three steps to a stronger organic search presence",
       steps: [
         {
-          title: "Share Your Vision",
+          title: "Free SEO Audit",
           description:
-            "Tell us about your business, your design preferences, and the features you need in your website.",
+            "We review your current rankings, technical health, and competitors to show you exactly where the opportunity is.",
         },
         {
-          title: "We Design & Build",
+          title: "Custom SEO Strategy",
           description:
-            "We create your custom WordPress website and keep you involved at every stage of the process.",
+            "Receive a prioritized action plan covering technical fixes, on page work, and link building, with clear timelines.",
         },
         {
-          title: "Launch & Grow",
+          title: "Execution & Monthly Reporting",
           description:
-            "We go live, hand over the keys with full training, and you start growing your online presence.",
+            "We execute the strategy and send monthly reports so you can track rankings, traffic, and progress at every step.",
         },
       ],
-      buttonText: "Start Your Website",
+      buttonText: "Get a Free SEO Audit",
       buttonLink: "/contact",
     },
-    ctaTitle: "Ready to Launch Your WordPress Website?",
-    ctaButton: "Get a Free Quote",
+    ctaTitle: "Ready to Rank Higher on Google?",
+    ctaButton: "Get a Free SEO Audit",
     ctaLink: "/contact",
     ctaBg:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
   },
-
 ];

@@ -82,8 +82,8 @@ const Contact = () => {
               {[
                 { label: "First Name", placeholder: "Enter your first name" },
                 { label: "Last Name", placeholder: "Enter your last name" },
-                { label: "Job Title", placeholder: "" },
-                { label: "Company", placeholder: "" },
+                { label: "Job Title", placeholder: "Enter your job title" },
+                { label: "Company", placeholder: "Enter your company name" },
                 { label: "Email", placeholder: "info@nefftosolution.com", type: "email" },
                 { label: "Phone", placeholder: "+1 (555) 000-0000" },
               ].map((field, i) => (

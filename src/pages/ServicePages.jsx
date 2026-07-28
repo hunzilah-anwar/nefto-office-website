@@ -129,7 +129,7 @@ const ProjectSlider = ({ projects, parentSlug }) => {
 // Roadmap Component
 const RoadmapSection = ({ roadmap }) => {
   return (
-    <section className="pb-20 px-4 bg-main-bg overflow-hidden">
+    <section className="py-20 px-4 overflow-hidden relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center sm:mb-16 mb-10">
           <h2 className="text-xl sm:text-3xl md:text-5xl font-black mb-4">
@@ -155,7 +155,7 @@ const RoadmapSection = ({ roadmap }) => {
                 }`}
               >
                 <div className="lg:w-1/2 w-full">
-                  <div className="bg-[#042558] w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-surface transition-all mx-px">
+                  <div className="glass w-full border border-white/20 sm:p-6 p-4 backdrop-blur-sm hover:border-surface transition-all mx-px">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-[linear-gradient(90deg,#4a7fa7,#b4d0e6)] flex items-center justify-center">
                         {React.createElement(step.icon, {
@@ -170,7 +170,7 @@ const RoadmapSection = ({ roadmap }) => {
                         <h3 className="text-xl font-bold">{step.title}</h3>
                       </div>
                     </div>
-                    <p className="text-zinc-400">{step.description}</p>
+                    <p className="text-zinc-300">{step.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -185,8 +185,10 @@ const RoadmapSection = ({ roadmap }) => {
 // Next Steps Component
 const NextStepsSection = ({ nextSteps }) => {
   return (
-    <section className="sm:py-16 py-10 sm:px-6 px-4 bg-main-bg">
-      <div className="max-w-7xl mx-auto">
+    <section className="sm:py-16 py-10 sm:px-6 px-4 bg-main-bg relative overflow-hidden">
+      <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center sm:mb-16 mb-10">
           <h2 className="text-xl sm:text-3xl md:text-5xl font-black mb-4">
             {nextSteps?.title || "Ready to Get Started?"}
@@ -284,10 +286,9 @@ const ServicePages = () => {
         >
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-main-bg/10 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute top-20 left-10 w-72 h-72 bg-main-bg[#042558]/10 rounded-full blur-3xl animate-pulse" />
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-black/10 rounded-full blur-3xl animate-pulse delay-1000" />
           </div>
-
           <div className="z-10 max-w-4xl w-full">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -316,8 +317,10 @@ const ServicePages = () => {
         </section>
 
         {/* SECTION 2: TABS / FEATURES */}
-        <section className="bg-main-bg text-white sm:py-16 py-10 sm:px-6 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-main-bg text-white sm:py-16 py-10 sm:px-6 px-4 relative overflow-hidden">
+          <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+          <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+          <div className="max-w-7xl mx-auto relative z-10">
             <div className="flex lg:flex-row flex-col lg:gap-12 mb-16 justify-between">
               <div className="mb-10 lg:mb-0 lg:w-1/2">
                 <h2 className="text-xl sm:text-2xl md:text-4xl font-black mb-6">
@@ -334,7 +337,7 @@ const ServicePages = () => {
               </div>
             </div>
           </div>
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid lg:grid-cols-3 grid-cols-1 border border-white/10 overflow-hidden">
               <div className="flex flex-col">
                 {tabs.map((tab, i) => (
@@ -397,7 +400,7 @@ const ServicePages = () => {
             backgroundImage: `url(${service.capabilitiesBg})`,
           }}
         >
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center space-y-4 sm:mb-20 mb-10">
               <h2 className="text-2xl md:text-6xl font-black tracking-tighter uppercase leading-none text-white">
@@ -416,11 +419,11 @@ const ServicePages = () => {
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="p-8 bg-[#042558] border border-white/10 backdrop-blur-md group hover:border-secondary transition-all"
+                  className="p-8 glass rounded-2xl border border-white/10 backdrop-blur-md group hover:border-secondary transition-all"
                 >
                   {s.icon && (
                     <s.icon
-                      className="p-3 mb-4 text-white shadow-lg backdrop-blur-xl border border-white/20 transition-transform duration-500"
+                      className="p-3 mb-4 text-white shadow-lg backdrop-blur-xl rounded-xl transition-transform duration-500"
                       style={{
                         background: `linear-gradient(90deg, #5878a0, #b4c6d8)`,
                       }}
@@ -440,8 +443,10 @@ const ServicePages = () => {
         </section>
 
         {/* SECTION 4: PROCESS */}
-        <section className="sm:py-16 py-10 sm:px-6 px-4 bg-main-bg">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white border-b border-white/10 pb-20">
+        <section className="sm:py-16 py-10 sm:px-6 px-4 bg-main-bg relative overflow-hidden">
+          <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+
+          <div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row gap-20 lg:items-center text-white border-b border-white/10 pb-20">
             <div className="lg:w-1/2 space-y-2">
               <h3 className="text-sm text-primary font-black">
                 {service.processSubTitle}
@@ -484,10 +489,9 @@ const ServicePages = () => {
               </div>
             </div>
           </div>
+          <RoadmapSection roadmap={roadmap} />
+          <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
         </section>
-
-        {/* SECTION 5: ROADMAP */}
-        <RoadmapSection roadmap={roadmap} />
 
         {/* SECTION 6: PROJECTS SHOWCASE */}
         {projects.length > 0 && (

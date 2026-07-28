@@ -25,7 +25,7 @@
 }
 
 .highlight {
-  background: linear-gradient(90deg, #4a7fa7 0%, #b4d0e6 100%);
+  background: linear-gradient(90deg, #5482b4 0%, #b4d0e6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
