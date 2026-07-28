@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroBg from "../assets/hero-bg.jpeg";
 import GlowButton from "../components/GlowButton";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,6 +53,39 @@ const Home = () => {
     backgroundPosition: "center",
   };
 
+  const [quoteEmail, setQuoteEmail] = useState("");
+  const [quoteMessage, setQuoteMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleQuoteSubmit = async (e) => {
+    e.preventDefault();
+    if (!quoteEmail) return;
+    
+    setIsSubmitting(true);
+    setQuoteMessage("");
+    
+    try {
+      const response = await fetch("https://neffto-solution-backend.vercel.app/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: quoteEmail }),
+      });
+      
+      if (response.ok) {
+        setQuoteMessage("Quote request sent!");
+        setQuoteEmail("");
+      } else {
+        setQuoteMessage("Failed to send request.");
+      }
+    } catch (error) {
+      console.error("Quote error:", error);
+      setQuoteMessage("Connection error.");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setQuoteMessage(""), 5000);
+    }
+  };
+
   return (
     <>
       <section
@@ -72,7 +105,7 @@ const Home = () => {
               full-stack solutions your business needs to scale in the digital
               age.
             </p>
-            <form className="relative flex items-center justify-start group/form md:max-w-xl max-w-100 mt-8">
+            <form onSubmit={handleQuoteSubmit} className="relative flex flex-col group/form md:max-w-xl max-w-100 mt-8">
               <div className="relative flex w-full bg-white border border-gray-200 shadow-xl overflow-hidden">
                 {/* Email Icon */}
                 <div className="flex items-center justify-center pl-2 text-gray-400">
@@ -94,13 +127,15 @@ const Home = () => {
                 {/* Input Field */}
                 <input
                   type="email"
+                  value={quoteEmail}
+                  onChange={(e) => setQuoteEmail(e.target.value)}
                   required
                   placeholder="Enter your business email"
                   className="w-full bg-transparent md:px-4 px-2 py-3 md:text-sm text-xs text-gray-900 outline-none placeholder:text-gray-400 font-medium"
                 />
 
                 {/* Modern Action Button */}
-                <button className="group/btn relative md:px-6 px-1 md:py-4 py-3 bg-black text-white text-[10px] md:text-xs md:font-black uppercase tracking-widest overflow-hidden transition-all duration-300 whitespace-nowrap cursor-pointer w-45">
+                <button disabled={isSubmitting} type="submit" className="group/btn relative md:px-6 px-1 md:py-4 py-3 bg-black text-white text-[10px] md:text-xs md:font-black uppercase tracking-widest overflow-hidden transition-all duration-300 whitespace-nowrap cursor-pointer w-45 disabled:opacity-50">
                   {/* 45-Degree Hover Layer (Violet) */}
                   <div className="absolute top-[-80%] left-[-80%] w-[200%] h-[300%] z-0 bg-surface rotate-45 translate-y-[150%] group-hover/btn:translate-y-[-30%] transition-transform duration-500 ease-out" />
 
@@ -110,9 +145,15 @@ const Home = () => {
                   </div>
 
                   {/* Button Text */}
-                  <span className="relative z-20">Get a Quota</span>
+                  <span className="relative z-20">{isSubmitting ? "Sending..." : "Get a Quote"}</span>
                 </button>
               </div>
+              
+              {quoteMessage && (
+                <div className="mt-3 text-sm font-bold text-primary">
+                  {quoteMessage}
+                </div>
+              )}
 
               {/* CSS for Shine Wave */}
               <style>

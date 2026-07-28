@@ -8,6 +8,9 @@ import Talha from "../assets/talha.png";
 import Abeeha from "../assets/Abeeha.png";
 import Wahaj from "../assets/Wahaj.png";
 import Rahul from "../assets/rahul-team.png";
+import Zeeshan from "../assets/Zeeshan.jpeg";
+import Ramish from "../assets/Ramish.jpeg";
+import Asim from "../assets/Asim.jpeg";
 
 const cardData = [
   {
@@ -73,6 +76,30 @@ const cardData = [
     description:
       "Building secure and responsive web solutions focused on performance, usability, and business growth.",
     image: Abeeha,
+  },
+  {
+    id: 9,
+    category: "SEO Growth Manager",
+    title: "zeeshan zahid",
+    description:
+      "Manages SEO, client hunting, marketplace accounts, and growth strategies to generate qualified leads and long-term business opportunities.",
+    image: Zeeshan,
+  },
+  {
+    id: 10,
+    category: "WEB DEVELOPER",
+    title: "Ramish ali",
+    description:
+      "Building secure and responsive web solutions focused on performance, usability, and business growth.",
+    image: Ramish,
+  },
+  {
+    id: 11,
+    category: "FRONT-END WEB DEVELOPER",
+    title: "Muhammad Asim",
+    description:
+      "Frontend Developer skilled in React, JavaScript, HTML, CSS, and Tailwind CSS, focused on building responsive and modern web applications.",
+    image: Asim,
   },
 ];
 

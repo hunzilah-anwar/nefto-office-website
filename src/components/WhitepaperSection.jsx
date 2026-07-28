@@ -7,15 +7,32 @@ const WhitepaperSection = () => {
   const [email, setEmail] = useState("");
   const [isSent, setIsSent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (email) {
-      setIsSent(true);
-
-      setTimeout(() => {
-        setIsSent(false);
-      }, 5000);
+      try {
+        const response = await fetch("https://neffto-solution-backend.vercel.app/api/whitepaper", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        });
+        
+        if (response.ok) {
+          setIsSent(true);
+          setEmail("");
+          setTimeout(() => {
+            setIsSent(false);
+          }, 5000);
+        } else {
+          alert("Failed to subscribe. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error subscribing:", error);
+        alert("An error occurred. Please check your internet connection.");
+      }
     }
   };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -12,6 +12,55 @@ import {
 import ContactBg from "../assets/Contact-bg.webp";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    jobTitle: "",
+    company: "",
+    email: "",
+    phone: "",
+    projectDetails: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("https://neffto-solution-backend.vercel.app/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setMessage("Your message has been sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          jobTitle: "",
+          company: "",
+          email: "",
+          phone: "",
+          projectDetails: ""
+        });
+      } else {
+        setMessage("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setMessage("An error occurred. Please check your internet connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section className={`relative w-full py-32 overflow-hidden bg-cover bg-center text-white`}
     style={{
@@ -75,17 +124,17 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           className="border border-white/10 glass rounded-3xl p-8 md:p-12"
         >
-          <form className="space-y-10">
+          <form onSubmit={handleSubmit} className="space-y-10">
 
             <div className="grid md:grid-cols-2 gap-10">
 
               {[
-                { label: "First Name", placeholder: "Enter your first name" },
-                { label: "Last Name", placeholder: "Enter your last name" },
-                { label: "Job Title", placeholder: "Enter your job title" },
-                { label: "Company", placeholder: "Enter your company name" },
-                { label: "Email", placeholder: "nefftosolution@gmail.com", type: "email" },
-                { label: "Phone", placeholder: "+1 (555) 000-0000" },
+                { label: "First Name", placeholder: "Enter your first name", name: "firstName" },
+                { label: "Last Name", placeholder: "Enter your last name", name: "lastName" },
+                { label: "Job Title", placeholder: "Enter your job title", name: "jobTitle" },
+                { label: "Company", placeholder: "Enter your company name", name: "company" },
+                { label: "Email", placeholder: "nefftosolution@gmail.com", type: "email", name: "email" },
+                { label: "Phone", placeholder: "+1 (555) 000-0000", name: "phone" },
               ].map((field, i) => (
                 <div key={i} className="flex flex-col gap-2 group">
                   <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-white group-focus-within:text-cyan-400 transition">
@@ -93,6 +142,9 @@ const Contact = () => {
                   </label>
                   <input
                     type={field.type || "text"}
+                    name={field.name}
+                    value={formData[field.name]}
+                    onChange={handleChange}
                     required
                     placeholder={field.placeholder}
                     className="bg-transparent border-b border-white/10 py-3 text-sm outline-none focus:border-cyan-500 transition placeholder:text-white/50"
@@ -109,6 +161,9 @@ const Contact = () => {
               </label>
               <textarea
                 rows="4"
+                name="projectDetails"
+                value={formData.projectDetails}
+                onChange={handleChange}
                 required
                 placeholder="Describe your project, goals, timeline, and budget..."
                 className="bg-transparent border-b border-white/10 py-3 text-sm outline-none focus:border-cyan-500 transition resize-none placeholder:text-white/50"
@@ -119,15 +174,22 @@ const Contact = () => {
             <div className="pt-6">
               <button
                 type="submit"
-                className="w-full relative group cursor-pointer border border-white bg-black hover:bg-white text-white hover:text-black font-black uppercase tracking-[0.3em] py-5 transition-all duration-500 flex items-center justify-center gap-3 overflow-hidden"
+                disabled={isSubmitting}
+                className="w-full relative group cursor-pointer border border-white bg-black hover:bg-white text-white hover:text-black font-black uppercase tracking-[0.3em] py-5 transition-all duration-500 flex items-center justify-center gap-3 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="relative z-10 text-sm">Submit</span>
+                <span className="relative z-10 text-sm">{isSubmitting ? "Submitting..." : "Submit"}</span>
                 <Send
                   size={18}
                   className="relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition"
                 />
               </button>
             </div>
+            
+            {message && (
+              <div className="mt-4 text-sm font-bold text-center text-primary bg-white/10 py-3 rounded">
+                {message}
+              </div>
+            )}
 
           </form>
         </motion.div>
