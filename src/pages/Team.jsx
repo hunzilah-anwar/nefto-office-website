@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Zap, Globe } from "lucide-react";
 import GlowButton from "../components/GlowButton";
@@ -6,7 +6,8 @@ import CEO from "../assets/CEO.jpeg";
 import CTO from "../assets/cto.png";
 import CoFounder from "../assets/Ameerhamza.webp";
 import TeamGrid from "../components/TeamGrid";
-
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const MainTeamCard = ({
   imageSrc,
@@ -15,31 +16,36 @@ const MainTeamCard = ({
   imagePosition = "center center",
 }) => {
   return (
-    <div className="group mx-auto w-full max-w-125 overflow-hidden rounded-[28px] border border-white/10 bg-surface/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-light-blue/40 hover:shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
-      {/* Image */}
-      <div className="relative h-120 overflow-hidden">
+    <div className="group relative select-none shrink-0 overflow-hidden w-65 rounded-2xl sm:rounded-[28px] border border-white/10 bg-[#020617]/60 backdrop-blur-xl transition-all duration-500 hover:border-cyan-400/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+      {/* Image Container */}
+      <div className="relative h-90 w-full overflow-hidden">
         <img
           loading="lazy"
           src={imageSrc}
           alt={name}
           style={{ objectPosition: imagePosition }}
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black via-primary-navy/20 to-transparent" />
+        {/* Multi-stage Gradient Overlay for Perfect Text Contrast */}
+        <div className="absolute inset-0 bg-linear-to-t from-black to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
 
-        {/* Role Badge */}
-        <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/40 px-4 py-2 backdrop-blur-md">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white">
+        {/* Modern Diagonal Shine/Gloss Effect on Hover */}
+        <div className="pointer-events-none absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-linear-to-r from-transparent via-white/10 to-transparent opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100" />
+
+        {/* Role Badge - Responsive Sizing */}
+        <div className="absolute left-3 top-3 sm:left-4 sm:top-4 rounded-full border border-white/15 bg-black/50 px-3 py-1.5 backdrop-blur-md shadow-lg transition-transform duration-300 group-hover:scale-105">
+          <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-accent-blue drop-shadow-sm">
             {title}
           </span>
         </div>
-      </div>
-      <div className="absolute bottom-0 left-0 p-7">
-        <h3 className="text-2xl font-bold text-off-white transition duration-300 group-hover:text-primary">
-          {name}
-        </h3>
+
+        {/* Card Content Footer */}
+        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-7">
+          <h3 className="text-lg sm:text-xl font-bold tracking-normal text-white transition-colors duration-300 group-hover:text-primary">
+            {name}
+          </h3>
+        </div>
       </div>
     </div>
   );
@@ -47,72 +53,157 @@ const MainTeamCard = ({
 
 /* ================= MAIN COMPONENT ================= */
 const Team = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Handle window resize for responsive logic
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const springTransition = {
+    type: "spring",
+    stiffness: 120,
+    damping: 22,
+    mass: 1,
+  };
+
+  const teamMembers = [
+    {
+      name: "Abdul Ahad Dahir",
+      title: "Founder / CEO",
+      image: CEO,
+      color: "bg-blue-600",
+    },
+    {
+      name: "Ameer Hamza",
+      title: "Co-Founder",
+      image: CoFounder,
+      color: "bg-indigo-600",
+    },
+    {
+      name: "Muhammad Hunzilah",
+      title: "CTO",
+      image: CTO,
+      color: "bg-purple-600",
+    },
+  ];
+
   return (
     <main className="bg-main-bg text-white selection:bg-surface selection:text-white pt-20">
-      {/* SECTION 1 (ODD): HERO - #00042A */}
-      <section className="relative sm:py-16 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
-        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
-        <div className="max-w-7xl mx-auto w-full relative z-10 text-center">
+      <section
+        className="relative overflow-hidden px-6 py-20"
+        // Hover only works on Desktop
+        onMouseEnter={() => !isMobile && setIsHovered(true)}
+        onMouseLeave={() => !isMobile && setIsHovered(false)}
+      >
+        <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto items-center justify-between">
+          {/* LEFT SIDE: TEXT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{
+              // On desktop: Shrink to 0 width. On mobile: Stay full width.
+              flexBasis: !isMobile && isHovered ? "0%" : "100%",
+              opacity: !isMobile && isHovered ? 0 : 1,
+              x: !isMobile && isHovered ? -100 : 0,
+            }}
+            transition={springTransition}
+            className="min-w-0 overflow-hidden text-center lg:text-left z-50 lg:pr-10 mb-16 lg:mb-0"
           >
-            <h1 className="text-5xl md:text-[8rem] font-black italic leading-[0.8] tracking-tighter uppercase sm:mb-10 mb-4">
-              OUR{" "}
-              <span className="text-transparent stroke-text italic font-serif">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black italic leading-[0.9] tracking-tighter uppercase text-white">
+              OUR {" "}
+              <span className="text-transparent stroke-text font-serif">
                 TEAM.
               </span>
             </h1>
-            <p className="text-zinc-200 sm:text-xl text-sm font-light max-w-2xl mx-auto leading-relaxed italic">
+            <p className="text-zinc-400 text-base md:text-xl font-light max-w-md mt-6 italic mx-auto lg:mx-0">
               "The innovators, creators, and dreamers architecting the digital
               backbone of the next century."
             </p>
           </motion.div>
+
+          {/* RIGHT SIDE: INTERACTIVE CARDS GALLERY */}
+          <motion.div
+            animate={{
+              width: !isMobile && isHovered ? "100%" : "50%",
+            }}
+            transition={springTransition}
+            className="relative shrink-0"
+          >
+            {/* 
+              MOBILE: Grid layout (2 columns on tablet, 1 on mobile)
+              DESKTOP: Stacked layout 
+          */}
+            <div className="flex items-center justify-center flex-wrap lg:block relative w-full gap-6 md:gap-10">
+              {teamMembers.map((member, index) => {
+                const total = teamMembers.length;
+                const centerIndex = (total - 1) / 2;
+                const distanceFromCenter = index - centerIndex;
+
+                return (
+                  <motion.div
+                    key={index}
+                    initial={false}
+                    animate={
+                      !isMobile
+                        ? {
+                            // DESKTOP ANIMATION
+                            x: isHovered
+                              ? distanceFromCenter * 280
+                              : distanceFromCenter * 25,
+
+                            y: 0, // NO Y-AXIS MOVEMENT AS REQUESTED
+
+                            rotate: isHovered ? 0 : distanceFromCenter * 4,
+
+                            scale: isHovered ? 1 : 1 - index * 0.02,
+
+                            zIndex: 100 - index, // First index on top
+                          }
+                        : {
+                            // MOBILE: No animation, reset positions for grid
+                            x: 0,
+                            y: 0,
+                            rotate: 0,
+                            scale: 1,
+                            zIndex: 1,
+                          }
+                    }
+                    transition={springTransition}
+                    // On Desktop it's absolute, on mobile it's relative to fill the grid
+                    className={`${isMobile ? "relative" : "absolute inset-0 m-auto flex items-center justify-center"}`}
+                  >
+                    <div className="relative group">
+
+                      <MainTeamCard
+                        imageSrc={member.image}
+                        name={member.name}
+                        title={member.title}
+                        imagePosition="center 0%"
+                      />
+                    </div>
+                  </motion.div>
+                );
+              })}
+
+              {/* 
+                This "Ghost" div ensures the section has height on Desktop 
+                since the children are absolute.
+            */}
+              <div className="hidden lg:block invisible pointer-events-none">
+                <MainTeamCard imageSrc="" name="" title="" />
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </section>
 
-      {/* SECTION 2 (EVEN): CEO - FIXED BG */}
-      <section
-        className="relative sm:py-16 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069')`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="w-full max-w-140 mr-auto mb-10">
-            <span className="inline-flex items-center gap-2 text-off-white text-sm font-bold tracking-[0.2em] uppercase">
-              • Meet Our Team
-            </span>
-            <p className="mt-2 max-w-2xl text-zinc-300 leading-8">
-              Our team combines creativity, technology, and innovation to build
-              high performance digital solutions that help businesses grow.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-between items-center gap-14">
-            <MainTeamCard
-              imageSrc={CEO}
-              name="Abdul Ahad Dahir"
-              title="Founder / CEO"
-              imagePosition="center 0%"
-            />
-
-            <MainTeamCard
-              imageSrc={CoFounder}
-              name="Ameer Hamza"
-              title="Co-Founder / CEO"
-              imagePosition="center 10%"
-            />
-
-            <MainTeamCard
-              imageSrc={CTO}
-              name="Muhammad Hunzilah"
-              title="CTO"
-              imagePosition="center 0%"
-            />
-          </div>
-        </div>
+        <style jsx>{`
+          .stroke-text {
+            -webkit-text-stroke: 1px white;
+          }
+        `}</style>
       </section>
 
       <TeamGrid />
