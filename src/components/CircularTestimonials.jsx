@@ -34,18 +34,10 @@ export default function CircularTestimonials({
 
   if (!item) return null;
 
-  const initials =
-    item.initials ||
-    item.name
-      ?.split(" ")
-      .map((n) => n[0])
-      .join("")
-      .slice(0, 2);
-
   return (
-    <section className="py-16">
+    <section className="py-16 relative z-10">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="relative overflow-hidden rounded-4xl border border-white/15 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-3xl md:p-12">
+        <div className="relative overflow-hidden rounded-4xl border border-white/15 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.35)] md:p-12">
           {/* Top Glow */}
           <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/70 to-transparent" />
 
@@ -57,7 +49,7 @@ export default function CircularTestimonials({
 
           {/* Quote */}
           <div className="absolute left-2 top-0 p-4">
-            <Quote className="h-20 w-20 text-gray-500" />
+            <Quote className="h-20 w-20 text-gray-300/20" />
           </div>
 
           <div className="relative z-10">

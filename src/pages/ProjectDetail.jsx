@@ -20,10 +20,7 @@ const ProjectDetail = () => {
     return (
       <div className="min-h-screen bg-main-bg text-white flex items-center justify-center flex-col gap-4">
         <h1 className="text-4xl font-bold">Project Not Found</h1>
-        <Link
-          to={`/services/${slug}`}
-          className="text-primary hover:underline"
-        >
+        <Link to={`/services/${slug}`} className="text-primary hover:underline">
           Back to {service?.title || "Service"}
         </Link>
       </div>
@@ -42,176 +39,183 @@ const ProjectDetail = () => {
   // If viewing a project inside showcase.projects
   if (isProject && project) {
     return (
-      <section className="bg-main-bg text-white min-h-screen sm:py-20 py-10 sm:px-10 px-4">
-        {/* ================= HERO SECTION ================= */}
-        <div className="relative py-20">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-primary uppercase tracking-[4px] text-sm font-bold">
-                {service.title}
-              </span>
-              <h1 className="md:text-5xl sm:text-3xl text-xl font-black sm:mb-6 mb-2 leading-tight">
-                {project.title}
-              </h1>
-              <p className="text-gray-300 sm:text-lg text-sm leading-relaxed mb-8">
-                {project.desc}
+      <section className="bg-main-bg text-white min-h-screen sm:py-20 py-10 sm:px-10 px-4 relative overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-300 h-300 bg-[#042558] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-300 h-300 bg-[#042558] blur-[140px]" />
+        <div className="relative z-10">
+          {/* ================= HERO SECTION ================= */}
+          <div className="relative py-20">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <span className="text-primary uppercase tracking-[4px] text-sm font-bold">
+                  {service.title}
+                </span>
+                <h1 className="md:text-5xl sm:text-3xl text-xl font-black sm:mb-6 mb-2 leading-tight">
+                  {project.title}
+                </h1>
+                <p className="text-gray-300 sm:text-lg text-sm leading-relaxed mb-8">
+                  {project.desc}
+                </p>
+                <GlowButton
+                  to={"/contact"}
+                  name={"Get This Service"}
+                  className="bg-surface text-white border-2 border-surface"
+                  hover="hover:text-surface"
+                  layerHover="bg-white"
+                />
+              </div>
+              <div className="relative">
+                <img
+                  src={project.image}
+                  className="rounded-3xl shadow-2xl border border-white/10 w-full"
+                  alt={project.title}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* ================= OVERVIEW ================= */}
+          {project.overview && (
+            <div className="max-w-7xl mx-auto py-10 border-t border-white/10">
+              <h2 className="sm:text-3xl text-2xl font-bold mb-4">Overview</h2>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                {project.overview}
+              </p>
+            </div>
+          )}
+
+          {/* ================= FEATURES ================= */}
+          {project.features && project.features.length > 0 && (
+            <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
+              <h2 className="sm:text-3xl text-2xl font-bold mb-10">
+                Key Features
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3">
+                {project.features.map((feature, i) => (
+                  <div
+                    key={i}
+                    className="p-6 glass border border-white/10 hover:border-surface transition group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-primary text-xl">✓</span>
+                      <span className="text-gray-200 font-medium">
+                        {feature}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* ================= TECHNOLOGIES ================= */}
+          {project.tech && project.tech.length > 0 && (
+            <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
+              <h2 className="sm:text-3xl text-2xl font-bold mb-10">
+                Technologies Used
+              </h2>
+              <div className="grid md:grid-cols-3 lg:grid-cols-4">
+                {project.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-8 py-4 text-lg glass text-white border border-white/20 transition"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* ================= RESULTS ================= */}
+          {project.results && project.results.length > 0 && (
+            <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
+              <h2 className="sm:text-3xl text-2xl font-bold mb-10">
+                Expected Results
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {project.results.map((result, i) => (
+                  <div
+                    key={i}
+                    className="p-6 glass border border-white/30 text-center"
+                  >
+                    <div className="text-primary text-3xl mb-2">✓</div>
+                    <p className="text-gray-200 font-medium">{result}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* ================= OTHER PROJECTS FROM SAME SERVICE ================= */}
+          {service.showcase?.projects &&
+            service.showcase.projects.length > 1 && (
+              <div className="max-w-7xl mx-auto py-20 border-t border-white/10">
+                <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-center">
+                  Other {service.title} Projects
+                </h2>
+                <p className="text-gray-400 text-center mb-12">
+                  Explore more projects under {service.title}
+                </p>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {service.showcase.projects
+                    .filter((p) => p.slug !== projectSlug)
+                    .slice(0, 3)
+                    .map((p, index) => (
+                      <Link
+                        key={index}
+                        to={`/services/${service.slug}/${p.slug}`}
+                        className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-secondary transition-all hover:scale-105 duration-300"
+                      >
+                        <div className="relative h-48 overflow-hidden">
+                          <img
+                            src={p.image}
+                            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt={p.title}
+                          />
+                        </div>
+                        <div className="p-6">
+                          <h3 className="text-xl font-bold mb-2 text-white transition">
+                            {p.title}
+                          </h3>
+                          <p className="text-gray-400 text-sm mb-4">
+                            {p.desc.slice(0, 100)}...
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {p.tech.slice(0, 3).map((tech, i) => (
+                              <span
+                                key={i}
+                                className="text-xs px-4 py-1 bg-white/10 border border-white/20 text-white rounded-full"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                </div>
+              </div>
+            )}
+
+          {/* ================= CTA ================= */}
+          <div className="py-10 border-t border-white/10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="sm:text-4xl text-2xl font-black mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-gray-400 mb-8">
+                Let's discuss how our {project.title} service can help your
+                business grow.
               </p>
               <GlowButton
                 to={"/contact"}
-                name={"Get This Service"}
+                name={"Let's Contact"}
                 className="bg-surface text-white border-2 border-surface"
                 hover="hover:text-surface"
                 layerHover="bg-white"
               />
             </div>
-            <div className="relative">
-              <img
-                src={project.image}
-                className="rounded-3xl shadow-2xl border border-white/10 w-full"
-                alt={project.title}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* ================= OVERVIEW ================= */}
-        {project.overview && (
-          <div className="max-w-7xl mx-auto py-10 border-t border-white/10">
-            <h2 className="sm:text-3xl text-2xl font-bold mb-4">Overview</h2>
-            <p className="text-gray-300 leading-relaxed text-lg">
-              {project.overview}
-            </p>
-          </div>
-        )}
-
-        {/* ================= FEATURES ================= */}
-        {project.features && project.features.length > 0 && (
-          <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
-            <h2 className="sm:text-3xl text-2xl font-bold mb-10">
-              Key Features
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3">
-              {project.features.map((feature, i) => (
-                <div
-                  key={i}
-                  className="p-6 bg-[#042558] border border-white/10 hover:border-surface transition group"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-primary text-xl">✓</span>
-                    <span className="text-gray-200 font-medium">{feature}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ================= TECHNOLOGIES ================= */}
-        {project.tech && project.tech.length > 0 && (
-          <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
-            <h2 className="sm:text-3xl text-2xl font-bold mb-10">
-              Technologies Used
-            </h2>
-            <div className="grid md:grid-cols-3 lg:grid-cols-4">
-              {project.tech.map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-8 py-4 text-lg bg-[#042558] text-white border border-white/20 hover:bg-primary transition"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ================= RESULTS ================= */}
-        {project.results && project.results.length > 0 && (
-          <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
-            <h2 className="sm:text-3xl text-2xl font-bold mb-10">
-              Expected Results
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {project.results.map((result, i) => (
-                <div
-                  key={i}
-                  className="p-6 bg-[#042558] border border-surface/10 text-center"
-                >
-                  <div className="text-primary text-3xl mb-2">✓</div>
-                  <p className="text-gray-200 font-medium">{result}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ================= OTHER PROJECTS FROM SAME SERVICE ================= */}
-        {service.showcase?.projects && service.showcase.projects.length > 1 && (
-          <div className="max-w-7xl mx-auto py-20 border-t border-white/10">
-            <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-center">
-              Other {service.title} Projects
-            </h2>
-            <p className="text-gray-400 text-center mb-12">
-              Explore more projects under {service.title}
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {service.showcase.projects
-                .filter((p) => p.slug !== projectSlug)
-                .slice(0, 3)
-                .map((p, index) => (
-                  <Link
-                    key={index}
-                    to={`/services/${service.slug}/${p.slug}`}
-                    className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-secondary transition-all hover:scale-105 duration-300"
-                  >
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={p.image}
-                        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                        alt={p.title}
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 text-white transition">
-                        {p.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm mb-4">
-                        {p.desc.slice(0, 100)}...
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {p.tech.slice(0, 3).map((tech, i) => (
-                          <span
-                            key={i}
-                            className="text-xs px-4 py-1 bg-white/10 border border-white/20 text-white rounded-full"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-            </div>
-          </div>
-        )}
-
-        {/* ================= CTA ================= */}
-        <div className="py-10 border-t border-white/10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="sm:text-4xl text-2xl font-black mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Let's discuss how our {project.title} service can help your
-              business grow.
-            </p>
-            <GlowButton
-              to={"/contact"}
-              name={"Let's Contact"}
-              className="bg-surface text-white border-2 border-surface"
-              hover="hover:text-surface"
-              layerHover="bg-white"
-            />
           </div>
         </div>
       </section>

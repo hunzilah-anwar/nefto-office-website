@@ -21,7 +21,7 @@ const Header = () => {
   const location = useLocation();
 
   const services = servicesData
-    .filter((s) => s.slug) // ❗ only valid services
+    .filter((s) => s.slug)
     .map((service) => ({
       title: service.title,
       to: `/services/${service.slug}`,
@@ -60,7 +60,8 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-1000 bg-[#042558] border-b border-white/20">
+    <header className="fixed top-0 left-0 z-1000 w-full border-b border-white/30 bg-[#042558]/30 backdrop-blur-xl">
+
       <div className="max-w-7xl mx-auto sm:px-6 px-4 h-20 flex justify-between items-center">
         {/* LOGO */}
         <Link to="/" className="flex items-center">
@@ -76,9 +77,7 @@ const Header = () => {
                 key={link.to}
                 to={link.to}
                 className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
-                  isActive
-                    ? "text-primary"
-                    : "text-white hover:text-primary"
+                  isActive ? "text-primary" : "text-white hover:text-primary"
                 }`}
               >
                 {link.name}
@@ -104,18 +103,17 @@ const Header = () => {
 
             {/* Dropdown Card */}
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-              <div className="bg-white border border-gray-200 shadow-2xl w-80 overflow-hidden">
+              <div className="bg-white border border-gray-200 shadow-2xl w-60 overflow-hidden">
                 <div className="p-2 grid grid-cols-1 gap-1">
                   {services.map((service, index) => (
                     <Link
                       key={index}
                       to={service.to}
-                      className="group/item flex items-start gap-4 p-4 hover:bg-surface text-gray-900 hover:text-white transition-all duration-300 border border-gray-300 hover:border-black/10"
+                      className="group/item flex items-start gap-4 p-3 hover:bg-surface text-gray-900 hover:text-white transition-all duration-300 border border-gray-300 hover:border-black/10"
                     >
-
                       {/* CONTENT */}
                       <div className="flex-1">
-                        <h4 className="text-[11px] font-black uppercase tracking-wide">
+                        <h4 className="text-[14px] font-bold uppercase tracking-wide">
                           {service.title}
                         </h4>
                       </div>
@@ -132,9 +130,7 @@ const Header = () => {
                 key={link.to}
                 to={link.to}
                 className={`relative mx-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
-                  isActive
-                    ? "text-primary"
-                    : "text-white hover:text-primary"
+                  isActive ? "text-primary" : "text-white hover:text-primary"
                 }`}
               >
                 {link.name}

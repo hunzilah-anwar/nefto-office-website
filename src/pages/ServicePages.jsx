@@ -155,7 +155,7 @@ const RoadmapSection = ({ roadmap }) => {
                 }`}
               >
                 <div className="lg:w-1/2 w-full">
-                  <div className="glass w-full border border-white/20 sm:p-6 p-4 backdrop-blur-sm hover:border-surface transition-all mx-px">
+                  <div className="glass w-full border border-white/20 sm:p-6 p-4 backdrop-blur-sm hover:border-surface hover:bg-secondary transition-all mx-px">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-[linear-gradient(90deg,#4a7fa7,#b4d0e6)] flex items-center justify-center">
                         {React.createElement(step.icon, {
@@ -279,11 +279,12 @@ const ServicePages = () => {
       <main>
         {/* SECTION 1: HERO */}
         <section
-          className="relative w-full bg-cover bg-center flex items-center px-4 sm:px-6 md:px-12 sm:py-20 py-16 overflow-hidden"
+          className="relative w-full bg-cover bg-center before:absolute before:inset-0 before:content-[''] before:bg-[linear-gradient(to_right,#071524_35%,rgba(7,21,36,0.85)_55%,rgba(7,21,36,0.3)_75%,transparent_100%)] before:pointer-events-none flex items-center px-4 sm:px-6 md:px-12 sm:py-20 py-16 overflow-hidden"
           style={{
             backgroundImage: `linear-gradient(135deg, rgba(0, 1, 12, 0.95) 0%, rgba(240, 240, 240, 0) 100%), url(${service.heroImage})`,
           }}
         >
+          <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 left-10 w-72 h-72 bg-main-bg[#042558]/10 rounded-full blur-3xl animate-pulse" />
@@ -344,7 +345,7 @@ const ServicePages = () => {
                   <button
                     key={i}
                     onClick={() => setActive(i)}
-                    className={`text-left px-6 py-5 cursor-pointer border transition-all duration-300
+                    className={`text-left px-6 py-5 cursor-pointer border transition-all duration-300 hover:bg-secondary/50
                     ${
                       active === i
                         ? "bg-[#042558] text-white border-secondary"
@@ -547,7 +548,9 @@ const ServicePages = () => {
 
         {/* SECTION 9: TESTIMONIALS */}
         {yourData.length > 0 && (
-          <section className="bg-main-bg">
+          <section className="bg-main-bg relative overflow-hidden">
+            <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+            <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
             <CircularTestimonials
               testimonials={yourData}
               autoplay={true}

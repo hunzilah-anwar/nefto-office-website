@@ -35,3 +35,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+.glass:hover{
+  /* background: rgba(195, 233, 254, 0.2); */
+  background: rgba(4, 37, 88, 0.3);
+}

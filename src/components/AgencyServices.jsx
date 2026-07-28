@@ -105,8 +105,8 @@ const AgencyServices = () => {
                 <div className="relative z-10 flex flex-col items-start gap-4">
                   {/* ICON */}
                   <div
-                    className="p-4 mb-4 text-white shadow-lg 
-                  backdrop-blur-xl border border-white/20 transition-transform duration-500"
+                    className="p-4 mb-4 text-white shadow-lg rounded-2xl
+                  backdrop-blur-xl transition-transform duration-500"
                     style={{
                       background: `linear-gradient(135deg, #5878a0, #b4c6d8)`,
                     }}

@@ -9,7 +9,14 @@ const WhitepaperSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email) setIsSent(true);
+
+    if (email) {
+      setIsSent(true);
+
+      setTimeout(() => {
+        setIsSent(false);
+      }, 5000);
+    }
   };
 
   return (
@@ -17,10 +24,11 @@ const WhitepaperSection = () => {
       {/* HUMAN DESIGN ELEMENT: The "Silk" Aura Gradient */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Deep Indigo Base */}
-        <div className={`absolute inset-0 bg-no-repeat bg-cover bg-fixed`}
-        style={{
-          backgroundImage: `url(${EmailBg})`,
-        }}
+        <div
+          className={`absolute inset-0 bg-no-repeat bg-cover bg-fixed`}
+          style={{
+            backgroundImage: `url(${EmailBg})`,
+          }}
         />
         <div className="absolute inset-0 bg-black/55" />
         {/* Bright Secondary Glow (Top Right) */}
@@ -44,13 +52,14 @@ const WhitepaperSection = () => {
                 >
                   <div className="space-y-4">
                     <h2 className="sm:text-3xl text-xl font-black text-white uppercase">
-                      STAY AHEAD IN { new Date().getFullYear().toString() }
+                      STAY AHEAD IN {new Date().getFullYear().toString()}
                     </h2>
 
                     <p className="sm:text-md text-sm text-zinc-300 font-light max-w-md leading-relaxed">
                       Get the latest insights on{" "}
                       <span className="text-white font-medium italic underline decoration-primary underline-offset-4">
-                        web development, app development, AI solutions, digital marketing, Graphic Designing and SEO
+                        web development, app development, AI solutions, digital
+                        marketing, Graphic Designing and SEO
                       </span>{" "}
                       to help your business grow faster.
                     </p>
@@ -95,14 +104,8 @@ const WhitepaperSection = () => {
                   <h3 className="text-2xl font-black text-white uppercase tracking-tighter">
                     Thank You!
                   </h3>
-                  <p className="text-zinc-400 text-sm">
-                    We emailed you the download link. Check your inbox and enjoy
-                    the whitepaper!
-                  </p>
+                  <p className="text-zinc-400 text-sm">We emailed you soon!</p>
                   <div className="pt-6 border-t border-white/10 flex items-center gap-6">
-                    <span className="text-sm uppercase tracking-widest text-zinc-500">
-                      Questions?
-                    </span>
                     <a
                       href="/contact"
                       className="text-white font-bold uppercase text-sm flex items-center gap-2 group"

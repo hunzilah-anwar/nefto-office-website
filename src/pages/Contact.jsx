@@ -53,7 +53,7 @@ const Contact = () => {
 
             <div className="flex items-center gap-4">
               <Mail className="text-primary" size={18} />
-              <span className="text-sm text-zinc-200">info@nefftosolution.com</span>
+              <span className="text-sm text-zinc-200">nefftosolution@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -84,7 +84,7 @@ const Contact = () => {
                 { label: "Last Name", placeholder: "Enter your last name" },
                 { label: "Job Title", placeholder: "Enter your job title" },
                 { label: "Company", placeholder: "Enter your company name" },
-                { label: "Email", placeholder: "info@nefftosolution.com", type: "email" },
+                { label: "Email", placeholder: "nefftosolution@gmail.com", type: "email" },
                 { label: "Phone", placeholder: "+1 (555) 000-0000" },
               ].map((field, i) => (
                 <div key={i} className="flex flex-col gap-2 group">

@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="relative w-full bg-main-bg pb-10 overflow-hidden">
-        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
       {/* ================= MARQUEE ================= */}
       <div className="relative border-y border-white/5 py-4 md:py-6 mb-10 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
@@ -37,11 +37,7 @@ const Footer = () => {
           <div className="space-y-8 lg:col-span-2">
             <div className="space-y-4">
               <Link to="/">
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className="w-30"
-                />
+                <img src={logo} alt="Logo" className="w-30" />
               </Link>
 
               <p className="max-w-sm text-white/70 text-xs sm:text-sm leading-relaxed">
@@ -69,8 +65,9 @@ const Footer = () => {
 
           {/* ================= NAV ================= */}
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
+            <h2 className="relative inline-block text-lg font-bold uppercase text-white sm:text-xl">
               Pages
+              <span className="absolute -bottom-1 left-0 h-0.75 w-16 rounded-full bg-linear-to-r from-[#5482b4] via-[#b4d0e6] to-transparent"></span>
             </h2>
 
             <nav className="space-y-3 sm:space-y-4">
@@ -93,8 +90,9 @@ const Footer = () => {
 
           {/* ================= SERVICES ================= */}
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
+            <h2 className="relative text-lg sm:text-xl font-bold text-white uppercase">
               Services
+              <span className="absolute -bottom-1 left-0 h-0.75 w-22 rounded-full bg-linear-to-r from-[#5482b4] via-[#b4d0e6] to-transparent"></span>
             </h2>
 
             <nav className="space-y-3 sm:space-y-4">
@@ -111,15 +109,16 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* ================= Agency Location ================= */}
+          {/* ================= Location ================= */}
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
-              Agency Location
+            <h2 className="relative text-lg sm:text-xl font-bold text-white uppercase">
+              Location
+              <span className="absolute -bottom-1 left-0 h-0.75 w-26 rounded-full bg-linear-to-r from-[#5482b4] via-[#b4d0e6] to-transparent"></span>
             </h2>
 
             <div className="space-y-3 text-white/70 text-sm">
-              <p>5942 W 124th St, Alsip, IL 60803</p>
-              <p>United States</p>
+              <p>Faisal Colony, Bahawalpur</p>
+              <p>Pakistan</p>
             </div>
           </div>
         </div>

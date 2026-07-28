@@ -61,7 +61,7 @@ const CaseStudies = () => {
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-2xl sm:text-5xl md:text-7xl font-black leading-[0.8]"
+              className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.8]"
             >
               BUILDING <span className="highlight">DIGITAL EXCELLENCE</span>
             </motion.h1>

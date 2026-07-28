@@ -60,8 +60,8 @@ const Home = () => {
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="absolute top-[-20%] left-[-10%] w-180 h-180 bg-[#042558] blur-[140px]" />
-        <div className="relative z-10 mx-auto grid max-w-7xl sm:px-6 px-4 md:items-center gap-20 lg:grid-cols-2">
-          <div className="z-50 max-w-2xl w-full">
+        <div className="relative z-10 mx-auto grid max-w-8xl sm:px-6 px-4 md:items-center gap-20 lg:grid-cols-2">
+          <div className="z-50 max-w-3xl w-full">
             <h1 className="font-sans text-white text-2xl md:text-4xl lg:text-5xl font-black leading-tight flex flex-col justify-start">
               Where Creativity Meets{" "}
               <span className="highlight">Computational Power</span>
@@ -145,7 +145,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="hidden flex-col items-center">
             {/* Monitor */}
             <div className="w-full max-w-xl rounded-[30px] border border-white/10 bg-white/10 p-2 shadow-2xl backdrop-blur-sm">
               <img src={HeroBg} alt="Monitor" className="rounded-3xl w-full" />
@@ -159,13 +159,15 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section style={fixedBgStyle} className="relative py-10 sm:px-6 px-4">
+      <section style={fixedBgStyle} className="relative py-10 sm:px-6 px-4 overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-[#042558] blur-[140px]" />
         {/* Light Overlay for text readability */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
-          <Counter value="120+" label="Systems Architected" light={false} />
+          <Counter value="20+" label="Systems Architected" light={false} />
           <Counter value="98%" label="Success Rate" light={false} />
-          <Counter value="50+" label="Global Partners" light={false} />
-          <Counter value="10M" label="Active Users" light={false} />
+          <Counter value="10+" label="Global Partners" light={false} />
+          <Counter value="500+" label="Active Users" light={false} />
         </div>
       </section>
       <section
