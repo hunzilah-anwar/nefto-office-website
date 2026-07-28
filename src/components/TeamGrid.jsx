@@ -8,98 +8,107 @@ import Talha from "../assets/talha.png";
 import Abeeha from "../assets/Abeeha.png";
 import Wahaj from "../assets/Wahaj.png";
 import Rahul from "../assets/rahul-team.png";
-import Zeeshan from "../assets/Zeeshan.jpeg";
-import Ramish from "../assets/Ramish.jpeg";
-import Asim from "../assets/Asim.jpeg";
+import Zeeshan from "../assets/Zeeshan.png";
+import Ramish from "../assets/Ramish.png";
+import Asim from "../assets/Asim.png";
+import Zohaib from "../assets/Zohaib.png";
 
 const cardData = [
   {
     id: 1,
-    category: "WEB DEVELOPER",
-    title: "MUHAMMAD HAMZA",
+    category: "FULL STACK WEB DEVELOPER",
+    title: "Muhammad Hamza",
     description:
-      "Developing high-performance web applications with secure architecture, clean code, and scalable backend solutions.",
+      "Develops high-performance web applications with secure architecture, clean code, and scalable frontend and backend solutions.",
     image: Hamza,
   },
   {
     id: 2,
-    category: "Python & Machine Learning",
+    category: "PYTHON & MACHINE LEARNING ENGINEER",
     title: "Ruhul Hussain",
     description:
-      "Building intelligent solutions with Python, Machine Learning, Data Analysis, and AI-driven automation to solve real-world business challenges.",
+      "Builds intelligent AI solutions using Python, Machine Learning, Data Analysis, and automation to solve complex business challenges.",
     image: Rahul,
   },
   {
     id: 3,
-    category: "PERFORMANCE MARKETING",
-    title: "SABIR HUSSAIN",
+    category: "PERFORMANCE MARKETING SPECIALIST",
+    title: "Sabir Hussain",
     description:
-      "Driving business growth through data-driven marketing strategies, paid advertising, and conversion optimization.",
+      "Drives business growth through performance marketing, paid advertising, lead generation, and conversion optimization strategies.",
     image: Sabir,
   },
   {
     id: 4,
     category: "FRONTEND WEB DEVELOPER",
-    title: "MUHAMMAD MUBEEN AMJAD",
+    title: "Muhammad Mubeen Amjad",
     description:
-      "Building responsive, interactive, and user-friendly interfaces using modern frontend technologies and best practices.",
+      "Creates responsive, interactive, and user-friendly web interfaces using React, Tailwind CSS, and modern frontend technologies.",
     image: Mubeen,
   },
   {
     id: 5,
     category: "GRAPHIC DESIGNER",
-    title: "MEER ALI ABBAS",
+    title: "Meer Ali Abbas",
     description:
-      "Designing creative brand assets, social media graphics, and visually engaging experiences for digital platforms.",
+      "Designs creative brand identities, social media creatives, marketing materials, and engaging visual experiences for digital platforms.",
     image: Meer,
   },
   {
     id: 6,
     category: "MACHINE LEARNING ENGINEER",
-    title: "MUHAMMAD TALHA",
+    title: "Muhammad Talha",
     description:
-      "Developing intelligent AI solutions, predictive models, and data-driven systems to solve complex business challenges.",
+      "Develops AI-powered applications, predictive models, and intelligent systems that transform data into valuable business insights.",
     image: Talha,
   },
   {
     id: 7,
-    category: "APP DEVELOPER",
-    title: "MUHAMMAD WAHAJ SAJID",
+    category: "FLUTTER APP DEVELOPER",
+    title: "Muhammad Wahaj Sajid",
     description:
-      "Creating scalable mobile applications with seamless user experiences, robust performance, and modern functionality.",
+      "Builds modern cross-platform mobile applications with seamless user experiences, scalable architecture, and high performance.",
     image: Wahaj,
   },
   {
     id: 8,
-    category: "WEB DEVELOPER",
-    title: "ABEEHA ARSHAD",
+    category: "FULL STACK WEB DEVELOPER",
+    title: "Abeeha Arshad",
     description:
-      "Building secure and responsive web solutions focused on performance, usability, and business growth.",
+      "Develops secure, scalable, and responsive web applications with a strong focus on performance, usability, and modern design.",
     image: Abeeha,
   },
   {
     id: 9,
-    category: "SEO Growth Manager",
-    title: "zeeshan zahid",
+    category: "SEO & BUSINESS GROWTH MANAGER",
+    title: "Zeeshan Zahid",
     description:
-      "Manages SEO, client hunting, marketplace accounts, and growth strategies to generate qualified leads and long-term business opportunities.",
+      "Leads SEO strategy, client acquisition, marketplace management, and business development to generate high-quality leads and long-term growth.",
     image: Zeeshan,
   },
   {
     id: 10,
-    category: "WEB DEVELOPER",
-    title: "Ramish ali",
+    category: "FULL STACK WEB DEVELOPER",
+    title: "Ramish Ali",
     description:
-      "Building secure and responsive web solutions focused on performance, usability, and business growth.",
+      "Builds reliable and scalable web applications with clean architecture, optimized performance, and exceptional user experiences.",
     image: Ramish,
   },
   {
     id: 11,
-    category: "FRONT-END WEB DEVELOPER",
+    category: "FRONTEND WEB DEVELOPER",
     title: "Muhammad Asim",
     description:
-      "Frontend Developer skilled in React, JavaScript, HTML, CSS, and Tailwind CSS, focused on building responsive and modern web applications.",
+      "Specializes in React, JavaScript, HTML, CSS, and Tailwind CSS to build fast, responsive, and modern web interfaces.",
     image: Asim,
+  },
+  {
+    id: 12,
+    category: "SEO SPECIALIST",
+    title: "Zohaib Jutt",
+    description:
+      "Improves website visibility through technical SEO, keyword research, on-page optimization, content strategy, and search engine growth.",
+    image: Zohaib,
   },
 ];
 

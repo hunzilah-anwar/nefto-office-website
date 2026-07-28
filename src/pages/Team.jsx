@@ -71,7 +71,7 @@ const Team = () => {
   const teamMembers = [
     {
       name: "Abdul Ahad Dahir",
-      title: "Founder / CEO",
+      title: "Co-Founder",
       image: CEO,
       color: "bg-blue-600",
     },
