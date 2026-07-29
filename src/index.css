@@ -32,8 +32,9 @@
 
 .glass {
   background: rgba(4, 37, 88, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transform: translateZ(0); /* Hardware acceleration */
 }
 .glass:hover{
   /* background: rgba(195, 233, 254, 0.2); */

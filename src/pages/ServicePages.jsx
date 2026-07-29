@@ -618,10 +618,6 @@ const ServicePages = () => {
               <p className="text-white/70 leading-relaxed text-sm md:text-base">
                 {selectedPost.description}
               </p>
-              <p className="text-white/50 text-sm leading-relaxed">
-                {selectedPost.content ||
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
-              </p>
             </div>
           </div>
         </div>

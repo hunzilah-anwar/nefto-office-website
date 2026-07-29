@@ -186,18 +186,6 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="hidden flex-col items-center">
-            {/* Monitor */}
-            <div className="w-full max-w-xl rounded-[30px] border border-white/10 bg-white/10 p-2 shadow-2xl backdrop-blur-sm">
-              <img src={HeroBg} alt="Monitor" className="rounded-3xl w-full" />
-            </div>
-
-            {/* Stand Neck */}
-            <div className="h-12 w-8 bg-linear-to-b from-gray-300 via-gray-400 to-gray-600 shadow-lg"></div>
-
-            {/* Stand Base */}
-            <div className="h-6 w-40 rounded-full bg-linear-to-b from-gray-300 via-gray-500 to-gray-700 shadow-xl"></div>
-          </div>
         </div>
       </section>
       <section style={fixedBgStyle} className="relative py-10 sm:px-6 px-4 overflow-hidden">
